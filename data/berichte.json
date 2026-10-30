@@ -87,7 +87,23 @@
   ],
   "hinweise": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
-  ]
+  ],
+  "themen": {
+   "gruendach": 25,
+   "solar": 102,
+   "deckung": 55,
+   "entwaesserung": 20,
+   "zubehoer": 48,
+   "sicherheit": 21,
+   "werkstoffe": 3,
+   "schneeschutz": 4
+  },
+  "arten": {
+   "Offenlegung": 117,
+   "Erteilung": 117,
+   "Gebrauchsmuster": 29,
+   "Internationale Anmeldung": 15
+  }
  },
  {
   "id": "woche-2026-44",
@@ -119,6 +135,15 @@
   "hinweise": [
    "Erstausgabe: Der Radar wurde rückwirkend mit Veröffentlichungen seit Ende April 2026 und Erteilungen seit Ende Januar 2026 befüllt.",
    "Einzelne europäische Anmeldungen, zu denen noch keine Zusammenfassung vorliegt, werden nachgetragen, sobald der Text verfügbar ist."
-  ]
+  ],
+  "themen": {
+   "gruendach": 5,
+   "solar": 3,
+   "deckung": 4
+  },
+  "arten": {
+   "Offenlegung": 9,
+   "Erteilung": 3
+  }
  }
 ]

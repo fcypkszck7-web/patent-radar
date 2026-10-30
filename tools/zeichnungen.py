@@ -258,7 +258,147 @@ RUBRIK = {
     "international": BLATT + '<circle cx="35" cy="40" r="8"/><ellipse cx="35" cy="40" rx="3.6" ry="8"/><path d="M27 40h16M28.6 35.5h12.8M28.6 44.5h12.8"/>',
 }
 
+# ---------------- Seitenfiguren für die Kopfbänder (320 × 200) ----------------
+def s(d, extra=""):
+    # Gestrichelte Linien ohne pathLength, sonst wird das Strichmuster auf die Pfadlänge 1 skaliert
+    laenge = "" if "strichliert" in extra else ' pathLength="1"'
+    return f'<path class="s{extra}"{laenge} d="{d}"/>'
+
+
+def farbe(var):
+    return f' style="--tf:var({var})"'
+
+
+def fig(nr, inhalt, label):
+    return (f'<svg class="fig-zeichnung fig-seite" viewBox="0 0 320 200" role="img" aria-label="{label}">' + inhalt +
+            f'<text class="fig-titel" x="300" y="194" text-anchor="end">Fig. {nr}</text></svg>')
+
+
+def bogen(cx, cy, r, a0, a1):
+    x0, y0 = cx + r * math.cos(math.radians(a0)), cy + r * math.sin(math.radians(a0))
+    x1, y1 = cx + r * math.cos(math.radians(a1)), cy + r * math.sin(math.radians(a1))
+    gross = 1 if (a1 - a0) % 360 > 180 else 0
+    return f"M{f(x0)} {f(y0)}A{f(r)} {f(r)} 0 {gross} 1 {f(x1)} {f(y1)}"
+
+
+# Fig. 2: vier Schriften als Fächer, je Rubrik ein Blatt mit Kennbuchstaben
+BLATT_UMRISS = "M0 0H74L96 22V124H0Z"
+def blatt(key, code, x, y, rot, extra, name):
+    return (f'<a class="teil blatt" data-rubrik="{key}" href="#/{key}" aria-label="{name}">'
+            f'<g transform="translate({x} {y}) rotate({rot} 48 62)"{farbe("--r-" + key)}>'
+            f'<path class="deckend" d="{BLATT_UMRISS}"/>' + s(BLATT_UMRISS) + s("M74 0V22H96", " duenn") +
+            '<rect class="voll" x="10" y="11" width="32" height="18" rx="3"/>'
+            f'<text class="blatt-code" x="26" y="24" text-anchor="middle">{code}</text>' +
+            s("M12 42H80M12 51H84M12 60H64M12 74H84M12 83H72M12 92H56", " duenn") + extra + "</g></a>")
+
+
+SIEGEL = s("M72 104m-11 0a11 11 0 1 0 22 0a11 11 0 1 0-22 0", " akzent") + '<circle class="voll" cx="72" cy="104" r="4.5"/>' + s("M65 113l-4 14 6-3 3 5 2-13M79 113l4 14-6-3-3 5", " akzent")
+LUPE = s("M30 104m-10 0a10 10 0 1 0 20 0a10 10 0 1 0-20 0", " akzent") + s("M37.5 111.5 47 121", " akzent dick")
+STEMPEL = '<rect class="voll" x="12" y="98" width="34" height="18" rx="2" transform="rotate(-8 29 107)" opacity=".85"/>' + s("M14 122H46", " akzent")
+GLOBUS = s("M30 104m-12 0a12 12 0 1 0 24 0a12 12 0 1 0-24 0", " akzent") + s("M30 92c-6 6-6 18 0 24c6-6 6-18 0-24M18 104h24", " akzent duenn")
+FIG_SCHUTZRECHTE = fig(2,
+    blatt("international", "WO", 26, 54, -11, GLOBUS, "International") +
+    blatt("gebrauchsmuster", "U1", 82, 42, -4, STEMPEL, "Gebrauchsmuster") +
+    blatt("offenlegungen", "A1", 140, 37, 3, LUPE, "Offenlegungen") +
+    blatt("erteilungen", "B1", 197, 44, 10, SIEGEL, "Erteilungen"),
+    "Vier Schriften im Fächer: internationale Anmeldung, Gebrauchsmuster, Offenlegung und Patentschrift")
+
+# Fig. 3: Kalenderblatt und Sanduhr
+kal = ['<path class="deckend" d="M28 36h150v136H28z"/>', s("M28 36h150v136H28z"), s("M28 60H178"),
+       s("M60 28v16M146 28v16", " dick"), '<text class="blatt-titel" x="103" y="53" text-anchor="middle">9 Monate</text>']
+markiert = {(0, 3): "--kupfer-band", (1, 1): "--messing-band", (1, 5): "--messing-band", (2, 2): "--messing-band",
+            (2, 6): "--patina-band", (3, 0): "--patina-band", (3, 4): "--patina-band", (0, 6): "--patina-band"}
+for zeile in range(4):
+    for spalte in range(7):
+        x, y = 38 + spalte * 20, 70 + zeile * 24
+        if (zeile, spalte) in markiert:
+            kal.append(f'<rect class="voll" x="{x}" y="{y}" width="14" height="14" rx="3"{farbe(markiert[(zeile, spalte)])}/>')
+        else:
+            kal.append(f'<rect class="s duenn" pathLength="1" x="{x}" y="{y}" width="14" height="14" rx="3"/>')
+uhr = [s("M210 30H290M210 178H290", " dick"), s("M218 30V178M282 30V178", " duenn"),
+       s("M228 36C228 80 246 94 246 104C246 114 228 128 228 172M272 36C272 80 254 94 254 104C254 114 272 128 272 172"),
+       f'<g{farbe("--messing-band")}><path class="voll" d="M235 62C239 82 248 94 250 100C252 94 261 82 265 62Z"/>'
+       '<path class="voll" d="M232 172C236 154 246 147 250 146C254 147 264 154 268 172Z"/>' + s("M250 101V145", " akzent strichliert") + "</g>"]
+FIG_FRISTEN = fig(3, "".join(kal) + "".join(uhr), "Kalenderblatt mit markierten Fristtagen und eine Sanduhr")
+
+# Fig. 4: Gebäude der Anmelder mit Dächern aus den Themen des Radars
+geb = [s("M12 172H308"),
+       # Halle mit Sheddach und Solarmodulen
+       '<path class="deckend" d="M24 172V116H124V172Z"/>', s("M24 172V116H124V172"),
+       f'<g{farbe("--t-solar")}>' + s("M24 116 24 96 49 116 49 96 74 116 74 96 99 116 99 96 124 116", " akzent") + "</g>",
+       s("M34 132h14v12H34zM58 132h14v12H58zM82 132h14v12H82zM104 150h12v22h-12z", " duenn"),
+       # Bürogebäude mit Absturzsicherung auf dem Flachdach
+       '<path class="deckend" d="M136 172V56H192V172Z"/>', s("M136 172V56H192V172"),
+       f'<g{farbe("--t-sicherheit")}>' + s("M136 46H192M140 56V46M154 56V46M168 56V46M182 56V46", " akzent") + "</g>"]
+for zeile in range(6):
+    for spalte in range(3):
+        geb.append(s(f"M{144 + spalte * 16} {66 + zeile * 17}h10v10h-10z", " duenn"))
+geb += ['<path class="deckend" d="M210 172V124H284V172Z"/>', s("M210 172V124H284V172"),
+        f'<g{farbe("--t-deckung")}>' + s("M200 128 247 88 294 128", " akzent dick") + "</g>",
+        f'<g{farbe("--t-solar")}><path class="voll" d="M256 101l14 11.8-9 0-14-11.8z" opacity=".9"/></g>',
+        f'<g{farbe("--t-entwaesserung")}>' + s("M198 128a6 6 0 0 0 12 0M204 134V172", " akzent") + "</g>",
+        f'<g{farbe("--t-schneeschutz")}>' + s("M226 112l9-7.6M222 108v8", " akzent") + "</g>",
+        s("M240 148h14v24h-14zM262 136h14v12h-14z", " duenn")]
+FIG_ANMELDER = fig(4, "".join(geb), "Gebäude verschiedener Anmelder mit Dächern, Solarmodulen, Geländer und Dachrinne")
+
+# Fig. 5: Zeitung mit Radarwellen
+news = ['<g transform="rotate(5 140 104)"><path class="deckend" d="M70 34h150v142H70z"/>' + s("M70 34h150v142H70z", " duenn") + "</g>",
+        '<g transform="rotate(-4 140 104)"><path class="deckend" d="M54 30h150v146H54z"/>' + s("M54 30h150v146H54z") +
+        s("M66 46H192", " dick") + s("M66 54H192", " duenn") + s("M66 68H170M66 78H150", " dick") +
+        '<path class="deckend" d="M66 90h60v46H66z"/>' + s("M66 90h60v46H66z", " duenn") +
+        f'<g{farbe("--t-deckung")}>' + s("M72 120 96 100 120 120", " akzent") + "</g>" +
+        f'<g{farbe("--t-solar")}><path class="voll" d="M99 104l9 7.5h-6l-9-7.5z"/></g>' +
+        f'<g{farbe("--t-entwaesserung")}>' + s("M69 120a4 4 0 0 0 8 0", " akzent") + "</g>" +
+        s("M134 92H192M134 100H186M134 108H192M134 116H178M134 124H192M134 132H170M66 148H192M66 156H180M66 164H150", " duenn") + "</g>"]
+news.append(f'<g{farbe("--patina-band")}>' + s(bogen(262, 64, 14, -150, -30), " akzent") + s(bogen(262, 64, 26, -150, -30), " akzent") +
+            s(bogen(262, 64, 38, -150, -30), " akzent duenn") + '<circle class="voll" cx="262" cy="64" r="4"/>' + s("M262 68V112", " akzent") + "</g>")
+FIG_NEWS = fig(5, "".join(news), "Zeitungsseite mit Dachmotiv und Radarwellen")
+
+# Fig. 6: Klemmbrett mit gestapeltem Säulendiagramm und Ring
+ber = ['<path class="deckend" d="M58 30h152v156H58z"/>', s("M58 30h152v156H58z"),
+       '<path class="deckend" d="M108 22h52v18h-52z"/>', s("M108 22h52v18h-52z"),
+       s("M74 54H170", " dick"), s("M74 64H140", " duenn"), s("M76 164H194")]
+saeulen = [[("--t-solar", 18), ("--t-deckung", 12), ("--t-entwaesserung", 8)],
+           [("--t-solar", 26), ("--t-zubehoer", 14), ("--t-gruendach", 10)],
+           [("--t-deckung", 20), ("--t-sicherheit", 12), ("--t-solar", 16)],
+           [("--t-entwaesserung", 14), ("--t-solar", 30), ("--t-zubehoer", 18)],
+           [("--t-deckung", 24), ("--t-gruendach", 14), ("--t-solar", 34)]]
+for i, saeule in enumerate(saeulen):
+    x, basis = 82 + i * 22, 162
+    for var, h in saeule:
+        ber.append(f'<rect class="voll" x="{x}" y="{basis - h}" width="14" height="{h}" rx="1.5"{farbe(var)}/>')
+        basis -= h + 2
+teile = [("--t-solar", 0, 140), ("--t-deckung", 144, 230), ("--t-zubehoer", 234, 290), ("--t-entwaesserung", 294, 356)]
+for var, a0, a1 in teile:
+    ber.append(f'<path class="ring" d="{bogen(262, 104, 30, a0 - 90, a1 - 90)}"{farbe(var)}/>')
+ber.append(s("M262 104m-44 0a44 44 0 1 0 88 0a44 44 0 1 0-88 0", " duenn strichliert"))
+FIG_BERICHTE = fig(6, "".join(ber), "Klemmbrett mit gestapeltem Säulendiagramm und Ringdiagramm")
+
+# Fig. 7: Aufgeschlagenes Buch mit Lupe und kleinem Zeitstrahl
+buch = ['<path class="deckend" d="M160 64C130 50 92 50 52 60V164C92 154 130 154 160 168C190 154 228 154 268 164V60C228 50 190 50 160 64Z"/>',
+        s("M160 64C130 50 92 50 52 60V164C92 154 130 154 160 168"), s("M160 64C190 50 228 50 268 60V164C228 154 190 154 160 168"),
+        s("M160 64V168", " duenn"), s("M52 164C92 160 130 162 160 174C190 162 228 160 268 164", " duenn"),
+        s("M68 76C96 70 126 70 146 78M68 88C96 82 126 82 146 90M68 100C96 94 120 94 146 102M68 112C96 106 126 106 146 114M68 124C90 118 110 118 130 124", " duenn"),
+        s("M176 122H252", " duenn")]
+for x, var in ((182, "--r-offenlegungen"), (212, "--r-erteilungen"), (242, "--kupfer-band")):
+    buch.append(f'<circle class="voll" cx="{x}" cy="122" r="5"{farbe(var)}/>')
+buch.append(s("M180 84H232M180 94H250M180 104H222", " duenn"))
+buch.append(f'<g{farbe("--patina-band")}>' + s("M236 52m-24 0a24 24 0 1 0 48 0a24 24 0 1 0-48 0", " akzent") + s("M253 69 280 96", " akzent dick") + "</g>")
+FIG_HINWEISE = fig(7, "".join(buch), "Aufgeschlagenes Buch mit Zeitstrahl und Lupe")
+
+# Fig. 8: Karteikarten mit Lesezeichen
+merk = []
+for i, (x, y) in enumerate(((96, 30), (84, 44), (72, 58))):
+    merk.append(f'<path class="deckend" d="M{x} {y}h152v112H{x}z"/>' + s(f"M{x} {y}h152v112H{x}z", "" if i == 2 else " duenn"))
+merk.append(s("M86 84H176M86 96H196M86 108H160M86 130H200M86 142H180", " duenn"))
+merk.append(f'<g{farbe("--patina-band")}><path class="voll" d="M196 52V102L208 92 220 102V52Z"/></g>')
+merk.append(f'<g{farbe("--messing-band")}>' + s("M86 70l4 4 8-9", " akzent") + "</g>")
+FIG_MERKLISTE = fig(8, "".join(merk), "Karteikarten mit Lesezeichen")
+
+SEITE = {"schutzrechte": FIG_SCHUTZRECHTE, "fristen": FIG_FRISTEN, "anmelder": FIG_ANMELDER, "news": FIG_NEWS,
+         "berichte": FIG_BERICHTE, "hinweise": FIG_HINWEISE, "merkliste": FIG_MERKLISTE}
+
 js = ("/* Zeichnungen des Patent-Radars: eigene Strichzeichnungen im Stil von Patentfiguren. */\n"
-      "window.PRZ = " + json.dumps({"hero": HERO, "thema": THEMA, "rubrik": RUBRIK}, ensure_ascii=False) + ";\n")
+      "window.PRZ = " + json.dumps({"hero": HERO, "thema": THEMA, "rubrik": RUBRIK, "seite": SEITE}, ensure_ascii=False) + ";\n")
 open(ZIEL, "w", encoding="utf-8").write(js)
 print(len(js), "Zeichen")

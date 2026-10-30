@@ -430,6 +430,12 @@ def main():
         anmelder.append({"name": x["name"], "anzahl": x["anzahl"], "land": land, "themen": x["themen"]})
     anmelder.sort(key=lambda a: (-a["anzahl"], a["name"].lower()))
 
+    def verteilung(liste, feld):
+        zaehl = {}
+        for e in liste:
+            zaehl[e[feld]] = zaehl.get(e[feld], 0) + 1
+        return zaehl
+
     def laufende():
         return [e for e in gueltig if e.get("einspruch_bis") and e["einspruch_bis"] >= heute]
 
@@ -446,6 +452,7 @@ def main():
             "kennzahlen": {"neu": len(neu), "erteilungen": sum(1 for e in neu if e["art"] == "Erteilung"),
                            "gebrauchsmuster": sum(1 for e in neu if e["art"] == "Gebrauchsmuster"),
                            "fristen_laufend": len(laufende())},
+            "themen": verteilung(neu, "thema"), "arten": verteilung(neu, "art"),
             "top": [e["id"] for e in neu[:3]],
             "fristen": [e["id"] for e in sorted(neu, key=lambda e: e.get("einspruch_bis") or "9") if e.get("einspruch_bis")],
             "news": [n["id"] for n in news if ist_datum(n.get("datum", "")) and von <= n["datum"] <= lauf["datum"]][:10],
@@ -478,6 +485,7 @@ def main():
                 "kennzahlen": {"neu": len(im_monat), "erteilungen": sum(1 for e in im_monat if e["art"] == "Erteilung"),
                                "gebrauchsmuster": sum(1 for e in im_monat if e["art"] == "Gebrauchsmuster"),
                                "fristen_laufend": len(laufende())},
+                "themen": verteilung(im_monat, "thema"), "arten": verteilung(im_monat, "art"),
                 "top": [e["id"] for e in top],
                 "fristen": [e["id"] for e in fristen90],
                 "trends": args.trends.strip(),
