@@ -97,6 +97,7 @@ s20 = 62
 fuss = links(s20, 2)
 kopf = links(s20, 26)
 schnee = [
+    f'<path class="f" d="M{pt(links(s20 + 6, 2))} L{pt(links(s20 + 6, 8))} Q{pt(links(s20 + 34, 30))} {pt(links(s20 + 76, 9))} L{pt(links(s20 + 76, 2))} Z"/>',
     strich(f"M{pt(links(s20 - 7, 2))} L{pt(links(s20 + 7, 2))}"),
     strich(f"M{pt(fuss)} L{pt(kopf)}"),
     f'<circle class="s" pathLength="1" cx="{f(kopf[0])}" cy="{f(kopf[1])}" r="4.2"/>',
@@ -128,7 +129,7 @@ tritt_a = links(222, 3)
 tritt_b = (tritt_a[0], tritt_a[1] - 13)
 sicherheit = [
     strich(f"M{pt(links(s40 - 7, 2))} L{pt(links(s40 + 7, 2))} M{pt(basis)} L{pt(oben)}"),
-    f'<circle class="s" pathLength="1" cx="{f(oese[0])}" cy="{f(oese[1])}" r="6"/>',
+    f'<circle class="s deckend" pathLength="1" cx="{f(oese[0])}" cy="{f(oese[1])}" r="6"/>',
     strich(f"M{pt(tritt_a)} L{pt(tritt_b)} M{f(tritt_b[0] - 14)} {f(tritt_b[1])} L{f(tritt_b[0] + 14)} {f(tritt_b[1])} M{f(tritt_b[0] - 14)} {f(tritt_b[1] + 3)} L{f(tritt_b[0] + 14)} {f(tritt_b[1] + 3)}"),
 ]
 
@@ -148,13 +149,14 @@ sonne = (690, 70)
 strahlen = " ".join(
     f"M{f(sonne[0] + 16 * math.cos(w))} {f(sonne[1] + 16 * math.sin(w))} L{f(sonne[0] + 23 * math.cos(w))} {f(sonne[1] + 23 * math.sin(w))}"
     for w in [i * math.pi / 4 for i in range(8)])
-solar.append(f'<circle class="s" pathLength="1" cx="{sonne[0]}" cy="{sonne[1]}" r="10"/>')
+solar.append(f'<circle class="s deckend" pathLength="1" cx="{sonne[0]}" cy="{sonne[1]}" r="10"/>')
 solar.append(f'<path class="s duenn" pathLength="1" d="{strahlen}"/>')
 
 # 10 Dachentwässerung: Rinne, Rinnenhaken, Fallrohr mit Rohrschellen, Tropfen
 G = (80.0, 284.0)
 r = 15.0
 entw = [
+    f'<path class="f" d="M{f(G[0] - r + 2)} {f(G[1] + 5)} L{f(G[0] + r - 2)} {f(G[1] + 5)} A{f(r - 1)} {f(r - 1)} 0 0 1 {f(G[0] - r + 2)} {f(G[1] + 5)} Z"/>',
     strich(f"M{f(G[0] - r)} {f(G[1])} A{f(r)} {f(r)} 0 0 0 {f(G[0] + r)} {f(G[1])}"),
     f'<circle class="s" pathLength="1" cx="{f(G[0] - r - 2)}" cy="{f(G[1] - 1)}" r="2.6"/>',
     strich(f"M{f(G[0] - r - 4)} {f(G[1] + 1)} A{f(r + 4)} {f(r + 4)} 0 0 0 {f(G[0] + r + 4)} {f(G[1])} L{f(G[0] + r + 4)} 272 L118 262"),
@@ -169,6 +171,7 @@ entw.append(f'<path class="s duenn" pathLength="1" d="{tropfen}"/>')
 
 # 70 Gründach am Anbau rechts
 gruen = [
+    '<path class="f" d="M584 322 L584 310 Q600 305 616 310 T648 310 T680 310 T712 310 T728 309 L728 322 Z"/>',
     strich("M580 322 L732 322 L732 420 M580 334 L732 334"),
     strich("M732 322 L732 304 L740 304 L740 420"),
     f'<path class="s strichliert" d="M584 316 L728 316"/>',
@@ -185,6 +188,7 @@ gruen.append(f'<path class="s duenn" pathLength="1" d="{gs}"/>')
 DA = (300.0, 362.0)
 RA = 50.0
 werk = [
+    f'<circle class="f" cx="{f(DA[0])}" cy="{f(DA[1])}" r="{f(RA)}"/>',
     f'<circle class="s strichliert" cx="{f(G[0] + 6)}" cy="{f(G[1] - 2)}" r="21"/>',
     f'<circle class="s" pathLength="1" cx="{f(DA[0])}" cy="{f(DA[1])}" r="{f(RA)}"/>',
     f'<path class="s strichliert duenn" d="M{f(G[0] + 27)} {f(G[1] + 2)} Q190 330 {f(DA[0] - RA + 2)} {f(DA[1] - 6)}"/>',
@@ -201,13 +205,13 @@ werk.append(bohr)
 # Bezugszeichen: (Nummer, Thema, Zahlposition, Ziel)
 bez = [
     (10, "entwaesserung", (30, 330), (G[0] - 8, G[1] + 12)),
-    (20, "schneeschutz", (34, 176), links(s20, 22)),
-    (30, "solar", (676, 160), rechts(150, 24)),
-    (40, "sicherheit", (238, 48), oese),
-    (50, "deckung", (452, 82), rechts(270, 7)),
-    (60, "zubehoer", (122, 132), links(176, 15)),
-    (70, "gruendach", (700, 268), (668, 307)),
-    (80, "werkstoffe", (386, 318), (DA[0] + 34, DA[1] - 14)),
+    (30, "schneeschutz", (34, 176), links(s20, 22)),
+    (40, "solar", (676, 160), rechts(150, 24)),
+    (20, "sicherheit", (238, 48), oese),
+    (80, "deckung", (452, 82), rechts(270, 7)),
+    (50, "zubehoer", (122, 132), links(176, 15)),
+    (60, "gruendach", (700, 268), (668, 307)),
+    (70, "werkstoffe", (386, 318), (DA[0] + 34, DA[1] - 14)),
 ]
 TEILE = {"entwaesserung": entw, "schneeschutz": schnee, "solar": solar, "sicherheit": sicherheit,
          "deckung": deckung, "zubehoer": fenster, "gruendach": gruen, "werkstoffe": werk}

@@ -513,7 +513,7 @@ def main():
     alle_lauf = laufende()
     radar = {
         "stand": meta["stand"], "heute": heute, "lauf": lauf,
-        "daten_ab": meta.get("daten_ab"),
+        "daten_ab": meta.get("daten_ab"), "voll_ab": meta.get("voll_ab"),
         "abdeckung": meta.get("abdeckung", {}),
         "weiterleitungen": meta.get("weiterleitungen", []),
         "kennzahlen": {"gesamt": len(gueltig), "neu": sum(1 for e in gueltig if e["neu"]),

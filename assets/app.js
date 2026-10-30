@@ -4,18 +4,17 @@
 
   var THEMEN = [
     { key: "entwaesserung", name: "Dachentwässerung", kurz: "Rinnen, Rinnenhalter, Fallrohre, Laubschutz, Flachdach- und Notentwässerung" },
+    { key: "sicherheit", name: "Dachsicherheit", kurz: "Dachtritte, Laufanlagen, Sicherheitsdachhaken, Absturzsicherung, Anschlagpunkte" },
     { key: "schneeschutz", name: "Schneeschutz", kurz: "Schneefang, Schneefanggitter, Schneestopper" },
     { key: "solar", name: "Solar auf dem Dach", kurz: "Befestigung und Montagesysteme, auch mit Schneeschutz" },
-    { key: "sicherheit", name: "Dachsicherheit", kurz: "Dachtritte, Laufanlagen, Sicherheitsdachhaken, Absturzsicherung, Anschlagpunkte" },
-    { key: "deckung", name: "Dachdeckung und Abdichtung", kurz: "Steil-, Flach- und Metalldach, Bahnen, Unterkonstruktion" },
     { key: "zubehoer", name: "Dachzubehör und Anschlüsse", kurz: "Durchführungen, Lüftung, Kamin- und Wandanschlüsse, Blitzschutz" },
     { key: "gruendach", name: "Gründach, Regenwasser und Dämmung", kurz: "Begrünung, Regenwassernutzung, Dämmung" },
-    { key: "werkstoffe", name: "Werkstoffe und Fertigung", kurz: "Bleche, Beschichtungen, Umform- und Fügeverfahren mit Dachbezug" }
-  ];
-  var THEMA = {};
+    { key: "werkstoffe", name: "Werkstoffe und Fertigung", kurz: "Bleche, Beschichtungen, Umform- und Fügeverfahren mit Dachbezug" },
+    { key: "deckung", name: "Dachdeckung und Abdichtung", kurz: "Steil-, Flach- und Metalldach, Bahnen, Unterkonstruktion" }
+  ];  var THEMA = {};
   THEMEN.forEach(function (t) { THEMA[t.key] = t; });
   var ARTEN = ["Offenlegung", "Erteilung", "Gebrauchsmuster", "Internationale Anmeldung"];
-  var BEZUG = { entwaesserung: 10, schneeschutz: 20, solar: 30, sicherheit: 40, deckung: 50, zubehoer: 60, gruendach: 70, werkstoffe: 80 };
+  var BEZUG = { entwaesserung: 10, sicherheit: 20, schneeschutz: 30, solar: 40, zubehoer: 50, gruendach: 60, werkstoffe: 70, deckung: 80 };
   var RUBRIKEN = [
     { key: "erteilungen", art: "Erteilung", name: "Erteilungen", codes: "B1, B2, B3, B4", kurz: "Geprüft und erteilt, mit Einspruchsfrist",
       text: "Geprüfte und erteilte Patente. Ab der Veröffentlichung der Erteilung kann neun Monate lang Einspruch eingelegt werden." },
@@ -261,7 +260,9 @@
     var abd = R.abdeckung || {};
     var jeThema = {};
     alle.forEach(function (e) { jeThema[e.thema] = (jeThema[e.thema] || 0) + 1; });
-    var html = '<section class="titelblatt" aria-labelledby="ausgabe-titel">' +
+    var maxThema = 1;
+    Object.keys(jeThema).forEach(function (k) { maxThema = Math.max(maxThema, jeThema[k]); });
+    var html = '<div class="titelband"><div class="titelband-innen"><section class="titelblatt" aria-labelledby="ausgabe-titel">' +
       '<div class="titelblatt-text"><h1 id="ausgabe-titel" class="ausgabe-woche"><small>Ausgabe</small>KW ' + w.woche + "<span>/" + w.jahr + "</span></h1>" +
       '<p class="ausgabe-satz">' + esc(satz) + "</p>" +
       '<p class="ausgabe-links"><a href="#/schutzrechte?neu=1"><strong>' + neu.length + "</strong> neu diese Woche</a>" +
@@ -272,9 +273,11 @@
 
     html += '<section class="bezugszeichen" aria-labelledby="bz-titel"><h2 id="bz-titel">Bezugszeichenliste <span>Themen des Radars, ein Klick zeigt alle Einträge</span></h2><ul>' +
       THEMEN.map(function (t) {
+        var n = jeThema[t.key] || 0;
         return '<li><a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '" data-thema="' + t.key + '" style="' + themaStil(t.key) + '">' +
-          '<span class="bz-nr">' + BEZUG[t.key] + "</span>" + zThema(t.key) + '<span class="bz-name">' + esc(t.name) + '</span><span class="bz-zahl">' + (jeThema[t.key] || 0) + "</span></a></li>";
-      }).join("") + "</ul></section>";
+          '<span class="bz-symbol">' + zThema(t.key) + '</span><span class="bz-nr">' + BEZUG[t.key] + '</span><span class="bz-name">' + esc(t.name) + '</span><span class="bz-zahl">' + n + "</span>" +
+          '<span class="bz-balken" aria-hidden="true"><span style="width:' + Math.max(2, Math.round(100 * n / maxThema)) + '%"></span></span></a></li>';
+      }).join("") + "</ul></section></div></div>";
 
     html += '<section class="abschnitt" aria-labelledby="rubriken-titel"><div class="abschnitt-kopf"><h2 id="rubriken-titel">Rubriken</h2><a href="#/schutzrechte">Alle ' + alle.length + " Schutzrechte</a></div>" + rubrikKacheln(alle) + "</section>";
 
@@ -294,15 +297,21 @@
       (top.liste.length ? '<ul class="liste">' + top.liste.map(function (e) { return karte(e, { neuMarke: true }); }).join("") + "</ul>" :
         leer("In diesem Monat noch keine Einträge.", "")) + "</section>";
 
-    html += '<section class="abschnitt" aria-labelledby="trend-titel"><div class="abschnitt-kopf"><h2 id="trend-titel">Veröffentlichungen je Thema, letzte 12 Monate</h2>' +
-      (R.daten_ab ? '<span class="hinweis-text">Erfasst ab ' + datum(R.daten_ab) + "</span>" : "") + "</div>" + trend() + "</section>";
+    html += '<section class="abschnitt" aria-labelledby="trend-titel"><div class="abschnitt-kopf"><h2 id="trend-titel">Neue Veröffentlichungen je Monat und Thema</h2>' +
+      '<span class="hinweis-text">' + (R.voll_ab ? "Vollständig erfasst ab " + MONATE_LANG[parseInt(R.voll_ab.slice(5, 7), 10) - 1] + " " + R.voll_ab.slice(0, 4) : "") + "</span></div>" + trend() + "</section>";
 
     var top8 = (R.anmelder || []).slice(0, 8);
     var max = top8.length ? top8[0].anzahl : 1;
-    html += '<section class="abschnitt" aria-labelledby="anm-titel"><div class="abschnitt-kopf"><h2 id="anm-titel">Top-Anmelder</h2><a href="#/anmelder">Rangliste</a></div>' +
-      (top8.length ? '<ul class="balken-liste">' + top8.map(function (a) {
-        return '<li><div class="balken-name"><a href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a.name })) + '">' + esc(a.name) + '</a><div class="balken"><span style="width:' + Math.max(4, Math.round(100 * a.anzahl / max)) + '%"></span></div></div><span class="zahl">' + a.anzahl + "</span></li>";
-      }).join("") + "</ul>" : leer("Noch keine Anmelder erfasst.", "")) + "</section>";
+    html += '<section class="abschnitt" aria-labelledby="anm-titel"><div class="abschnitt-kopf"><h2 id="anm-titel">Top-Anmelder nach Themen</h2><a href="#/anmelder">Rangliste</a></div>' +
+      (top8.length ? '<div class="anm-rahmen"><ul class="anm-liste">' + top8.map(function (a) {
+        var segs = THEMEN.filter(function (t) { return (a.themen || {})[t.key]; }).map(function (t) {
+          var n = a.themen[t.key];
+          return '<span class="anm-seg" style="' + themaStil(t.key) + ";flex-grow:" + n + '" data-tip="' + esc(a.name + ": " + t.name + ", " + n + " " + plural(n, "Eintrag", "Einträge")) + '"></span>';
+        }).join("");
+        return '<li><a class="anm-name" href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a.name })) + '">' + esc(a.name) + '</a><span class="anm-balken" style="width:' + Math.max(6, Math.round(100 * a.anzahl / max)) + '%">' + segs + '</span><span class="anm-zahl">' + a.anzahl + "</span></li>";
+      }).join("") + "</ul>" + '<ul class="stapel-legende">' + THEMEN.map(function (t) {
+        return '<li><a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '" style="' + themaStil(t.key) + '"><span class="farbfeld"></span>' + esc(t.name) + "</a></li>";
+      }).join("") + "</ul></div>" : leer("Noch keine Anmelder erfasst.", "")) + "</section>";
     return html;
   }
   uebersicht.titel = function () { return "Übersicht"; };
@@ -345,7 +354,7 @@
     ["q", "thema", "amt", "relevanz", "anmelder", "von", "bis", "neu", "frist", "ansicht"].forEach(function (k) { if (p.get(k)) behalten.set(k, p.get(k)); });
     var basis = filterAnwenden(D.radar.eintraege, behalten);
     function reiter(key, name, n, icon) {
-      return '<a href="' + hashMit(key, behalten) + '"' + (aktiv === key ? ' aria-current="page"' : "") + ">" + icon + "<span>" + esc(name) + '</span><span class="reiter-zahl">' + n + "</span></a>";
+      return '<a class="rk-' + key + '" href="' + hashMit(key, behalten) + '"' + (aktiv === key ? ' aria-current="page"' : "") + ">" + icon + "<span>" + esc(name) + '</span><span class="reiter-zahl">' + n + "</span></a>";
     }
     return '<nav class="reiter" aria-label="Rubriken">' + reiter("schutzrechte", "Alle", basis.length, "") +
       RUBRIKEN.map(function (rb) {
@@ -407,32 +416,53 @@
   }
 
   function trend() {
-    var h = heute();
+    var R = D.radar, h = heute();
     var j = parseInt(h.slice(0, 4), 10), mo = parseInt(h.slice(5, 7), 10) - 1;
     var monate = [];
-    for (var i = 11; i >= 0; i--) {
-      var d = new Date(Date.UTC(j, mo - i, 1));
-      monate.push(d.toISOString().slice(0, 7));
-    }
-    var ab = (D.radar.daten_ab || "").slice(0, 7);
-    var zaehl = {};
-    THEMEN.forEach(function (t) { zaehl[t.key] = {}; });
-    D.radar.eintraege.forEach(function (e) {
+    for (var i = 11; i >= 0; i--) monate.push(new Date(Date.UTC(j, mo - i, 1)).toISOString().slice(0, 7));
+    var ab = (R.voll_ab || R.daten_ab || "").slice(0, 7);
+    if (ab) monate = monate.filter(function (m) { return m >= ab; });
+    if (!monate.length) return leer("Noch keine Monate vollständig erfasst.", "");
+    var z = {};
+    monate.forEach(function (m) { z[m] = {}; });
+    R.eintraege.forEach(function (e) {
       var m = String(e.veroeffentlicht).slice(0, 7);
-      if (zaehl[e.thema]) zaehl[e.thema][m] = (zaehl[e.thema][m] || 0) + 1;
+      if (z[m]) z[m][e.thema] = (z[m][e.thema] || 0) + 1;
     });
-    var gesamtMax = 1;
-    THEMEN.forEach(function (t) { monate.forEach(function (m) { gesamtMax = Math.max(gesamtMax, zaehl[t.key][m] || 0); }); });
-    return '<div class="trend-raster">' + THEMEN.map(function (t) {
-      var summe = 0;
-      var balken = monate.map(function (m, idx) {
-        var n = zaehl[t.key][m] || 0; summe += n;
-        var hoehe = n ? Math.max(3, Math.round(50 * n / gesamtMax)) : 2;
-        var vorher = ab && m < ab;
-        return '<rect x="' + (idx * 10 + 1) + '" y="' + (52 - hoehe) + '" width="7" height="' + hoehe + '" rx="1.5"' + (vorher || !n ? ' class="leer-monat"' : "") + '><title>' + MONATE_LANG[parseInt(m.slice(5), 10) - 1] + " " + m.slice(0, 4) + ": " + (vorher ? "nicht erfasst" : n) + "</title></rect>";
-      }).join("");
-      return '<div class="trend-zelle" style="' + themaStil(t.key) + '"><h3>' + zThema(t.key) + '<a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '">' + esc(t.name) + "</a><span>" + summe + '</span></h3><svg viewBox="0 0 120 54" preserveAspectRatio="none" role="img" aria-label="' + esc(t.name + ": " + summe + " Veröffentlichungen in 12 Monaten") + '">' + balken + '</svg><div class="trend-achse"><span>' + MONATE[parseInt(monate[0].slice(5), 10) - 1] + "</span><span>" + MONATE[parseInt(monate[11].slice(5), 10) - 1] + "</span></div></div>";
-    }).join("") + "</div>";
+    var summe = function (m) { return THEMEN.reduce(function (a, t) { return a + (z[m][t.key] || 0); }, 0); };
+    var maxS = Math.max.apply(null, monate.map(summe).concat([1]));
+    var schritt = maxS > 60 ? 20 : maxS > 30 ? 10 : 5;
+    var oben = Math.ceil(maxS / schritt) * schritt;
+    var B = 1080, H = 300, L = 36, Rr = 8, T = 24, U = 30, ih = H - T - U, iw = B - L - Rr;
+    var band = iw / monate.length, bw = Math.min(76, band * 0.5);
+    function y(v) { return T + ih - ih * v / oben; }
+    var svg = '<svg class="stapel" viewBox="0 0 ' + B + " " + H + '" role="img" aria-label="Neue Veröffentlichungen je Monat, gestapelt nach Thema. Die Tabelle darunter enthält alle Werte.">';
+    for (var g = 0; g <= oben; g += schritt) svg += '<line class="gitter" x1="' + L + '" x2="' + (B - Rr) + '" y1="' + y(g) + '" y2="' + y(g) + '"/><text class="achse-text" x="' + (L - 8) + '" y="' + (y(g) + 4) + '" text-anchor="end">' + g + "</text>";
+    monate.forEach(function (m, idx) {
+      var x = L + band * idx + (band - bw) / 2, basis = 0, gesamt = summe(m);
+      var mName = MONATE_LANG[parseInt(m.slice(5), 10) - 1] + " " + m.slice(0, 4);
+      var segmente = THEMEN.filter(function (t) { return z[m][t.key]; });
+      segmente.forEach(function (t, sIdx) {
+        var n = z[m][t.key], y0 = y(basis), y1 = y(basis + n), hgt = Math.max(1, y0 - y1 - (sIdx ? 2 : 0));
+        var top = y0 - (sIdx ? 2 : 0) - hgt;
+        var istOben = sIdx === segmente.length - 1, r = Math.min(4, hgt);
+        var d = istOben ? "M" + x + " " + (top + hgt) + "V" + (top + r) + "Q" + x + " " + top + " " + (x + r) + " " + top + "H" + (x + bw - r) + "Q" + (x + bw) + " " + top + " " + (x + bw) + " " + (top + r) + "V" + (top + hgt) + "Z"
+          : "M" + x + " " + top + "H" + (x + bw) + "V" + (top + hgt) + "H" + x + "Z";
+        svg += '<path class="segment" d="' + d + '" style="' + themaStil(t.key) + '" data-tip="' + esc(mName + ": " + t.name + ", " + n + " " + plural(n, "Eintrag", "Einträge")) + '"/>';
+        basis += n;
+      });
+      if (gesamt) svg += '<text class="summe-text" x="' + (x + bw / 2) + '" y="' + (y(gesamt) - 7) + '" text-anchor="middle">' + gesamt + "</text>";
+      svg += '<text class="achse-text" x="' + (x + bw / 2) + '" y="' + (H - 9) + '" text-anchor="middle">' + MONATE[parseInt(m.slice(5), 10) - 1] + (m.slice(5) === "01" || idx === 0 ? " " + m.slice(2, 4) : "") + "</text>";
+    });
+    svg += '<line class="grundlinie" x1="' + L + '" x2="' + (B - Rr) + '" y1="' + y(0) + '" y2="' + y(0) + '"/></svg>';
+    var legende = '<ul class="stapel-legende">' + THEMEN.map(function (t) {
+      return '<li><a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '" style="' + themaStil(t.key) + '"><span class="farbfeld"></span>' + esc(t.name) + "</a></li>";
+    }).join("") + "</ul>";
+    var tabelle = '<details class="stapel-tabelle"><summary>Werte als Tabelle</summary><div class="tabelle-rahmen"><table><thead><tr><th scope="col">Thema</th>' +
+      monate.map(function (m) { return '<th scope="col">' + MONATE[parseInt(m.slice(5), 10) - 1] + " " + m.slice(2, 4) + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      THEMEN.map(function (t) { return '<tr><th scope="row">' + esc(t.name) + "</th>" + monate.map(function (m) { return '<td class="tab">' + (z[m][t.key] || 0) + "</td>"; }).join("") + "</tr>"; }).join("") +
+      '<tr class="summe-zeile"><th scope="row">Gesamt</th>' + monate.map(function (m) { return '<td class="tab">' + summe(m) + "</td>"; }).join("") + "</tr></tbody></table></div></details>";
+    return '<div class="stapel-rahmen">' + svg + legende + tabelle + "</div>";
   }
 
   /* ---------- Schutzrechte ---------- */
@@ -820,6 +850,17 @@
   }
 
   /* ---------- Ereignisse ---------- */
+  var tip = document.createElement("div");
+  tip.className = "tip"; tip.hidden = true; tip.setAttribute("role", "tooltip");
+  document.body.appendChild(tip);
+  main.addEventListener("mousemove", function (ev) {
+    var t = ev.target.closest && ev.target.closest("[data-tip]");
+    if (!t) { tip.hidden = true; return; }
+    tip.textContent = t.getAttribute("data-tip"); tip.hidden = false;
+    var x = Math.min(window.innerWidth - tip.offsetWidth - 8, ev.clientX + 14), yy = ev.clientY - tip.offsetHeight - 12;
+    tip.style.left = Math.max(8, x) + "px"; tip.style.top = (yy < 8 ? ev.clientY + 18 : yy) + "px";
+  });
+  main.addEventListener("mouseleave", function () { tip.hidden = true; });
   function binden() {
     main.querySelectorAll("[data-merken]").forEach(function (b) {
       b.addEventListener("click", function (ev) {
