@@ -1,0 +1,124 @@
+[
+ {
+  "id": "monat-2026-10",
+  "art": "monat",
+  "titel": "Oktober 2026",
+  "zeitraum": {
+   "von": "2026-10-01",
+   "bis": "2026-10-31"
+  },
+  "erstellt": "2026-10-30",
+  "zusammenfassung": "Der Oktober-Bericht umfasst die Erstbefüllung des Radars mit 278 Einträgen, darunter 117 Erteilungen, 117 Offenlegungen und 29 Gebrauchsmuster. Derzeit laufen 114 Einspruchsfristen, 34 davon enden in den nächsten 90 Tagen.",
+  "kurz": "278 neue Einträge, 34 Fristen in 90 Tagen",
+  "kennzahlen": {
+   "neu": 278,
+   "erteilungen": 117,
+   "gebrauchsmuster": 29,
+   "fristen_laufend": 114
+  },
+  "top": [
+   "de-102024123778",
+   "ep-4492677",
+   "de-102023122587",
+   "de-102023000784",
+   "ep-4375587"
+  ],
+  "fristen": [
+   "de-102024102480",
+   "ep-3894760",
+   "de-102012013032",
+   "ep-4483020",
+   "ep-4471224",
+   "ep-4141186",
+   "ep-4119198",
+   "ep-4299851",
+   "ep-4141185",
+   "ep-4058155",
+   "ep-4575131",
+   "ep-4545725",
+   "ep-4541981",
+   "ep-4511409",
+   "ep-4448891",
+   "ep-4383559",
+   "ep-4603651",
+   "ep-4499932",
+   "ep-3902958",
+   "ep-4523325",
+   "ep-4470370",
+   "ep-4411086",
+   "ep-4575120",
+   "de-102024112829",
+   "ep-4103289",
+   "ep-4519059",
+   "ep-4417759",
+   "ep-3911517",
+   "ep-4499942",
+   "ep-3933138",
+   "ep-4431838",
+   "ep-4413659",
+   "ep-4089024",
+   "de-102024139459"
+  ],
+  "trends": "Solarbefestigung auf dem Dach ist mit gut einem Drittel der Einträge das stärkste Feld, vor allem Ballastsysteme für Flachdächer, Dachhaken und Klemmen für Metalldächer. Bei Dachfenstern und Lichtkuppeln melden wenige Anmelder viele Schutzrechte an, im Gründachbereich häufen sich Lösungen zur Wasserspeicherung und passiven Bewässerung. Zu Schneeschutz erschienen im Erfassungszeitraum nur vereinzelte Veröffentlichungen.",
+  "anmelder": [
+   {
+    "name": "VKR Holding A/S",
+    "anzahl": 17
+   },
+   {
+    "name": "SL Rack GmbH",
+    "anzahl": 10
+   },
+   {
+    "name": "RMH Tech LLC",
+    "anzahl": 6
+   },
+   {
+    "name": "Roto Frank Dachsystem-Technologie GmbH",
+    "anzahl": 5
+   },
+   {
+    "name": "Sika Technology AG",
+    "anzahl": 4
+   }
+  ],
+  "news": [
+   "n-20261008-pv-dachziegel-latten"
+  ],
+  "hinweise": [
+   "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
+  ]
+ },
+ {
+  "id": "woche-2026-44",
+  "art": "woche",
+  "titel": "Kalenderwoche 44/2026",
+  "zeitraum": {
+   "von": "2026-10-23",
+   "bis": "2026-10-30"
+  },
+  "erstellt": "2026-10-30",
+  "zusammenfassung": "Erstausgabe: Der Radar startet mit 278 Einträgen zu Dach, Dachentwässerung und angrenzenden Themen, rückwirkend erfasst seit Ende April 2026 (Veröffentlichungen) bzw. Ende Januar 2026 (Erteilungen). In den letzten zwei Wochen sind zwölf Schutzrechte neu erschienen, darunter Anmeldungen zur Abstützung von Dachhaken und zu höhenverstellbaren Solarbefestigungen sowie mehrere Offenlegungen zu Gründach und Sandwichpaneelen mit Photovoltaik. Zwei neue Erteilungen lösen Einspruchsfristen bis Juli 2027 aus.",
+  "kurz": "12 neue Einträge",
+  "kennzahlen": {
+   "neu": 12,
+   "erteilungen": 3,
+   "gebrauchsmuster": 0,
+   "fristen_laufend": 114
+  },
+  "top": [
+   "ep-4824934",
+   "ep-4824479",
+   "de-102019110588"
+  ],
+  "fristen": [
+   "ep-3835508",
+   "de-102019110588"
+  ],
+  "news": [],
+  "hinweise": [
+   "Erstausgabe: Der Radar wurde rückwirkend mit Veröffentlichungen seit Ende April 2026 und Erteilungen seit Ende Januar 2026 befüllt.",
+   "Einzelne europäische Anmeldungen, zu denen noch keine Zusammenfassung vorliegt, werden nachgetragen, sobald der Text verfügbar ist."
+  ]
+ }
+]
