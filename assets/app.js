@@ -15,6 +15,19 @@
   var THEMA = {};
   THEMEN.forEach(function (t) { THEMA[t.key] = t; });
   var ARTEN = ["Offenlegung", "Erteilung", "Gebrauchsmuster", "Internationale Anmeldung"];
+  var BEZUG = { entwaesserung: 10, schneeschutz: 20, solar: 30, sicherheit: 40, deckung: 50, zubehoer: 60, gruendach: 70, werkstoffe: 80 };
+  var RUBRIKEN = [
+    { key: "erteilungen", art: "Erteilung", name: "Erteilungen", codes: "B1, B2, B3, B4", kurz: "Geprüft und erteilt, mit Einspruchsfrist",
+      text: "Geprüfte und erteilte Patente. Ab der Veröffentlichung der Erteilung kann neun Monate lang Einspruch eingelegt werden." },
+    { key: "offenlegungen", art: "Offenlegung", name: "Offenlegungen", codes: "A1, A2", kurz: "Veröffentlichte Anmeldungen, noch ohne Schutz",
+      text: "Veröffentlichte Patentanmeldungen. Sie entfalten noch keinen vollen Schutz, zeigen aber früh, woran gearbeitet wird." },
+    { key: "gebrauchsmuster", art: "Gebrauchsmuster", name: "Gebrauchsmuster", codes: "U1", kurz: "Eingetragen ohne Prüfung, schnell wirksam",
+      text: "Eingetragene Schutzrechte ohne Prüfung auf Neuheit. Sie wirken ab der Eintragung und lassen sich mit einem Löschungsantrag angreifen." },
+    { key: "international", art: "Internationale Anmeldung", name: "International", codes: "WO A1", kurz: "PCT-Anmeldungen, nur klar passende",
+      text: "Internationale Anmeldungen nach dem Patentzusammenarbeitsvertrag (PCT). Aufgenommen werden nur thematisch klar passende." }
+  ];
+  var RUBRIK = {}, RUBRIK_NACH_ART = {};
+  RUBRIKEN.forEach(function (r) { RUBRIK[r.key] = r; RUBRIK_NACH_ART[r.art] = r; });
   var AEMTER = { DE: "Deutschland (DPMA)", EP: "Europa (EPA)", WO: "International (PCT)" };
   var MONATE = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
   var MONATE_LANG = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
@@ -56,6 +69,18 @@
   function fristLaeuft(e) { return !!e.einspruch_bis && tageBis(e.einspruch_bis) >= 0; }
   function themaName(k) { return (THEMA[k] && THEMA[k].name) || k || "–"; }
   function themaStil(k) { return "--themafarbe: var(--t-" + (THEMA[k] ? k : "deckung") + ")"; }
+  function zThema(k, klasse) {
+    var z = window.PRZ && window.PRZ.thema[k];
+    return z ? '<svg class="' + (klasse || "ic-thema") + '" viewBox="0 0 48 48" aria-hidden="true" focusable="false">' + z + "</svg>" : "";
+  }
+  function zRubrik(k, klasse) {
+    var z = window.PRZ && window.PRZ.rubrik[k];
+    return z ? '<svg class="' + (klasse || "ic-rubrik") + '" viewBox="0 0 56 56" aria-hidden="true" focusable="false">' + z + "</svg>" : "";
+  }
+  function kindMarke(e) {
+    var rb = RUBRIK_NACH_ART[e.art];
+    return '<span class="kind kind-' + (rb ? rb.key : "x") + '" title="' + esc(e.art) + '"><small>' + esc(e.amt) + "</small>" + esc(e.kind || "") + "</span>";
+  }
   function relRang(r) { return r === "hoch" ? 0 : 1; }
   function plural(n, a, b) { return n === 1 ? a : b; }
   function kw(isoDatum) {
@@ -119,7 +144,7 @@
     return { name: pfad[0] || "uebersicht", arg: pfad[1] || null, params: params };
   }
   function setzeNav(name) {
-    var n = name === "eintrag" ? "schutzrechte" : name;
+    var n = name === "eintrag" || RUBRIK[name] ? "schutzrechte" : name;
     document.querySelectorAll("[data-route]").forEach(function (a) {
       if (a.getAttribute("data-route") === n) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -133,9 +158,21 @@
     uebersicht: uebersicht, schutzrechte: schutzrechte, eintrag: eintrag, fristen: fristen,
     anmelder: anmelder, news: news, berichte: berichte, hinweise: hinweise, merkliste: merkliste
   };
+  RUBRIKEN.forEach(function (rb) {
+    var fn = function (r) { return schutzrechte(r, rb); };
+    fn.titel = function () { return rb.name; };
+    fn.danach = function (r) { schutzrechte.danach(r); };
+    ANSICHTEN[rb.key] = fn;
+  });
   var letzteRoute = "";
   function zeichnen(fokus) {
     var r = route();
+    if (r.name === "schutzrechte" && RUBRIK_NACH_ART[r.params.get("art")]) {
+      var ziel = RUBRIK_NACH_ART[r.params.get("art")].key;
+      r.params.delete("art");
+      history.replaceState(null, "", hashMit(ziel, r.params));
+      r = route();
+    }
     var fn = ANSICHTEN[r.name] || nichtGefunden;
     setzeNav(r.name);
     main.innerHTML = '<div class="seite einblenden">' + fn(r) + "</div>";
@@ -155,7 +192,8 @@
     var frist = e.einspruch_bis ? '<span class="frist ' + fk + '">Einspruch bis ' + datum(e.einspruch_bis) + (fk === "abgelaufen" ? " (abgelaufen)" : "") + "</span>" : "";
     var merk = Merk.hat(e.id);
     return '<li class="karte" style="' + themaStil(e.thema) + '">' +
-      '<div class="karte-oben"><span class="art-marke">' + esc(e.art) + "</span>" +
+      '<div class="karte-rand">' + kindMarke(e) + zThema(e.thema) + "</div>" +
+      '<div class="karte-inhalt"><div class="karte-oben"><span class="art-marke">' + esc(e.art) + "</span>" +
       '<span class="nummer">' + esc(e.nummer) + "</span>" +
       "<span>" + datum(e.veroeffentlicht) + "</span>" +
       (e.neu_erteilt ? '<span class="etikett neu-erteilt">neu erteilt</span>' : "") +
@@ -167,7 +205,7 @@
       '<span class="relevanz ' + esc(e.relevanz) + '">Relevanz ' + esc(e.relevanz) + "</span>" +
       "<span>" + esc((e.anmelder || []).join(", ")) + "</span>" + frist +
       '<button type="button" class="knopf klein merken" data-merken="' + esc(e.id) + '" aria-pressed="' + merk + '" aria-label="' + (merk ? "Von der Merkliste entfernen" : "Auf die Merkliste") + '">' + ICON.merken + "<span>" + (merk ? "Gemerkt" : "Merken") + "</span></button>" +
-      "</div></li>";
+      "</div></div></li>";
   }
   function leer(titel, text) {
     return '<div class="leer"><strong>' + esc(titel) + "</strong>" + (text ? esc(text) : "") + "</div>";
@@ -221,18 +259,24 @@
     }
 
     var abd = R.abdeckung || {};
-    var html = '<section class="ausgabe" aria-labelledby="ausgabe-titel">' +
-      '<div><h1 id="ausgabe-titel" class="ausgabe-woche"><small>Ausgabe</small>KW ' + w.woche + " / " + w.jahr + "</h1>" +
-      '<p class="ausgabe-satz">' + esc(satz) + "</p></div>" +
-      '<div class="ausgabe-stand"><strong>Stand ' + datum(R.stand) + "</strong>" + esc(alle.length + " Schutzrechte im Radar") +
-      (abd.status === "eingeschraenkt" ? '<br><span class="abdeckung-hinweis">Eingeschränkte Abdeckung</span>' : "") + "</div></section>";
+    var jeThema = {};
+    alle.forEach(function (e) { jeThema[e.thema] = (jeThema[e.thema] || 0) + 1; });
+    var html = '<section class="titelblatt" aria-labelledby="ausgabe-titel">' +
+      '<div class="titelblatt-text"><h1 id="ausgabe-titel" class="ausgabe-woche"><small>Ausgabe</small>KW ' + w.woche + "<span>/" + w.jahr + "</span></h1>" +
+      '<p class="ausgabe-satz">' + esc(satz) + "</p>" +
+      '<p class="ausgabe-links"><a href="#/schutzrechte?neu=1"><strong>' + neu.length + "</strong> neu diese Woche</a>" +
+      '<a href="#/fristen"><strong>' + laufend.length + "</strong> laufende Einspruchsfristen</a></p>" +
+      '<p class="ausgabe-stand">Stand ' + datum(R.stand) + ", " + esc(alle.length + " Schutzrechte im Radar") +
+      (abd.status === "eingeschraenkt" ? '<br><span class="abdeckung-hinweis">Eingeschränkte Abdeckung</span>' : "") + "</p></div>" +
+      '<figure class="zeichenblatt">' + ((window.PRZ && window.PRZ.hero) || "") + "</figure></section>";
 
-    html += kennzahlBlock([
-      { wert: neu.length, name: "neu diese Woche", link: "#/schutzrechte?neu=1" },
-      { wert: erteilt, name: "Erteilungen", link: "#/schutzrechte?art=Erteilung" },
-      { wert: gm, name: "Gebrauchsmuster", link: "#/schutzrechte?art=Gebrauchsmuster" },
-      { wert: laufend.length, name: "laufende Einspruchsfristen", link: "#/fristen" }
-    ]);
+    html += '<section class="bezugszeichen" aria-labelledby="bz-titel"><h2 id="bz-titel">Bezugszeichenliste <span>Themen des Radars, ein Klick zeigt alle Einträge</span></h2><ul>' +
+      THEMEN.map(function (t) {
+        return '<li><a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '" data-thema="' + t.key + '" style="' + themaStil(t.key) + '">' +
+          '<span class="bz-nr">' + BEZUG[t.key] + "</span>" + zThema(t.key) + '<span class="bz-name">' + esc(t.name) + '</span><span class="bz-zahl">' + (jeThema[t.key] || 0) + "</span></a></li>";
+      }).join("") + "</ul></section>";
+
+    html += '<section class="abschnitt" aria-labelledby="rubriken-titel"><div class="abschnitt-kopf"><h2 id="rubriken-titel">Rubriken</h2><a href="#/schutzrechte">Alle ' + alle.length + " Schutzrechte</a></div>" + rubrikKacheln(alle) + "</section>";
 
     html += '<section class="abschnitt" aria-labelledby="leiste-titel"><div class="abschnitt-kopf"><h2 id="leiste-titel">Einspruchsfristen der nächsten neun Monate</h2><a href="#/fristen">Alle Fristen</a></div>' +
       fristenLeiste(laufend) + "</section>";
@@ -262,7 +306,52 @@
     return html;
   }
   uebersicht.titel = function () { return "Übersicht"; };
-  uebersicht.danach = zaehlen;
+  var schonGezeichnet = false;
+  uebersicht.danach = function () {
+    var svg = main.querySelector(".fig-zeichnung");
+    if (!svg) return;
+    var teile = svg.querySelectorAll(".teil");
+    teile.forEach(function (t, i) {
+      var k = t.getAttribute("data-thema");
+      var n = main.querySelector('.bezugszeichen a[data-thema="' + k + '"] .bz-zahl');
+      t.setAttribute("aria-label", BEZUG[k] + " " + themaName(k) + ", " + (n ? n.textContent : "0") + " Einträge");
+      t.style.setProperty("--v", (0.75 + i * 0.16).toFixed(2) + "s");
+    });
+    if (!schonGezeichnet && !reduziert) svg.classList.add("zeichnet");
+    schonGezeichnet = true;
+    main.querySelectorAll(".bezugszeichen a[data-thema]").forEach(function (a) {
+      var teil = svg.querySelector('.teil[data-thema="' + a.getAttribute("data-thema") + '"]');
+      if (!teil) return;
+      function an() { teil.classList.add("hervor"); }
+      function aus() { teil.classList.remove("hervor"); }
+      a.addEventListener("mouseenter", an); a.addEventListener("focus", an);
+      a.addEventListener("mouseleave", aus); a.addEventListener("blur", aus);
+    });
+  };
+
+  function rubrikKacheln(alle) {
+    return '<ul class="rubriken">' + RUBRIKEN.map(function (rb) {
+      var liste = alle.filter(function (e) { return e.art === rb.art; });
+      var neuN = liste.filter(function (e) { return e.neu; }).length;
+      var zusatz = rb.key === "erteilungen" ? liste.filter(fristLaeuft).length + " mit laufender Einspruchsfrist" : (neuN ? neuN + " neu diese Woche" : "Codes " + rb.codes);
+      return '<li><a class="rubrik-kachel rk-' + rb.key + '" href="#/' + rb.key + '">' + zRubrik(rb.key) +
+        '<span class="rk-kopf"><span class="rk-name">' + esc(rb.name) + '</span><span class="rk-zahl">' + liste.length + "</span></span>" +
+        '<span class="rk-text">' + esc(rb.kurz) + '</span><span class="rk-zusatz">' + esc(zusatz) + "</span></a></li>";
+    }).join("") + "</ul>";
+  }
+
+  function rubrikReiter(aktiv, p) {
+    var behalten = new URLSearchParams();
+    ["q", "thema", "amt", "relevanz", "anmelder", "von", "bis", "neu", "frist", "ansicht"].forEach(function (k) { if (p.get(k)) behalten.set(k, p.get(k)); });
+    var basis = filterAnwenden(D.radar.eintraege, behalten);
+    function reiter(key, name, n, icon) {
+      return '<a href="' + hashMit(key, behalten) + '"' + (aktiv === key ? ' aria-current="page"' : "") + ">" + icon + "<span>" + esc(name) + '</span><span class="reiter-zahl">' + n + "</span></a>";
+    }
+    return '<nav class="reiter" aria-label="Rubriken">' + reiter("schutzrechte", "Alle", basis.length, "") +
+      RUBRIKEN.map(function (rb) {
+        return reiter(rb.key, rb.name, basis.filter(function (e) { return e.art === rb.art; }).length, zRubrik(rb.key));
+      }).join("") + "</nav>";
+  }
 
   function topDesMonats() {
     var bericht = D.berichte.filter(function (b) { return b.art === "monat" && b.top && b.top.length; })
@@ -342,7 +431,7 @@
         var vorher = ab && m < ab;
         return '<rect x="' + (idx * 10 + 1) + '" y="' + (52 - hoehe) + '" width="7" height="' + hoehe + '" rx="1.5"' + (vorher || !n ? ' class="leer-monat"' : "") + '><title>' + MONATE_LANG[parseInt(m.slice(5), 10) - 1] + " " + m.slice(0, 4) + ": " + (vorher ? "nicht erfasst" : n) + "</title></rect>";
       }).join("");
-      return '<div class="trend-zelle" style="' + themaStil(t.key) + '"><h3><a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '" style="color:inherit">' + esc(t.name) + "</a><span>" + summe + '</span></h3><svg viewBox="0 0 120 54" preserveAspectRatio="none" role="img" aria-label="' + esc(t.name + ": " + summe + " Veröffentlichungen in 12 Monaten") + '">' + balken + '</svg><div class="trend-achse"><span>' + MONATE[parseInt(monate[0].slice(5), 10) - 1] + "</span><span>" + MONATE[parseInt(monate[11].slice(5), 10) - 1] + "</span></div></div>";
+      return '<div class="trend-zelle" style="' + themaStil(t.key) + '"><h3>' + zThema(t.key) + '<a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '">' + esc(t.name) + "</a><span>" + summe + '</span></h3><svg viewBox="0 0 120 54" preserveAspectRatio="none" role="img" aria-label="' + esc(t.name + ": " + summe + " Veröffentlichungen in 12 Monaten") + '">' + balken + '</svg><div class="trend-achse"><span>' + MONATE[parseInt(monate[0].slice(5), 10) - 1] + "</span><span>" + MONATE[parseInt(monate[11].slice(5), 10) - 1] + "</span></div></div>";
     }).join("") + "</div>";
   }
 
@@ -385,21 +474,30 @@
       optionen.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (o[0] === wert ? " selected" : "") + ">" + esc(o[1]) + "</option>"; }).join("") + "</select></label>";
   }
 
-  function schutzrechte(r) {
+  function schutzrechte(r, rub) {
     var p = r.params;
+    var filterP = new URLSearchParams(p);
+    if (rub) filterP.set("art", rub.art);
     var sort = SORTIERUNG[p.get("sort")] ? p.get("sort") : "datum";
     var ansicht = p.get("ansicht") === "tabelle" ? "tabelle" : "karten";
-    var liste = filterAnwenden(D.radar.eintraege, p).sort(SORTIERUNG[sort].fn);
+    var liste = filterAnwenden(D.radar.eintraege, filterP).sort(SORTIERUNG[sort].fn);
     aktuelleListe = liste;
     var anmelderListe = (D.radar.anmelder || []).map(function (a) { return [a.name, a.name + " (" + a.anzahl + ")"]; });
     var aktiv = ["thema", "art", "amt", "relevanz", "von", "bis", "anmelder", "neu", "frist", "q"].some(function (k) { return p.get(k); });
+    var hier = rub ? rub.key : "schutzrechte";
 
-    var html = '<div class="seite-kopf"><h1>Alle Schutzrechte</h1><p>Patente, Offenlegungen und Gebrauchsmuster aus Deutschland und Europa, nach Patentfamilie zusammengefasst. Jede Ansicht lässt sich über die Adresszeile teilen.</p></div>';
+    var html = rubrikReiter(hier, p);
+    if (rub) {
+      html += '<div class="seite-kopf rubrik-kopf rk-' + rub.key + '">' + zRubrik(rub.key, "rubrik-bild") +
+        "<div><h1>" + esc(rub.name) + "</h1><p>" + esc(rub.text) + ' <span class="hinweis-text">Kennbuchstaben ' + esc(rub.codes) + ".</span></p></div></div>";
+    } else {
+      html += '<div class="seite-kopf"><h1>Alle Schutzrechte</h1><p>Erteilungen, Offenlegungen, Gebrauchsmuster und internationale Anmeldungen aus Deutschland und Europa, nach Patentfamilie zusammengefasst. Die Rubriken oben zeigen jede Art einzeln.</p></div>';
+    }
     html += '<form class="filter" id="filter" role="search" onsubmit="return false">' +
       '<label class="feld suche"><span class="visuell-verborgen">Volltextsuche</span>' + ICON.suche + '<input type="search" name="q" value="' + esc(p.get("q") || "") + '" placeholder="Suche nach Titel, Inhalt, Anmelder, Nummer oder Patentklasse" autocomplete="off"></label>' +
       '<div class="filter-zeile">' +
       auswahl("thema", "Thema", THEMEN.map(function (t) { return [t.key, t.name]; }), p.get("thema")) +
-      auswahl("art", "Art", ARTEN.map(function (a) { return [a, a]; }), p.get("art")) +
+      (rub ? "" : auswahl("art", "Art", ARTEN.map(function (a) { return [a, a]; }), p.get("art"))) +
       auswahl("amt", "Amt", Object.keys(AEMTER).map(function (k) { return [k, AEMTER[k]]; }), p.get("amt")) +
       auswahl("relevanz", "Relevanz", [["hoch", "hoch"], ["mittel", "mittel"]], p.get("relevanz")) +
       auswahl("anmelder", "Anmelder", anmelderListe, p.get("anmelder")) +
@@ -412,7 +510,7 @@
       "</form>";
 
     html += '<div class="ergebnis-leiste"><span class="ergebnis-zahl"><strong>' + liste.length + "</strong> " + plural(liste.length, "Schutzrecht", "Schutzrechte") +
-      (aktiv ? ' gefunden <a href="#/schutzrechte" style="margin-left:8px">Filter zurücksetzen</a>' : "") + "</span>" +
+      (aktiv ? ' gefunden <a href="#/' + hier + '" style="margin-left:8px">Filter zurücksetzen</a>' : "") + "</span>" +
       '<div class="werkzeug-reihe"><div class="knopf-gruppe" role="group" aria-label="Ansicht">' +
       '<button type="button" class="knopf klein" data-ansicht="karten" aria-pressed="' + (ansicht === "karten") + '">Karten</button>' +
       '<button type="button" class="knopf klein" data-ansicht="tabelle" aria-pressed="' + (ansicht === "tabelle") + '">Tabelle</button></div>' +
@@ -438,7 +536,13 @@
         var el = f.elements[k]; if (!el) return;
         if (el.value && !(k === "sort" && el.value === "datum")) p.set(k, el.value); else p.delete(k);
       });
-      var ziel = hashMit("schutzrechte", p);
+      if (!document.body.contains(f)) return;
+      if (RUBRIK[r.name]) p.delete("art");
+      var ziel = hashMit(r.name, p);
+      if (r.name === "schutzrechte" && RUBRIK_NACH_ART[p.get("art")]) {
+        var art = p.get("art"); p.delete("art");
+        ziel = hashMit(RUBRIK_NACH_ART[art].key, p);
+      }
       if (ziel !== location.hash) {
         var fokusName = document.activeElement && document.activeElement.name;
         var pos = document.activeElement && document.activeElement.selectionStart;
@@ -474,27 +578,37 @@
     var e = D.byId[r.arg];
     if (!e) return leer("Dieser Eintrag ist nicht (mehr) im Radar.", "Er wurde möglicherweise mit einem anderen Familienmitglied zusammengeführt.") + '<p style="margin-top:14px"><a href="#/schutzrechte">Zu allen Schutzrechten</a></p>';
     var fk = fristKlasse(e), merk = Merk.hat(e.id);
-    var html = '<a class="zurueck" href="#/schutzrechte">' + ICON.zurueck + "Alle Schutzrechte</a>";
+    var rb = RUBRIK_NACH_ART[e.art];
+    var html = '<a class="zurueck" href="#/' + (rb ? rb.key : "schutzrechte") + '">' + ICON.zurueck + (rb ? rb.name : "Alle Schutzrechte") + "</a>";
     html += '<div class="detail"><article class="detail-haupt" style="' + themaStil(e.thema) + '">' +
-      '<div class="karte-oben"><span class="art-marke">' + esc(e.art) + '</span><span class="nummer">' + esc(e.nummer) + "</span>" + (e.neu_erteilt ? '<span class="etikett neu-erteilt">neu erteilt</span>' : "") + (e.neu ? '<span class="etikett neu">neu diese Woche</span>' : "") + "</div>" +
-      "<h1>" + esc(e.titel) + '</h1><p class="original">' + esc(e.titel_original) + "</p>" +
+      '<div class="karte-oben">' + kindMarke(e) + '<span class="art-marke">' + esc(e.art) + '</span><span class="nummer">' + esc(e.nummer) + "</span>" + (e.neu_erteilt ? '<span class="etikett neu-erteilt">neu erteilt</span>' : "") + (e.neu ? '<span class="etikett neu">neu diese Woche</span>' : "") + "</div>" +
+      "<h1>" + esc(e.titel) + '</h1><p class="original"><span class="inid">(54)</span> ' + esc(e.titel_original) + "</p>" +
       '<h2>Was ist neu?</h2><p class="absatz">' + esc(e.was_neu) + "</p>" +
       '<h2>Bezug</h2><p class="absatz">' + esc(e.bezug) + "</p>" +
       '<div class="werkzeug-reihe" style="margin-top:18px"><button type="button" class="knopf merken" data-merken="' + esc(e.id) + '" aria-pressed="' + merk + '">' + ICON.merken + "<span>" + (merk ? "Gemerkt" : "Merken") + '</span></button><button type="button" class="knopf" data-teilen>' + ICON.teilen + "Link kopieren</button></div>" +
-      "</article><aside class=\"detail-seite\">";
+      "</article><aside class=\"detail-seite\">" +
+      '<figure class="symbolbild" style="' + themaStil(e.thema) + '">' + zThema(e.thema, "symbolbild-zeichnung") +
+      '<figcaption><span class="bz-nr">' + (BEZUG[e.thema] || "") + "</span> " + esc(themaName(e.thema)) + '<span class="hinweis-text">Symbolbild zum Thema, keine Zeichnung aus der Patentschrift</span></figcaption></figure>';
     if (e.einspruch_bis) {
       html += '<div class="kasten frist-kasten ' + fk + '"><h2>Einspruch möglich bis</h2><div class="frist-datum">' + datum(e.einspruch_bis) + "</div><p>" +
         (fk === "abgelaufen" ? "Frist abgelaufen." : "Noch " + tageBis(e.einspruch_bis) + " Tage.") + " Neun Monate ab Veröffentlichung der Erteilung am " + datum(e.erteilung_datum) +
         " (" + (e.amt === "EP" ? "Art. 99 EPÜ" : "§ 59 PatG") + ").</p><p class=\"hinweis-text\" style=\"margin:0\">Frist im amtlichen Register prüfen.</p></div>";
     }
+    var inidVeroeff = e.art === "Erteilung" ? ["(45)", "Veröffentlichung der Erteilung"] : e.art === "Gebrauchsmuster" ? ["(43)", "Bekanntmachung"] : ["(43)", "Veröffentlichung"];
+    function zeile(inid, name, wert) { return "<dt>" + (inid ? '<span class="inid">' + inid + "</span>" : "") + esc(name) + "</dt><dd>" + wert + "</dd>"; }
     html += '<div class="kasten"><h2>Daten</h2><dl class="daten">' +
-      "<dt>Art</dt><dd>" + esc(e.art) + "</dd><dt>Amt</dt><dd>" + esc(AEMTER[e.amt] || e.amt) + '</dd><dt>Nummer</dt><dd class="nummer">' + esc(e.nummer) + "</dd>" +
-      "<dt>Anmelder</dt><dd>" + (e.anmelder || []).map(function (a) { return '<a href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a })) + '">' + esc(a) + "</a>"; }).join("<br>") + "</dd>" +
-      "<dt>Veröffentlicht</dt><dd>" + datum(e.veroeffentlicht) + "</dd><dt>Angemeldet</dt><dd>" + datum(e.angemeldet) + "</dd><dt>Priorität</dt><dd>" + datum(e.prioritaet) + "</dd>" +
-      '<dt>Thema</dt><dd><span class="thema-marke" style="' + themaStil(e.thema) + '">' + esc(themaName(e.thema)) + "</span></dd>" +
-      '<dt>Relevanz</dt><dd><span class="relevanz ' + esc(e.relevanz) + '">' + esc(e.relevanz) + "</span></dd>" +
-      "<dt>Klassen</dt><dd>" + esc((e.klassen || []).join(", ")) + "</dd>" +
-      "<dt>Im Radar seit</dt><dd>" + datum(e.aufgenommen) + "</dd></dl></div>";
+      zeile("(11)", "Nummer", '<span class="nummer">' + esc(e.nummer) + "</span>") +
+      zeile("", "Art", esc(e.art) + ", " + esc(AEMTER[e.amt] || e.amt)) +
+      (e.anmeldenummer ? zeile("(21)", "Aktenzeichen", '<span class="nummer">' + esc(e.anmeldenummer) + "</span>") : "") +
+      zeile("(22)", "Anmeldetag", datum(e.angemeldet)) +
+      (e.prioritaet ? zeile("(30)", "Priorität", datum(e.prioritaet)) : "") +
+      zeile(inidVeroeff[0], inidVeroeff[1], datum(e.veroeffentlicht)) +
+      zeile("(51)", "Klassen", esc((e.klassen || []).join(", "))) +
+      zeile("(71)", "Anmelder", (e.anmelder || []).map(function (a) { return '<a href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a })) + '">' + esc(a) + "</a>"; }).join("<br>")) +
+      zeile("", "Thema", '<span class="thema-marke" style="' + themaStil(e.thema) + '">' + esc(themaName(e.thema)) + "</span>") +
+      zeile("", "Relevanz", '<span class="relevanz ' + esc(e.relevanz) + '">' + esc(e.relevanz) + "</span>") +
+      zeile("", "Im Radar seit", datum(e.aufgenommen)) + "</dl>" +
+      '<p class="hinweis-text inid-hinweis">Die Zahlen in Klammern sind die international genormten Kennungen (INID) der Angaben auf Patentschriften.</p></div>';
     if (e.familie && e.familie.length) {
       html += '<div class="kasten"><h2>Weitere Familienmitglieder</h2><ul class="link-liste">' + e.familie.map(function (f) {
         return '<li><span class="nummer">' + esc(f.nummer) + "</span>" + (f.art ? " – " + esc(f.art) : "") + (f.datum ? ", " + datum(f.datum) : "") + "</li>";
@@ -632,7 +746,8 @@
       "<li>Treffer werden thematisch geprüft und als hoch oder mittel relevant eingestuft. Bauthemen ohne Dachbezug werden nicht aufgenommen.</li>" +
       "<li>Dokumente derselben Patentfamilie werden zu einem Eintrag zusammengefasst; gezeigt wird der weiteste Stand, also Erteilung vor Anmeldung. Wird eine bereits gezeigte Anmeldung erteilt, wird der Eintrag aktualisiert und als „neu erteilt“ markiert.</li>" +
       "<li>Jeder Eintrag beruht auf einer amtlichen Nummer und verlinkt auf Espacenet und das jeweilige amtliche Register. Daten und Fristen stammen aus den amtlichen Daten; Einspruchsfristen werden aus dem Veröffentlichungstag der Erteilung berechnet.</li>" +
-      "<li>Die Texte unter „Was ist neu?“ und „Bezug“ sind eigene Zusammenfassungen und ersetzen nicht die Lektüre der Patentschrift.</li></ul>" +
+      "<li>Die Texte unter „Was ist neu?“ und „Bezug“ sind eigene Zusammenfassungen und ersetzen nicht die Lektüre der Patentschrift.</li>" +
+      "<li>Die Zeichnungen auf dieser Seite sind eigene Symbolbilder im Stil von Patentzeichnungen. Sie zeigen keine Inhalte aus den Patentschriften.</li></ul>" +
       "<h2>Die 18-Monats-Regel</h2><p>Patentanmeldungen werden erst 18 Monate nach dem Prioritätstag veröffentlicht. Was heute im Radar erscheint, wurde also meist eineinhalb Jahre zuvor angemeldet. Jüngere Entwicklungen sind noch nicht sichtbar. Gebrauchsmuster werden dagegen schon mit der Eintragung bekannt gemacht, oft wenige Monate nach der Anmeldung.</p>" +
       '<h2>Glossar</h2><dl class="glossar">' +
       "<dt>Offenlegung</dt><dd>Veröffentlichung einer Patentanmeldung, meist 18 Monate nach dem Prioritätstag. Ein Schutzrecht besteht damit noch nicht.</dd>" +
@@ -641,6 +756,8 @@
       "<dt>Einspruch</dt><dd>Verfahren, mit dem Dritte ein erteiltes Patent innerhalb von neun Monaten nach Veröffentlichung der Erteilung angreifen können (DE: § 59 PatG, EP: Art. 99 EPÜ).</dd>" +
       "<dt>Patentfamilie</dt><dd>Alle Anmeldungen und Patente, die auf dieselbe Erfindung und dieselbe Priorität zurückgehen, etwa eine deutsche und eine europäische Fassung.</dd>" +
       "<dt>Kind-Codes</dt><dd>Kennbuchstaben hinter der Nummer. DE: A1 Offenlegungsschrift, B3 Patentschrift ohne vorherige Offenlegung, B4 Patentschrift nach Offenlegung, U1 Gebrauchsmuster. EP: A1 Anmeldung mit Recherchenbericht, A2 Anmeldung ohne Recherchenbericht, B1 Patentschrift, B2 geänderte Patentschrift nach Einspruch. WO: A1 internationale Anmeldung.</dd>" +
+      "<dt>Bezugszeichen</dt><dd>Zahlen in Patentzeichnungen, die auf einzelne Bauteile verweisen. In der Zeichnung auf der Übersicht führen sie zu den Themen des Radars.</dd>" +
+      "<dt>INID-Kennungen</dt><dd>International genormte Zahlen in Klammern für die Angaben auf Patentschriften, etwa (11) Nummer, (22) Anmeldetag, (54) Bezeichnung oder (71) Anmelder.</dd>" +
       "<dt>Einheitliche Wirkung</dt><dd>Europäische Patente können nach der Erteilung einheitliche Wirkung in den teilnehmenden EU-Staaten erhalten (Einheitspatent). Den Status zeigt das Europäische Patentregister.</dd></dl>" +
       "<h2>Datenschutz</h2><p>Diese Seite setzt keine Cookies, verwendet keine Analyse- oder Tracking-Dienste und lädt keine Inhalte von fremden Servern. Merkliste und Farbmodus werden nur im eigenen Browser gespeichert.</p>" +
       '<h2>Benachrichtigung</h2><p>Der <a href="feed.xml">RSS-Feed</a> enthält die wöchentlichen Neuheiten und lässt sich mit einem RSS-zu-E-Mail-Dienst abonnieren.</p></div>';
@@ -730,14 +847,14 @@
       b.addEventListener("click", function () {
         var r = route(); var p = r.params;
         if (b.getAttribute("data-ansicht") === "tabelle") p.set("ansicht", "tabelle"); else p.delete("ansicht");
-        history.replaceState(null, "", hashMit("schutzrechte", p)); zeichnen(false);
+        history.replaceState(null, "", hashMit(r.name, p)); zeichnen(false);
       });
     });
     main.querySelectorAll("[data-sort]").forEach(function (b) {
       b.addEventListener("click", function () {
         var r = route(); var p = r.params; var k = b.getAttribute("data-sort");
         if (k === "datum") p.delete("sort"); else p.set("sort", k);
-        history.replaceState(null, "", hashMit("schutzrechte", p)); zeichnen(false);
+        history.replaceState(null, "", hashMit(r.name, p)); zeichnen(false);
       });
     });
     main.querySelectorAll("[data-drucken]").forEach(function (b) { b.addEventListener("click", function () { window.print(); }); });

@@ -7,6 +7,7 @@ Die Seite ist statisch: Die Daten liegen als JSON im Ordner `data/`, Suche und F
 ## Aufbau
 
 - `index.html`, `assets/` – Oberfläche (Schriften und Bibliotheken liegen lokal, keine externen Abrufe)
+- `assets/zeichnungen.js` – eigene Strichzeichnungen im Stil von Patentfiguren, erzeugt mit `tools/zeichnungen.py`
 - `data/eintraege.json` – gepflegte Einträge, `data/news.json` – Meldungen, `data/berichte.json` – Berichte, `data/meta.json` – Stand und Abdeckung
 - `data/radar.json`, `feed.xml` – werden von `tools/build.py` erzeugt
 - `tools/suchprofil.json` – Patentklassen und Stichwörter der Recherche
