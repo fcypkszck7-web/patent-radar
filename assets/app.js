@@ -962,6 +962,7 @@
   function restText(ende, kurz) {
     var t = tageBis(ende);
     if (t < 0) return "abgelaufen";
+    if (t === 0) return "endet heute";
     if (t < 62) return "noch " + t + " " + plural(t, "Tag", "Tage");
     var a = new Date(heute() + "T00:00:00Z"), b = new Date(ende + "T00:00:00Z");
     var m = (b.getUTCFullYear() - a.getUTCFullYear()) * 12 + (b.getUTCMonth() - a.getUTCMonth()) - (b.getUTCDate() < a.getUTCDate() ? 1 : 0);
@@ -1206,7 +1207,7 @@
       titel: esc(e.titel),
       chips: [
         { name: themaName(e.thema), farbe: "--themafarbe", link: hashMit("bestand", new URLSearchParams({ thema: e.thema })) },
-        e.art === "anmeldung" ? { name: "keine Erteilung veröffentlicht", farbe: "--r-offenlegungen" } : { wert: esc(restText(e.ende, true).replace(/^noch /, "")), name: "längstens bis " + datum(e.ende), farbe: t < 365 ? "--kupfer-band" : "--patina-band" }
+        e.art === "anmeldung" ? { name: "keine Erteilung veröffentlicht", farbe: "--r-offenlegungen" } : { wert: esc(t > 0 ? restText(e.ende, true).replace(/^noch /, "") : "endet heute"), name: "längstens bis " + datum(e.ende), farbe: t < 365 ? "--kupfer-band" : "--patina-band" }
       ],
       fig: zThema(e.thema, "fig-zeichnung symbol-gross"),
       figAttr: ' aria-label="Symbolbild zum Thema ' + esc(themaName(e.thema)) + '"',

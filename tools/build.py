@@ -151,7 +151,7 @@ def namenschluessel(n):
 STAAT_ORT = re.compile(r",\s*(?!Co\.)(?:[A-Z][a-z]{1,4}\.|[A-Z]\.\s?[A-Z]\.)\s*,\s*[^,]+$")
 RECHTSFORM_ORT = re.compile(r"^(.*?\b(?:GmbH\s*&\s*Co\.?\s*KG|GmbH|mbH|AG|KGaA|KG|SE|e\.\s?V\.|LLC|L\.L\.C\.|Inc\.?|Ltd\.?|Limited|"
                             r"Corp\.?|Corporation|B\.\s?V\.|N\.\s?V\.|S\.A\.S\.|S\.A\.|SAS|SARL|S\.p\.A\.|S\.r\.l\.|AB|A/S|ApS|Oyj|Oy|"
-                            r"Sp\. z o\.o\.|s\.r\.o\.|PLC|GesmbH|Ges\.m\.b\.H\.))\s*,\s*[^,]+$", re.I)
+                            r"Sp\. z o\.o\.|s\.r\.o\.|PLC|GesmbH|Ges\.m\.b\.H\.))\s*(?:,\s*[^,]+){1,2}$", re.I)
 
 
 def ohne_ort(name):
@@ -159,7 +159,14 @@ def ohne_ort(name):
     'Roto Frank AG, Leinfelden-Echterdingen' -> 'Roto Frank AG'"""
     n = STAAT_ORT.sub("", (name or "").strip())
     m = RECHTSFORM_ORT.match(n)
-    return m.group(1).strip() if m else n
+    if m:
+        return m.group(1).strip()
+    # Personen: 'Nachname, Vorname, Ort' -> 'Nachname, Vorname' (Titel wie Dr. oder Dipl.-Ing. bleiben)
+    teile = [x.strip() for x in n.split(",")]
+    if (len(teile) == 3 and re.match(r"^[A-ZÄÖÜ][\w'\-]+(?: [a-z]{2,3})?$", teile[0]) and re.match(r"^[A-ZÄÖÜ][\w.\- ]+$", teile[1])
+            and not re.search(r"Dr\.|Dipl|Prof|Ing\.|jun\.|sen\.|Mag\.", teile[2]) and not re.search(r"\d", teile[2])):
+        return ", ".join(teile[:2])
+    return n
 
 
 def anzeige_nummer(amt, nr, kind):
