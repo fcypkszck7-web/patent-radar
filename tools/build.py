@@ -148,6 +148,20 @@ def namenschluessel(n):
     return re.sub(r"[^a-z0-9]", "", t)
 
 
+STAAT_ORT = re.compile(r",\s*(?!Co\.)(?:[A-Z][a-z]{1,4}\.|[A-Z]\.\s?[A-Z]\.)\s*,\s*[^,]+$")
+RECHTSFORM_ORT = re.compile(r"^(.*?\b(?:GmbH\s*&\s*Co\.?\s*KG|GmbH|mbH|AG|KGaA|KG|SE|e\.\s?V\.|LLC|L\.L\.C\.|Inc\.?|Ltd\.?|Limited|"
+                            r"Corp\.?|Corporation|B\.\s?V\.|N\.\s?V\.|S\.A\.S\.|S\.A\.|SAS|SARL|S\.p\.A\.|S\.r\.l\.|AB|A/S|ApS|Oyj|Oy|"
+                            r"Sp\. z o\.o\.|s\.r\.o\.|PLC|GesmbH|Ges\.m\.b\.H\.))\s*,\s*[^,]+$", re.I)
+
+
+def ohne_ort(name):
+    """'Ford Global Technologies, LLC, Mich., Dearborn' -> 'Ford Global Technologies, LLC';
+    'Roto Frank AG, Leinfelden-Echterdingen' -> 'Roto Frank AG'"""
+    n = STAAT_ORT.sub("", (name or "").strip())
+    m = RECHTSFORM_ORT.match(n)
+    return m.group(1).strip() if m else n
+
+
 def anzeige_nummer(amt, nr, kind):
     """DE102015104643 + B4 -> 'DE 10 2015 104 643 B4'; EP1845319 + B1 -> 'EP 1845319 B1'"""
     z = nr[2:]
@@ -175,6 +189,8 @@ def baue_bestand(quelle, heute, radar_eintraege):
             vorgabe.setdefault(namenschluessel(n), n)
     varianten, laender, haeufig = {}, {}, {}
     for r in rechte:
+        r["anmelder"] = [[ohne_ort(n), l] for n, l in r.get("anmelder") or []]
+    for r in rechte:
         for name, land in r.get("anmelder") or []:
             k = namenschluessel(name)
             if not k:
@@ -194,8 +210,31 @@ def baue_bestand(quelle, heute, radar_eintraege):
         pool = gemischt or list(v)
         return max(pool, key=lambda n: (v[n], -len(n)))
 
-    schluessel = sorted(haeufig, key=lambda k: (-haeufig[k], anzeigename(k).lower()))
-    index = {k: i for i, k in enumerate(schluessel)}
+    # Restliche Ortsangaben: 'Firma, Ort' auf 'Firma' zurückführen, wenn es 'Firma' auch ohne Ort gibt
+    umleiten = {}
+    for k, v in varianten.items():
+        if k in vorgabe:
+            continue
+        name = max(v, key=v.get)
+        if ", " in name:
+            kurz = namenschluessel(name.rsplit(", ", 1)[0])
+            if kurz != k and kurz in varianten:
+                umleiten[k] = kurz
+    for k, ziel in umleiten.items():
+        haeufig[ziel] = haeufig.get(ziel, 0) + haeufig.pop(k, 0)
+        laender.setdefault(ziel, {})
+        for l, c in laender.pop(k, {}).items():
+            laender[ziel][l] = laender[ziel].get(l, 0) + c
+
+    def ziel(k):
+        return umleiten.get(k, k)
+
+    # Gleicher Anzeigename = ein Anmelder
+    nach_name = {}
+    for k in haeufig:
+        nach_name.setdefault(anzeigename(k), []).append(k)
+    namen = sorted(nach_name, key=lambda n: (-sum(haeufig[k] for k in nach_name[n]), n.lower()))
+    index = {k: i for i, n in enumerate(namen) for k in nach_name[n]}
     eintraege, zaehl = [], {"patent": 0, "anmeldung": 0, "gm": 0}
     for r in rechte:
         if r.get("art") not in BESTAND_ART or r.get("thema") not in THEMEN:
@@ -212,10 +251,10 @@ def baue_bestand(quelle, heute, radar_eintraege):
         titel = t.get("de") or t.get("en") or t.get("fr") or next(iter(t.values()), "")
         anm, gesehen = [], set()
         for name, _ in r.get("anmelder") or []:
-            k = namenschluessel(name)
-            if k in index and k not in gesehen:
+            k = ziel(namenschluessel(name))
+            if k in index and index[k] not in gesehen:
                 anm.append(index[k])
-                gesehen.add(k)
+                gesehen.add(index[k])
         zaehl[r["art"]] += 1
         eintraege.append([
             f"{r['amt'].lower()}-{nr[2:]}", r["amt"], r["art"], anzeige_nummer(r["amt"], nr, letzt["kind"]),
@@ -228,8 +267,8 @@ def baue_bestand(quelle, heute, radar_eintraege):
         "vollstaendig": bool(roh.get("vollstaendig")), "heute": heute, "anmeldungen_jahre": ANMELDUNG_JAHRE,
         "felder": ["id", "amt", "art", "nummer", "dokumente", "angemeldet", "veroeffentlicht", "erteilt", "ende",
                    "thema", "titel", "anmelder", "klassen", "geaendert"],
-        "anmelder": [anzeigename(k) for k in schluessel],
-        "anmelder_land": [max(laender[k], key=laender[k].get) if k in laender else None for k in schluessel],
+        "anmelder": namen,
+        "anmelder_land": [land_von([laender.get(k, {}) for k in nach_name[n]]) for n in namen],
         "eintraege": eintraege,
     }
     return bestand
@@ -242,6 +281,14 @@ def schreibe_bestand(bestand):
         f.write(json.dumps(kopf, ensure_ascii=False, separators=(",", ":"))[:-1] + ',"eintraege":[\n')
         f.write(",\n".join(json.dumps(z, ensure_ascii=False, separators=(",", ":")) for z in bestand["eintraege"]))
         f.write("\n]}\n")
+
+
+def land_von(zaehlungen):
+    gesamt = {}
+    for z in zaehlungen:
+        for l, c in z.items():
+            gesamt[l] = gesamt.get(l, 0) + c
+    return max(gesamt, key=gesamt.get) if gesamt else None
 
 
 def bestand_kurz(bestand, heute):

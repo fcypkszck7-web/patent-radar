@@ -76,5 +76,8 @@
   "gutter", "gutter hanger", "gutter bracket", "downpipe", "downspout", "gutter guard", "snow guard", "snow retention", "snow stop",
   "snow fence", "roof walkway", "roof hook", "roof drain", "scupper", "solar roof mount", "roof anchor", "roof safety", "roof penetration",
   "eaves", "rainwater", "green roof", "roof tile", "roofing"
- ]
+ ],
+ "bestand_titel_pflicht": ["B21D", "C22C38/", "C23C2/", "H02S20/20", "H02S20/22", "H02S20/26", "F24S25/6", "F24S25/70"],
+ "bestand_titel_stichwoerter": ["dach", "roof", "rinne", "gutter", "schnee", "snow", "ziegel", "sparren", "rafter", "traufe", "eaves", "attika", "stehfalz", "falzdach", "trapezblech", "bedachung", "toit", "tuile", "gouttière"],
+ "bestand_ausschluss": ["fahrzeug", "vehicle", "automobil", "automotive", "karosserie", "car body", "schiebedach", "sunroof", "cabrio", "convertible", "wohnmobil", "caravan", "anhänger", "trailer", "zaun", "fence", "carport", "pergola", "terrasse", "gewächshaus", "greenhouse", "markise", "awning", "windturbine", "wind turbine", "panzerung", "véhicule", "kabelrinne", "kabelkanal"]
 }
