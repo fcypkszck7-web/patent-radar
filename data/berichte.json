@@ -1,5 +1,50 @@
 [
  {
+  "id": "woche-2026-45",
+  "art": "woche",
+  "titel": "Kalenderwoche 45/2026",
+  "zeitraum": {
+   "von": "2026-10-26",
+   "bis": "2026-11-02"
+  },
+  "erstellt": "2026-11-02",
+  "zusammenfassung": "Sieben neue Einträge, davon fünf Erteilungen: Schwerpunkte sind Solarbefestigung auf Falz- und Flachdächern, eine Durchsturzsicherung für Lichtbänder und eine Klemmverbindung, die unter anderem Rinnenhaltern zugeordnet ist. Dazu kommen eine selbstklebende Abdichtungsbahn und ein Anschlusselement für Dachfenster. Für die fünf Erteilungen laufen neue Einspruchsfristen bis Ende Juli 2027.",
+  "kurz": "7 neue Einträge",
+  "kennzahlen": {
+   "neu": 7,
+   "erteilungen": 5,
+   "gebrauchsmuster": 0,
+   "fristen_laufend": 119
+  },
+  "themen": {
+   "entwaesserung": 1,
+   "solar": 3,
+   "sicherheit": 1,
+   "zubehoer": 1,
+   "deckung": 1
+  },
+  "arten": {
+   "Erteilung": 5,
+   "Offenlegung": 2
+  },
+  "top": [
+   "ep-3710647",
+   "ep-4727008",
+   "de-102017109317"
+  ],
+  "fristen": [
+   "ep-3710647",
+   "ep-4727008",
+   "ep-4609503",
+   "ep-4212684",
+   "de-102017109317"
+  ],
+  "news": [],
+  "hinweise": [
+   "Zu sechs bereits erfassten europäischen Anmeldungen liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+  ]
+ },
+ {
   "id": "monat-2026-10",
   "art": "monat",
   "titel": "Oktober 2026",
@@ -7,14 +52,30 @@
    "von": "2026-10-01",
    "bis": "2026-10-31"
   },
-  "erstellt": "2026-10-30",
-  "zusammenfassung": "Der Oktober-Bericht umfasst die Erstbefüllung des Radars mit 278 Einträgen, darunter 117 Erteilungen, 117 Offenlegungen und 29 Gebrauchsmuster. Derzeit laufen 114 Einspruchsfristen, 34 davon enden in den nächsten 90 Tagen.",
-  "kurz": "278 neue Einträge, 34 Fristen in 90 Tagen",
+  "erstellt": "2026-11-02",
+  "zusammenfassung": "Der Oktober-Bericht umfasst die Erstbefüllung des Radars mit 278 Einträgen, darunter 117 Erteilungen, 117 Offenlegungen und 29 Gebrauchsmuster. Stand Anfang November laufen 119 Einspruchsfristen, 38 davon enden in den nächsten 90 Tagen.",
+  "kurz": "278 neue Einträge, 38 Fristen in 90 Tagen",
   "kennzahlen": {
    "neu": 278,
    "erteilungen": 117,
    "gebrauchsmuster": 29,
-   "fristen_laufend": 114
+   "fristen_laufend": 119
+  },
+  "themen": {
+   "gruendach": 25,
+   "solar": 102,
+   "deckung": 55,
+   "entwaesserung": 20,
+   "zubehoer": 48,
+   "sicherheit": 21,
+   "werkstoffe": 3,
+   "schneeschutz": 4
+  },
+  "arten": {
+   "Offenlegung": 117,
+   "Erteilung": 117,
+   "Gebrauchsmuster": 29,
+   "Internationale Anmeldung": 15
   },
   "top": [
    "de-102024123778",
@@ -57,7 +118,11 @@
    "ep-4431838",
    "ep-4413659",
    "ep-4089024",
-   "de-102024139459"
+   "de-102024139459",
+   "ep-4397820",
+   "ep-4275274",
+   "ep-4172222",
+   "ep-3310717"
   ],
   "trends": "Solarbefestigung auf dem Dach ist mit gut einem Drittel der Einträge das stärkste Feld, vor allem Ballastsysteme für Flachdächer, Dachhaken und Klemmen für Metalldächer. Bei Dachfenstern und Lichtkuppeln melden wenige Anmelder viele Schutzrechte an, im Gründachbereich häufen sich Lösungen zur Wasserspeicherung und passiven Bewässerung. Zu Schneeschutz erschienen im Erfassungszeitraum nur vereinzelte Veröffentlichungen.",
   "anmelder": [
@@ -87,23 +152,7 @@
   ],
   "hinweise": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
-  ],
-  "themen": {
-   "gruendach": 25,
-   "solar": 102,
-   "deckung": 55,
-   "entwaesserung": 20,
-   "zubehoer": 48,
-   "sicherheit": 21,
-   "werkstoffe": 3,
-   "schneeschutz": 4
-  },
-  "arten": {
-   "Offenlegung": 117,
-   "Erteilung": 117,
-   "Gebrauchsmuster": 29,
-   "Internationale Anmeldung": 15
-  }
+  ]
  },
  {
   "id": "woche-2026-44",

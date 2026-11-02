@@ -1,9 +1,9 @@
 {
- "stand": "2026-10-30",
- "heute": "2026-10-30",
+ "stand": "2026-11-02",
+ "heute": "2026-11-02",
  "lauf": {
-  "datum": "2026-10-30",
-  "art": "erstbefuellung"
+  "datum": "2026-11-02",
+  "art": "woche"
  },
  "daten_ab": "2026-01-29",
  "voll_ab": "2026-05-01",
@@ -14,19 +14,18 @@
    {
     "name": "DEPATISnet (DPMA)",
     "umfang": "DE, EP, WO – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
-    "stand": "2026-10-29",
+    "stand": "2026-11-02",
     "status": "aktuell"
    },
    {
     "name": "Europäischer Publikationsserver (EPA)",
     "umfang": "Ergänzend: Zusammenfassungen und Ansprüche europäischer Dokumente",
-    "stand": "2026-10-29",
+    "stand": "2026-11-02",
     "status": "aktuell"
    }
   ],
   "hinweise_woche": [
-   "Erstausgabe: Der Radar wurde rückwirkend mit Veröffentlichungen seit Ende April 2026 und Erteilungen seit Ende Januar 2026 befüllt.",
-   "Einzelne europäische Anmeldungen, zu denen noch keine Zusammenfassung vorliegt, werden nachgetragen, sobald der Text verfügbar ist."
+   "Zu sechs bereits erfassten europäischen Anmeldungen liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
   ],
   "hinweise_monat": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
@@ -34,21 +33,21 @@
  },
  "weiterleitungen": [],
  "kennzahlen": {
-  "gesamt": 278,
-  "neu": 12,
-  "erteilungen": 117,
+  "gesamt": 285,
+  "neu": 7,
+  "erteilungen": 122,
   "gebrauchsmuster": 29,
-  "fristen_laufend": 114
+  "fristen_laufend": 119
  },
  "anmelder": [
   {
    "name": "VKR Holding A/S",
-   "anzahl": 17,
+   "anzahl": 19,
    "land": "DK",
    "themen": {
-    "zubehoer": 14,
+    "zubehoer": 15,
     "entwaesserung": 1,
-    "sicherheit": 2
+    "sicherheit": 3
    }
   },
   {
@@ -103,6 +102,14 @@
    }
   },
   {
+   "name": "Contact Italia S.r.l.",
+   "anzahl": 3,
+   "land": "IT",
+   "themen": {
+    "solar": 3
+   }
+  },
+  {
    "name": "Enstall US Inc.",
    "anzahl": 3,
    "land": "US",
@@ -145,6 +152,14 @@
    }
   },
   {
+   "name": "ACO Ahlmann SE & Co. KG",
+   "anzahl": 2,
+   "land": "DE",
+   "themen": {
+    "entwaesserung": 2
+   }
+  },
+  {
    "name": "Aerocompact Group Holding GmbH",
    "anzahl": 2,
    "land": "AT",
@@ -162,11 +177,12 @@
    }
   },
   {
-   "name": "Contact Italia S.r.l.",
+   "name": "Blachotrapez Sp. z o.o.",
    "anzahl": 2,
-   "land": "IT",
+   "land": "PL",
    "themen": {
-    "solar": 2
+    "deckung": 1,
+    "solar": 1
    }
   },
   {
@@ -372,14 +388,6 @@
    }
   },
   {
-   "name": "ACO Ahlmann SE & Co. KG",
-   "anzahl": 1,
-   "land": "DE",
-   "themen": {
-    "entwaesserung": 1
-   }
-  },
-  {
    "name": "Adhex Tech",
    "anzahl": 1,
    "land": "FR",
@@ -513,14 +521,6 @@
    "land": "DE",
    "themen": {
     "solar": 1
-   }
-  },
-  {
-   "name": "Blachotrapez Sp. z o.o.",
-   "anzahl": 1,
-   "land": "PL",
-   "themen": {
-    "deckung": 1
    }
   },
   {
@@ -948,6 +948,14 @@
    }
   },
   {
+   "name": "Henkel AG & Co. KGaA",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "deckung": 1
+   }
+  },
+  {
    "name": "Heuel GmbH Aluminiumgießerei",
    "anzahl": 1,
    "land": "DE",
@@ -1153,6 +1161,14 @@
    "land": "DE",
    "themen": {
     "entwaesserung": 1
+   }
+  },
+  {
+   "name": "Matthew Ennis",
+   "anzahl": 1,
+   "land": "IE",
+   "themen": {
+    "solar": 1
    }
   },
   {
@@ -1798,6 +1814,396 @@
  ],
  "eintraege": [
   {
+   "id": "de-102017109317",
+   "titel": "Durchsturzsicherung aus Gittermatten für Lichtbänder",
+   "titel_original": "Durchsturzsicherung für eine Lichtbandzarge sowie Verfahren zur Herstellung einer Durchsturzsicherung",
+   "was_neu": "Ein Schutzgitter aus Längs- und Querstäben wird über Halteelemente an der Zarge eines Lichtbands oder am Aufsetzkranz einer Lichtkuppel befestigt. Das Gitter besteht aus Mattenabschnitten, die an den Stoßkanten mit einem durch die Maschen gedrehten Spiraldraht verbunden sind. Beim Auffangen einer Last darf sich das Gitter verformen und hält die Person zurück.",
+   "bezug": "Betrifft Absturzsicherung an Lichtbändern und Lichtkuppeln auf Dächern.",
+   "amt": "DE",
+   "nummer": "DE 10 2017 109 317 B4",
+   "anmelder": [
+    "VKR Holding A/S"
+   ],
+   "anmelder_original": [
+    "VKR Holding A/S, Hørsholm"
+   ],
+   "anmelder_land": [
+    "DK"
+   ],
+   "veroeffentlicht": "2026-10-29",
+   "angemeldet": "2017-05-02",
+   "prioritaet": "2016-12-23",
+   "anmeldenummer": "102017109317",
+   "thema": "sicherheit",
+   "relevanz": "hoch",
+   "punkte": 25,
+   "klassen": [
+    "E04D13/0335",
+    "E04D13/03",
+    "E04G21/3266",
+    "E06B9/01"
+   ],
+   "familie": [],
+   "aufgenommen": "2026-11-02",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "B4",
+   "nummer_kompakt": "DE102017109317B4",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-10-29",
+   "einspruch_bis": "2027-07-29",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102017109317B4"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020171093176"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102017109317B4"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4832341",
+   "titel": "Aufgeklebte Solarhalterung für Flachdächer mit Dichtungsbahn",
+   "titel_original": "STATIONÄRE HALTERUNG FÜR EINE FOTOVOLTAISCHE TAFEL",
+   "was_neu": "Eine flache Metallgrundplatte mit aufgeschweißtem Gewindebolzen wird wasserdicht auf die vorhandene Dachabdichtung geklebt, ohne diese zu durchdringen. Ein aufgeschraubtes Distanzstück mit einer Scheibe aus passendem Bahnenmaterial dichtet die Verbindung ab und trägt oben das Photovoltaikmodul. Die Abdichtung des Flachdachs bleibt so unverletzt.",
+   "bezug": "Betrifft die Befestigung von Solarmodulen auf abgedichteten Flachdächern.",
+   "amt": "EP",
+   "nummer": "EP 4832341 A1",
+   "anmelder": [
+    "Matthew Ennis"
+   ],
+   "anmelder_original": [
+    "ENNIS MATTHEW"
+   ],
+   "anmelder_land": [
+    "IE"
+   ],
+   "veroeffentlicht": "2026-10-28",
+   "angemeldet": "2026-03-18",
+   "prioritaet": "2025-04-22",
+   "anmeldenummer": "26165780",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 23,
+   "klassen": [
+    "H02S20/23",
+    "H02S20/24",
+    "F24S25/61",
+    "F24S25/615",
+    "F24S25/636",
+    "F24S25/33"
+   ],
+   "familie": [],
+   "aufgenommen": "2026-11-02",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4832341A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4832341A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP26165780&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4727008",
+   "titel": "Universalhalter für Solarmodule auf Falzdächern",
+   "titel_original": "UNIVERSELLE MONTAGEHALTERUNG ZUR BEFESTIGUNG VON GROSSEN FLÄCHENELEMENTEN AUF DACHSCHRÄGEN MIT FALZ, INSBESONDERE PHOTOVOLTAIKMODULEN",
+   "was_neu": "Ein H-förmiger Grundkörper wird mit einer Schraube seitlich am Falz des Metalldachs festgeklemmt. Auf seine oberen Kanten werden U-förmige Kappen eingehängt, die als Auflage für die Photovoltaikmodule dienen, und ein Klemmelement mit Adapter hält die Module fest. Der Halter besteht aus wenigen lösbaren Teilen und soll sich einfach montieren lassen.",
+   "bezug": "Betrifft Modulhalter für Stehfalz- und Falzdächer.",
+   "amt": "EP",
+   "nummer": "EP 4727008 B1",
+   "familie": [
+    {
+     "nummer": "EP 4727008 A1",
+     "art": "Offenlegung"
+    }
+   ],
+   "anmelder": [
+    "Blachotrapez Sp. z o.o."
+   ],
+   "anmelder_original": [
+    "BLACHOTRAPEZ SP Z O O"
+   ],
+   "anmelder_land": [
+    "PL"
+   ],
+   "veroeffentlicht": "2026-10-28",
+   "angemeldet": "2025-10-06",
+   "prioritaet": "2024-10-10",
+   "anmeldenummer": "25207058",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 26,
+   "klassen": [
+    "F24S25/63",
+    "F24S25/636",
+    "H02S20/23"
+   ],
+   "aufgenommen": "2026-11-02",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "B1",
+   "nummer_kompakt": "EP4727008B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-10-28",
+   "einspruch_bis": "2027-07-28",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4727008B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP25207058&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4609503",
+   "titel": "Ballastsystem aus Betonblöcken für Photovoltaikmodule",
+   "titel_original": "VERRIEGELUNGSSYSTEM FÜR PHOTOVOLTAIKMODULE MIT EINSCHRÄNKUNGEN AUF DER LÄNGEREN SEITE",
+   "was_neu": "Das Modul liegt auf mindestens zwei Paaren geneigter Betonblöcke, die ohne Verankerung auf der ebenen Fläche stehen. In die Oberseiten der Blöcke sind Metallprofile eingelassen, an denen das Modul mit Klemmen befestigt wird; am ersten Block verläuft das Profil quer zur Verbindungslinie der Blöcke. So wird das Modul an seiner Längsseite gehalten.",
+   "bezug": "Betrifft ballastierte Solarmontage auf Flachdächern.",
+   "amt": "EP",
+   "nummer": "EP 4609503 B1",
+   "anmelder": [
+    "Contact Italia S.r.l."
+   ],
+   "anmelder_original": [
+    "CONTACT ITALIA S R L"
+   ],
+   "anmelder_land": [
+    "IT"
+   ],
+   "veroeffentlicht": "2026-10-28",
+   "angemeldet": "2023-10-12",
+   "prioritaet": "2022-10-28",
+   "anmeldenummer": "23798513",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 25,
+   "klassen": [
+    "F24S25/11",
+    "F24S25/636",
+    "F24S25/70",
+    "H02S20/23",
+    "H02S20/24"
+   ],
+   "links_extra": [
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2024089517"
+    }
+   ],
+   "familie": [],
+   "aufgenommen": "2026-11-02",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "B1",
+   "nummer_kompakt": "EP4609503B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-10-28",
+   "einspruch_bis": "2027-07-28",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4609503B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP23798513&lng=de"
+    },
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2024089517"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-3710647",
+   "titel": "Steckverbindung mit Klemmelement für Bauteile, etwa Rinnenhalter",
+   "titel_original": "VERBUNDELEMENT FÜR DEN HOCHBAU ODER TIEFBAU",
+   "was_neu": "Zwei Bauteile werden verbunden, indem ein Klemmelement auf einen meist zylindrischen Montagedorn am ersten Bauteil geschoben wird und dort kraftschlüssig hält. Schrauben oder Schweißen entfallen damit. Die Klassifizierung ordnet die Lösung unter anderem den Halterungen für Dachrinnen zu.",
+   "bezug": "Betrifft Befestigungen im Bauwesen, darunter Halterungen für Rinnen.",
+   "amt": "EP",
+   "nummer": "EP 3710647 B1",
+   "anmelder": [
+    "ACO Ahlmann SE & Co. KG"
+   ],
+   "anmelder_original": [
+    "ACO AHLMANN SE & CO KG"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-10-28",
+   "angemeldet": "2018-11-13",
+   "prioritaet": "2017-11-17",
+   "anmeldenummer": "18808239",
+   "thema": "entwaesserung",
+   "relevanz": "hoch",
+   "punkte": 27,
+   "klassen": [
+    "E04D13/072",
+    "E04D13/064",
+    "E04F17/00",
+    "F16B21/186",
+    "F16B9/056"
+   ],
+   "links_extra": [
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2019096779"
+    }
+   ],
+   "familie": [],
+   "aufgenommen": "2026-11-02",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "B1",
+   "nummer_kompakt": "EP3710647B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-10-28",
+   "einspruch_bis": "2027-07-28",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP3710647B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP18808239&lng=de"
+    },
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2019096779"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4831232",
+   "titel": "Mehrschichtige Abdichtungsbahn mit bitumenhaltiger Klebeschicht",
+   "titel_original": "WASSERDICHTE MEHRSCHICHTMEMBRAN",
+   "was_neu": "Die Abdichtungsbahn besteht aus Schutzfolie, modifizierter Bitumenschicht, Sperrfolie und einer Klebeschicht unter einer abziehbaren Trennfolie. Die Klebeschicht enthält Bitumen, Gummigranulat, Elastomer und Weichmacher. Sie soll über einen weiten Temperaturbereich gut haften und auch bei Kälte nicht reißen.",
+   "bezug": "Betrifft selbstklebende Abdichtungsbahnen, etwa für Dächer.",
+   "amt": "EP",
+   "nummer": "EP 4831232 A1",
+   "anmelder": [
+    "Henkel AG & Co. KGaA"
+   ],
+   "anmelder_original": [
+    "HENKEL AG & CO KGAA"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-10-28",
+   "angemeldet": "2025-04-25",
+   "anmeldenummer": "25172606",
+   "thema": "deckung",
+   "relevanz": "mittel",
+   "punkte": 13,
+   "klassen": [
+    "E04D5/10",
+    "B32B11/00",
+    "B32B11/046",
+    "C09J7/35",
+    "C08L95/00"
+   ],
+   "familie": [],
+   "aufgenommen": "2026-11-02",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4831232A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4831232A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP25172606&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4212684",
+   "titel": "Unteres Anschlusselement für Dachfenster mit Eckteilen",
+   "titel_original": "BODENANSCHLUSSELEMENT FÜR EINE DACHDURCHDRINGENDE STRUKTUR, ANSCHLUSSANORDNUNG UND IN EINEM GENEIGTEN DACH MONTIERTES DACHFENSTER",
+   "was_neu": "Das untere Anschlusselement eines Dachfensters besteht aus einer Schiene am Rahmen, einer Schürze über der Dacheindeckung und zwei seitlichen Eckteilen, die unter die angrenzende Eindeckung greifen. Die Eckteile tragen an ihrer Außenkante einen nach außen ragenden Rand und sind breiter als lang. Das soll den Übergang zwischen Fenster und Dach zuverlässig abdichten.",
+   "bezug": "Betrifft Eindeckrahmen und Anschlüsse von Dachfenstern.",
+   "amt": "EP",
+   "nummer": "EP 4212684 B1",
+   "anmelder": [
+    "VKR Holding A/S"
+   ],
+   "anmelder_original": [
+    "VKR HOLDING AS"
+   ],
+   "anmelder_land": [
+    "DK"
+   ],
+   "veroeffentlicht": "2026-10-28",
+   "angemeldet": "2022-01-11",
+   "prioritaet": "2021-01-12",
+   "anmeldenummer": "23160979",
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 15,
+   "klassen": [
+    "E04D13/147",
+    "E04D13/1475",
+    "E04D13/1476",
+    "E04D13/031"
+   ],
+   "familie": [],
+   "aufgenommen": "2026-11-02",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "B1",
+   "nummer_kompakt": "EP4212684B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-10-28",
+   "einspruch_bis": "2027-07-28",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4212684B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP23160979&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
    "id": "de-102025115246",
    "titel": "Textilaufbau für Dachbegrünung mit Befestigung von Solarmodulen",
    "titel_original": "Textil-Anordnung zur Dachbegrünung und Befestigung eines Objekts",
@@ -1848,7 +2254,7 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025115246A1"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "de-102019110588",
@@ -1902,7 +2308,7 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102019110588B4"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4826990",
@@ -1952,7 +2358,7 @@
      "url": "https://register.epo.org/application?number=EP26172777&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4825160",
@@ -2008,7 +2414,7 @@
      "url": "https://register.epo.org/application?number=EP26169000&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4824937",
@@ -2068,7 +2474,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025125860"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4824936",
@@ -2127,7 +2533,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025125862"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4824935",
@@ -2186,7 +2592,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025125861"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4824934",
@@ -2245,7 +2651,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025201908"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4824479",
@@ -2305,7 +2711,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025223901"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4826187",
@@ -2355,7 +2761,7 @@
      "url": "https://register.epo.org/application?number=EP26202967&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-3921487",
@@ -2406,7 +2812,7 @@
      "url": "https://register.epo.org/application?number=EP20707509&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-3835508",
@@ -2459,7 +2865,7 @@
      "url": "https://register.epo.org/application?number=EP20210601&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "de-202026002614",

@@ -10057,5 +10057,270 @@
   "aufgenommen": "2026-10-30",
   "quelle": "DEPATISnet",
   "familie": []
+ },
+ {
+  "id": "ep-4832341",
+  "titel": "Aufgeklebte Solarhalterung für Flachdächer mit Dichtungsbahn",
+  "titel_original": "STATIONÄRE HALTERUNG FÜR EINE FOTOVOLTAISCHE TAFEL",
+  "was_neu": "Eine flache Metallgrundplatte mit aufgeschweißtem Gewindebolzen wird wasserdicht auf die vorhandene Dachabdichtung geklebt, ohne diese zu durchdringen. Ein aufgeschraubtes Distanzstück mit einer Scheibe aus passendem Bahnenmaterial dichtet die Verbindung ab und trägt oben das Photovoltaikmodul. Die Abdichtung des Flachdachs bleibt so unverletzt.",
+  "bezug": "Betrifft die Befestigung von Solarmodulen auf abgedichteten Flachdächern.",
+  "amt": "EP",
+  "nummer": "EP 4832341 A1",
+  "anmelder": [
+   "Matthew Ennis"
+  ],
+  "anmelder_original": [
+   "ENNIS MATTHEW"
+  ],
+  "anmelder_land": [
+   "IE"
+  ],
+  "veroeffentlicht": "2026-10-28",
+  "angemeldet": "2026-03-18",
+  "prioritaet": "2025-04-22",
+  "anmeldenummer": "26165780",
+  "thema": "solar",
+  "relevanz": "hoch",
+  "punkte": 23,
+  "klassen": [
+   "H02S20/23",
+   "H02S20/24",
+   "F24S25/61",
+   "F24S25/615",
+   "F24S25/636",
+   "F24S25/33"
+  ],
+  "familie": [],
+  "aufgenommen": "2026-11-02",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": false
+ },
+ {
+  "id": "ep-4727008",
+  "titel": "Universalhalter für Solarmodule auf Falzdächern",
+  "titel_original": "UNIVERSELLE MONTAGEHALTERUNG ZUR BEFESTIGUNG VON GROSSEN FLÄCHENELEMENTEN AUF DACHSCHRÄGEN MIT FALZ, INSBESONDERE PHOTOVOLTAIKMODULEN",
+  "was_neu": "Ein H-förmiger Grundkörper wird mit einer Schraube seitlich am Falz des Metalldachs festgeklemmt. Auf seine oberen Kanten werden U-förmige Kappen eingehängt, die als Auflage für die Photovoltaikmodule dienen, und ein Klemmelement mit Adapter hält die Module fest. Der Halter besteht aus wenigen lösbaren Teilen und soll sich einfach montieren lassen.",
+  "bezug": "Betrifft Modulhalter für Stehfalz- und Falzdächer.",
+  "amt": "EP",
+  "nummer": "EP 4727008 B1",
+  "familie": [
+   {
+    "nummer": "EP 4727008 A1",
+    "art": "Offenlegung"
+   }
+  ],
+  "anmelder": [
+   "Blachotrapez Sp. z o.o."
+  ],
+  "anmelder_original": [
+   "BLACHOTRAPEZ SP Z O O"
+  ],
+  "anmelder_land": [
+   "PL"
+  ],
+  "veroeffentlicht": "2026-10-28",
+  "angemeldet": "2025-10-06",
+  "prioritaet": "2024-10-10",
+  "anmeldenummer": "25207058",
+  "thema": "solar",
+  "relevanz": "hoch",
+  "punkte": 26,
+  "klassen": [
+   "F24S25/63",
+   "F24S25/636",
+   "H02S20/23"
+  ],
+  "aufgenommen": "2026-11-02",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": false
+ },
+ {
+  "id": "ep-4609503",
+  "titel": "Ballastsystem aus Betonblöcken für Photovoltaikmodule",
+  "titel_original": "VERRIEGELUNGSSYSTEM FÜR PHOTOVOLTAIKMODULE MIT EINSCHRÄNKUNGEN AUF DER LÄNGEREN SEITE",
+  "was_neu": "Das Modul liegt auf mindestens zwei Paaren geneigter Betonblöcke, die ohne Verankerung auf der ebenen Fläche stehen. In die Oberseiten der Blöcke sind Metallprofile eingelassen, an denen das Modul mit Klemmen befestigt wird; am ersten Block verläuft das Profil quer zur Verbindungslinie der Blöcke. So wird das Modul an seiner Längsseite gehalten.",
+  "bezug": "Betrifft ballastierte Solarmontage auf Flachdächern.",
+  "amt": "EP",
+  "nummer": "EP 4609503 B1",
+  "anmelder": [
+   "Contact Italia S.r.l."
+  ],
+  "anmelder_original": [
+   "CONTACT ITALIA S R L"
+  ],
+  "anmelder_land": [
+   "IT"
+  ],
+  "veroeffentlicht": "2026-10-28",
+  "angemeldet": "2023-10-12",
+  "prioritaet": "2022-10-28",
+  "anmeldenummer": "23798513",
+  "thema": "solar",
+  "relevanz": "hoch",
+  "punkte": 25,
+  "klassen": [
+   "F24S25/11",
+   "F24S25/636",
+   "F24S25/70",
+   "H02S20/23",
+   "H02S20/24"
+  ],
+  "links_extra": [
+   {
+    "label": "PATENTSCOPE (internationale Anmeldung)",
+    "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2024089517"
+   }
+  ],
+  "familie": [],
+  "aufgenommen": "2026-11-02",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": false
+ },
+ {
+  "id": "ep-3710647",
+  "titel": "Steckverbindung mit Klemmelement für Bauteile, etwa Rinnenhalter",
+  "titel_original": "VERBUNDELEMENT FÜR DEN HOCHBAU ODER TIEFBAU",
+  "was_neu": "Zwei Bauteile werden verbunden, indem ein Klemmelement auf einen meist zylindrischen Montagedorn am ersten Bauteil geschoben wird und dort kraftschlüssig hält. Schrauben oder Schweißen entfallen damit. Die Klassifizierung ordnet die Lösung unter anderem den Halterungen für Dachrinnen zu.",
+  "bezug": "Betrifft Befestigungen im Bauwesen, darunter Halterungen für Rinnen.",
+  "amt": "EP",
+  "nummer": "EP 3710647 B1",
+  "anmelder": [
+   "ACO Ahlmann SE & Co. KG"
+  ],
+  "anmelder_original": [
+   "ACO AHLMANN SE & CO KG"
+  ],
+  "anmelder_land": [
+   "DE"
+  ],
+  "veroeffentlicht": "2026-10-28",
+  "angemeldet": "2018-11-13",
+  "prioritaet": "2017-11-17",
+  "anmeldenummer": "18808239",
+  "thema": "entwaesserung",
+  "relevanz": "hoch",
+  "punkte": 27,
+  "klassen": [
+   "E04D13/072",
+   "E04D13/064",
+   "E04F17/00",
+   "F16B21/186",
+   "F16B9/056"
+  ],
+  "links_extra": [
+   {
+    "label": "PATENTSCOPE (internationale Anmeldung)",
+    "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2019096779"
+   }
+  ],
+  "familie": [],
+  "aufgenommen": "2026-11-02",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": false
+ },
+ {
+  "id": "de-102017109317",
+  "titel": "Durchsturzsicherung aus Gittermatten für Lichtbänder",
+  "titel_original": "Durchsturzsicherung für eine Lichtbandzarge sowie Verfahren zur Herstellung einer Durchsturzsicherung",
+  "was_neu": "Ein Schutzgitter aus Längs- und Querstäben wird über Halteelemente an der Zarge eines Lichtbands oder am Aufsetzkranz einer Lichtkuppel befestigt. Das Gitter besteht aus Mattenabschnitten, die an den Stoßkanten mit einem durch die Maschen gedrehten Spiraldraht verbunden sind. Beim Auffangen einer Last darf sich das Gitter verformen und hält die Person zurück.",
+  "bezug": "Betrifft Absturzsicherung an Lichtbändern und Lichtkuppeln auf Dächern.",
+  "amt": "DE",
+  "nummer": "DE 10 2017 109 317 B4",
+  "anmelder": [
+   "VKR Holding A/S"
+  ],
+  "anmelder_original": [
+   "VKR Holding A/S, Hørsholm"
+  ],
+  "anmelder_land": [
+   "DK"
+  ],
+  "veroeffentlicht": "2026-10-29",
+  "angemeldet": "2017-05-02",
+  "prioritaet": "2016-12-23",
+  "anmeldenummer": "102017109317",
+  "thema": "sicherheit",
+  "relevanz": "hoch",
+  "punkte": 25,
+  "klassen": [
+   "E04D13/0335",
+   "E04D13/03",
+   "E04G21/3266",
+   "E06B9/01"
+  ],
+  "familie": [],
+  "aufgenommen": "2026-11-02",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": false
+ },
+ {
+  "id": "ep-4831232",
+  "titel": "Mehrschichtige Abdichtungsbahn mit bitumenhaltiger Klebeschicht",
+  "titel_original": "WASSERDICHTE MEHRSCHICHTMEMBRAN",
+  "was_neu": "Die Abdichtungsbahn besteht aus Schutzfolie, modifizierter Bitumenschicht, Sperrfolie und einer Klebeschicht unter einer abziehbaren Trennfolie. Die Klebeschicht enthält Bitumen, Gummigranulat, Elastomer und Weichmacher. Sie soll über einen weiten Temperaturbereich gut haften und auch bei Kälte nicht reißen.",
+  "bezug": "Betrifft selbstklebende Abdichtungsbahnen, etwa für Dächer.",
+  "amt": "EP",
+  "nummer": "EP 4831232 A1",
+  "anmelder": [
+   "Henkel AG & Co. KGaA"
+  ],
+  "anmelder_original": [
+   "HENKEL AG & CO KGAA"
+  ],
+  "anmelder_land": [
+   "DE"
+  ],
+  "veroeffentlicht": "2026-10-28",
+  "angemeldet": "2025-04-25",
+  "anmeldenummer": "25172606",
+  "thema": "deckung",
+  "relevanz": "mittel",
+  "punkte": 13,
+  "klassen": [
+   "E04D5/10",
+   "B32B11/00",
+   "B32B11/046",
+   "C09J7/35",
+   "C08L95/00"
+  ],
+  "familie": [],
+  "aufgenommen": "2026-11-02",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": false
+ },
+ {
+  "id": "ep-4212684",
+  "titel": "Unteres Anschlusselement für Dachfenster mit Eckteilen",
+  "titel_original": "BODENANSCHLUSSELEMENT FÜR EINE DACHDURCHDRINGENDE STRUKTUR, ANSCHLUSSANORDNUNG UND IN EINEM GENEIGTEN DACH MONTIERTES DACHFENSTER",
+  "was_neu": "Das untere Anschlusselement eines Dachfensters besteht aus einer Schiene am Rahmen, einer Schürze über der Dacheindeckung und zwei seitlichen Eckteilen, die unter die angrenzende Eindeckung greifen. Die Eckteile tragen an ihrer Außenkante einen nach außen ragenden Rand und sind breiter als lang. Das soll den Übergang zwischen Fenster und Dach zuverlässig abdichten.",
+  "bezug": "Betrifft Eindeckrahmen und Anschlüsse von Dachfenstern.",
+  "amt": "EP",
+  "nummer": "EP 4212684 B1",
+  "anmelder": [
+   "VKR Holding A/S"
+  ],
+  "anmelder_original": [
+   "VKR HOLDING AS"
+  ],
+  "anmelder_land": [
+   "DK"
+  ],
+  "veroeffentlicht": "2026-10-28",
+  "angemeldet": "2022-01-11",
+  "prioritaet": "2021-01-12",
+  "anmeldenummer": "23160979",
+  "thema": "zubehoer",
+  "relevanz": "mittel",
+  "punkte": 15,
+  "klassen": [
+   "E04D13/147",
+   "E04D13/1475",
+   "E04D13/1476",
+   "E04D13/031"
+  ],
+  "familie": [],
+  "aufgenommen": "2026-11-02",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": false
  }
 ]
