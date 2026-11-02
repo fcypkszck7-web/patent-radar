@@ -770,9 +770,78 @@ ol.bericht-eintraege .bz-zeile::before { content: counter(platz); font-family: v
 .info-karten p { margin: 0; color: var(--tinte-2); }
 .leer-bild p { margin: 14px 0 0; }
 
+/* Bestand */
+.hinweis-kasten { margin: 0 0 16px; padding: 10px 14px; border-radius: 8px; background: var(--messing-hell); color: var(--tinte); font-size: 14.5px; }
+.ablauf { margin-top: 4px; margin-bottom: 18px; }
+.ablauf-rahmen { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius-gross); padding: 16px 18px 14px; }
+.ablauf-saeulen { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--jahre), minmax(0, 1fr)); gap: 4px; align-items: end; }
+.ablauf-saeulen a { display: grid; grid-template-rows: 16px 150px 18px; align-items: end; text-decoration: none; color: var(--tinte-2); border-radius: 6px; padding: 0 1px; }
+.as-zahl { font-size: 11px; text-align: center; color: var(--tinte-3); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; }
+.as-saeule { height: 150px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--linie); }
+.as-stapel { width: 100%; display: flex; flex-direction: column-reverse; gap: 2px; min-height: 0; }
+.as-seg { display: block; min-height: 2px; background: var(--sf); border-radius: 0; }
+.as-stapel .as-seg:last-child { border-radius: 4px 4px 0 0; }
+.as-jahr { font-size: 11px; text-align: center; color: var(--tinte-3); font-variant-numeric: tabular-nums; padding-top: 4px; }
+.ablauf-saeulen li:not(.as-marke) .as-jahr { color: transparent; }
+.ablauf-saeulen li:not(.as-marke) a:hover .as-jahr, .ablauf-saeulen li:not(.as-marke) a[aria-current="true"] .as-jahr { color: var(--tinte-2); }
+.ablauf-saeulen a:hover { background: var(--flaeche-2); }
+.ablauf-saeulen a:hover .as-zahl, .ablauf-saeulen a[aria-current="true"] .as-zahl { color: var(--tinte); font-weight: 600; }
+.ablauf-saeulen a[aria-current="true"] { background: var(--patina-hell); }
+.ablauf-saeulen a:focus-visible { outline: 2px solid var(--patina); outline-offset: 1px; }
+.ablauf-rahmen .stapel-legende a { --themafarbe: inherit; }
+.ablauf-rahmen .stapel-legende a[aria-current="true"] { color: var(--tinte); font-weight: 600; text-decoration: underline; }
+.aktiv-filter { margin: 10px 0 0; font-size: 14px; color: var(--tinte-2); }
+.aktiv-filter a { margin-left: 8px; }
+.top-anmelder { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 14px; align-items: start; margin: 0 0 16px; }
+.ta-titel { font-size: 13.5px; color: var(--tinte-2); padding-top: 5px; }
+.ta-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ta-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--linie); background: var(--flaeche); color: var(--tinte); font-size: 13.5px; text-decoration: none; }
+.ta-chip b { font-weight: 600; color: var(--tinte-2); font-variant-numeric: tabular-nums; }
+.ta-chip:hover { border-color: var(--tinte-3); }
+.bestand-liste { list-style: none; margin: 0; padding: 0; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius-gross); overflow: hidden; }
+.bestand-zeile { --uf: var(--af); position: relative; display: grid; grid-template-columns: 60px minmax(0, 1fr) 200px; gap: 18px; align-items: center; padding: 12px 18px 12px 14px; border-top: 1px solid var(--linie-2); box-shadow: inset 3px 0 0 var(--themafarbe); transition: background-color .15s; }
+.bestand-zeile:first-child { border-top: 0; }
+.bestand-zeile:hover { background: color-mix(in srgb, var(--af) 5%, var(--flaeche)); }
+.bestand-zeile.bald { --uf: var(--kupfer); }
+.bestand-zeile .fz-tage { color: var(--tinte); font-weight: 500; }
+.bestand-zeile.bald .fz-tage { color: var(--kupfer); }
+.bestand-zeile .fz-tage small { font-weight: 400; color: var(--tinte-3); font-size: 12px; }
+.bestand-zeile.b-anmeldung .fz-balken span { background: repeating-linear-gradient(135deg, var(--af) 0 4px, color-mix(in srgb, var(--af) 45%, var(--flaeche)) 4px 7px); }
+.bestand-zeile .karte-oben { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.bestand-zeile .fz-anm .land-marke { margin-left: 2px; }
+.b-art { font-size: 13px; color: var(--tinte-2); }
+.b-daten { color: var(--tinte-3); }
+.etikett.im-radar { background: var(--patina-hell); color: var(--patina-tief); font-size: 12px; }
+.ende-kachel { display: grid; justify-items: center; align-content: center; width: 58px; height: 64px; border-radius: 10px; line-height: 1; background: color-mix(in srgb, var(--af) 12%, var(--flaeche)); border: 1px solid color-mix(in srgb, var(--af) 40%, transparent); color: var(--tinte); }
+.ende-kachel small { font-size: 10.5px; color: var(--tinte-2); text-transform: uppercase; letter-spacing: .06em; }
+.ende-kachel b { font-family: var(--schrift-schmal); font-size: 21px; font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 3px; }
+.ende-kachel span { font-size: 11.5px; font-weight: 600; color: var(--tinte-2); text-transform: uppercase; letter-spacing: .05em; margin-top: 3px; }
+.bald .ende-kachel { background: var(--kupfer-hell); border-color: color-mix(in srgb, var(--kupfer) 45%, transparent); }
+.mehr-zeile { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 16px 0 0; }
+.rechtsstand-kasten { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px 22px; align-items: center; margin-top: 24px; padding: 16px 18px; border-radius: 10px; background: var(--flaeche-2); border: 1px solid var(--linie); box-shadow: inset 3px 0 0 var(--kupfer); }
+.rechtsstand-kasten h3 { margin: 0 0 4px; font-size: 17px; }
+.rechtsstand-kasten p { margin: 0; color: var(--tinte-2); font-size: 14.5px; }
+.im-radar-hinweis { margin: 16px 0 0; font-size: 14.5px; color: var(--tinte-2); }
+.anm-bestand { font-size: 12.5px; color: var(--tinte-2); text-decoration: none; border-bottom: 1px dotted var(--tinte-3); margin-left: 4px; position: relative; z-index: 1; }
+.anm-bestand:hover { color: var(--tinte); border-bottom-style: solid; }
+.bestand-teaser { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 12px; }
+.bt-haupt { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 18px; align-items: center; padding: 14px 20px 14px 14px; border-radius: var(--radius-gross); background: var(--band-1); background-image: linear-gradient(135deg, var(--band-1), var(--band-2)); color: var(--band-tinte); text-decoration: none; }
+.bt-haupt:hover .bt-text strong { text-decoration: underline; }
+.bt-bild svg { width: 100%; height: auto; display: block; }
+.bt-text { font-size: 15px; line-height: 1.5; color: var(--band-tinte-2); }
+.bt-text strong { display: block; font-family: var(--schrift-schmal); font-size: 24px; font-weight: 600; color: var(--band-tinte); margin-bottom: 4px; }
+.bt-zahlen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.bt-zahl { display: grid; align-content: center; gap: 2px; padding: 12px 14px; border-radius: 10px; background: var(--flaeche); border: 1px solid var(--linie); box-shadow: inset 0 3px 0 var(--zf); text-decoration: none; color: var(--tinte); }
+.bt-zahl b { font-family: var(--schrift-schmal); font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bt-zahl span { font-size: 13.5px; color: var(--tinte-2); }
+.bt-zahl:hover { border-color: var(--tinte-3); }
+.laufzeit-regeln { list-style: none; margin: 14px 0; padding: 0; display: grid; gap: 8px; }
+.laufzeit-regeln li { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 12px; padding: 10px 14px; border-radius: 8px; background: var(--flaeche); border: 1px solid var(--linie); box-shadow: inset 3px 0 0 var(--lf); }
+.laufzeit-regeln span { color: var(--tinte-2); }
+
 @media (max-width: 960px) {
   .kopfband-innen { grid-template-columns: minmax(0, 1fr) 240px; gap: 22px; }
-  .frist-zeile { grid-template-columns: 56px minmax(0, 1fr) 170px; gap: 14px; }
+  .frist-zeile, .bestand-zeile { grid-template-columns: 56px minmax(0, 1fr) 170px; gap: 14px; }
 }
 @media (max-width: 760px) {
   .kopfband { margin-top: -20px; padding: 24px 0 26px; }
@@ -781,7 +850,26 @@ ol.bericht-eintraege .bz-zeile::before { content: counter(platz); font-family: v
   .kopfband-unten { margin-top: 20px; }
   .kopfband .reiter a { padding: 9px 12px 11px; }
   .glossar-karten, .info-karten { grid-template-columns: 1fr; }
-  .frist-zeile { grid-template-columns: 54px minmax(0, 1fr); gap: 6px 12px; padding: 12px 14px 12px 12px; }
+  .frist-zeile, .bestand-zeile { grid-template-columns: 54px minmax(0, 1fr); gap: 6px 12px; padding: 12px 14px 12px 12px; }
+  .ende-kachel { width: 54px; height: 60px; }
+  .bestand-zeile .fz-rest { grid-column: 2; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 4px 10px; }
+  .bestand-zeile .fz-text { grid-column: 1 / -1; }
+  .ablauf-rahmen { padding: 12px 10px 10px; }
+  .filter-zeile { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 10px; }
+  .ablauf-saeulen { gap: 2px; }
+  .ablauf-saeulen a { grid-template-rows: 0 120px 18px; }
+  .as-zahl { visibility: hidden; }
+  .as-saeule { height: 120px; }
+  .ablauf-saeulen li:not(.as-marke) .as-jahr { visibility: hidden; }
+  .as-jahr { font-size: 10px; overflow: visible; white-space: nowrap; }
+  .top-anmelder { grid-template-columns: 1fr; gap: 6px; }
+  .ta-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 4px; }
+  .ta-chip { flex-shrink: 0; white-space: nowrap; }
+  .bestand-teaser { grid-template-columns: 1fr; }
+  .bt-haupt { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 12px 14px 12px 10px; }
+  .bt-text strong { font-size: 21px; }
+  .rechtsstand-kasten { grid-template-columns: 1fr; }
+  .laufzeit-regeln li { grid-template-columns: 1fr; gap: 2px; }
   .fz-rest { grid-column: 2; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 4px 10px; }
   .fz-text { grid-column: 1 / -1; }
   .datum-kachel { width: 54px; height: 60px; }

@@ -130,6 +130,138 @@ def links(e):
     return l
 
 
+BESTAND_ART = {"patent", "anmeldung", "gm"}
+# Anmeldungen ohne veröffentlichte Erteilung nur bis zu diesem Alter zeigen; ältere sind in aller Regel
+# zurückgenommen, zurückgewiesen oder gelten als zurückgenommen (DE: Prüfungsantrag binnen 7 Jahren, § 44 PatG).
+ANMELDUNG_JAHRE = 10
+
+
+def namenschluessel(n):
+    t = (n or "").lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss"), ("é", "e"), ("è", "e")):
+        t = t.replace(a, b)
+    t = re.sub(r"gesellschaft mit beschr(ae|a)nkter haftung", "gmbh", t)
+    t = re.sub(r"\bges\.?\s*m\.?\s*b\.?\s*h\.?", "gmbh", t)
+    t = re.sub(r"\bg\.\s*m\.\s*b\.\s*h\.?", "gmbh", t)
+    t = re.sub(r"aktiengesellschaft", "ag", t)
+    t = re.sub(r"kommanditgesellschaft", "kg", t)
+    return re.sub(r"[^a-z0-9]", "", t)
+
+
+def anzeige_nummer(amt, nr, kind):
+    """DE102015104643 + B4 -> 'DE 10 2015 104 643 B4'; EP1845319 + B1 -> 'EP 1845319 B1'"""
+    z = nr[2:]
+    if amt == "DE" and z.startswith("0000"):
+        z = str(int(z))
+    if amt == "DE" and len(z) == 12:
+        return f"DE {z[:2]} {z[2:6]} {z[6:9]} {z[9:]} {kind}"
+    return f"{amt} {z} {kind}"
+
+
+def baue_bestand(quelle, heute, radar_eintraege):
+    """data/bestand.json aus rohdaten/bestand.json des Datenabrufs: nur Schutzrechte, deren
+    längstmögliche Laufzeit noch nicht abgelaufen ist; Anmelder vereinheitlicht."""
+    with open(quelle, encoding="utf-8") as f:
+        roh = json.load(f)
+    grenze_anm = plus_monate(heute, -12 * ANMELDUNG_JAHRE)
+    rechte = [r for r in roh.get("schutzrechte", []) if r.get("ende_laengstens", "") >= heute
+              and not (r.get("art") == "anmeldung" and r.get("angemeldet", "") < grenze_anm)]
+    # Vereinheitlichte Schreibweisen aus dem Radar übernehmen
+    vorgabe = {}
+    for e in radar_eintraege:
+        for o, n in zip(e.get("anmelder_original") or [], e.get("anmelder") or []):
+            vorgabe.setdefault(namenschluessel(o), n)
+        for n in e.get("anmelder") or []:
+            vorgabe.setdefault(namenschluessel(n), n)
+    varianten, laender, haeufig = {}, {}, {}
+    for r in rechte:
+        for name, land in r.get("anmelder") or []:
+            k = namenschluessel(name)
+            if not k:
+                continue
+            varianten.setdefault(k, {})
+            varianten[k][name] = varianten[k].get(name, 0) + 1
+            if land:
+                laender.setdefault(k, {})
+                laender[k][land] = laender[k].get(land, 0) + 1
+            haeufig[k] = haeufig.get(k, 0) + 1
+
+    def anzeigename(k):
+        if k in vorgabe:
+            return vorgabe[k]
+        v = varianten[k]
+        gemischt = [n for n in v if n != n.upper()]
+        pool = gemischt or list(v)
+        return max(pool, key=lambda n: (v[n], -len(n)))
+
+    schluessel = sorted(haeufig, key=lambda k: (-haeufig[k], anzeigename(k).lower()))
+    index = {k: i for i, k in enumerate(schluessel)}
+    eintraege, zaehl = [], {"patent": 0, "anmeldung": 0, "gm": 0}
+    for r in rechte:
+        if r.get("art") not in BESTAND_ART or r.get("thema") not in THEMEN:
+            warnungen.append(f"Bestand {r.get('id')}: Art oder Thema unbekannt, ausgelassen")
+            continue
+        doks = r.get("dokumente") or []
+        if not doks or not ist_datum(r.get("angemeldet")):
+            continue
+        letzt = doks[-1]
+        nr = re.sub(r"[A-Z]\d?$", "", letzt["nummer"])
+        if r["amt"] == "EP" or nr[2:].startswith("0000"):
+            nr = nr[:2] + str(int(nr[2:]))
+        t = r.get("titel") or {}
+        titel = t.get("de") or t.get("en") or t.get("fr") or next(iter(t.values()), "")
+        anm, gesehen = [], set()
+        for name, _ in r.get("anmelder") or []:
+            k = namenschluessel(name)
+            if k in index and k not in gesehen:
+                anm.append(index[k])
+                gesehen.add(k)
+        zaehl[r["art"]] += 1
+        eintraege.append([
+            f"{r['amt'].lower()}-{nr[2:]}", r["amt"], r["art"], anzeige_nummer(r["amt"], nr, letzt["kind"]),
+            [[d["kind"], d.get("pub")] for d in doks], r["angemeldet"], r.get("veroeffentlicht"), r.get("erteilt"),
+            r["ende_laengstens"], r["thema"], titel, anm, r.get("klassen") or [], 1 if r.get("geaendert") else 0,
+        ])
+    eintraege.sort(key=lambda z: (z[5], z[0]), reverse=True)
+    bestand = {
+        "stand": roh.get("stand"), "quelle": roh.get("quelle", "DEPATISnet (DPMA)"), "ab": roh.get("ab"),
+        "vollstaendig": bool(roh.get("vollstaendig")), "heute": heute, "anmeldungen_jahre": ANMELDUNG_JAHRE,
+        "felder": ["id", "amt", "art", "nummer", "dokumente", "angemeldet", "veroeffentlicht", "erteilt", "ende",
+                   "thema", "titel", "anmelder", "klassen", "geaendert"],
+        "anmelder": [anzeigename(k) for k in schluessel],
+        "anmelder_land": [max(laender[k], key=laender[k].get) if k in laender else None for k in schluessel],
+        "eintraege": eintraege,
+    }
+    return bestand
+
+
+def schreibe_bestand(bestand):
+    """Kompakt, ein Schutzrecht je Zeile (kleine Diffs, kleine Datei)."""
+    kopf = {k: v for k, v in bestand.items() if k != "eintraege"}
+    with open(os.path.join(DATEN, "bestand.json"), "w", encoding="utf-8") as f:
+        f.write(json.dumps(kopf, ensure_ascii=False, separators=(",", ":"))[:-1] + ',"eintraege":[\n')
+        f.write(",\n".join(json.dumps(z, ensure_ascii=False, separators=(",", ":")) for z in bestand["eintraege"]))
+        f.write("\n]}\n")
+
+
+def bestand_kurz(bestand, heute):
+    if not bestand or not bestand.get("eintraege"):
+        return None
+    f = {n: i for i, n in enumerate(bestand["felder"])}
+    laufend = [z for z in bestand["eintraege"] if z[f["ende"]] >= heute]
+    in12 = plus_monate(heute, 12)
+    return {
+        "stand": bestand.get("stand"), "ab": bestand.get("ab"), "vollstaendig": bestand.get("vollstaendig"),
+        "anmeldungen_jahre": bestand.get("anmeldungen_jahre"),
+        "gesamt": len(laufend),
+        "patente": sum(1 for z in laufend if z[f["art"]] == "patent"),
+        "anmeldungen": sum(1 for z in laufend if z[f["art"]] == "anmeldung"),
+        "gebrauchsmuster": sum(1 for z in laufend if z[f["art"]] == "gm"),
+        "auslaufend_12m": sum(1 for z in laufend if z[f["ende"]] < in12 and z[f["art"]] != "anmeldung"),
+        "anmelder": len(bestand.get("anmelder") or []),
+    }
+
+
 def pruefe_eintrag(e, heute):
     wo = e.get("id", "?")
     for feld in PFLICHT:
@@ -340,6 +472,7 @@ def main():
     ap.add_argument("--monatsbericht")
     ap.add_argument("--trends", default="")
     ap.add_argument("--heute")
+    ap.add_argument("--bestand", help="rohdaten/bestand.json aus dem Daten-Repository; erzeugt data/bestand.json neu")
     args = ap.parse_args()
 
     heute = args.heute or dt.date.today().isoformat()
@@ -518,6 +651,35 @@ def main():
     if fehler:
         return abbruch()
 
+    bestand = None
+    if args.bestand:
+        if not os.path.exists(args.bestand):
+            fehler.append(f"--bestand: Datei {args.bestand} nicht gefunden")
+            return abbruch()
+        bestand = baue_bestand(args.bestand, heute, gueltig)
+        woerter = [w.lower() for w in args.sperrwort if w.strip()]
+        if woerter:
+            ti = bestand["felder"].index("titel")
+            vorher = len(bestand["eintraege"])
+            bestand["eintraege"] = [z for z in bestand["eintraege"] if not any(w in (z[ti] or "").lower() for w in woerter)]
+            if len(bestand["eintraege"]) < vorher:
+                warnungen.append(f"Bestand: {vorher - len(bestand['eintraege'])} Einträge mit nicht-öffentlichem Wort im Titel ausgelassen")
+    alt_bestand = bestand or lade("bestand.json", None)
+    if fehler:
+        return abbruch()
+
+    if alt_bestand and alt_bestand.get("eintraege"):
+        fb = {n: i for i, n in enumerate(alt_bestand["felder"])}
+        zaehl_b = {}
+        for z in alt_bestand["eintraege"]:
+            if z[fb["ende"]] >= heute:
+                for i in z[fb["anmelder"]]:
+                    zaehl_b[i] = zaehl_b.get(i, 0) + 1
+        namen_b = {alt_bestand["anmelder"][i]: n for i, n in zaehl_b.items()}
+        for a in anmelder:
+            if namen_b.get(a["name"]):
+                a["bestand"] = namen_b[a["name"]]
+
     alle_lauf = laufende()
     radar = {
         "stand": meta["stand"], "heute": heute, "lauf": lauf,
@@ -529,6 +691,7 @@ def main():
                        "gebrauchsmuster": sum(1 for e in gueltig if e["art"] == "Gebrauchsmuster"),
                        "fristen_laufend": len(alle_lauf)},
         "anmelder": anmelder,
+        "bestand": bestand_kurz(alt_bestand, heute),
         "eintraege": sorted(gueltig, key=lambda e: e["veroeffentlicht"], reverse=True),
     }
     basis = meta.get("basis_url", "./")
@@ -540,7 +703,7 @@ def main():
         return abbruch()
 
     alte = {}
-    for name in ("radar.json", "berichte.json", "meta.json"):
+    for name in ("radar.json", "berichte.json", "meta.json", "bestand.json"):
         p = os.path.join(DATEN, name)
         alte[name] = open(p, encoding="utf-8").read() if os.path.exists(p) else None
     alt_feed = open(os.path.join(WURZEL, "feed.xml"), encoding="utf-8").read() if os.path.exists(os.path.join(WURZEL, "feed.xml")) else None
@@ -548,6 +711,8 @@ def main():
     schreibe("radar.json", radar)
     schreibe("berichte.json", sorted(berichte, key=lambda b: (b["zeitraum"]["bis"], b["art"]), reverse=True))
     schreibe("meta.json", meta)
+    if bestand is not None:
+        schreibe_bestand(bestand)
     with open(os.path.join(WURZEL, "feed.xml"), "w", encoding="utf-8") as f:
         f.write(feed(radar, berichte, basis))
 
@@ -571,6 +736,11 @@ def main():
             print("  " + t)
         sys.exit(2)
 
+    if radar.get("bestand"):
+        b = radar["bestand"]
+        print(f"Bestand: {b['gesamt']} laufende Schutzrechte ({b['patente']} Patente, {b['anmeldungen']} Anmeldungen, "
+              f"{b['gebrauchsmuster']} Gebrauchsmuster), {b['anmelder']} Anmelder, Stand {b['stand']}"
+              + ("" if b.get("vollstaendig") else " – Erstbefüllung noch nicht vollständig"))
     k = radar["kennzahlen"]
     print(f"OK: {k['gesamt']} Einträge, {k['neu']} neu, {k['erteilungen']} Erteilungen, {k['gebrauchsmuster']} Gebrauchsmuster, "
           f"{k['fristen_laufend']} laufende Einspruchsfristen, {len(news)} News, {len(berichte)} Berichte.")

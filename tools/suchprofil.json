@@ -57,7 +57,8 @@
   {"praefix": "E03B3/02", "thema": "gruendach"},
   {"praefix": "E03B3/03", "thema": "gruendach"},
   {"praefix": "B21D", "thema": "werkstoffe", "nur_mit_stichwort": true},
-  {"praefix": "C23C2/", "thema": "werkstoffe", "nur_mit_stichwort": true}
+  {"praefix": "C23C2/", "thema": "werkstoffe", "nur_mit_stichwort": true},
+  {"praefix": "C22C38/", "thema": "werkstoffe", "nur_mit_stichwort": true}
  ],
  "dach_stichwoerter": [
   "dach", "roof", "rinne", "gutter", "eaves", "traufe", "fallrohr", "downpipe", "downspout", "regenrohr", "schnee", "snow",

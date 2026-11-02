@@ -395,8 +395,37 @@ merk.append(f'<g{farbe("--patina-band")}><path class="voll" d="M196 52V102L208 9
 merk.append(f'<g{farbe("--messing-band")}>' + s("M86 70l4 4 8-9", " akzent") + "</g>")
 FIG_MERKLISTE = fig(8, "".join(merk), "Karteikarten mit Lesezeichen")
 
+# Fig. 9: Karteischrank und Laufzeitbalken mit Markierung „heute“
+best = [
+    # Karteikasten mit Reitern
+    '<path class="deckend" d="M30 64h92v114H30z"/>', s("M30 64h92v114H30z"),
+    s("M30 102H122M30 140H122", " duenn"),
+]
+for y in (78, 116, 154):
+    best.append(s(f"M60 {y}h32v10H60z", " duenn"))
+    best.append(s(f"M66 {y + 17}h20", " dick"))
+best.append('<path class="deckend" d="M24 48h104v16H24z"/>')
+best.append(s("M24 48h104v16H24z"))
+for i, (x, var) in enumerate(((34, "--r-erteilungen"), (54, "--r-gebrauchsmuster"), (74, "--r-offenlegungen"), (94, "--r-erteilungen"))):
+    best.append(f'<path class="deckend" d="M{x} {30 + i % 2 * 4}h22v18H{x}z"/>' + s(f"M{x} {30 + i % 2 * 4}h22v18H{x}z", " duenn"))
+    best.append(f'<rect class="voll" x="{x + 3}" y="{33 + i % 2 * 4}" width="10" height="5" rx="1"{farbe(var)}/>')
+# Zeitachse mit Laufzeitbalken: links vergangen (Umriss), rechts die Restlaufzeit (gefüllt)
+heute_x = 196
+best.append(s("M146 168H304"))
+for x in range(146, 305, 16):
+    best.append(s(f"M{x} 168v5", " duenn"))
+balken = [(150, 280, "--r-erteilungen"), (166, 236, "--r-gebrauchsmuster"), (158, 302, "--r-offenlegungen"),
+          (182, 266, "--r-erteilungen"), (160, 214, "--r-gebrauchsmuster"), (174, 292, "--r-erteilungen")]
+for i, (a, b, var) in enumerate(balken):
+    y = 44 + i * 20
+    best.append(s(f"M{a} {y}h{b - a}v10h-{b - a}z", " duenn"))
+    best.append(f'<rect class="voll" x="{max(a, heute_x)}" y="{y}" width="{b - max(a, heute_x)}" height="10" rx="1.5"{farbe(var)}/>')
+best.append(f'<g{farbe("--kupfer-band")}>' + s(f"M{heute_x} 34V176", " akzent strichliert") +
+            f'<path class="voll" d="M{heute_x - 6} 26h12l-6 8z"/></g>')
+FIG_BESTAND = fig(9, "".join(best), "Karteikasten mit farbigen Reitern und Laufzeitbalken, die an einer Linie für heute beginnen")
+
 SEITE = {"schutzrechte": FIG_SCHUTZRECHTE, "fristen": FIG_FRISTEN, "anmelder": FIG_ANMELDER, "news": FIG_NEWS,
-         "berichte": FIG_BERICHTE, "hinweise": FIG_HINWEISE, "merkliste": FIG_MERKLISTE}
+         "berichte": FIG_BERICHTE, "hinweise": FIG_HINWEISE, "merkliste": FIG_MERKLISTE, "bestand": FIG_BESTAND}
 
 js = ("/* Zeichnungen des Patent-Radars: eigene Strichzeichnungen im Stil von Patentfiguren. */\n"
       "window.PRZ = " + json.dumps({"hero": HERO, "thema": THEMA, "rubrik": RUBRIK, "seite": SEITE}, ensure_ascii=False) + ";\n")
