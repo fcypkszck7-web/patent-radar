@@ -9,18 +9,18 @@
    {
     "name": "DEPATISnet (DPMA)",
     "umfang": "DE, EP, WO – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
-    "stand": "2026-11-02",
+    "stand": "2026-11-09",
     "status": "aktuell"
    },
    {
     "name": "Europäischer Publikationsserver (EPA)",
     "umfang": "Ergänzend: Zusammenfassungen und Ansprüche europäischer Dokumente",
-    "stand": "2026-11-02",
+    "stand": "2026-11-09",
     "status": "aktuell"
    }
   ],
   "hinweise_woche": [
-   "Zu sechs bereits erfassten europäischen Anmeldungen liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+   "Zu sieben bereits erfassten europäischen Dokumenten liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
   ],
   "hinweise_monat": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
@@ -28,8 +28,8 @@
  },
  "weiterleitungen": [],
  "lauf": {
-  "datum": "2026-11-02",
+  "datum": "2026-11-09",
   "art": "woche"
  },
- "stand": "2026-11-02"
+ "stand": "2026-11-09"
 }

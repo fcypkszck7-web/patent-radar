@@ -1,5 +1,49 @@
 [
  {
+  "id": "woche-2026-46",
+  "art": "woche",
+  "titel": "Kalenderwoche 46/2026",
+  "zeitraum": {
+   "von": "2026-11-02",
+   "bis": "2026-11-09"
+  },
+  "erstellt": "2026-11-09",
+  "zusammenfassung": "Neun neue Einträge, fünf davon zur Solarbefestigung auf dem Dach, darunter eine Dachhaken-Abdeckung im Biberschwanzformat, ein Halteschuh für Flachdachgestelle und ein schwenkbarer Modulhalter für C-Profilschienen. Dazu kommen ein Dachfenster-Anschluss, ein Zwischenblech für versetzte Dachfenster, ein Dachziegel mit integriertem Solarpaneel und Sandwichpaneele mit Werksdichtung. Für zwei neue europäische Erteilungen läuft die Einspruchsfrist bis 4. August 2027.",
+  "kurz": "9 neue Einträge",
+  "kennzahlen": {
+   "neu": 9,
+   "erteilungen": 2,
+   "gebrauchsmuster": 1,
+   "fristen_laufend": 120
+  },
+  "themen": {
+   "solar": 5,
+   "deckung": 2,
+   "zubehoer": 2
+  },
+  "arten": {
+   "Offenlegung": 6,
+   "Gebrauchsmuster": 1,
+   "Erteilung": 2
+  },
+  "top": [
+   "ep-4835368",
+   "de-202026105205",
+   "de-102025116772"
+  ],
+  "fristen": [
+   "ep-4038325",
+   "ep-4442923"
+  ],
+  "news": [
+   "n-20261104-japan-hitzeschutz-dach",
+   "n-20261103-epa-fristverlaengerung-stoerung"
+  ],
+  "hinweise": [
+   "Zu sieben bereits erfassten europäischen Dokumenten liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+  ]
+ },
+ {
   "id": "woche-2026-45",
   "art": "woche",
   "titel": "Kalenderwoche 45/2026",

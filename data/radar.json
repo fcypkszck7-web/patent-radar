@@ -1,8 +1,8 @@
 {
- "stand": "2026-11-02",
- "heute": "2026-11-02",
+ "stand": "2026-11-09",
+ "heute": "2026-11-09",
  "lauf": {
-  "datum": "2026-11-02",
+  "datum": "2026-11-09",
   "art": "woche"
  },
  "daten_ab": "2026-01-29",
@@ -14,18 +14,18 @@
    {
     "name": "DEPATISnet (DPMA)",
     "umfang": "DE, EP, WO – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
-    "stand": "2026-11-02",
+    "stand": "2026-11-09",
     "status": "aktuell"
    },
    {
     "name": "Europäischer Publikationsserver (EPA)",
     "umfang": "Ergänzend: Zusammenfassungen und Ansprüche europäischer Dokumente",
-    "stand": "2026-11-02",
+    "stand": "2026-11-09",
     "status": "aktuell"
    }
   ],
   "hinweise_woche": [
-   "Zu sechs bereits erfassten europäischen Anmeldungen liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+   "Zu sieben bereits erfassten europäischen Dokumenten liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
   ],
   "hinweise_monat": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
@@ -33,32 +33,32 @@
  },
  "weiterleitungen": [],
  "kennzahlen": {
-  "gesamt": 285,
-  "neu": 7,
-  "erteilungen": 122,
-  "gebrauchsmuster": 29,
-  "fristen_laufend": 119
+  "gesamt": 294,
+  "neu": 9,
+  "erteilungen": 124,
+  "gebrauchsmuster": 30,
+  "fristen_laufend": 120
  },
  "anmelder": [
   {
    "name": "VKR Holding A/S",
-   "anzahl": 19,
+   "anzahl": 21,
    "land": "DK",
    "themen": {
-    "zubehoer": 15,
+    "zubehoer": 17,
     "entwaesserung": 1,
     "sicherheit": 3
    },
-   "bestand": 466
+   "bestand": 467
   },
   {
    "name": "SL Rack GmbH",
-   "anzahl": 10,
+   "anzahl": 12,
    "land": "DE",
    "themen": {
-    "solar": 10
+    "solar": 12
    },
-   "bestand": 59
+   "bestand": 61
   },
   {
    "name": "RMH Tech LLC",
@@ -318,6 +318,15 @@
     "solar": 2
    },
    "bestand": 14
+  },
+  {
+   "name": "SFS Group International AG",
+   "anzahl": 2,
+   "land": "CH",
+   "themen": {
+    "solar": 2
+   },
+   "bestand": 4
   },
   {
    "name": "Soprema",
@@ -889,6 +898,15 @@
    "bestand": 34
   },
   {
+   "name": "FF Future Oy",
+   "anzahl": 1,
+   "land": "FI",
+   "themen": {
+    "solar": 1
+   },
+   "bestand": 2
+  },
+  {
    "name": "First Tec AG",
    "anzahl": 1,
    "land": "CH",
@@ -1129,6 +1147,15 @@
    "bestand": 2
   },
   {
+   "name": "K2 Systems GmbH",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "solar": 1
+   },
+   "bestand": 7
+  },
+  {
    "name": "Kieslich Dirk",
    "anzahl": 1,
    "land": "DE",
@@ -1260,6 +1287,15 @@
    "themen": {
     "solar": 1
    }
+  },
+  {
+   "name": "Maguire, Desmond Michael",
+   "anzahl": 1,
+   "land": "GB",
+   "themen": {
+    "deckung": 1
+   },
+   "bestand": 1
   },
   {
    "name": "Manthorpe Building Products Ltd",
@@ -1672,15 +1708,6 @@
    "bestand": 1
   },
   {
-   "name": "SFS Group International AG",
-   "anzahl": 1,
-   "land": "CH",
-   "themen": {
-    "solar": 1
-   },
-   "bestand": 3
-  },
-  {
    "name": "Shalimov, Denis",
    "anzahl": 1,
    "land": "DE",
@@ -1869,6 +1896,15 @@
    "bestand": 2
   },
   {
+   "name": "Tremco CPG Germany GmbH",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "deckung": 1
+   },
+   "bestand": 1
+  },
+  {
    "name": "Tuttosicurezza S.r.l.",
    "anzahl": 1,
    "land": "IT",
@@ -2014,18 +2050,443 @@
   }
  ],
  "bestand": {
-  "stand": "2026-11-02",
+  "stand": "2026-11-09",
   "ab": "2006-01-01",
   "vollstaendig": true,
   "anmeldungen_jahre": 10,
-  "gesamt": 5672,
+  "gesamt": 5682,
   "patente": 3129,
-  "anmeldungen": 1899,
-  "gebrauchsmuster": 644,
-  "auslaufend_12m": 238,
-  "anmelder": 2949
+  "anmeldungen": 1907,
+  "gebrauchsmuster": 646,
+  "auslaufend_12m": 240,
+  "anmelder": 2952
  },
  "eintraege": [
+  {
+   "id": "de-102025116772",
+   "titel": "Halteschuh mit einrastendem Rahmenfuß für Solarmodule auf Flachdächern",
+   "titel_original": "Befestigungsvorrichtung",
+   "was_neu": "Ein Halteschuh aus Grundplatte und zwei parallelen Seitenwänden nimmt einen Rahmenfuß für das Solarmodul auf. Anschlag und Gegenanschlag legen die Position fest, seitliche Fixiervorrichtungen am Fuß greifen in Fixierelemente der Seitenwände. Damit soll sich das Gestell auf dem Flachdach einfach und sicher verbinden lassen.",
+   "bezug": "Betrifft Befestigungen von Solarmodulen auf Flachdächern.",
+   "anmelder": [
+    "SL Rack GmbH"
+   ],
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 26,
+   "amt": "DE",
+   "nummer": "DE 10 2025 116 772 A1",
+   "anmelder_original": [
+    "SL Rack GmbH, 83527, Haag"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-05",
+   "angemeldet": "2025-04-30",
+   "anmeldenummer": "102025116772",
+   "klassen": [
+    "F24S2025/6004",
+    "F24S2025/6007",
+    "F24S25/16",
+    "F24S25/61",
+    "F24S25/65",
+    "H02S20/23"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "familie": [],
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "DE102025116772A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102025116772A1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020251167729"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025116772A1"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "de-102025116902",
+   "titel": "Sandwichpaneele mit aufgespritztem Dichtstreifen",
+   "titel_original": "Sandwich Paneele mit Dichtmittelstreifen sowie Verfahren zu dessen Herstellung",
+   "was_neu": "Ein Bauteil wie ein Sandwichpaneel wird auf einer Transporteinrichtung an einer feststehenden Düse vorbeigeführt, die ein fließfähiges Dichtmaterial auf eine Seitenfläche aufträgt. Der Dichtstreifen erstreckt sich über mindestens 80 Prozent der Länge und erhält seine Form durch die Düse. So kann die Dichtung bereits im Werk angebracht werden.",
+   "bezug": "Betrifft die Abdichtung von Sandwichpaneelen für Dach und Wand.",
+   "anmelder": [
+    "Tremco CPG Germany GmbH"
+   ],
+   "thema": "deckung",
+   "relevanz": "mittel",
+   "punkte": 12,
+   "amt": "DE",
+   "nummer": "DE 10 2025 116 902 A1",
+   "anmelder_original": [
+    "Tremco CPG Germany GmbH, 92439, Bodenwöhr"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-05",
+   "angemeldet": "2025-05-02",
+   "anmeldenummer": "102025116902",
+   "klassen": [
+    "B05C5/022",
+    "B29C48/12",
+    "B29C48/151",
+    "B29C48/152",
+    "B29C48/155",
+    "E04B1/6133"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "familie": [],
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "DE102025116902A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102025116902A1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020251169020"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025116902A1"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4835368",
+   "titel": "Schwenkbarer Solarmodulhalter für C-Profilschienen",
+   "titel_original": "SOLARMODULHALTER UND HALTESYSTEM",
+   "was_neu": "Der Halter wird in eine auf dem Dach montierte Führungsschiene mit C-Profil eingesetzt und lässt sich dort um eine Achse parallel zur Schiene schwenken. Ein gekrümmter Nutsteinabschnitt läuft unverlierbar im Inneren der Schiene, ein ebenfalls gekrümmter Auflageabschnitt stützt sich auf den Schienenstegen ab. So kann das Modul eingeschwenkt werden, ohne dass der Halter aus der Schiene fällt.",
+   "bezug": "Betrifft Modulhalter für Montageschienen von Solaranlagen auf Dächern.",
+   "anmelder": [
+    "K2 Systems GmbH"
+   ],
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 27,
+   "familie": [
+    {
+     "nummer": "DE 10 2025 116 961 A1",
+     "art": "Offenlegung",
+     "datum": "2026-11-05"
+    }
+   ],
+   "amt": "EP",
+   "nummer": "EP 4835368 A1",
+   "anmelder_original": [
+    "K2 SYSTEMS GMBH"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2026-04-23",
+   "prioritaet": "2025-05-02",
+   "anmeldenummer": "26174280",
+   "klassen": [
+    "F24S2025/015",
+    "F24S2025/019",
+    "F24S2025/801",
+    "F24S2025/804",
+    "F24S2025/806",
+    "F24S25/33"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4835368A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4835368A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP26174280&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4836291",
+   "titel": "Dämmstoffsockel mit Metalldeckschicht als Unterbau für Solarmodule",
+   "titel_original": "MONTAGESOCKEL FÜR EIN SOLARPANEEL, SOLARPANEELSYSTEM UND DACHSTRUKTUR",
+   "was_neu": "Der Montagesockel besteht aus Wärmedämmstoff und hat zwei gegeneinander geneigte Außenflächen, von denen mindestens eine als Auflage für Solarmodule dient. Die geneigten Flächen sind mit einer metallhaltigen Deckschicht überzogen; dazwischen liegen ein Stützgewebe und ein Klebstoff mit Flammschutz. Aus mehreren Sockeln wird der Unterbau einer Solaranlage auf dem Dach gebildet.",
+   "bezug": "Betrifft Unterkonstruktionen für Solarmodule auf Dächern.",
+   "anmelder": [
+    "FF Future Oy"
+   ],
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 21,
+   "amt": "EP",
+   "nummer": "EP 4836291 A1",
+   "anmelder_original": [
+    "FF FUTURE OY"
+   ],
+   "anmelder_land": [
+    "FI"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2026-04-29",
+   "prioritaet": "2025-04-30",
+   "anmeldenummer": "26175290",
+   "klassen": [
+    "H02S20/23"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "familie": [],
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4836291A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4836291A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP26175290&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4836289",
+   "titel": "Absturzsichere Haltevorrichtung für Solarmodule an Gebäudeflächen",
+   "titel_original": "HALTEVORRICHTUNG FÜR EIN SOLARMODUL UND MONTAGEVERFAHREN",
+   "was_neu": "Ein Modulträger mit Tragplatte und Konsole greift in eine Grundschiene mit zwei genuteten Schenkeln. Eine Sicherungsklammer umfasst die Konsole kragenartig und wird mit der Schiene verschraubt, eine Modul- oder Endklemme hält das Solarmodul. Die Vorrichtung ist vor allem für bestehende Fassaden gedacht und soll ein Herabfallen der Module verhindern.",
+   "bezug": "Betrifft Befestigungen von Solarmodulen an Gebäudeflächen, vorrangig Fassaden.",
+   "anmelder": [
+    "SFS Group International AG"
+   ],
+   "thema": "solar",
+   "relevanz": "mittel",
+   "punkte": 14,
+   "amt": "EP",
+   "nummer": "EP 4836289 A1",
+   "anmelder_original": [
+    "SFS GROUP INTERNATIONAL AG"
+   ],
+   "anmelder_land": [
+    "CH"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2025-05-02",
+   "anmeldenummer": "25174081",
+   "klassen": [
+    "F24S25/636",
+    "H02S20/23"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "familie": [],
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4836289A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4836289A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP25174081&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4835219",
+   "titel": "Dachfenster mit Dichtungsprofil zur Aufnahme der Eindeckung",
+   "titel_original": "DACHFENSTER MIT EINEM RAHMEN, EINEM FLÜGEL UND EINER SCHNITTSTELLENEINHEIT",
+   "was_neu": "Zwischen Rahmen, Flügel und Scheibe des Dachfensters sitzt eine Schnittstelleneinheit, die Teil der äußeren Dichtebene ist. Ihre Profile haben eine Nut mit Vorsprüngen, in die das Eindeckblech eingreift, sowie innere und äußere Dichtelemente. Zusätzliche Wetterschutzmaßnahmen wie höhere äußere Dichtlippen oder verbundene Dichtabschnitte sollen das Eindringen von Wasser verhindern.",
+   "bezug": "Betrifft den Anschluss von Dachfenstern an die Eindeckung.",
+   "anmelder": [
+    "VKR Holding A/S"
+   ],
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 14,
+   "amt": "EP",
+   "nummer": "EP 4835219 A1",
+   "anmelder_original": [
+    "VKR HOLDING AS"
+   ],
+   "anmelder_land": [
+    "DK"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2025-08-19",
+   "prioritaet": "2024-08-19",
+   "anmeldenummer": "25196733",
+   "klassen": [
+    "E04D13/031",
+    "E04D13/0351",
+    "E04D13/1475",
+    "E06B7/2305",
+    "E06B7/2309",
+    "E06B7/2312"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "familie": [],
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4835219A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4835219A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP25196733&lng=de"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4038325",
+   "titel": "Dachziegel mit integriertem Solarpaneel",
+   "titel_original": "DACHZIEGEL",
+   "was_neu": "Der Dachziegel hat einen überlappenden und einen unterlappenden Bereich wie ein üblicher Ziegel; im überlappenden Teil bildet ein Solarpaneel die Oberseite. Elektrische Steckverbinder verbinden den Ziegel mit benachbarten Ziegeln und mit der Hausstromversorgung. Das Solarpaneel liegt bündig in der Dachfläche und braucht keinen eigenen Montagerahmen.",
+   "bezug": "Betrifft Dachdeckungen mit integrierter Photovoltaik.",
+   "anmelder": [
+    "Maguire, Desmond Michael"
+   ],
+   "thema": "deckung",
+   "relevanz": "mittel",
+   "punkte": 17,
+   "links_extra": [
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2021048310"
+    }
+   ],
+   "amt": "EP",
+   "nummer": "EP 4038325 B1",
+   "anmelder_original": [
+    "MAGUIRE DESMOND MICHAEL"
+   ],
+   "anmelder_land": [
+    "GB"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2020-09-10",
+   "prioritaet": "2019-09-10",
+   "anmeldenummer": "20785680",
+   "klassen": [
+    "E04D1/30",
+    "E04D2001/307",
+    "F24S20/69",
+    "H02S20/25",
+    "H02S40/36"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "familie": [],
+   "neu_erteilt": true,
+   "kind": "B1",
+   "nummer_kompakt": "EP4038325B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-11-04",
+   "einspruch_bis": "2027-08-04",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4038325B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP20785680&lng=de"
+    },
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2021048310"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4442923",
+   "titel": "Zwischenblech für Eindeckrahmen versetzt angeordneter Dachfenster",
+   "titel_original": "SEITLICHES ZWISCHENBLECH FÜR LÄNGSBLECH, BAUSATZ MIT SOLCHEN BLECHEN UND VERFAHREN ZUM VERBLECHEN VON ZWEI DACHTEILEN, DIE ENTLANG EINES SCHRÄGDACHES IN UNTERSCHIEDLICHEN HÖHEN NEBENEINANDER ANGEORDNET SIND",
+   "was_neu": "Das seitliche Zwischenblech verbindet die seitlichen Eindeckbleche von Dachelementen wie Dachfenstern, die auf einem geneigten Dach nebeneinander in unterschiedlicher Höhe sitzen. Sein L-förmiger Längsabschnitt hat eine Z-förmige Tasche, die sich zum unteren Ende hin verjüngt, sodass sich benachbarte Taschen zu einem durchgehenden Kanal ineinanderstecken lassen. Dadurch kann seitlich eine durchgehende Metalldeckung an den Elementen entlanggeführt werden.",
+   "bezug": "Betrifft Eindeckbleche für Dachfenster und andere Dachdurchdringungen.",
+   "anmelder": [
+    "VKR Holding A/S"
+   ],
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 16,
+   "quelle": "DEPATISnet",
+   "amt": "EP",
+   "nummer": "EP 4442923 B1",
+   "anmelder_original": [
+    "VKR HOLDING AS"
+   ],
+   "anmelder_land": [
+    "DK"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2024-03-26",
+   "prioritaet": "2023-04-05",
+   "anmeldenummer": "24166292",
+   "klassen": [
+    "E04D13/02",
+    "E04D13/03",
+    "E04D13/031",
+    "E04D13/147",
+    "E04D13/1475",
+    "E06B7/18"
+   ],
+   "aufgenommen": "2026-11-09",
+   "familie": [],
+   "neu_erteilt": true,
+   "kind": "B1",
+   "nummer_kompakt": "EP4442923B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-11-04",
+   "einspruch_bis": "2027-08-04",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4442923B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP24166292&lng=de"
+    }
+   ],
+   "neu": true
+  },
   {
    "id": "de-102017109317",
    "titel": "Durchsturzsicherung aus Gittermatten für Lichtbänder",
@@ -2080,7 +2541,7 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102017109317B4"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4832341",
@@ -2131,7 +2592,7 @@
      "url": "https://register.epo.org/application?number=EP26165780&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4727008",
@@ -2187,7 +2648,7 @@
      "url": "https://register.epo.org/application?number=EP25207058&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4609503",
@@ -2250,7 +2711,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2024089517"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-3710647",
@@ -2313,7 +2774,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2019096779"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4831232",
@@ -2362,7 +2823,7 @@
      "url": "https://register.epo.org/application?number=EP25172606&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4212684",
@@ -2414,7 +2875,7 @@
      "url": "https://register.epo.org/application?number=EP23160979&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "de-102025115246",
@@ -2522,6 +2983,60 @@
     }
    ],
    "neu": false
+  },
+  {
+   "id": "de-202026105205",
+   "titel": "Abdeckung mit Biberschwanz-Form für Dachhaken von Solaranlagen",
+   "titel_original": "Abdeckvorrichtung",
+   "was_neu": "Eine als Einheit montierbare Basis deckt den Bereich ab, in dem ein Dachhaken für eine Solar- oder Photovoltaikanlage am Dach befestigt ist. Die Basis ist der Biberschwanzdeckung nachgebildet: zwei untere und ein darüber liegender biberschwanzförmiger Abschnitt. Dachhaken und Dachbefestigung sind Teil der Vorrichtung, sodass die Durchdringung der Deckung sauber abgedeckt wird.",
+   "bezug": "Betrifft Ziegelersatzplatten und Dachhaken für Solaranlagen auf Biberschwanzdächern.",
+   "anmelder": [
+    "SL Rack GmbH"
+   ],
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 27,
+   "amt": "DE",
+   "nummer": "DE 20 2026 105 205 U1",
+   "anmelder_original": [
+    "SL Rack GmbH, 83527, Haag"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-10-22",
+   "angemeldet": "2026-08-26",
+   "anmeldenummer": "202026105205",
+   "klassen": [
+    "E04D1/2918",
+    "F24S2025/6002",
+    "F24S25/40",
+    "F24S25/61",
+    "F24S25/613",
+    "F24S25/632"
+   ],
+   "aufgenommen": "2026-11-09",
+   "quelle": "DEPATISnet",
+   "familie": [],
+   "neu_erteilt": false,
+   "kind": "U1",
+   "nummer_kompakt": "DE202026105205U1",
+   "art": "Gebrauchsmuster",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE202026105205U1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=2020261052051"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026105205U1"
+    }
+   ],
+   "neu": true
   },
   {
    "id": "ep-4826990",
@@ -16985,7 +17500,7 @@
    "art": "Erteilung",
    "erteilung_datum": "2026-02-05",
    "einspruch_bis": "2026-11-05",
-   "frist_status": "laufend",
+   "frist_status": "abgelaufen",
    "links": [
     {
      "label": "Espacenet",
