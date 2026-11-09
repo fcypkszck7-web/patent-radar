@@ -6,7 +6,9 @@ Die Seite ist statisch: Die Daten liegen als JSON im Ordner `data/`, Suche und F
 
 ## Aufbau
 
-- `index.html`, `assets/` – Oberfläche (Schriften und Bibliotheken liegen lokal, keine externen Abrufe)
+- `index.html`, `assets/app.js`, `assets/app.css` – Oberfläche: Schiefer-Farbschema (dunkel, wahlweise hell), Kachel-Übersicht, klebende Filterleiste mit Themen, Karten mit Materialbild, Detailseiten mit Faktenkacheln und Schnellsuche (Strg K oder /) über Radar, Bestand, Anmelder und Seiten
+- `assets/fonts/` – Schrift Barlow und Barlow Condensed (SIL Open Font License, `OFL-Barlow.txt`), lokal eingebunden; keine externen Abrufe
+- `assets/motive.js` – Materialbilder je Thema (Rohre, Riffelblech, Schnee auf Stehfalz, Solarmodule, Trapezblech, Gründach, Zinkblech, Dachziegel), im Browser als SVG erzeugt; Symbolbilder, keine Abbildungen aus den Schriften
 - `assets/zeichnungen.js` – eigene Strichzeichnungen im Stil von Patentfiguren (Fig. 1 auf der Übersicht, Fig. 2 bis 9 in den Kopfbändern der Unterseiten), erzeugt mit `tools/zeichnungen.py`
 - `data/eintraege.json` – gepflegte Einträge, `data/news.json` – Meldungen, `data/berichte.json` – Berichte, `data/meta.json` – Stand und Abdeckung
 - `data/radar.json`, `feed.xml` – werden von `tools/build.py` erzeugt
@@ -27,4 +29,4 @@ Im Bestand gilt als Laufzeitende die längstmögliche Laufzeit: Patente 20 Jahre
 
 Automatisierte Übersicht öffentlicher Veröffentlichungen. Keine Rechtsberatung. Vor Entscheidungen bitte durch eine Patentanwältin oder einen Patentanwalt prüfen lassen.
 
-Datenquellen: DEPATISnet des Deutschen Patent- und Markenamts, Europäischer Publikationsserver des Europäischen Patentamts. Keine Cookies, kein Tracking.
+Datenquellen: DEPATISnet des Deutschen Patent- und Markenamts, Europäischer Publikationsserver des Europäischen Patentamts. Keine Cookies, kein Tracking. Merkliste und Farbschema liegen nur im eigenen Browser.

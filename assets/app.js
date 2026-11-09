@@ -3,14 +3,14 @@
   "use strict";
 
   var THEMEN = [
-    { key: "entwaesserung", name: "Dachentwässerung", kurz: "Rinnen, Rinnenhalter, Fallrohre, Laubschutz, Flachdach- und Notentwässerung" },
-    { key: "sicherheit", name: "Dachsicherheit", kurz: "Dachtritte, Laufanlagen, Sicherheitsdachhaken, Absturzsicherung, Anschlagpunkte" },
-    { key: "schneeschutz", name: "Schneeschutz", kurz: "Schneefang, Schneefanggitter, Schneestopper" },
-    { key: "solar", name: "Solar auf dem Dach", kurz: "Befestigung und Montagesysteme, auch mit Schneeschutz" },
-    { key: "zubehoer", name: "Dachzubehör und Anschlüsse", kurz: "Durchführungen, Lüftung, Kamin- und Wandanschlüsse, Blitzschutz" },
-    { key: "gruendach", name: "Gründach, Regenwasser und Dämmung", kurz: "Begrünung, Regenwassernutzung, Dämmung" },
-    { key: "werkstoffe", name: "Werkstoffe und Fertigung", kurz: "Bleche, Beschichtungen, Umform- und Fügeverfahren mit Dachbezug" },
-    { key: "deckung", name: "Dachdeckung und Abdichtung", kurz: "Steil-, Flach- und Metalldach, Bahnen, Unterkonstruktion" }
+    { key: "entwaesserung", knapp: "Entwässerung", name: "Dachentwässerung", kurz: "Rinnen, Rinnenhalter, Fallrohre, Laubschutz, Flachdach- und Notentwässerung" },
+    { key: "sicherheit", knapp: "Sicherheit", name: "Dachsicherheit", kurz: "Dachtritte, Laufanlagen, Sicherheitsdachhaken, Absturzsicherung, Anschlagpunkte" },
+    { key: "schneeschutz", knapp: "Schneeschutz", name: "Schneeschutz", kurz: "Schneefang, Schneefanggitter, Schneestopper" },
+    { key: "solar", knapp: "Solar", name: "Solar auf dem Dach", kurz: "Befestigung und Montagesysteme, auch mit Schneeschutz" },
+    { key: "zubehoer", knapp: "Zubehör", name: "Dachzubehör und Anschlüsse", kurz: "Durchführungen, Lüftung, Kamin- und Wandanschlüsse, Blitzschutz" },
+    { key: "gruendach", knapp: "Gründach", name: "Gründach, Regenwasser und Dämmung", kurz: "Begrünung, Regenwassernutzung, Dämmung" },
+    { key: "werkstoffe", knapp: "Werkstoffe", name: "Werkstoffe und Fertigung", kurz: "Bleche, Beschichtungen, Umform- und Fügeverfahren mit Dachbezug" },
+    { key: "deckung", knapp: "Deckung", name: "Dachdeckung und Abdichtung", kurz: "Steil-, Flach- und Metalldach, Bahnen, Unterkonstruktion" }
   ];  var THEMA = {};
   THEMEN.forEach(function (t) { THEMA[t.key] = t; });
   var ARTEN = ["Offenlegung", "Erteilung", "Gebrauchsmuster", "Internationale Anmeldung"];
@@ -107,6 +107,24 @@
       "</div>" + (fig ? '<figure class="seitenfigur"' + (o.figAttr || "") + ">" + fig + (o.figText ? "<figcaption>" + o.figText + "</figcaption>" : "") + "</figure>" : "") +
       "</div>" + (o.unten ? '<div class="kopfband-unten">' + o.unten + "</div>" : "") + "</header>";
   }
+  var SYM = {
+    alle: '<svg class="br-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/></svg>',
+    filter: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M7 12h10M10 17.5h4"/></svg>',
+    x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>',
+    anmelder: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 20V9.5L12 4.5l7.5 5V20"/><path d="M9.5 20v-5.5h5V20"/></svg>',
+    karten: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4.5" width="16" height="6" rx="1.5"/><rect x="4" y="13.5" width="16" height="6" rx="1.5"/></svg>',
+    tabelle: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4zM4 10h16M4 14.5h16M10 5.5v13"/></svg>',
+    links: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6 8.5 12l6 6"/></svg>',
+    rechts: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6"/></svg>',
+    pfeil: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 7l5 5-5 5"/></svg>',
+    kalender: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>',
+    uhr: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+    stern: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>',
+    rss: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11a8 8 0 0 1 8 8M5 5a14 14 0 0 1 14 14"/><circle class="punkt" cx="6" cy="18" r="1.4"/></svg>',
+    radar: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12l6-6"/></svg>',
+    seite: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/></svg>'
+  };
+  /* Themen-Leiste mit Symbolen und Zahlen (wie die Branchen-Leiste des Start-up-Radars) */
   function themenFilter(liste, p, ziel) {
     var aktiv = p.get("thema");
     var zahl = {};
@@ -116,12 +134,40 @@
       if (k) q.set("thema", k); else q.delete("thema");
       return hashMit(ziel, q);
     }
-    return '<nav class="themen-filter" aria-label="Nach Thema filtern"><a class="tf-alle" href="' + link("") + '"' + (!aktiv ? ' aria-current="true"' : "") + "><span>Alle Themen</span><b>" + liste.length + "</b></a>" +
+    return '<div class="kat-leiste"><button type="button" class="kat-pfeil links" aria-label="Themen nach links blättern" tabindex="-1">' + SYM.links + '</button>' +
+      '<nav class="kat-spur" aria-label="Nach Thema filtern"><a class="kat" href="' + link("") + '"' + (!aktiv ? ' aria-current="true"' : "") + ">" + SYM.alle + '<span class="kat-name">Alle</span><span class="kat-zahl">' + liste.length.toLocaleString("de-DE") + "</span></a>" +
       THEMEN.map(function (t) {
         var n = zahl[t.key] || 0, an = aktiv === t.key;
-        return '<a href="' + link(an ? "" : t.key) + '" style="' + themaStil(t.key) + '"' + (an ? ' aria-current="true"' : "") + (n || an ? "" : ' class="leer-thema"') + ' title="' + esc(t.kurz) + '">' +
-          zThema(t.key, "ic-thema") + "<span>" + esc(t.name) + "</span><b>" + n + "</b></a>";
-      }).join("") + "</nav>";
+        return '<a class="kat' + (n || an ? "" : " leer-thema") + '" href="' + link(an ? "" : t.key) + '" style="--f:var(--t-' + t.key + ')"' + (an ? ' aria-current="true"' : "") + ' title="' + esc(t.name + ": " + t.kurz) + '">' +
+          zThema(t.key, "br-ic") + '<span class="kat-name">' + esc(t.knapp) + '</span><span class="kat-zahl">' + n.toLocaleString("de-DE") + "</span></a>";
+      }).join("") + '</nav><button type="button" class="kat-pfeil rechts" aria-label="Themen nach rechts blättern" tabindex="-1">' + SYM.rechts + "</button></div>";
+  }
+  /* Klebende Filterleiste: Themen, Suche, Schnellfilter, Aufklappmenü, aktive Filter als Chips */
+  function filterLeiste(o) {
+    var mehr = o.mehr ? '<div class="pop-anker"><button type="button" class="knopf filter-knopf" data-pop="filter-pop" aria-expanded="false" aria-controls="filter-pop">' + SYM.filter + "Filter" +
+      (o.mehrZahl ? '<b class="fl-zahl">' + o.mehrZahl + "</b>" : "") + '</button><div class="pop" id="filter-pop" role="group" aria-label="Weitere Filter" hidden><p class="pop-titel">Weitere Filter</p>' + o.mehr +
+      '<div class="pop-fuss"><a class="knopf leise" href="' + o.zuruecksetzen + '">Alle zurücksetzen</a><button type="button" class="knopf primaer" data-pop-zu>Fertig</button></div></div></div>' : "";
+    return '<div class="filterleiste"><div class="fl-innen">' + (o.kat || "") +
+      (o.suche || o.schnell || mehr ? '<form class="fl-werkzeug" id="filter" role="search" onsubmit="return false">' + (o.suche || "") +
+        (o.schnell ? '<div class="schnell" role="group" aria-label="Schnellfilter">' + o.schnell + "</div>" : "") + mehr + "</form>" : "") +
+      '<div class="aktiv-filter">' + (o.chips || []).map(function (c) {
+        return '<a class="af-chip" href="' + c.weg + '" aria-label="Filter entfernen: ' + esc(c.text) + '">' + esc(c.text) + SYM.x + "</a>";
+      }).join("") + ((o.chips || []).length > 1 ? '<a class="af-alle" href="' + o.zuruecksetzen + '">Alle Filter entfernen</a>' : "") + "</div></div></div>";
+  }
+  function ohneParam(ziel, p, k) { var q = new URLSearchParams(p); q.delete(k); return hashMit(ziel, q); }
+  function schnellLink(ziel, p, k, v, text, title) {
+    var an = p.get(k) === v, q = new URLSearchParams(p);
+    if (an) q.delete(k); else q.set(k, v);
+    return '<a class="schnell-knopf" href="' + hashMit(ziel, q) + '"' + (an ? ' aria-current="true"' : "") + (title ? ' title="' + esc(title) + '"' : "") + ">" + text + "</a>";
+  }
+  function exportMenue(mitDruck) {
+    return '<div class="pop-anker"><button type="button" class="knopf" data-pop="export-pop" aria-expanded="false" aria-controls="export-pop">' + ICON.export + 'Exportieren</button>' +
+      '<div class="pop pop-menue rechts" id="export-pop" hidden>' +
+      '<button type="button" class="pop-eintrag" data-export="xlsx">' + ICON.export + "<span><b>Excel-Tabelle</b><small>Alle Einträge dieser Auswahl als .xlsx</small></span></button>" +
+      '<button type="button" class="pop-eintrag" data-export="csv">' + ICON.export + "<span><b>CSV-Datei</b><small>Für andere Programme</small></span></button>" +
+      '<button type="button" class="pop-eintrag" data-teilen>' + ICON.teilen + "<span><b>Link kopieren</b><small>Mit allen Filtern, zum Weitergeben</small></span></button>" +
+      (mitDruck ? '<button type="button" class="pop-eintrag" data-drucken>' + ICON.druck + "<span><b>Drucken</b><small>Druckansicht dieser Seite</small></span></button>" : "") +
+      "</div></div>";
   }
   function themaChip(k, n, link) {
     var inner = '<span class="tc-punkt"></span>' + esc(themaName(k)) + (n != null ? " <b>" + n + "</b>" : "");
@@ -182,24 +228,52 @@
     umschalten: function (id) {
       var i = this.ids.indexOf(id);
       if (i >= 0) this.ids.splice(i, 1); else this.ids.push(id);
-      this.speichern(); this.zaehler();
+      this.speichern(); this.zaehler(true);
       return i < 0;
     },
-    zaehler: function () {
-      var z = document.querySelector(".merk-zahl");
-      if (z) z.textContent = this.ids.length;
+    zaehler: function (pop) {
+      var z = document.querySelector(".merk-zahl"), l = document.querySelector(".merk-link");
+      if (!z) return;
+      z.textContent = this.ids.length; z.hidden = !this.ids.length;
+      if (l) l.classList.toggle("hat", this.ids.length > 0);
+      if (pop && !reduziert) { z.classList.remove("pop"); void z.offsetWidth; z.classList.add("pop"); }
     }
   };
 
   /* ---------- Thema (hell/dunkel) ---------- */
   document.getElementById("thema-schalter").addEventListener("click", function () {
     var root = document.documentElement;
-    var aktuell = root.getAttribute("data-theme");
-    if (!aktuell) aktuell = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    var neu = aktuell === "dark" ? "light" : "dark";
+    var neu = root.getAttribute("data-theme") === "light" ? "dark" : "light";
     root.setAttribute("data-theme", neu);
-    try { localStorage.setItem("pr-theme", neu); } catch (e) {}
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute("content", neu === "light" ? "#dfe5eb" : "#1d2935");
+    try { localStorage.setItem("pr-farbschema", neu); } catch (e) {}
+    toast(neu === "light" ? "Helles Farbschema" : "Dunkles Farbschema (Schiefer)");
   });
+
+  /* ---------- Gleitende Markierung in der Hauptnavigation ---------- */
+  function navZeiger() {
+    var z = document.querySelector(".nav-zeiger"), a = document.querySelector('.hauptnav a[aria-current="page"]');
+    if (!z) return;
+    if (!a || !a.offsetWidth) { z.style.opacity = "0"; return; }
+    z.style.width = (a.offsetWidth - 16) + "px";
+    z.style.transform = "translateX(" + (a.offsetLeft + 8) + "px)";
+    z.style.opacity = "1";
+    if (!z.classList.contains("bereit")) requestAnimationFrame(function () { z.classList.add("bereit"); });
+  }
+  window.addEventListener("resize", function () { navZeiger(); });
+
+  /* ---------- Mobile Leiste: „Mehr“ ---------- */
+  (function () {
+    var k = document.querySelector(".un-mehr"), m = document.getElementById("un-menue");
+    if (!k || !m) return;
+    k.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      var auf = m.hidden; m.hidden = !auf; k.setAttribute("aria-expanded", String(auf));
+    });
+    document.addEventListener("click", function (ev) { if (!m.hidden && !m.contains(ev.target)) { m.hidden = true; k.setAttribute("aria-expanded", "false"); } });
+    m.addEventListener("click", function () { m.hidden = true; k.setAttribute("aria-expanded", "false"); });
+  })();
 
   /* ---------- Routing ---------- */
   function route() {
@@ -214,6 +288,9 @@
     document.querySelectorAll("[data-route]").forEach(function (a) {
       if (a.getAttribute("data-route") === n) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
+    var mehr = document.querySelector(".un-mehr");
+    if (mehr) mehr.classList.toggle("aktiv", ["anmelder", "news", "berichte", "merkliste", "hinweise"].indexOf(n) >= 0);
+    navZeiger();
   }
   function hashMit(name, params) {
     var q = params.toString();
@@ -231,7 +308,36 @@
     ANSICHTEN[rb.key] = fn;
   });
   var letzteRoute = "", gezeichnet = {};
-  function zeichnen(fokus) {
+  function flipErfassen() {
+    var m = {};
+    if (reduziert) return m;
+    var vh = window.innerHeight;
+    main.querySelectorAll("[data-flip]").forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.bottom > -80 && r.top < vh + 80) m[el.getAttribute("data-flip")] = r;
+    });
+    return m;
+  }
+  function flipAbspielen(alt) {
+    if (reduziert || !alt || !Element.prototype.animate) return;
+    var vh = window.innerHeight, n = 0;
+    main.querySelectorAll("[data-flip]").forEach(function (el) {
+      if (n > 60) return;
+      var r = el.getBoundingClientRect();
+      if (r.bottom < -80 || r.top > vh + 80) return;
+      var a = alt[el.getAttribute("data-flip")];
+      n++;
+      if (a) {
+        var dx = a.left - r.left, dy = a.top - r.top;
+        if (Math.abs(dx) < 1 && Math.abs(dy) < 1) return;
+        el.animate([{ transform: "translate(" + dx + "px," + dy + "px)" }, { transform: "none" }], { duration: 460, easing: "cubic-bezier(.2,.7,.2,1)" });
+      } else {
+        el.animate([{ opacity: 0, transform: "translateY(10px) scale(.98)" }, { opacity: 1, transform: "none" }], { duration: 340, delay: Math.min(n, 12) * 18, easing: "ease-out", fill: "backwards" });
+      }
+    });
+  }
+  function zeichnen(fokus, flip) {
+    var alt = flip ? flipErfassen() : null;
     var r = route();
     if (r.name === "schutzrechte" && RUBRIK_NACH_ART[r.params.get("art")]) {
       var ziel = RUBRIK_NACH_ART[r.params.get("art")].key;
@@ -241,7 +347,7 @@
     }
     var fn = ANSICHTEN[r.name] || nichtGefunden;
     setzeNav(r.name);
-    main.innerHTML = '<div class="seite einblenden">' + fn(r) + "</div>";
+    main.innerHTML = '<div class="seite' + (fokus === false ? "" : " einblenden") + '" data-seite="' + esc(RUBRIK[r.name] ? "schutzrechte" : r.name) + '">' + fn(r) + "</div>";
     document.title = (fn.titel ? fn.titel(r) + " – " : "") + "Patent-Radar Bau & Dach";
     if (fn.danach) fn.danach(r);
     binden();
@@ -254,30 +360,113 @@
     var schluessel = r.name + "/" + (r.arg || "");
     if (fokus && schluessel !== letzteRoute) { window.scrollTo(0, 0); main.focus({ preventScroll: true }); }
     letzteRoute = schluessel;
+    filterHoehe();
+    if (alt) flipAbspielen(alt);
   }
+  /* Filterleiste: Höhe merken (für klebende Wochenmarken) und beim Runterscrollen ausweichen */
+  function filterHoehe() {
+    var fl = main.querySelector(".filterleiste");
+    document.documentElement.style.setProperty("--filter-h", (fl ? fl.offsetHeight : 0) + "px");
+  }
+  var letzteY = window.scrollY;
+  window.addEventListener("scroll", function () {
+    var fl = main.querySelector(".filterleiste"), y = window.scrollY;
+    if (fl) {
+      var offen = fl.querySelector(".pop:not([hidden])") || fl.contains(document.activeElement);
+      if (y > letzteY + 8 && y > 520 && !offen) fl.classList.add("weg");
+      else if (y < letzteY - 8 || y < 300) fl.classList.remove("weg");
+    }
+    letzteY = y;
+  }, { passive: true });
   window.addEventListener("hashchange", function () { zeichnen(true); });
 
   /* ---------- Bausteine ---------- */
+  function fristPille(e) {
+    if (!e.einspruch_bis) return "";
+    var t = tageBis(e.einspruch_bis), fk = fristKlasse(e);
+    return '<span class="frist-pille ' + fk + '">' + SYM.uhr + (t < 0 ? "Einspruchsfrist abgelaufen" : "Einspruch bis " + datum(e.einspruch_bis) + (t < 90 ? " · noch " + t + " " + plural(t, "Tag", "Tage") : "")) + "</span>";
+  }
+  function merkKnopf(e, klasse) {
+    var merk = Merk.hat(e.id);
+    return '<button type="button" class="' + (klasse || "stern") + ' merken" data-merken="' + esc(e.id) + '" aria-pressed="' + merk + '" aria-label="' + (merk ? "Von der Merkliste entfernen" : "Auf die Merkliste") + '" title="Merken">' + ICON.merken + (klasse ? "<span>" + (merk ? "Gemerkt" : "Merken") + "</span>" : "") + "</button>";
+  }
+  /* Karte: Text links, Materialbild des Themas rechts (wie die Terminkarten des Start-up-Radars) */
   function karte(e, opt) {
     opt = opt || {};
-    var fk = fristKlasse(e);
-    var frist = e.einspruch_bis ? '<span class="frist ' + fk + '">Einspruch bis ' + datum(e.einspruch_bis) + (fk === "abgelaufen" ? " (abgelaufen)" : "") + "</span>" : "";
-    var merk = Merk.hat(e.id);
-    return '<li class="karte" style="' + themaStil(e.thema) + '">' +
-      '<div class="karte-rand">' + kindMarke(e) + zThema(e.thema) + "</div>" +
-      '<div class="karte-inhalt"><div class="karte-oben"><span class="art-marke">' + esc(e.art) + "</span>" +
-      '<span class="nummer">' + esc(e.nummer) + "</span>" +
-      "<span>" + datum(e.veroeffentlicht) + "</span>" +
-      (e.neu_erteilt ? '<span class="etikett neu-erteilt">neu erteilt</span>' : "") +
-      (opt.neuMarke && e.neu ? '<span class="etikett neu">neu</span>' : "") + "</div>" +
+    var oben = '<span class="art-text">' + esc(e.art) + '</span><span class="k-datum">' + datum(e.veroeffentlicht) + "</span>" +
+      (e.neu_erteilt ? '<span class="etikett neu-erteilt">neu erteilt</span>' : "") + (opt.neuMarke && e.neu ? '<span class="etikett neu">neu</span>' : "");
+    var anm = '<span class="k-anm">' + SYM.anmelder + esc((e.anmelder || []).join(", ") || "Anmelder unbekannt") + "</span>";
+    if (opt.kompakt) {
+      return '<li class="karte kompakt" data-flip="' + esc(e.id) + '" style="' + themaStil(e.thema) + '"><div class="karte-inhalt"><div class="karte-oben">' + kindMini(e.art, e.amt, e.kind) + oben + "</div>" +
+        '<h3><a href="#/eintrag/' + encodeURIComponent(e.id) + '">' + esc(e.titel) + "</a></h3>" +
+        '<div class="karte-unten">' + anm + fristPille(e) + "</div></div></li>";
+    }
+    return '<li class="karte" data-flip="' + esc(e.id) + '" style="' + themaStil(e.thema) + '">' +
+      '<div class="karte-inhalt"><div class="karte-oben">' + oben + "</div>" +
       '<h3><a href="#/eintrag/' + encodeURIComponent(e.id) + '">' + esc(e.titel) + "</a></h3>" +
-      (opt.kompakt ? "" : '<p class="original">' + esc(e.titel_original) + "</p>") +
-      (opt.kompakt ? "" : '<p class="neu-text">' + esc(e.was_neu) + "</p>") +
-      '<div class="karte-unten"><span class="thema-marke" style="' + themaStil(e.thema) + '">' + esc(themaName(e.thema)) + "</span>" +
-      '<span class="relevanz ' + esc(e.relevanz) + '">Relevanz ' + esc(e.relevanz) + "</span>" +
-      "<span>" + esc((e.anmelder || []).join(", ")) + "</span>" + frist +
-      '<button type="button" class="knopf klein merken" data-merken="' + esc(e.id) + '" aria-pressed="' + merk + '" aria-label="' + (merk ? "Von der Merkliste entfernen" : "Auf die Merkliste") + '">' + ICON.merken + "<span>" + (merk ? "Gemerkt" : "Merken") + "</span></button>" +
-      "</div></div></li>";
+      '<p class="neu-text">' + esc(e.was_neu) + "</p>" +
+      '<div class="karte-unten">' + anm + '<span class="thema-pille">' + zThema(e.thema, "tp-ic") + esc(THEMA[e.thema] ? THEMA[e.thema].knapp : themaName(e.thema)) + "</span>" +
+      '<span class="relevanz ' + esc(e.relevanz) + '">' + (e.relevanz === "hoch" ? "hoch relevant" : "mittel") + "</span>" + fristPille(e) + "</div></div>" +
+      '<div class="karte-bild mb-' + (THEMA[e.thema] ? e.thema : "x") + '">' + kindMarke(e) + merkKnopf(e) + "</div></li>";
+  }
+  /* Zeitleiste: Monate, darin Veröffentlichungswochen mit klebender Wochenmarke */
+  function wochenRahmen(iso) {
+    var d = new Date(iso + "T00:00:00Z"), tag = (d.getUTCDay() + 6) % 7;
+    var mo = new Date(d); mo.setUTCDate(d.getUTCDate() - tag);
+    var so = new Date(mo); so.setUTCDate(mo.getUTCDate() + 6);
+    var a = mo.getUTCDate() + "." + (mo.getUTCMonth() !== so.getUTCMonth() ? " " + MONATE[mo.getUTCMonth()] : "");
+    return a + "–" + so.getUTCDate() + ". " + MONATE[so.getUTCMonth()];
+  }
+  function zeitleiste(liste, feld, opt) {
+    opt = opt || {};
+    feld = feld || "veroeffentlicht";
+    var jeMonat = {};
+    liste.forEach(function (e) { var m = String(e[feld]).slice(0, 7); jeMonat[m] = (jeMonat[m] || 0) + 1; });
+    var html = "", monat = "", woche = "", offen = false;
+    liste.forEach(function (e) {
+      var d = String(e[feld]), m = d.slice(0, 7), w = kw(d), wk = m + "|" + w.jahr + "-" + w.woche;
+      if (m !== monat) {
+        if (offen) html += "</ul></div>";
+        offen = false; monat = m; woche = "";
+        html += '<h2 class="monat-kopf" id="m-' + m + '">' + MONATE_LANG[parseInt(m.slice(5), 10) - 1] + " " + m.slice(0, 4) + " <span>" + jeMonat[m] + " " + plural(jeMonat[m], "Schutzrecht", "Schutzrechte") + "</span></h2>";
+      }
+      if (wk !== woche) {
+        if (offen) html += "</ul></div>";
+        woche = wk; offen = true;
+        html += '<div class="tag-gruppe" data-woche="' + w.jahr + "-" + w.woche + '"><div class="tag-datum"><span class="td-wt">KW</span><span class="td-tag">' + w.woche + '</span><span class="td-sub">' + wochenRahmen(d) + '</span></div><ul class="liste karten">';
+      }
+      html += karte(e, opt);
+    });
+    if (offen) html += "</ul></div>";
+    return '<div class="zeitleiste">' + html + "</div>";
+  }
+  /* Seitenspalte: Monatskalender (Punkte an Tagen mit Einträgen) und Kennzahlen der Auswahl */
+  function kalender(liste, feld, monat, ziel) {
+    var tage = {};
+    liste.forEach(function (e) { var d = e[feld]; if (d) tage[d] = (tage[d] || 0) + 1; });
+    var j = parseInt(monat.slice(0, 4), 10), m = parseInt(monat.slice(5, 7), 10) - 1;
+    var erster = new Date(Date.UTC(j, m, 1)), versatz = (erster.getUTCDay() + 6) % 7, anzahl = new Date(Date.UTC(j, m + 1, 0)).getUTCDate();
+    var h = heute(), html = '<div class="kal" data-monat="' + monat + '" data-feld="' + feld + '"><div class="kal-kopf"><button type="button" class="kal-pfeil" data-kal="-1" aria-label="Vormonat">' + SYM.links + "</button>" +
+      "<strong>" + MONATE_LANG[m] + " " + j + '</strong><button type="button" class="kal-pfeil" data-kal="1" aria-label="Nächster Monat">' + SYM.rechts + "</button></div>" +
+      '<div class="kal-raster" role="grid"><span class="kal-wt">Mo</span><span class="kal-wt">Di</span><span class="kal-wt">Mi</span><span class="kal-wt">Do</span><span class="kal-wt">Fr</span><span class="kal-wt">Sa</span><span class="kal-wt">So</span>';
+    for (var i = 0; i < versatz; i++) html += "<span></span>";
+    for (var dTag = 1; dTag <= anzahl; dTag++) {
+      var iso = monat + "-" + String(dTag).padStart(2, "0"), n = tages(iso);
+      html += n ? '<button type="button" class="kal-tag hat' + (iso === h ? " heute" : "") + '" data-tag="' + iso + '" aria-label="' + datum(iso) + ": " + n + " " + plural(n, "Eintrag", "Einträge") + '">' + dTag + '<i style="--n:' + Math.min(n, 4) + '"></i></button>'
+        : '<span class="kal-tag' + (iso === h ? " heute" : "") + '">' + dTag + "</span>";
+    }
+    function tages(iso) { return tage[iso] || 0; }
+    return html + "</div></div>";
+  }
+  function auswahlStatistik(liste, titel) {
+    var max = 1, z = {};
+    RUBRIKEN.forEach(function (rb) { z[rb.key] = liste.filter(function (e) { return e.art === rb.art; }).length; max = Math.max(max, z[rb.key]); });
+    var hoch = liste.filter(function (e) { return e.relevanz === "hoch"; }).length, frist = liste.filter(fristLaeuft).length;
+    return '<div class="sk-karte"><p class="sk-titel">' + esc(titel || "In dieser Auswahl") + '</p><p class="sk-zahl">' + liste.length.toLocaleString("de-DE") + " " + plural(liste.length, "Schutzrecht", "Schutzrechte") + "</p>" +
+      '<ul class="sk-balken">' + RUBRIKEN.map(function (rb) {
+        return '<li style="--sf:var(--r-' + rb.key + ')"><span>' + esc(rb.name) + "</span><b>" + z[rb.key] + '</b><i><em style="width:' + Math.round(100 * z[rb.key] / max) + '%"></em></i></li>';
+      }).join("") + "</ul>" +
+      '<dl class="sk-werte"><div><dt>hoch relevant</dt><dd>' + hoch + "</dd></div><div><dt>mit laufender Einspruchsfrist</dt><dd>" + frist + "</dd></div></dl></div>";
   }
   function leer(titel, text) {
     return '<div class="leer"><strong>' + esc(titel) + "</strong>" + (text ? esc(text) : "") + "</div>";
@@ -352,40 +541,7 @@
           '<span class="bz-balken" aria-hidden="true"><span style="width:' + Math.max(2, Math.round(100 * n / maxThema)) + '%"></span></span></a></li>';
       }).join("") + "</ul></section></div></div>";
 
-    html += '<section class="abschnitt" aria-labelledby="rubriken-titel"><div class="abschnitt-kopf"><h2 id="rubriken-titel">Rubriken</h2><a href="#/schutzrechte">Alle ' + alle.length + " Schutzrechte</a></div>" + rubrikKacheln(alle) + "</section>";
-    html += bestandTeaser(R.bestand);
-
-    html += '<section class="abschnitt" aria-labelledby="leiste-titel"><div class="abschnitt-kopf"><h2 id="leiste-titel">Einspruchsfristen der nächsten neun Monate</h2><a href="#/fristen">Alle Fristen</a></div>' +
-      fristenLeiste(laufend) + "</section>";
-
-    html += '<div class="zwei-spalten abschnitt"><section aria-labelledby="neu-titel"><div class="abschnitt-kopf"><h2 id="neu-titel">Neu diese Woche</h2>' +
-      (neu.length > 6 ? '<a href="#/schutzrechte?neu=1">Alle ' + neu.length + " anzeigen</a>" : "") + "</div>" +
-      (neu.length ? '<ul class="liste">' + neu.slice(0, 6).map(function (e) { return karte(e); }).join("") + "</ul>" :
-        leer("Diese Woche keine neuen relevanten Veröffentlichungen.", "Der Radar wird jeden Montag aktualisiert.")) + "</section>" +
-      '<section aria-labelledby="bald-titel"><div class="abschnitt-kopf"><h2 id="bald-titel">Einspruchsfristen, die bald enden</h2></div>' +
-      (bald.length ? '<ul class="liste kompakt">' + bald.map(function (e) { return karte(e, { kompakt: true }); }).join("") + "</ul>" :
-        leer("Keine laufenden Einspruchsfristen.", "")) + "</section></div>";
-
-    var top = topDesMonats();
-    html += '<section class="abschnitt" aria-labelledby="top-titel"><div class="abschnitt-kopf"><h2 id="top-titel">Top 5 des Monats</h2><span class="hinweis-text">' + esc(top.label) + "</span></div>" +
-      (top.liste.length ? '<ul class="liste">' + top.liste.map(function (e) { return karte(e, { neuMarke: true }); }).join("") + "</ul>" :
-        leer("In diesem Monat noch keine Einträge.", "")) + "</section>";
-
-    html += '<section class="abschnitt" aria-labelledby="trend-titel"><div class="abschnitt-kopf"><h2 id="trend-titel">Neue Veröffentlichungen je Monat und Thema</h2>' +
-      '<span class="hinweis-text">' + (R.voll_ab ? "Vollständig erfasst ab " + MONATE_LANG[parseInt(R.voll_ab.slice(5, 7), 10) - 1] + " " + R.voll_ab.slice(0, 4) : "") + "</span></div>" + trend() + "</section>";
-
-    var top8 = (R.anmelder || []).slice(0, 8);
-    var max = top8.length ? top8[0].anzahl : 1;
-    html += '<section class="abschnitt" aria-labelledby="anm-titel"><div class="abschnitt-kopf"><h2 id="anm-titel">Top-Anmelder nach Themen</h2><a href="#/anmelder">Rangliste</a></div>' +
-      (top8.length ? '<div class="anm-rahmen"><ul class="anm-liste">' + top8.map(function (a) {
-        var segs = THEMEN.filter(function (t) { return (a.themen || {})[t.key]; }).map(function (t) {
-          var n = a.themen[t.key];
-          return '<span class="anm-seg" style="' + themaStil(t.key) + ";flex-grow:" + n + '" data-tip="' + esc(a.name + ": " + t.name + ", " + n + " " + plural(n, "Eintrag", "Einträge")) + '"></span>';
-        }).join("");
-        return '<li><a class="anm-name" href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a.name })) + '">' + esc(a.name) + '</a><span class="anm-balken" style="width:' + Math.max(6, Math.round(100 * a.anzahl / max)) + '%">' + segs + '</span><span class="anm-zahl">' + a.anzahl + "</span></li>";
-      }).join("") + "</ul>" + '<ul class="stapel-legende">' + THEMEN.map(function (t) {
-        return '<li><a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: t.key })) + '" style="' + themaStil(t.key) + '"><span class="farbfeld"></span>' + esc(t.name) + "</a></li>";
-      }).join("") + "</ul></div>" : leer("Noch keine Anmelder erfasst.", "")) + "</section>";
+    html += bento(alle, neu, laufend);
     return html;
   }
   uebersicht.titel = function () { return "Übersicht"; };
@@ -400,7 +556,7 @@
       t.setAttribute("aria-label", BEZUG[k] + " " + themaName(k) + ", " + (n ? n.textContent : "0") + " Einträge");
       t.style.setProperty("--v", (0.75 + i * 0.16).toFixed(2) + "s");
     });
-    if (!schonGezeichnet && !reduziert) svg.classList.add("zeichnet");
+    if (!schonGezeichnet && !reduziert) { svg.classList.add("zeichnet"); zaehlen(); }
     schonGezeichnet = true;
     main.querySelectorAll(".bezugszeichen a[data-thema]").forEach(function (a) {
       var teil = svg.querySelector('.teil[data-thema="' + a.getAttribute("data-thema") + '"]');
@@ -412,27 +568,99 @@
     });
   };
 
-  function bestandTeaser(k) {
-    if (!k || !k.gesamt) return "";
-    function zahl(n, name, farbe, link) {
-      return '<a class="bt-zahl" href="' + link + '" style="--zf:var(' + farbe + ')"><b>' + n.toLocaleString("de-DE") + "</b><span>" + esc(name) + "</span></a>";
-    }
-    return '<section class="abschnitt" aria-labelledby="bestand-titel"><div class="abschnitt-kopf"><h2 id="bestand-titel">Bestand: alles, was noch läuft</h2><a href="#/bestand">Zur Recherche-Datenbank</a></div>' +
-      '<div class="bestand-teaser"><a class="bt-haupt" href="#/bestand"><span class="bt-bild">' + ((window.PRZ && window.PRZ.seite && window.PRZ.seite.bestand) || "") + "</span>" +
-      '<span class="bt-text"><strong>' + k.gesamt.toLocaleString("de-DE") + " Schutzrechte</strong> aus Deutschland und Europa zu den Themen des Radars, deren Laufzeit noch nicht abgelaufen ist. Durchsuchbar nach Thema, Anmelder und Restlaufzeit.</span></a>" +
-      '<div class="bt-zahlen">' + zahl(k.patente, "erteilte Patente", "--r-erteilungen", "#/bestand?art=patent") + zahl(k.gebrauchsmuster, "Gebrauchsmuster", "--r-gebrauchsmuster", "#/bestand?art=gm") +
-      zahl(k.anmeldungen, "Anmeldungen", "--r-offenlegungen", "#/bestand?art=anmeldung") + zahl(k.auslaufend_12m, "laufen in 12 Monaten aus", "--kupfer", "#/bestand?ende=12m&sort=ablauf") + "</div></div></section>";
+  /* ---------- Übersicht: Kachel-Raster wie beim Start-up-Radar ---------- */
+  var ART_ZAHL = { erteilungen: ["Erteilung", "Erteilungen"], offenlegungen: ["Offenlegung", "Offenlegungen"], gebrauchsmuster: ["Gebrauchsmuster", "Gebrauchsmuster"], international: ["PCT-Anmeldung", "PCT-Anmeldungen"] };
+  function kLink(href, text) { return '<a class="k-link" href="' + href + '">' + text + SYM.rechts + "</a>"; }
+  function kKopf(id, titel, rechts) { return '<div class="k-kopf"><h2 id="' + id + '">' + titel + "</h2>" + (rechts || "") + "</div>"; }
+  function miniBild(e) {
+    return '<span class="mini-bild mb-' + (THEMA[e.thema] ? e.thema : "x") + '" aria-hidden="true"><small>' + esc(e.amt) + "</small>" + esc(e.kind || "") + "</span>";
   }
+  function anmText(e) { return (e.anmelder || []).join(", ") || "Anmelder unbekannt"; }
+  function bento(alle, neu, laufend) {
+    var R = D.radar, h = '<div class="bento">';
+    var jeArt = {};
+    neu.forEach(function (e) { jeArt[e.art] = (jeArt[e.art] || 0) + 1; });
+    h += '<section class="kachel k4 k-neu" aria-labelledby="kn-titel">' + kKopf("kn-titel", "Neu diese Woche", neu.length ? kLink("#/schutzrechte?neu=1", "Alle") : "") +
+      '<p class="k-zahl"><span data-zaehlen="' + neu.length + '">' + neu.length + "</span><small>" + plural(neu.length, "Schutzrecht", "Schutzrechte") + "</small></p>" +
+      (neu.length ? '<p class="k-arten">' + RUBRIKEN.filter(function (rb) { return jeArt[rb.art]; }).map(function (rb) {
+        var n = jeArt[rb.art];
+        return '<a href="' + hashMit(rb.key, new URLSearchParams({ neu: "1" })) + '" style="--rf:var(--r-' + rb.key + ')"><i></i>' + n + " " + ART_ZAHL[rb.key][n === 1 ? 0 : 1] + "</a>";
+      }).join("") + "</p>" +
+        '<ul class="k-liste">' + neu.slice(0, 3).map(function (e) {
+          return '<li><a href="#/eintrag/' + encodeURIComponent(e.id) + '">' + miniBild(e) + '<span class="kl-text"><span class="kl-name">' + esc(e.titel) + '</span><span class="kl-sub">' + esc(anmText(e)) + "</span></span></a></li>";
+        }).join("") + "</ul>"
+        : '<p class="k-leer">Diese Woche keine neuen relevanten Veröffentlichungen. Der Radar wird jeden Montag aktualisiert.</p>') + "</section>";
 
-  function rubrikKacheln(alle) {
-    return '<ul class="rubriken">' + RUBRIKEN.map(function (rb) {
-      var liste = alle.filter(function (e) { return e.art === rb.art; });
-      var neuN = liste.filter(function (e) { return e.neu; }).length;
-      var zusatz = rb.key === "erteilungen" ? liste.filter(fristLaeuft).length + " mit laufender Einspruchsfrist" : (neuN ? neuN + " neu diese Woche" : "Codes " + rb.codes);
-      return '<li><a class="rubrik-kachel rk-' + rb.key + '" href="#/' + rb.key + '">' + zRubrik(rb.key) +
-        '<span class="rk-kopf"><span class="rk-name">' + esc(rb.name) + '</span><span class="rk-zahl">' + liste.length + "</span></span>" +
-        '<span class="rk-text">' + esc(rb.kurz) + '</span><span class="rk-zusatz">' + esc(zusatz) + "</span></a></li>";
-    }).join("") + "</ul>";
+    var n30 = laufend.filter(function (e) { return tageBis(e.einspruch_bis) < 30; }).length;
+    h += '<section class="kachel k4 k-fristen" aria-labelledby="kf-titel">' + kKopf("kf-titel", "Einspruchsfristen", laufend.length ? kLink("#/fristen", "Alle " + laufend.length) : "") +
+      (laufend.length ? '<ul class="k-liste">' + laufend.slice(0, 4).map(function (e) {
+        var t = tageBis(e.einspruch_bis);
+        return '<li><a href="#/eintrag/' + encodeURIComponent(e.id) + '"><span class="countdown ' + urgenz(t) + '"><b>' + t + "</b><small>" + plural(t, "Tag", "Tage") + '</small></span><span class="kl-text"><span class="kl-name">' + esc(e.titel) + '</span><span class="kl-sub">' + esc(e.nummer) + ", bis " + datum(e.einspruch_bis) + "</span></span></a></li>";
+      }).join("") + "</ul>" + (n30 ? '<p class="k-fuss">' + n30 + " " + plural(n30, "Frist endet", "Fristen enden") + " in weniger als 30 Tagen.</p>" : "")
+        : '<p class="k-leer">Zurzeit laufen keine Einspruchsfristen.</p>') + "</section>";
+
+    h += '<section class="kachel k4 k-rubriken" aria-labelledby="kr-titel">' + kKopf("kr-titel", "Rubriken", kLink("#/schutzrechte", "Alle " + alle.length)) +
+      '<ul class="k-liste">' + RUBRIKEN.map(function (rb) {
+        var liste = alle.filter(function (e) { return e.art === rb.art; });
+        var neuN = liste.filter(function (e) { return e.neu; }).length;
+        var zusatz = rb.key === "erteilungen" ? liste.filter(fristLaeuft).length + " mit laufender Einspruchsfrist" : neuN ? neuN + " neu diese Woche" : rb.kurz;
+        return '<li><a class="rk-' + rb.key + '" href="#/' + rb.key + '">' + zRubrik(rb.key, "kr-ic") + '<span class="kl-text"><span class="kl-name">' + esc(rb.name) + '</span><span class="kl-sub">' + esc(zusatz) + '</span></span><b class="kr-zahl">' + liste.length + "</b></a></li>";
+      }).join("") + "</ul></section>";
+
+    var top = topDesMonats();
+    h += '<section class="kachel k12 k-top" aria-labelledby="kt-titel">' + kKopf("kt-titel", "Top 5 des Monats", '<p class="k-text">' + esc(top.label) + "</p>") +
+      (top.liste.length ? '<ol class="top5">' + top.liste.map(function (e, i) {
+        return '<li><a class="t5" href="#/eintrag/' + encodeURIComponent(e.id) + '" style="' + themaStil(e.thema) + '"><span class="t5-bild mb-' + (THEMA[e.thema] ? e.thema : "x") + '"><span class="t5-rang">' + (i + 1) + "</span>" + kindMarke(e) + "</span>" +
+          '<span class="t5-text"><span class="t5-art">' + esc(e.art) + " · " + datum(e.veroeffentlicht) + '</span><span class="t5-titel">' + esc(e.titel) + '</span><span class="t5-sub">' + esc(anmText(e)) + "</span></span></a></li>";
+      }).join("") + "</ol>" : '<p class="k-leer">In diesem Monat noch keine Einträge.</p>') + "</section>";
+
+    h += '<section class="kachel k12 k-leiste" aria-labelledby="kl-titel">' + kKopf("kl-titel", "Einspruchsfristen der nächsten neun Monate", kLink("#/fristen", "Zum Fristenkalender")) + fristenLeiste(laufend) + "</section>";
+
+    var k = R.bestand;
+    if (k && k.gesamt) {
+      var teile = [["patente", "erteilte Patente", "--r-erteilungen", "patent"], ["gebrauchsmuster", "Gebrauchsmuster", "--r-gebrauchsmuster", "gm"], ["anmeldungen", "Anmeldungen", "--r-offenlegungen", "anmeldung"]];
+      h += '<section class="kachel k6 k-bestand" aria-labelledby="kb-titel">' + kKopf("kb-titel", "Bestand: alles, was noch läuft", kLink("#/bestand", "Zur Datenbank")) +
+        '<p class="k-zahl">' + k.gesamt.toLocaleString("de-DE") + "<small>laufende Schutzrechte aus DE und EP</small></p>" +
+        '<div class="kb-anteile" role="img" aria-label="' + esc(teile.map(function (t) { return k[t[0]] + " " + t[1]; }).join(", ")) + '">' + teile.map(function (t) {
+          return '<span style="--sf:var(' + t[2] + ");flex-grow:" + k[t[0]] + '" data-tip="' + esc(t[1] + ": " + k[t[0]].toLocaleString("de-DE")) + '"></span>';
+        }).join("") + "</div>" +
+        '<ul class="kb-zahlen">' + teile.map(function (t) {
+          return '<li><a href="#/bestand?art=' + t[3] + '" style="--sf:var(' + t[2] + ')"><b>' + k[t[0]].toLocaleString("de-DE") + "</b><span>" + esc(t[1]) + "</span></a></li>";
+        }).join("") + '<li><a href="#/bestand?ende=12m&amp;sort=ablauf" style="--sf:var(--kupfer)"><b>' + k.auslaufend_12m.toLocaleString("de-DE") + "</b><span>laufen in 12 Monaten aus</span></a></li></ul>" +
+        '<form class="kb-suche" data-bestand-suche role="search"><label class="feld suche"><span class="visuell-verborgen">Im Bestand suchen</span>' + ICON.suche + '<input type="search" name="q" placeholder="Titel, Anmelder, Nummer oder Klasse" autocomplete="off"></label><button type="submit" class="knopf primaer">Im Bestand suchen</button></form></section>';
+    }
+
+    var top6 = (R.anmelder || []).slice(0, 5), maxA = top6.length ? top6[0].anzahl : 1;
+    var themenA = {};
+    top6.forEach(function (a) { Object.keys(a.themen || {}).forEach(function (t) { themenA[t] = 1; }); });
+    h += '<section class="kachel k6 k-anmelder" aria-labelledby="ka-titel">' + kKopf("ka-titel", "Aktivste Anmelder", kLink("#/anmelder", "Rangliste")) +
+      (top6.length ? '<ul class="ka-liste">' + top6.map(function (a) {
+        var segs = THEMEN.filter(function (t) { return (a.themen || {})[t.key]; }).map(function (t) {
+          var n = a.themen[t.key];
+          return '<span class="anm-seg" style="' + themaStil(t.key) + ";flex-grow:" + n + '" data-tip="' + esc(a.name + ": " + t.name + ", " + n + " " + plural(n, "Eintrag", "Einträge")) + '"></span>';
+        }).join("");
+        return '<li><a class="ka-name" href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a.name })) + '">' + esc(a.name) + "</a><b>" + a.anzahl + '</b><span class="ka-balken"><span style="width:' + Math.max(6, Math.round(100 * a.anzahl / maxA)) + '%">' + segs + "</span></span></li>";
+      }).join("") + '</ul><ul class="stapel-legende klein">' + THEMEN.filter(function (t) { return themenA[t.key]; }).map(function (t) {
+        return '<li><span class="leg-eintrag" style="' + themaStil(t.key) + '"><span class="farbfeld"></span>' + esc(THEMA[t.key].knapp) + "</span></li>";
+      }).join("") + "</ul>" : '<p class="k-leer">Noch keine Anmelder erfasst.</p>') + "</section>";
+
+    h += '<section class="kachel k12 k-trend" aria-labelledby="ktr-titel">' + kKopf("ktr-titel", "Neue Veröffentlichungen je Monat und Thema",
+      R.voll_ab ? '<p class="k-text">Vollständig erfasst ab ' + MONATE_LANG[parseInt(R.voll_ab.slice(5, 7), 10) - 1] + " " + R.voll_ab.slice(0, 4) + "</p>" : "") + trend() + "</section>";
+
+    var nl = D.news.slice().sort(function (a, b) { return String(b.datum).localeCompare(a.datum); }).slice(0, 3);
+    h += '<section class="kachel k6 k-news" aria-labelledby="kne-titel">' + kKopf("kne-titel", "News", nl.length ? kLink("#/news", "Alle Meldungen") : "") +
+      (nl.length ? '<ul class="k-liste">' + nl.map(function (n) {
+        return '<li><a href="' + esc(n.url) + '" target="_blank" rel="noopener noreferrer">' + datumKachel(n.datum, "kn-datum") + '<span class="kl-text"><span class="kl-name">' + esc(n.titel) + '</span><span class="kl-sub">' + esc(n.quelle) + ' <span aria-hidden="true">↗</span></span></span></a></li>';
+      }).join("") + "</ul>" : '<p class="k-leer">Noch keine Meldungen.</p>') + "</section>";
+
+    var bericht = D.berichte.slice().sort(function (a, b) { return String(b.zeitraum.bis).localeCompare(a.zeitraum.bis) || (a.art === "monat" ? -1 : 1); })[0];
+    function zeile(inhalt, sym, name, sub) { return "<li>" + inhalt.replace("%", '<span class="st-icon">' + sym + '</span><span class="kl-text"><span class="kl-name">' + name + '</span><span class="kl-sub">' + sub + "</span></span>") + "</li>"; }
+    h += '<section class="kachel k6 k-dran" aria-labelledby="kd-titel">' + kKopf("kd-titel", "Auf dem Laufenden bleiben", "") + '<ul class="k-liste">' +
+      (bericht ? zeile('<a href="#/berichte/' + encodeURIComponent(bericht.id) + '">%</a>', ICON.druck, esc(bericht.titel), (bericht.art === "monat" ? "Monatsbericht" : "Wochenbericht") + ", zum Drucken oder als PDF") : "") +
+      zeile('<a href="feed.xml">%</a>', SYM.rss, "RSS-Feed", "Die Neuheiten jeder Woche, auch per RSS-zu-E-Mail-Dienst") +
+      zeile('<a href="#/merkliste">%</a>', ICON.merken, "Merkliste", Merk.ids.length + " gemerkt, nur in diesem Browser") +
+      zeile('<button type="button" data-suche>%</button>', ICON.suche, "Suchen", "Strg K durchsucht Radar, Bestand und Anmelder") + "</ul></section>";
+    return h + "</div>";
   }
 
   function rubrikReiter(aktiv, p) {
@@ -618,35 +846,48 @@
       chips: chips, figKey: "schutzrechte", figAttr: rub ? ' data-aktiv="' + rub.key + '"' : "",
       unten: rubrikReiter(hier, p)
     });
-    html += themenFilter(basisThema, p, hier);
-    html += '<form class="filter" id="filter" role="search" onsubmit="return false">' +
-      '<label class="feld suche"><span class="visuell-verborgen">Volltextsuche</span>' + ICON.suche + '<input type="search" name="q" value="' + esc(p.get("q") || "") + '" placeholder="Suche nach Titel, Inhalt, Anmelder, Nummer oder Patentklasse" autocomplete="off"></label>' +
-      '<div class="filter-zeile">' +
-      (rub ? "" : auswahl("art", "Art", ARTEN.map(function (a) { return [a, a]; }), p.get("art"))) +
-      auswahl("amt", "Amt", Object.keys(AEMTER).map(function (k) { return [k, AEMTER[k]]; }), p.get("amt")) +
-      auswahl("relevanz", "Relevanz", [["hoch", "hoch"], ["mittel", "mittel"]], p.get("relevanz")) +
-      auswahl("anmelder", "Anmelder", anmelderListe, p.get("anmelder")) +
-      '<label class="feld"><span>Veröffentlicht ab</span><input type="date" name="von" value="' + esc(p.get("von") || "") + '"></label>' +
-      '<label class="feld"><span>Veröffentlicht bis</span><input type="date" name="bis" value="' + esc(p.get("bis") || "") + '"></label>' +
-      '<label class="feld"><span>Sortierung</span><select name="sort">' + Object.keys(SORTIERUNG).map(function (k) { return '<option value="' + k + '"' + (k === sort ? " selected" : "") + ">" + SORTIERUNG[k].name + "</option>"; }).join("") + "</select></label>" +
-      "</div>" +
-      (p.get("neu") === "1" ? '<p class="hinweis-text">Gefiltert auf: neu in dieser Woche.</p>' : "") +
-      (p.get("frist") === "laufend" ? '<p class="hinweis-text">Gefiltert auf: laufende Einspruchsfrist.</p>' : "") +
-      "</form>";
+    var mehrZahl = ["art", "amt", "anmelder", "von", "bis"].filter(function (k) { return p.get(k); }).length;
+    var chipsAktiv = [];
+    if (p.get("q")) chipsAktiv.push({ text: "Suche: " + p.get("q"), weg: ohneParam(hier, p, "q") });
+    if (p.get("thema")) chipsAktiv.push({ text: "Thema: " + themaName(p.get("thema")), weg: ohneParam(hier, p, "thema") });
+    if (p.get("art")) chipsAktiv.push({ text: "Art: " + p.get("art"), weg: ohneParam(hier, p, "art") });
+    if (p.get("amt")) chipsAktiv.push({ text: "Amt: " + (AEMTER[p.get("amt")] || p.get("amt")), weg: ohneParam(hier, p, "amt") });
+    if (p.get("relevanz")) chipsAktiv.push({ text: "Relevanz " + p.get("relevanz"), weg: ohneParam(hier, p, "relevanz") });
+    if (p.get("anmelder")) chipsAktiv.push({ text: "Anmelder: " + p.get("anmelder"), weg: ohneParam(hier, p, "anmelder") });
+    if (p.get("von")) chipsAktiv.push({ text: "ab " + datum(p.get("von")), weg: ohneParam(hier, p, "von") });
+    if (p.get("bis")) chipsAktiv.push({ text: "bis " + datum(p.get("bis")), weg: ohneParam(hier, p, "bis") });
+    if (p.get("neu") === "1") chipsAktiv.push({ text: "neu diese Woche", weg: ohneParam(hier, p, "neu") });
+    if (p.get("frist") === "laufend") chipsAktiv.push({ text: "Einspruchsfrist läuft", weg: ohneParam(hier, p, "frist") });
+    html += filterLeiste({
+      kat: themenFilter(basisThema, p, hier),
+      suche: '<label class="feld suche"><span class="visuell-verborgen">Volltextsuche</span>' + ICON.suche + '<input type="search" name="q" value="' + esc(p.get("q") || "") + '" placeholder="Suchen: Titel, Inhalt, Anmelder, Nummer, Patentklasse" autocomplete="off"></label>',
+      schnell: schnellLink(hier, p, "neu", "1", "Neu", "Nur Einträge dieser Woche") + schnellLink(hier, p, "relevanz", "hoch", "Hoch relevant") +
+        (!rub || rub.key === "erteilungen" ? schnellLink(hier, p, "frist", "laufend", "Frist läuft", "Nur Erteilungen mit laufender Einspruchsfrist") : ""),
+      mehr: (rub ? "" : '<div class="pop-feld">' + auswahl("art", "Art", ARTEN.map(function (a) { return [a, a]; }), p.get("art")) + "</div>") +
+        '<div class="pop-feld">' + auswahl("amt", "Amt", Object.keys(AEMTER).map(function (k) { return [k, AEMTER[k]]; }), p.get("amt")) + "</div>" +
+        '<div class="pop-feld">' + auswahl("anmelder", "Anmelder", anmelderListe, p.get("anmelder")) + "</div>" +
+        '<div class="pop-feld zwei"><label class="feld"><span>Veröffentlicht ab</span><input type="date" name="von" value="' + esc(p.get("von") || "") + '"></label>' +
+        '<label class="feld"><span>bis</span><input type="date" name="bis" value="' + esc(p.get("bis") || "") + '"></label></div>',
+      mehrZahl: mehrZahl, chips: chipsAktiv, zuruecksetzen: "#/" + hier
+    });
 
-    html += '<div class="ergebnis-leiste"><span class="ergebnis-zahl"><strong>' + liste.length + "</strong> " + plural(liste.length, "Schutzrecht", "Schutzrechte") +
-      (aktiv ? ' gefunden <a href="#/' + hier + '" style="margin-left:8px">Filter zurücksetzen</a>' : "") + "</span>" +
-      '<div class="werkzeug-reihe"><div class="knopf-gruppe" role="group" aria-label="Ansicht">' +
-      '<button type="button" class="knopf klein" data-ansicht="karten" aria-pressed="' + (ansicht === "karten") + '">Karten</button>' +
-      '<button type="button" class="knopf klein" data-ansicht="tabelle" aria-pressed="' + (ansicht === "tabelle") + '">Tabelle</button></div>' +
-      exportKnoepfe() + '<button type="button" class="knopf klein" data-teilen>' + ICON.teilen + "Link kopieren</button></div></div>";
+    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl">' + liste.length.toLocaleString("de-DE") + " " + plural(liste.length, "Schutzrecht", "Schutzrechte") + "</h2>" +
+      '<div class="werkzeug-reihe"><div class="segment" role="group" aria-label="Ansicht">' +
+      '<button type="button" data-ansicht="karten" aria-pressed="' + (ansicht === "karten") + '">' + SYM.karten + "Karten</button>" +
+      '<button type="button" data-ansicht="tabelle" aria-pressed="' + (ansicht === "tabelle") + '">' + SYM.tabelle + "Tabelle</button></div>" +
+      '<label class="sortier"><span class="visuell-verborgen">Sortierung</span><select name="sort" form="filter" aria-label="Sortierung">' + Object.keys(SORTIERUNG).map(function (k) { return '<option value="' + k + '"' + (k === sort ? " selected" : "") + ">" + SORTIERUNG[k].name + "</option>"; }).join("") + "</select></label>" +
+      exportMenue(false) + "</div></div>";
 
     if (!liste.length) {
       html += leer(aktiv ? "Keine Schutzrechte zu diesen Filtern." : "Noch keine Schutzrechte im Radar.", aktiv ? "Lockere die Filter oder setze sie zurück." : "");
     } else if (ansicht === "tabelle") {
       html += tabelle(liste, sort);
     } else {
-      html += '<ul class="liste">' + liste.map(function (e) { return karte(e, { neuMarke: true }); }).join("") + "</ul>";
+      var listeHtml = sort === "datum" ? zeitleiste(liste, "veroeffentlicht", { neuMarke: true }) : '<ul class="liste karten">' + liste.map(function (e) { return karte(e, { neuMarke: true }); }).join("") + "</ul>";
+      var monat = String(liste[0].veroeffentlicht).slice(0, 7);
+      html += '<div class="liste-raster"><div class="liste-haupt">' + listeHtml + "</div>" +
+        '<aside class="seitenspalte" aria-label="Kalender und Kennzahlen">' + (sort === "datum" ? '<div class="sk-karte kal-karte">' + kalender(liste, "veroeffentlicht", monat) + '<p class="kal-hinweis">Punkte zeigen Veröffentlichungstage. Antippen springt zur Woche.</p></div>' : "") +
+        auswahlStatistik(liste) + "</aside></div>";
     }
     return html;
   }
@@ -671,11 +912,14 @@
       if (ziel !== location.hash) {
         var fokusName = document.activeElement && document.activeElement.name;
         var pos = document.activeElement && document.activeElement.selectionStart;
+        var popOffen = !!document.querySelector("#filter-pop:not([hidden])");
         history.replaceState(null, "", ziel);
-        zeichnen(false);
+        zeichnen(false, true);
+        if (popOffen) popUmschalten(document.querySelector('[data-pop="filter-pop"]'), true);
         if (fokusName) {
-          var neuEl = document.getElementById("filter").elements[fokusName];
-          if (neuEl) { neuEl.focus(); if (pos != null && neuEl.setSelectionRange) try { neuEl.setSelectionRange(pos, pos); } catch (e) {} }
+          var neuF = document.getElementById("filter");
+          var neuEl = neuF && neuF.elements[fokusName];
+          if (neuEl) { neuEl.focus({ preventScroll: true }); if (pos != null && neuEl.setSelectionRange) try { neuEl.setSelectionRange(pos, pos); } catch (e) {} }
         }
       }
     }
@@ -684,6 +928,7 @@
       timer = setTimeout(anwenden, ev.target.name === "q" ? 250 : 0);
     });
     f.addEventListener("change", anwenden);
+    document.querySelectorAll('[form="filter"]').forEach(function (el) { el.addEventListener("change", anwenden); });
   };
 
   function tabelle(liste, sort) {
@@ -704,32 +949,36 @@
     if (!e) return leer("Dieser Eintrag ist nicht (mehr) im Radar.", "Er wurde möglicherweise mit einem anderen Familienmitglied zusammengeführt.") + '<p style="margin-top:14px"><a href="#/schutzrechte">Zu allen Schutzrechten</a></p>';
     var fk = fristKlasse(e), merk = Merk.hat(e.id);
     var rb = RUBRIK_NACH_ART[e.art];
-    var fristChip = e.einspruch_bis ? { name: (fk === "abgelaufen" ? "Einspruchsfrist abgelaufen am " : "Einspruch bis ") + datum(e.einspruch_bis), farbe: fk === "unter-30" ? "--kupfer-band" : fk === "unter-90" ? "--messing-band" : fk === "abgelaufen" ? "--band-tinte-2" : "--patina-band", link: "#/fristen" } : null;
-    var html = kopfband({
-      klasse: "kopfband-detail", stil: themaStil(e.thema),
-      oben: '<a class="band-zurueck" href="#/' + (rb ? rb.key : "schutzrechte") + '">' + ICON.zurueck + esc(rb ? rb.name : "Alle Schutzrechte") + "</a>",
-      kicker: kindMarke(e) + '<span class="art-marke">' + esc(e.art) + '</span><span class="nummer">' + esc(e.nummer) + "</span>" + (e.neu_erteilt ? '<span class="etikett neu-erteilt">neu erteilt</span>' : "") + (e.neu ? '<span class="etikett neu">neu diese Woche</span>' : ""),
+    var inidVeroeff = e.art === "Erteilung" ? ["(45)", "Erteilung veröffentlicht"] : e.art === "Gebrauchsmuster" ? ["(43)", "Bekanntmachung"] : ["(43)", "Veröffentlicht"];
+    var html = detailBand({
+      thema: e.thema, schluessel: e.id,
+      zurueck: { href: "#/" + (rb ? rb.key : "schutzrechte"), text: rb ? rb.name : "Alle Schutzrechte" },
+      badges: kindMarke(e) + '<span class="db-pille">' + esc(e.art) + "</span>" + '<span class="db-pille">' + esc(themaName(e.thema)) + "</span>" +
+        (e.neu_erteilt ? '<span class="db-pille signal">neu erteilt</span>' : "") + (e.neu ? '<span class="db-pille signal">neu diese Woche</span>' : ""),
       titel: esc(e.titel),
-      unterzeile: '<p class="band-original"><span class="inid">(54)</span> ' + esc(e.titel_original) + "</p>",
-      chips: [{ name: themaName(e.thema), farbe: "--themafarbe", link: hashMit("schutzrechte", new URLSearchParams({ thema: e.thema })) }, { name: "Relevanz " + e.relevanz, farbe: "--band-tinte-2" }].concat(fristChip ? [fristChip] : []),
-      fig: zThema(e.thema, "fig-zeichnung symbol-gross"),
-      figAttr: ' aria-label="Symbolbild zum Thema ' + esc(themaName(e.thema)) + '"',
-      figText: '<span class="bz-nr">' + (BEZUG[e.thema] || "") + "</span> Symbolbild zum Thema, keine Zeichnung aus der Patentschrift"
+      unter: '<p class="db-original"><span class="inid">(54)</span> ' + esc(e.titel_original) + "</p>"
     });
-    html += '<div class="detail"><article class="detail-haupt" style="' + themaStil(e.thema) + '">' +
-      '<h2>Was ist neu?</h2><p class="absatz">' + esc(e.was_neu) + "</p>" +
-      '<h2>Bezug</h2><p class="absatz">' + esc(e.bezug) + "</p>" +
-      "<h2>Verlauf</h2>" + verlauf(e) +
-      '<div class="werkzeug-reihe" style="margin-top:22px"><button type="button" class="knopf merken" data-merken="' + esc(e.id) + '" aria-pressed="' + merk + '">' + ICON.merken + "<span>" + (merk ? "Gemerkt" : "Merken") + '</span></button><button type="button" class="knopf" data-teilen>' + ICON.teilen + "Link kopieren</button></div>" +
-      "</article><aside class=\"detail-seite\">";
+    var kacheln = [];
     if (e.einspruch_bis) {
-      html += '<div class="kasten frist-kasten ' + fk + '"><h2>Einspruch möglich bis</h2><div class="frist-datum">' + datum(e.einspruch_bis) + "</div><p>" +
-        (fk === "abgelaufen" ? "Frist abgelaufen." : "Noch " + tageBis(e.einspruch_bis) + " Tage.") + " Neun Monate ab Veröffentlichung der Erteilung am " + datum(e.erteilung_datum) +
-        " (" + (e.amt === "EP" ? "Art. 99 EPÜ" : "§ 59 PatG") + ").</p><p class=\"hinweis-text\" style=\"margin:0\">Frist im amtlichen Register prüfen.</p></div>";
+      var t = tageBis(e.einspruch_bis);
+      kacheln.push(fakt(SYM.uhr, "Einspruch möglich bis", datum(e.einspruch_bis), t < 0 ? "Frist abgelaufen" : t === 0 ? "endet heute" : "noch " + t + " " + plural(t, "Tag", "Tage"), "fk-frist " + (fk || "laeuft")));
     }
-    var inidVeroeff = e.art === "Erteilung" ? ["(45)", "Veröffentlichung der Erteilung"] : e.art === "Gebrauchsmuster" ? ["(43)", "Bekanntmachung"] : ["(43)", "Veröffentlichung"];
+    kacheln.push(fakt(SYM.kalender, '<span class="inid">' + inidVeroeff[0] + "</span>" + inidVeroeff[1], datum(e.veroeffentlicht), "angemeldet " + datum(e.angemeldet) + (e.prioritaet && e.prioritaet < e.angemeldet ? ", Priorität " + datum(e.prioritaet) : "")));
+    kacheln.push(fakt(SYM.anmelder, '<span class="inid">(71)</span>Anmelder', (e.anmelder || []).map(function (a) { return '<a href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a })) + '">' + esc(a) + "</a>"; }).join(", ") || "–",
+      e.anmelder_land ? esc(landName(e.anmelder_land)) : ""));
+    kacheln.push(fakt(zThema(e.thema, "fk-thema"), "Thema", '<a href="' + hashMit("schutzrechte", new URLSearchParams({ thema: e.thema })) + '">' + esc(THEMA[e.thema] ? THEMA[e.thema].knapp : themaName(e.thema)) + "</a>",
+      '<span class="relevanz ' + esc(e.relevanz) + '">' + (e.relevanz === "hoch" ? "hoch relevant" : "mittel relevant") + "</span>"));
+    kacheln.push(fakt(SYM.seite, '<span class="inid">(11)</span>Nummer', '<span class="nummer">' + esc(e.nummer) + "</span>", esc(e.art) + ", " + esc(AEMTER[e.amt] || e.amt)));
+    if (!e.einspruch_bis) kacheln.push(fakt(SYM.tabelle, '<span class="inid">(51)</span>Patentklassen', esc((e.klassen || []).slice(0, 3).join(", ") || "–"), (e.klassen || []).length > 3 ? "und " + (e.klassen.length - 3) + " weitere" : ""));
+    kacheln.push(fakt(SYM.radar, "Im Radar seit", datum(e.aufgenommen), e.familie && e.familie.length ? e.familie.length + " weitere " + plural(e.familie.length, "Veröffentlichung", "Veröffentlichungen") + " der Familie" : "eine Veröffentlichung in der Familie"));
     function zeile(inid, name, wert) { return "<dt>" + (inid ? '<span class="inid">' + inid + "</span>" : "") + esc(name) + "</dt><dd>" + wert + "</dd>"; }
-    html += '<div class="kasten"><h2>Daten</h2><dl class="daten">' +
+    var quelle = (e.links || [])[0];
+    html += '<div class="detail"><article class="detail-haupt" style="' + themaStil(e.thema) + '">' +
+      '<div class="faktenraster">' + kacheln.join("") + "</div>" +
+      '<section class="d-abschnitt"><h2>Was ist neu?</h2><p class="absatz">' + esc(e.was_neu) + "</p></section>" +
+      '<section class="d-abschnitt"><h2>Bezug</h2><p class="absatz">' + esc(e.bezug) + "</p></section>" +
+      '<section class="d-abschnitt"><h2>Verlauf</h2>' + verlauf(e) + "</section>" +
+      '<details class="d-mehr"><summary>Alle bibliografischen Daten</summary><dl class="daten">' +
       zeile("(11)", "Nummer", '<span class="nummer">' + esc(e.nummer) + "</span>") +
       zeile("", "Art", esc(e.art) + ", " + esc(AEMTER[e.amt] || e.amt)) +
       (e.anmeldenummer ? zeile("(21)", "Aktenzeichen", '<span class="nummer">' + esc(e.anmeldenummer) + "</span>") : "") +
@@ -737,11 +986,19 @@
       (e.prioritaet ? zeile("(30)", "Priorität", datum(e.prioritaet)) : "") +
       zeile(inidVeroeff[0], inidVeroeff[1], datum(e.veroeffentlicht)) +
       zeile("(51)", "Klassen", esc((e.klassen || []).join(", "))) +
+      zeile("(54)", "Bezeichnung", esc(e.titel_original)) +
       zeile("(71)", "Anmelder", (e.anmelder || []).map(function (a) { return '<a href="' + hashMit("schutzrechte", new URLSearchParams({ anmelder: a })) + '">' + esc(a) + "</a>"; }).join("<br>")) +
-      zeile("", "Thema", '<span class="thema-marke" style="' + themaStil(e.thema) + '">' + esc(themaName(e.thema)) + "</span>") +
       zeile("", "Relevanz", '<span class="relevanz ' + esc(e.relevanz) + '">' + esc(e.relevanz) + "</span>") +
       zeile("", "Im Radar seit", datum(e.aufgenommen)) + "</dl>" +
-      '<p class="hinweis-text inid-hinweis">Die Zahlen in Klammern sind die international genormten Kennungen (INID) der Angaben auf Patentschriften.</p></div>';
+      '<p class="hinweis-text inid-hinweis">Die Zahlen in Klammern sind die international genormten Kennungen (INID) der Angaben auf Patentschriften.</p></details>' +
+      '<div class="aktion-leiste">' + merkKnopf(e, "knopf") + '<button type="button" class="knopf" data-teilen aria-label="Link kopieren">' + ICON.teilen + "<span>Link kopieren</span></button>" +
+      (quelle ? '<a class="knopf primaer" href="' + esc(quelle.url) + '" target="_blank" rel="noopener noreferrer">Zur Schrift<span class="al-lang"> bei ' + esc(quelle.label) + '</span> <span aria-hidden="true">↗</span></a>' : "") + "</div>" +
+      "</article><aside class=\"detail-seite\">";
+    if (e.einspruch_bis) {
+      html += '<div class="kasten frist-kasten ' + fk + '"><h2>Einspruch möglich bis</h2><div class="frist-datum">' + datum(e.einspruch_bis) + "</div><p>" +
+        (fk === "abgelaufen" ? "Frist abgelaufen." : "Noch " + tageBis(e.einspruch_bis) + " Tage.") + " Neun Monate ab Veröffentlichung der Erteilung am " + datum(e.erteilung_datum) +
+        " (" + (e.amt === "EP" ? "Art. 99 EPÜ" : "§ 59 PatG") + ").</p><p class=\"hinweis-text\" style=\"margin:0\">Frist im amtlichen Register prüfen.</p></div>";
+    }
     if (e.familie && e.familie.length) {
       html += '<div class="kasten"><h2>Weitere Familienmitglieder</h2><ul class="familie-liste">' + e.familie.map(function (f) {
         var k = kindAusNummer(f.nummer);
@@ -750,8 +1007,18 @@
     }
     html += '<div class="kasten"><h2>Amtliche Quellen</h2><ul class="quellen-links">' + (e.links || []).map(function (l) {
       return '<li><a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '<span aria-hidden="true">↗</span></a></li>';
-    }).join("") + "</ul></div></aside></div>";
+    }).join("") + '</ul><p class="hinweis-text db-hinweis">Das Bild oben ist ein Materialbild zum Thema, keine Abbildung aus der Schrift.</p></div></aside></div>';
     return html;
+  }
+  /* Kopf der Detailseiten: Materialbild des Themas mit Titel darüber */
+  function detailBand(o) {
+    var motiv = window.Motiv ? window.Motiv.svg(THEMA[o.thema] ? o.thema : "", o.schluessel) : "";
+    return '<header class="detail-band" style="' + themaStil(o.thema) + '"><div class="db-bild" aria-hidden="true">' + motiv + '</div><div class="db-innen">' +
+      '<a class="band-zurueck" href="' + o.zurueck.href + '">' + ICON.zurueck + esc(o.zurueck.text) + "</a>" +
+      '<div class="db-badges">' + o.badges + "</div><h1>" + o.titel + "</h1>" + (o.unter || "") + "</div></header>";
+  }
+  function fakt(sym, titel, wert, sub, klasse) {
+    return '<div class="fakt' + (klasse ? " " + klasse : "") + '">' + sym + '<span class="fk-titel">' + titel + "</span><strong>" + wert + "</strong>" + (sub ? '<span class="fk-sub">' + sub + "</span>" : "") + "</div>";
   }
 
   function verlauf(e) {
@@ -803,12 +1070,22 @@
 
   /* ---------- Fristen ---------- */
   function fristen(r) {
-    var p = r.params, thema = p.get("thema");
+    var p = r.params, thema = p.get("thema"), q = (p.get("q") || "").toLowerCase().trim(), amt = p.get("amt"), fenster = p.get("fenster");
+    var woerter = q ? q.split(/\s+/) : [];
     var alleMitFrist = D.radar.eintraege.filter(function (e) { return e.einspruch_bis; });
     var laufendAlle = alleMitFrist.filter(fristLaeuft);
-    var alle = thema ? alleMitFrist.filter(function (e) { return e.thema === thema; }) : alleMitFrist;
-    var laufend = alle.filter(fristLaeuft).sort(function (a, b) { return a.einspruch_bis.localeCompare(b.einspruch_bis); });
-    var abgelaufen = alle.filter(function (e) { return !fristLaeuft(e); }).sort(function (a, b) { return b.einspruch_bis.localeCompare(a.einspruch_bis); });
+    function passt(e, ohneThema) {
+      if (!ohneThema && thema && e.thema !== thema) return false;
+      if (amt && e.amt !== amt) return false;
+      if (fenster && tageBis(e.einspruch_bis) >= parseInt(fenster, 10)) return false;
+      if (woerter.length) {
+        var text = [e.titel, e.titel_original, (e.anmelder || []).join(" "), e.nummer, e.nummer_kompakt, (e.klassen || []).join(" "), themaName(e.thema)].join(" ").toLowerCase();
+        for (var i = 0; i < woerter.length; i++) if (text.indexOf(woerter[i]) < 0) return false;
+      }
+      return true;
+    }
+    var laufend = laufendAlle.filter(function (e) { return passt(e); }).sort(function (a, b) { return a.einspruch_bis.localeCompare(b.einspruch_bis); });
+    var abgelaufen = alleMitFrist.filter(function (e) { return !fristLaeuft(e) && passt(e); }).sort(function (a, b) { return b.einspruch_bis.localeCompare(a.einspruch_bis); });
     aktuelleListe = laufend;
     var n30 = laufendAlle.filter(function (e) { return tageBis(e.einspruch_bis) < 30; }).length;
     var n90 = laufendAlle.filter(function (e) { var t = tageBis(e.einspruch_bis); return t >= 30 && t < 90; }).length;
@@ -816,34 +1093,54 @@
       kicker: "Kalender",
       titel: "Einspruchsfristen",
       text: "Gegen ein erteiltes Patent kann innerhalb von neun Monaten nach Veröffentlichung der Erteilung Einspruch eingelegt werden (DE: § 59 PatG, EP: Art. 99 EPÜ). Fristen bitte immer im amtlichen Register prüfen.",
-      chips: [{ wert: laufendAlle.length, name: "laufende Fristen", farbe: "--patina-band" }, { wert: n30, name: "enden in unter 30 Tagen", farbe: "--kupfer-band" }, { wert: n90, name: "in 30 bis 90 Tagen", farbe: "--messing-band" }],
-      figKey: "fristen"
+      chips: [{ wert: laufendAlle.length, name: "laufende Fristen", farbe: "--patina-band", link: "#/fristen" }, { wert: n30, name: "enden in unter 30 Tagen", farbe: "--kupfer-band", link: "#/fristen?fenster=30" }, { wert: n90, name: "in 30 bis 90 Tagen", farbe: "--messing-band", link: "#/fristen?fenster=90" }],
+      figKey: "fristen", stil: "--ak: var(--messing)"
     });
-    html += themenFilter(laufendAlle, p, "fristen");
-    html += fristenLeiste(laufend);
-    html += '<div class="ergebnis-leiste" style="margin-top:22px"><span class="ergebnis-zahl"><strong>' + laufend.length + "</strong> laufende " + plural(laufend.length, "Frist", "Fristen") + (thema ? " zum Thema " + esc(themaName(thema)) : "") + "</span>" +
-      '<div class="werkzeug-reihe">' + exportKnoepfe() + "</div></div>";
-    if (!laufend.length) html += leer(thema ? "Zu diesem Thema laufen zurzeit keine Einspruchsfristen." : "Zurzeit keine laufenden Einspruchsfristen.", "");
+    var chips = [];
+    if (p.get("q")) chips.push({ text: "Suche: " + p.get("q"), weg: ohneParam("fristen", p, "q") });
+    if (thema) chips.push({ text: "Thema: " + themaName(thema), weg: ohneParam("fristen", p, "thema") });
+    if (amt) chips.push({ text: "Amt: " + (AEMTER[amt] || amt), weg: ohneParam("fristen", p, "amt") });
+    if (fenster) chips.push({ text: "endet in unter " + fenster + " Tagen", weg: ohneParam("fristen", p, "fenster") });
+    html += filterLeiste({
+      kat: themenFilter(laufendAlle.filter(function (e) { return passt(e, true); }), p, "fristen"),
+      suche: '<label class="feld suche"><span class="visuell-verborgen">Fristen durchsuchen</span>' + ICON.suche + '<input type="search" name="q" value="' + esc(p.get("q") || "") + '" placeholder="Suchen: Titel, Anmelder, Nummer, Patentklasse" autocomplete="off"></label>',
+      schnell: schnellLink("fristen", p, "fenster", "30", "unter 30 Tagen", "Fristen, die in weniger als 30 Tagen enden") + schnellLink("fristen", p, "fenster", "90", "unter 90 Tagen") +
+        schnellLink("fristen", p, "amt", "DE", "DE", "Nur deutsche Patente") + schnellLink("fristen", p, "amt", "EP", "EP", "Nur europäische Patente"),
+      chips: chips, zuruecksetzen: "#/fristen"
+    });
+    html += '<section class="kachel k-leiste fristen-kachel" aria-labelledby="fl-titel">' + kKopf("fl-titel", "Die nächsten neun Monate", '<p class="k-text">Jeder Punkt ist eine Erteilung mit laufender Frist. Antippen öffnet den Eintrag.</p>') + fristenLeiste(laufend) + "</section>";
+    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl">' + laufend.length + " laufende " + plural(laufend.length, "Frist", "Fristen") + "</h2>" +
+      '<div class="werkzeug-reihe">' + exportMenue(true) + "</div></div>";
+    if (!laufend.length) html += leer(chips.length ? "Zu diesen Filtern laufen zurzeit keine Einspruchsfristen." : "Zurzeit keine laufenden Einspruchsfristen.", chips.length ? "Lockere die Filter oder setze sie zurück." : "");
     else {
       var monate = {};
       laufend.forEach(function (e) { var m = e.einspruch_bis.slice(0, 7); (monate[m] = monate[m] || []).push(e); });
-      html += '<div class="frist-monate">' + Object.keys(monate).sort().map(function (m) {
+      var dringend = laufend.filter(function (e) { return tageBis(e.einspruch_bis) < 30; }).length, bald = laufend.filter(function (e) { var t = tageBis(e.einspruch_bis); return t >= 30 && t < 90; }).length;
+      var ep = laufend.filter(function (e) { return e.amt === "EP"; }).length;
+      html += '<div class="liste-raster"><div class="liste-haupt frist-monate">' + Object.keys(monate).sort().map(function (m) {
         var liste = monate[m];
-        return '<section class="frist-monat"><h2><span>' + MONATE_LANG[parseInt(m.slice(5), 10) - 1] + " " + m.slice(0, 4) + '</span><span class="fm-zahl">' + liste.length + " " + plural(liste.length, "Frist", "Fristen") + "</span></h2>" +
+        return '<section class="frist-monat"><h2 class="monat-kopf" id="m-' + m + '">' + MONATE_LANG[parseInt(m.slice(5), 10) - 1] + " " + m.slice(0, 4) + " <span>" + liste.length + " " + plural(liste.length, "Frist", "Fristen") + "</span></h2>" +
           '<ol class="frist-liste">' + liste.map(fristZeile).join("") + "</ol></section>";
-      }).join("") + "</div>";
+      }).join("") + "</div>" +
+        '<aside class="seitenspalte" aria-label="Kalender und Kennzahlen"><div class="sk-karte kal-karte">' + kalender(laufend, "einspruch_bis", laufend[0].einspruch_bis.slice(0, 7)) + '<p class="kal-hinweis">Punkte zeigen Tage, an denen Fristen enden. Antippen springt zum Eintrag.</p></div>' +
+        '<div class="sk-karte"><p class="sk-titel">In dieser Auswahl</p><p class="sk-zahl">' + laufend.length + " " + plural(laufend.length, "Frist", "Fristen") + "</p>" +
+        '<ul class="sk-balken">' + [["unter 30 Tage", dringend, "--kupfer"], ["30 bis 90 Tage", bald, "--messing"], ["über 90 Tage", laufend.length - dringend - bald, "--patina"]].map(function (x) {
+          return '<li style="--sf:var(' + x[2] + ')"><span>' + x[0] + "</span><b>" + x[1] + '</b><i><em style="width:' + Math.round(100 * x[1] / Math.max(1, laufend.length)) + '%"></em></i></li>';
+        }).join("") + "</ul>" +
+        '<dl class="sk-werte"><div><dt>Europäische Patente</dt><dd>' + ep + "</dd></div><div><dt>Deutsche Patente</dt><dd>" + (laufend.length - ep) + "</dd></div><div><dt>nächstes Fristende</dt><dd>" + datum(laufend[0].einspruch_bis) + "</dd></div></dl></div></aside></div>";
     }
     if (abgelaufen.length) {
-      html += '<details class="abschnitt"><summary>Abgelaufene Fristen (' + abgelaufen.length + ")</summary>" + '<ul class="liste kompakt" style="margin-top:12px">' + abgelaufen.map(function (e) { return karte(e, { kompakt: true }); }).join("") + "</ul></details>";
+      html += '<details class="d-mehr abgelaufen-liste"><summary>Abgelaufene Fristen (' + abgelaufen.length + ")</summary>" + '<ul class="liste kompakt">' + abgelaufen.map(function (e) { return karte(e, { kompakt: true }); }).join("") + "</ul></details>";
     }
     return html;
   }
+  fristen.danach = function (r) { schutzrechte.danach(r); };
   function fristZeile(e) {
     var t = tageBis(e.einspruch_bis), u = urgenz(t);
     var start = e.erteilung_datum || e.veroeffentlicht;
     var gesamt = Math.max(1, Math.round((new Date(e.einspruch_bis + "T00:00:00Z") - new Date(start + "T00:00:00Z")) / 86400000));
     var rest = Math.max(0, Math.min(100, Math.round(100 * t / gesamt)));
-    return '<li class="frist-zeile ' + u + '" style="' + themaStil(e.thema) + '">' + datumKachel(e.einspruch_bis, u) +
+    return '<li class="frist-zeile ' + u + '" style="' + themaStil(e.thema) + '" data-flip="' + esc(e.id) + '" data-tag-anker="' + e.einspruch_bis + '">' + datumKachel(e.einspruch_bis, u) +
       '<div class="fz-info"><div class="karte-oben">' + kindMini(e.art, e.amt, e.kind) + '<span class="nummer">' + esc(e.nummer) + "</span>" + themaChip(e.thema) + "</div>" +
       '<a class="fz-titel" href="#/eintrag/' + encodeURIComponent(e.id) + '">' + esc(e.titel) + '</a><span class="fz-anm">' + esc((e.anmelder || []).join(", ")) + "</span></div>" +
       '<div class="fz-rest"><span class="fz-tage"><b>' + t + "</b> " + plural(t, "Tag", "Tage") + '</span><span class="fz-balken" role="img" aria-label="' + rest + ' Prozent der Frist verbleiben"><span style="width:' + Math.max(2, rest) + '%"></span></span><span class="fz-text">von ' + gesamt + " Tagen ab Erteilung</span></div></li>";
@@ -957,6 +1254,7 @@
     }).then(function () {
       bestandLaeuft = false;
       if (route().name === "bestand") zeichnen(false);
+      if (suche && suche.open) sucheRendern();
     });
   }
   function restText(ende, kurz) {
@@ -1031,28 +1329,33 @@
     var sort = BESTAND_SORT[p.get("sort")] ? p.get("sort") : "neu";
     var liste = bestandFiltern(alle, p).sort(BESTAND_SORT[sort].f);
     aktuelleListe = liste;
-    var aktiv = ["q", "thema", "art", "amt", "anmelder", "ende"].some(function (k) { return p.get(k); });
     var html = bestandKopf(bestandZahlen(alle));
     if (!B.meta.vollstaendig) html += '<p class="hinweis-kasten">Der Bestand wird noch aufgebaut. Bisher sind die jüngeren Veröffentlichungsjahre erfasst; ältere folgen mit den nächsten Abrufen.</p>';
-    html += themenFilter(bestandFiltern(alle, p, "thema"), p, "bestand");
-    html += ablaufDiagramm(bestandFiltern(alle, p, "ende"), p);
     var an = p.get("anmelder"), en = p.get("ende");
     var endeOpt = Object.keys(BESTAND_ENDE).map(function (k) { return [k, BESTAND_ENDE[k]]; });
     if (en && /^\d{4}$/.test(en)) endeOpt.push([en, "im Jahr " + en]);
-    html += '<form class="filter" id="filter" role="search" onsubmit="return false">' +
-      '<label class="feld suche"><span class="visuell-verborgen">Im Bestand suchen</span>' + ICON.suche + '<input type="search" name="q" value="' + esc(p.get("q") || "") + '" placeholder="Suche nach Titel, Anmelder, Nummer oder Patentklasse" autocomplete="off"></label>' +
-      '<div class="filter-zeile">' +
-      auswahl("art", "Art", BESTAND_REIHE.map(function (k) { return [k, BESTAND_ART[k].name]; }), p.get("art")) +
-      auswahl("amt", "Amt", [["DE", AEMTER.DE], ["EP", AEMTER.EP]], p.get("amt")) +
-      auswahl("ende", "Laufzeit endet", endeOpt, en) +
-      '<label class="feld"><span>Sortierung</span><select name="sort">' + Object.keys(BESTAND_SORT).map(function (k) { return '<option value="' + k + '"' + (k === sort ? " selected" : "") + ">" + BESTAND_SORT[k].name + "</option>"; }).join("") + "</select></label>" +
-      "</div>" +
-      (an ? '<p class="aktiv-filter">Anmelder: <strong>' + esc(an) + '</strong> <a href="' + (function () { var q = new URLSearchParams(p); q.delete("anmelder"); return hashMit("bestand", q); })() + '" aria-label="Anmelder-Filter entfernen">✕ entfernen</a></p>' : "") +
-      "</form>";
+    var chips = [];
+    if (p.get("q")) chips.push({ text: "Suche: " + p.get("q"), weg: ohneParam("bestand", p, "q") });
+    if (p.get("thema")) chips.push({ text: "Thema: " + themaName(p.get("thema")), weg: ohneParam("bestand", p, "thema") });
+    if (p.get("art") && BESTAND_ART[p.get("art")]) chips.push({ text: "Art: " + BESTAND_ART[p.get("art")].name, weg: ohneParam("bestand", p, "art") });
+    if (p.get("amt")) chips.push({ text: "Amt: " + (AEMTER[p.get("amt")] || p.get("amt")), weg: ohneParam("bestand", p, "amt") });
+    if (an) chips.push({ text: "Anmelder: " + an, weg: ohneParam("bestand", p, "anmelder") });
+    if (en) chips.push({ text: "Laufzeit endet " + (BESTAND_ENDE[en] || "im Jahr " + en), weg: ohneParam("bestand", p, "ende") });
+    html += filterLeiste({
+      kat: themenFilter(bestandFiltern(alle, p, "thema"), p, "bestand"),
+      suche: '<label class="feld suche"><span class="visuell-verborgen">Im Bestand suchen</span>' + ICON.suche + '<input type="search" name="q" value="' + esc(p.get("q") || "") + '" placeholder="Im Bestand suchen: Titel, Anmelder, Nummer, Patentklasse" autocomplete="off"></label>',
+      schnell: BESTAND_REIHE.map(function (k) { return schnellLink("bestand", p, "art", k, { patent: "Patente", gm: "Gebrauchsmuster", anmeldung: "Anmeldungen" }[k], BESTAND_ART[k].mehr); }).join("") +
+        schnellLink("bestand", p, "ende", "12m", "läuft bald aus", "Längste Laufzeit endet in den nächsten 12 Monaten"),
+      mehr: '<div class="pop-feld">' + auswahl("amt", "Amt", [["DE", AEMTER.DE], ["EP", AEMTER.EP]], p.get("amt")) + "</div>" +
+        '<div class="pop-feld">' + auswahl("ende", "Laufzeit endet", endeOpt, en) + "</div>",
+      mehrZahl: ["amt", "ende"].filter(function (k) { return p.get(k); }).length, chips: chips, zuruecksetzen: "#/bestand"
+    });
+    html += ablaufDiagramm(bestandFiltern(alle, p, "ende"), p);
     if (!an) html += topAnmelder(bestandFiltern(alle, p, "anmelder"), p);
-    html += '<div class="ergebnis-leiste"><span class="ergebnis-zahl"><strong>' + liste.length.toLocaleString("de-DE") + "</strong> " + plural(liste.length, "Schutzrecht", "Schutzrechte") +
-      (aktiv ? ' gefunden <a href="#/bestand" style="margin-left:8px">Filter zurücksetzen</a>' : "") + "</span>" +
-      '<div class="werkzeug-reihe">' + exportKnoepfe() + '<button type="button" class="knopf klein" data-teilen>' + ICON.teilen + "Link kopieren</button></div></div>";
+    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl">' + liste.length.toLocaleString("de-DE") + " " + plural(liste.length, "Schutzrecht", "Schutzrechte") + "</h2>" +
+      '<div class="werkzeug-reihe"><label class="sortier"><span class="visuell-verborgen">Sortierung</span><select name="sort" form="filter" aria-label="Sortierung">' +
+      Object.keys(BESTAND_SORT).map(function (k) { return '<option value="' + k + '"' + (k === sort ? " selected" : "") + ">" + BESTAND_SORT[k].name + "</option>"; }).join("") + "</select></label>" +
+      exportMenue(false) + "</div></div>";
     if (!liste.length) return html + leer("Keine Schutzrechte zu diesen Filtern.", "Lockere die Filter oder setze sie zurück.");
     html += '<ol class="bestand-liste" data-gezeigt="' + Math.min(BESTAND_SEITE, liste.length) + '">' + liste.slice(0, BESTAND_SEITE).map(bestandZeile).join("") + "</ol>";
     if (liste.length > BESTAND_SEITE) html += '<p class="mehr-zeile"><button type="button" class="knopf" data-mehr>Weitere ' + Math.min(BESTAND_SEITE, liste.length - BESTAND_SEITE) + " anzeigen</button> <span class=\"hinweis-text\">" + BESTAND_SEITE + " von " + liste.length.toLocaleString("de-DE") + " gezeigt</span></p>";
@@ -1126,7 +1429,7 @@
     var rest = Math.max(0, Math.min(100, Math.round(100 * t / gesamt)));
     var kind = (e.dok[e.dok.length - 1] || [])[0] || "";
     var bald = e.art !== "anmeldung" && t < 365;
-    return '<li class="bestand-zeile b-' + e.art + (bald ? " bald" : "") + '" style="' + themaStil(e.thema) + ";--af:var(" + A.farbe + ')">' +
+    return '<li class="bestand-zeile b-' + e.art + (bald ? " bald" : "") + '" data-flip="b-' + esc(e.id) + '" style="' + themaStil(e.thema) + ";--af:var(" + A.farbe + ')">' +
       '<span class="ende-kachel" aria-hidden="true"><small>bis</small><b>' + e.ende.slice(0, 4) + "</b><span>" + MONATE[parseInt(e.ende.slice(5, 7), 10) - 1] + "</span></span>" +
       '<div class="fz-info"><div class="karte-oben">' + kindMini(A.art, e.amt, kind) + '<span class="nummer">' + esc(e.nummer) + '</span><span class="b-art">' + esc(A.name) + "</span>" + themaChip(e.thema) +
       (e.radar ? '<span class="etikett im-radar">auch im Radar</span>' : "") + "</div>" +
@@ -1200,18 +1503,12 @@
     if (!e) return leer("Dieses Schutzrecht ist nicht (mehr) im Bestand.", "Seine längstmögliche Laufzeit ist vermutlich abgelaufen.") + '<p style="margin-top:14px"><a href="#/bestand">Zum Bestand</a></p>';
     var A = BESTAND_ART[e.art], t = tageBis(e.ende), kind = (e.dok[e.dok.length - 1] || [])[0] || "";
     var links = bestandLinks(e), register = links.filter(function (l) { return l.rechtsstand; })[0];
-    var html = kopfband({
-      klasse: "kopfband-detail", stil: themaStil(e.thema),
-      oben: '<a class="band-zurueck" href="#/bestand">' + ICON.zurueck + "Bestand</a>",
-      kicker: kindMini(A.art, e.amt, kind) + '<span class="art-marke">' + esc(A.name) + '</span><span class="nummer">' + esc(e.nummer) + "</span>",
-      titel: esc(e.titel),
-      chips: [
-        { name: themaName(e.thema), farbe: "--themafarbe", link: hashMit("bestand", new URLSearchParams({ thema: e.thema })) },
-        e.art === "anmeldung" ? { name: "keine Erteilung veröffentlicht", farbe: "--r-offenlegungen" } : { wert: esc(t > 0 ? restText(e.ende, true).replace(/^noch /, "") : "endet heute"), name: "längstens bis " + datum(e.ende), farbe: t < 365 ? "--kupfer-band" : "--patina-band" }
-      ],
-      fig: zThema(e.thema, "fig-zeichnung symbol-gross"),
-      figAttr: ' aria-label="Symbolbild zum Thema ' + esc(themaName(e.thema)) + '"',
-      figText: '<span class="bz-nr">' + (BEZUG[e.thema] || "") + "</span> Symbolbild zum Thema, keine Zeichnung aus der Schrift"
+    var html = detailBand({
+      thema: e.thema, schluessel: e.id,
+      zurueck: { href: "#/bestand", text: "Bestand" },
+      badges: kindMini(A.art, e.amt, kind) + '<span class="db-pille">' + esc(A.name) + '</span><span class="db-pille">' + esc(themaName(e.thema)) + "</span>" +
+        (e.radar ? '<a class="db-pille signal" href="#/eintrag/' + encodeURIComponent(e.radar) + '">auch im Radar</a>' : ""),
+      titel: esc(e.titel)
     });
     var rechtsText = e.art === "anmeldung"
       ? "Zu dieser Anmeldung ist keine Erteilung veröffentlicht. Eine Anmeldung allein gibt noch keinen Schutz. Ob sie noch geprüft wird, zurückgenommen oder zurückgewiesen wurde, zeigt das Register. Wird sie erteilt, läuft das Patent längstens bis " + datum(e.ende) + "."
@@ -1219,16 +1516,23 @@
         ? "Ein Gebrauchsmuster läuft längstens zehn Jahre nach Ablauf des Monats, in dem es angemeldet wurde (§ 23 GebrMG), hier also bis " + datum(e.ende) + ". Es muss nach drei, sechs und acht Jahren verlängert werden; ob das geschehen ist, zeigt das Register."
         : "Ein Patent läuft längstens 20 Jahre ab dem Anmeldetag (" + (e.amt === "EP" ? "Art. 63 EPÜ" : "§ 16 PatG") + "), hier also bis " + datum(e.ende) + ". Es erlischt früher, wenn die Jahresgebühren nicht gezahlt werden, der Inhaber verzichtet oder es widerrufen oder für nichtig erklärt wird." +
           (e.amt === "EP" ? " Ein europäisches Patent wirkt in den Staaten, in denen es validiert wurde; die Länder zeigt das Europäische Patentregister." : "");
-    html += '<div class="detail"><article class="detail-haupt" style="' + themaStil(e.thema) + '">' +
-      "<h2>Laufzeit</h2>" + bestandVerlauf(e) +
-      '<div class="rechtsstand-kasten"><div><h3>' + (e.art === "anmeldung" ? "Stand der Anmeldung prüfen" : "Gilt es noch?") + "</h3><p>" + esc(rechtsText) + "</p></div>" +
-      (register ? '<a class="knopf primaer" href="' + esc(register.url) + '" target="_blank" rel="noopener noreferrer">Rechtsstand im ' + (e.amt === "EP" ? "Europäischen Patentregister" : "DPMAregister") + ' <span aria-hidden="true">↗</span></a>' : "") + "</div>" +
-      (e.radar ? '<p class="im-radar-hinweis">Dieses Schutzrecht ist auch im Radar beschrieben, mit Zusammenfassung „Was ist neu?“. <a href="#/eintrag/' + encodeURIComponent(e.radar) + '">Zum Radar-Eintrag</a></p>' : "") +
-      '<div class="werkzeug-reihe" style="margin-top:22px"><button type="button" class="knopf" data-teilen>' + ICON.teilen + "Link kopieren</button>" +
-      (e.anmName ? '<a class="knopf" href="' + hashMit("bestand", new URLSearchParams({ anmelder: e.anmName })) + '">Alle Schutzrechte dieses Anmelders</a>' : "") + "</div>" +
-      "</article><aside class=\"detail-seite\">";
+    var bald = e.art !== "anmeldung" && t < 365;
+    var kacheln = [
+      fakt(SYM.uhr, e.art === "anmeldung" ? "Falls erteilt, längstens bis" : "Längstens bis", datum(e.ende), t <= 0 ? "endet heute" : restText(e.ende), "fk-frist " + (bald ? "unter-30" : e.art === "anmeldung" ? "offen" : "laeuft")),
+      fakt(SYM.kalender, '<span class="inid">(22)</span>Angemeldet', datum(e.angemeldet), e.erteilt ? "erteilt " + datum(e.erteilt) : "veröffentlicht " + datum(e.veroeffentlicht)),
+      fakt(SYM.anmelder, '<span class="inid">(71)</span>Anmelder', e.anmNamen.map(function (a) { return '<a href="' + hashMit("bestand", new URLSearchParams({ anmelder: a })) + '">' + esc(a) + "</a>"; }).join(", ") || "–",
+        e.laender.filter(Boolean).length ? esc(e.laender.filter(Boolean).map(landName).filter(function (x, i, l) { return l.indexOf(x) === i; }).join(", ")) : ""),
+      fakt(zThema(e.thema, "fk-thema"), "Thema", '<a href="' + hashMit("bestand", new URLSearchParams({ thema: e.thema })) + '">' + esc(THEMA[e.thema] ? THEMA[e.thema].knapp : themaName(e.thema)) + "</a>", "aus Patentklasse und Titel"),
+      fakt(SYM.seite, '<span class="inid">(11)</span>Nummer', '<span class="nummer">' + esc(e.nummer) + "</span>", esc(A.name) + ", " + esc(AEMTER[e.amt] || e.amt)),
+      fakt(SYM.tabelle, '<span class="inid">(51)</span>Patentklassen', esc(e.klassen.slice(0, 3).join(", ") || "–"), e.klassen.length > 3 ? "und " + (e.klassen.length - 3) + " weitere" : "")
+    ];
     function zeile(inid, name, wert) { return "<dt>" + (inid ? '<span class="inid">' + inid + "</span>" : "") + esc(name) + "</dt><dd>" + wert + "</dd>"; }
-    html += '<div class="kasten"><h2>Daten</h2><dl class="daten">' +
+    html += '<div class="detail"><article class="detail-haupt" style="' + themaStil(e.thema) + '">' +
+      '<div class="faktenraster">' + kacheln.join("") + "</div>" +
+      '<section class="d-abschnitt"><h2>Laufzeit</h2>' + bestandVerlauf(e) + "</section>" +
+      '<div class="rechtsstand-kasten"><div><h3>' + (e.art === "anmeldung" ? "Stand der Anmeldung prüfen" : "Gilt es noch?") + "</h3><p>" + esc(rechtsText) + "</p></div></div>" +
+      (e.radar ? '<p class="im-radar-hinweis">Dieses Schutzrecht ist auch im Radar beschrieben, mit Zusammenfassung „Was ist neu?“. <a href="#/eintrag/' + encodeURIComponent(e.radar) + '">Zum Radar-Eintrag</a></p>' : "") +
+      '<details class="d-mehr"><summary>Alle bibliografischen Daten</summary><dl class="daten">' +
       zeile("(11)", "Nummer", '<span class="nummer">' + esc(e.nummer) + "</span>") +
       zeile("", "Art", esc(A.name) + ", " + esc(AEMTER[e.amt] || e.amt)) +
       zeile("(22)", "Anmeldetag", datum(e.angemeldet)) +
@@ -1237,7 +1541,11 @@
       zeile("(51)", "Klassen", esc(e.klassen.join(", ") || "–")) +
       zeile("(71)", "Anmelder", e.anmNamen.map(function (a, i) { return '<a href="' + hashMit("bestand", new URLSearchParams({ anmelder: a })) + '">' + esc(a) + "</a>" + (e.laender[i] ? ' <span class="land-marke" title="' + esc(landName(e.laender[i])) + '">' + esc(e.laender[i]) + "</span>" : ""); }).join("<br>") || "–") +
       zeile("", "Thema", '<span class="thema-marke" style="' + themaStil(e.thema) + '">' + esc(themaName(e.thema)) + "</span>") + "</dl>" +
-      '<p class="hinweis-text inid-hinweis">Anmelder wie zuletzt veröffentlicht. Spätere Übertragungen stehen im Register.</p></div>';
+      '<p class="hinweis-text inid-hinweis">Anmelder wie zuletzt veröffentlicht. Spätere Übertragungen stehen im Register.</p></details>' +
+      '<div class="aktion-leiste">' + (register ? '<a class="knopf primaer" href="' + esc(register.url) + '" target="_blank" rel="noopener noreferrer">Rechtsstand<span class="al-lang"> im ' + (e.amt === "EP" ? "EP-Register" : "DPMAregister") + '</span> prüfen <span aria-hidden="true">↗</span></a>' : "") +
+      '<button type="button" class="knopf" data-teilen aria-label="Link kopieren">' + ICON.teilen + "<span>Link kopieren</span></button>" +
+      (e.anmName ? '<a class="knopf" href="' + hashMit("bestand", new URLSearchParams({ anmelder: e.anmName })) + '" aria-label="Alle Schutzrechte dieses Anmelders">' + SYM.anmelder + "<span>Alle dieses Anmelders</span></a>" : "") + "</div>" +
+      "</article><aside class=\"detail-seite\">";
     html += '<div class="kasten"><h2>Veröffentlichungen</h2><ul class="familie-liste">' + e.dok.slice().reverse().map(function (d) {
       var art = d[0] === "U1" ? "Gebrauchsmuster" : d[0].charAt(0) === "B" ? "Erteilung" : "Offenlegung";
       var name = d[0] === "U1" ? "Gebrauchsmuster" : d[0] === "B2" ? "Geänderte Patentschrift" : d[0].charAt(0) === "B" ? "Patentschrift" : "Offenlegungsschrift";
@@ -1245,7 +1553,7 @@
     }).join("") + "</ul></div>";
     html += '<div class="kasten"><h2>Amtliche Quellen</h2><ul class="quellen-links">' + links.map(function (l) {
       return '<li><a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label + (l.rechtsstand ? " (Rechtsstand)" : "")) + '<span aria-hidden="true">↗</span></a></li>';
-    }).join("") + "</ul></div></aside></div>";
+    }).join("") + '</ul><p class="hinweis-text db-hinweis">Das Bild oben ist ein Materialbild zum Thema, keine Abbildung aus der Schrift.</p></div></aside></div>';
     return html;
   }
 
@@ -1455,7 +1763,10 @@
   }
   hinweise.titel = function () { return "Hinweise"; };
 
-  function nichtGefunden() { return leer("Diese Seite gibt es nicht.", "") + '<p style="margin-top:14px"><a href="#/">Zur Übersicht</a></p>'; }
+  function nichtGefunden() {
+    return kopfband({ kicker: "Nicht gefunden", titel: "Diese Seite gibt es nicht", text: "Der Link ist vielleicht veraltet. Die Suche oben findet Schutzrechte, Anmelder und Seiten." }) +
+      '<div class="werkzeug-reihe" style="margin-top:24px"><a class="knopf primaer" href="#/">Zur Übersicht</a><button type="button" class="knopf" data-suche>' + ICON.suche + "Suchen</button></div>";
+  }
 
   /* ---------- Export ---------- */
   function exportKnoepfe() {
@@ -1573,6 +1884,188 @@
       });
     });
     main.querySelectorAll("[data-drucken]").forEach(function (b) { b.addEventListener("click", function () { window.print(); }); });
+    main.querySelectorAll("[data-pop]").forEach(function (b) {
+      b.addEventListener("click", function (ev) { ev.stopPropagation(); popUmschalten(b); });
+    });
+    main.querySelectorAll("[data-pop-zu]").forEach(function (b) { b.addEventListener("click", function () { allePopsZu(); }); });
+    main.querySelectorAll(".pop").forEach(function (p) { p.addEventListener("click", function (ev) { ev.stopPropagation(); }); });
+    main.querySelectorAll("[data-bestand-suche]").forEach(function (f) {
+      f.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var v = f.elements.q.value.trim();
+        location.hash = hashMit("bestand", new URLSearchParams(v ? { q: v } : {}));
+      });
+    });
+    main.querySelectorAll(".kat-leiste").forEach(katLeiste);
+    main.querySelectorAll(".kal").forEach(function (k) { kalenderBinden(k.parentNode); });
+  }
+  function popUmschalten(knopf, auf) {
+    if (!knopf) return;
+    var pop = document.getElementById(knopf.getAttribute("data-pop"));
+    if (!pop) return;
+    var oeffnen = auf != null ? auf : pop.hidden;
+    allePopsZu();
+    pop.hidden = !oeffnen; knopf.setAttribute("aria-expanded", String(oeffnen));
+    if (oeffnen && auf == null) { var erstes = pop.querySelector("select, input, button"); if (erstes) erstes.focus({ preventScroll: true }); }
+  }
+  function allePopsZu() {
+    document.querySelectorAll(".pop").forEach(function (p) { p.hidden = true; });
+    document.querySelectorAll("[data-pop]").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+  }
+  document.addEventListener("click", function () { allePopsZu(); });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") allePopsZu(); });
+  function katLeiste(l) {
+    var spur = l.querySelector(".kat-spur");
+    function lage() {
+      l.classList.toggle("kann-links", spur.scrollLeft > 4);
+      l.classList.toggle("kann-rechts", spur.scrollLeft + spur.clientWidth < spur.scrollWidth - 4);
+    }
+    l.querySelectorAll(".kat-pfeil").forEach(function (b) {
+      b.addEventListener("click", function () { spur.scrollBy({ left: (b.classList.contains("links") ? -1 : 1) * spur.clientWidth * .7, behavior: reduziert ? "auto" : "smooth" }); });
+    });
+    spur.addEventListener("scroll", lage, { passive: true });
+    var aktiv = spur.querySelector('[aria-current="true"]');
+    if (aktiv && aktiv.offsetLeft + aktiv.offsetWidth > spur.clientWidth) spur.scrollLeft = aktiv.offsetLeft - 40;
+    lage();
+  }
+  function kalenderBinden(rahmen) {
+    rahmen.addEventListener("click", function (ev) {
+      var k = rahmen.querySelector(".kal");
+      var pfeil = ev.target.closest("[data-kal]"), tag = ev.target.closest("[data-tag]");
+      if (pfeil) {
+        var m = k.getAttribute("data-monat"), j = parseInt(m.slice(0, 4), 10), mo = parseInt(m.slice(5, 7), 10) - 1 + parseInt(pfeil.getAttribute("data-kal"), 10);
+        var neu = new Date(Date.UTC(j, mo, 1)).toISOString().slice(0, 7);
+        k.outerHTML = kalender(aktuelleListe, k.getAttribute("data-feld"), neu);
+        return;
+      }
+      if (tag) {
+        var iso = tag.getAttribute("data-tag"), ziel = main.querySelector('[data-tag-anker="' + iso + '"]');
+        if (!ziel) { var w = kw(iso); ziel = main.querySelector('.tag-gruppe[data-woche="' + w.jahr + "-" + w.woche + '"]'); }
+        if (ziel) ziel.scrollIntoView({ behavior: reduziert ? "auto" : "smooth", block: "start" });
+      }
+    });
+  }
+
+  /* ---------- Schnellsuche als Befehlspalette (Strg K) ---------- */
+  var SEITEN = [
+    { name: "Übersicht", ziel: "#/", sub: "Ausgabe der Woche", w: "start übersicht ausgabe woche", sym: SYM.alle },
+    { name: "Alle Schutzrechte", ziel: "#/schutzrechte", sub: "Register mit Filtern und Kalender", w: "schutzrechte register liste patente", sym: SYM.karten },
+    { name: "Bestand", ziel: "#/bestand", sub: "Alle laufenden Schutzrechte, Recherche-Datenbank", w: "bestand datenbank recherche laufzeit restlaufzeit", sym: SYM.tabelle },
+    { name: "Einspruchsfristen", ziel: "#/fristen", sub: "Kalender der laufenden Fristen", w: "fristen einspruch kalender", sym: SYM.uhr },
+    { name: "Anmelder", ziel: "#/anmelder", sub: "Rangliste und Herkunft", w: "anmelder rangliste firmen länder wettbewerb", sym: SYM.anmelder },
+    { name: "News", ziel: "#/news", sub: "Presseschau", w: "news meldungen presse nachrichten", sym: SYM.seite },
+    { name: "Berichte", ziel: "#/berichte", sub: "Wochen- und Monatsberichte zum Drucken", w: "berichte monatsbericht wochenbericht pdf drucken", sym: ICON.druck },
+    { name: "Merkliste", ziel: "#/merkliste", sub: "Gemerkte Einträge", w: "merkliste gemerkt favoriten", sym: ICON.merken },
+    { name: "Hinweise", ziel: "#/hinweise", sub: "Quellen, Methode, Glossar, Datenschutz", w: "hinweise quellen methode glossar hilfe datenschutz", sym: SYM.radar }
+  ];
+  RUBRIKEN.forEach(function (rb) { SEITEN.push({ name: rb.name, ziel: "#/" + rb.key, sub: "Rubrik, " + rb.codes, w: rb.name + " " + rb.art + " " + rb.codes + " rubrik", rubrik: rb.key }); });
+  THEMEN.forEach(function (t) { SEITEN.push({ name: t.name, ziel: hashMit("schutzrechte", new URLSearchParams({ thema: t.key })), sub: "Thema: " + t.kurz, w: t.name + " " + t.kurz + " thema", thema: t.key }); });
+  var suche = document.getElementById("suche"), sucheFeld = document.getElementById("suche-feld"), sucheTreffer = document.getElementById("suche-treffer");
+  var sucheAuswahl = 0, sucheListe = [];
+  function oeffneSuche() {
+    if (!D.radar || !suche) return;
+    allePopsZu();
+    sucheFeld.value = ""; sucheAuswahl = 0; sucheRendern();
+    if (suche.showModal) { if (!suche.open) suche.showModal(); } else suche.setAttribute("open", "");
+    sucheFeld.focus();
+  }
+  function alleWoerter(text, w) { for (var i = 0; i < w.length; i++) if (text.indexOf(w[i]) < 0) return false; return true; }
+  function namensRang(name, q) { var n = String(name).toLowerCase(); return n.indexOf(q) === 0 ? 30 : n.indexOf(q) > 0 ? 15 : 0; }
+  function seitenTreffer(x) {
+    return { gruppe: "Seiten und Themen", ziel: x.ziel, name: x.name, sub: x.sub,
+      bild: x.thema ? '<span class="st-icon" style="' + themaStil(x.thema) + '">' + zThema(x.thema, "st-thema") + "</span>" : x.rubrik ? '<span class="st-icon rk-' + x.rubrik + '">' + zRubrik(x.rubrik, "kr-ic") + "</span>" : '<span class="st-icon">' + x.sym + "</span>" };
+  }
+  function radarTreffer(e, gruppe) {
+    return { gruppe: gruppe || "Schutzrechte im Radar", ziel: "#/eintrag/" + encodeURIComponent(e.id), name: e.titel, sub: e.nummer + " · " + anmText(e), bild: miniBild(e),
+      rechts: fristLaeuft(e) ? '<span class="st-marke frist">Frist läuft</span>' : e.neu ? '<span class="st-marke">neu</span>' : "" };
+  }
+  function sucheRendern() {
+    var q = sucheFeld.value.trim().toLowerCase(), w = q ? q.split(/\s+/) : [];
+    var t = [];
+    if (!w.length) {
+      D.radar.eintraege.filter(function (e) { return e.neu; }).sort(SORTIERUNG.relevanz.fn).slice(0, 5).forEach(function (e) { t.push(radarTreffer(e, "Neu diese Woche")); });
+      SEITEN.slice(0, 5).forEach(function (x) { t.push(seitenTreffer(x)); });
+    } else {
+      var se = [];
+      SEITEN.forEach(function (x) { if (alleWoerter((x.name + " " + x.w + " " + x.sub).toLowerCase(), w)) se.push({ p: namensRang(x.name, q), x: x }); });
+      se.sort(function (a, b) { return b.p - a.p; }).slice(0, 4).forEach(function (o) { t.push(seitenTreffer(o.x)); });
+      var ra = [];
+      D.radar.eintraege.forEach(function (e) {
+        var text = e._suche || (e._suche = [e.titel, e.titel_original, e.was_neu, e.bezug, (e.anmelder || []).join(" "), e.nummer, e.nummer_kompakt,
+          (e.klassen || []).join(" "), (e.familie || []).map(function (f) { return f.nummer; }).join(" "), themaName(e.thema)].join(" ").toLowerCase());
+        if (alleWoerter(text, w)) ra.push({ p: namensRang(e.titel, q) + (e.relevanz === "hoch" ? 3 : 0) + (e.neu ? 2 : 0) + (String(e.nummer_kompakt || "").toLowerCase().indexOf(q.replace(/\s/g, "")) >= 0 ? 40 : 0), e: e });
+      });
+      var an = [];
+      (D.radar.anmelder || []).forEach(function (a) { if (alleWoerter(a.name.toLowerCase(), w)) an.push({ p: namensRang(a.name, q) + Math.min(a.anzahl, 10), a: a }); });
+      an.sort(function (a, b) { return b.p - a.p; }).slice(0, ra.length ? 3 : 6).forEach(function (o) {
+        var a = o.a;
+        t.push({ gruppe: "Anmelder", ziel: hashMit("schutzrechte", new URLSearchParams({ anmelder: a.name })), name: a.name, bild: '<span class="st-icon st-land">' + esc(a.land || "–") + "</span>",
+          sub: a.anzahl + " im Radar" + (a.bestand ? ", " + a.bestand.toLocaleString("de-DE") + " im Bestand" : "") + (a.land ? " · " + landName(a.land) : "") });
+      });
+      ra.sort(function (a, b) { return b.p - a.p || String(b.e.veroeffentlicht).localeCompare(a.e.veroeffentlicht); }).slice(0, 12).forEach(function (o) { t.push(radarTreffer(o.e)); });
+      if (D.bestand) {
+        var be = [];
+        D.bestand.liste.forEach(function (e) { if (alleWoerter(e.such, w)) be.push({ p: namensRang(e.titel, q) + (e.nummer.replace(/\s/g, "").toLowerCase().indexOf(q.replace(/\s/g, "")) >= 0 ? 40 : 0), e: e }); });
+        be.sort(function (a, b) { return b.p - a.p || b.e.angemeldet.localeCompare(a.e.angemeldet); });
+        be.slice(0, 8).forEach(function (o) {
+          var e = o.e;
+          t.push({ gruppe: "Bestand" + (be.length > 8 ? " (" + be.length.toLocaleString("de-DE") + " Treffer)" : ""), ziel: "#/bestand/" + encodeURIComponent(e.id), name: e.titel, sub: e.nummer + " · " + (e.anmName || "Anmelder unbekannt"),
+            bild: '<span class="st-datum"><small>bis</small><b>' + e.ende.slice(0, 4) + "</b></span>", rechts: '<span class="st-marke">' + esc(BESTAND_ART[e.art].name) + "</span>" });
+        });
+        if (be.length > 8) t.push({ gruppe: t[t.length - 1].gruppe, ziel: hashMit("bestand", new URLSearchParams({ q: sucheFeld.value.trim() })), name: "Alle " + be.length.toLocaleString("de-DE") + " Treffer im Bestand zeigen", sub: "Mit Filtern, Laufzeiten und Export", bild: '<span class="st-icon">' + SYM.pfeil + "</span>" });
+      } else if (q.length >= 3 && !D.bestandFehler) {
+        ladeBestand();
+        t.push({ gruppe: "Bestand", info: true, name: "Bestand wird geladen …", sub: "Gleich werden auch die " + ((D.radar.bestand && D.radar.bestand.gesamt) || 0).toLocaleString("de-DE") + " laufenden Schutzrechte durchsucht.", bild: '<span class="st-icon">' + SYM.tabelle + "</span>" });
+      }
+    }
+    sucheListe = t.filter(function (x) { return !x.info; });
+    if (sucheAuswahl >= sucheListe.length) sucheAuswahl = 0;
+    function mark(text) {
+      var h = esc(text);
+      w.forEach(function (x) { if (x.length < 2) return; var re = new RegExp("(" + esc(x).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"); h = h.replace(re, "<mark>$1</mark>"); });
+      return h;
+    }
+    var letzte = null, i = 0;
+    sucheTreffer.innerHTML = t.length ? t.map(function (x) {
+      var kopf = x.gruppe !== letzte ? '<li class="st-gruppe" role="presentation">' + esc(x.gruppe) + "</li>" : "";
+      letzte = x.gruppe;
+      if (x.info) return kopf + '<li class="st-info" role="presentation">' + x.bild + '<span class="st-text"><span class="st-name">' + esc(x.name) + '</span><span class="st-sub">' + esc(x.sub) + "</span></span></li>";
+      var n = i++;
+      return kopf + '<li role="option" id="st-' + n + '" data-i="' + n + '" aria-selected="' + (n === sucheAuswahl) + '">' + x.bild +
+        '<span class="st-text"><span class="st-name">' + mark(x.name) + '</span><span class="st-sub">' + mark(x.sub || "") + "</span></span>" + (x.rechts || "") + "</li>";
+    }).join("") : '<li class="suche-leer" role="presentation">Nichts gefunden. Anderen Begriff versuchen, zum Beispiel einen Anmelder, eine Nummer oder ein Thema.</li>';
+    sucheFeld.setAttribute("aria-activedescendant", sucheListe.length ? "st-" + sucheAuswahl : "");
+  }
+  function markiereSuche() {
+    sucheTreffer.querySelectorAll("li[data-i]").forEach(function (li) {
+      var an = +li.getAttribute("data-i") === sucheAuswahl;
+      li.setAttribute("aria-selected", an); if (an) li.scrollIntoView({ block: "nearest" });
+    });
+    sucheFeld.setAttribute("aria-activedescendant", "st-" + sucheAuswahl);
+  }
+  function sucheWaehle(i) {
+    var x = sucheListe[i]; if (!x) return;
+    suche.close();
+    if (location.hash === x.ziel || (x.ziel === "#/" && !location.hash)) zeichnen(true); else location.hash = x.ziel;
+  }
+  if (suche) {
+    sucheFeld.addEventListener("input", function () { sucheAuswahl = 0; sucheRendern(); });
+    sucheFeld.addEventListener("keydown", function (ev) {
+      if (ev.key === "ArrowDown") { sucheAuswahl = Math.min(sucheListe.length - 1, sucheAuswahl + 1); markiereSuche(); ev.preventDefault(); }
+      else if (ev.key === "ArrowUp") { sucheAuswahl = Math.max(0, sucheAuswahl - 1); markiereSuche(); ev.preventDefault(); }
+      else if (ev.key === "Enter") { sucheWaehle(sucheAuswahl); ev.preventDefault(); }
+      else if (ev.key === "Escape") { suche.close(); ev.preventDefault(); }
+    });
+    sucheTreffer.addEventListener("click", function (ev) { var li = ev.target.closest("li[data-i]"); if (li) sucheWaehle(+li.getAttribute("data-i")); });
+    sucheTreffer.addEventListener("mousemove", function (ev) { var li = ev.target.closest("li[data-i]"); if (li && +li.getAttribute("data-i") !== sucheAuswahl) { sucheAuswahl = +li.getAttribute("data-i"); markiereSuche(); } });
+    suche.addEventListener("click", function (ev) { if (ev.target === suche) suche.close(); });
+    document.getElementById("suche-zu").addEventListener("click", function () { suche.close(); });
+    document.addEventListener("click", function (ev) { var k = ev.target.closest && ev.target.closest("[data-suche]"); if (k) { ev.preventDefault(); oeffneSuche(); } });
+    document.addEventListener("keydown", function (ev) {
+      var tippt = /INPUT|SELECT|TEXTAREA/.test(ev.target.tagName || "") || ev.target.isContentEditable;
+      if ((ev.ctrlKey || ev.metaKey) && (ev.key === "k" || ev.key === "K")) { ev.preventDefault(); if (suche.open) suche.close(); else oeffneSuche(); }
+      else if (ev.key === "/" && !tippt && !suche.open) { ev.preventDefault(); oeffneSuche(); }
+    });
   }
 
   /* ---------- Start ---------- */
@@ -1583,6 +2076,12 @@
     });
   }
   Merk.laden(); Merk.zaehler();
+  /* Materialbilder einmal als CSS-Hintergründe erzeugen (von allen Karten geteilt) */
+  if (window.Motiv) {
+    var mst = document.createElement("style");
+    mst.textContent = window.Motiv.bandStile();
+    document.head.appendChild(mst);
+  }
   json("data/radar.json").then(function (radar) {
     D.radar = radar;
     radar.eintraege.forEach(function (e) { D.byId[e.id] = e; });
@@ -1595,7 +2094,7 @@
     ]);
   }).then(function (r) {
     D.news = r[0] || []; D.berichte = r[1] || [];
-    zeichnen(false);
+    zeichnen(true);
   }).catch(function (err) {
     main.innerHTML = '<div class="seite">' + leer("Die Daten konnten nicht geladen werden.", "Bitte die Seite neu laden. Besteht das Problem weiter, liegt eine Störung bei der Aktualisierung vor.") + "</div>";
     if (window.console) console.error(err);

@@ -5,42 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#1d2935">
 <title>Patent-Radar Bau &amp; Dach</title>
 <meta name="description" content="Wöchentliche Übersicht neuer Patente und Gebrauchsmuster zu Dach, Dachentwässerung und angrenzenden Bauthemen.">
 <link rel="alternate" type="application/rss+xml" title="Patent-Radar Bau &amp; Dach – Neuheiten" href="feed.xml">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 17 16 6l13 11' fill='none' stroke='%232E7A6A' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 21h16M11 26h10' stroke='%232E7A6A' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/app.css?v=5">
+<link rel="stylesheet" href="assets/app.css?v=8">
 <script>
-  try { var t = localStorage.getItem('pr-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  /* Schiefer (dunkel) ist Standard; Hell bleibt über den Umschalter wählbar */
+  (function () { var t = null; try { t = localStorage.getItem('pr-farbschema'); } catch (e) {} document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark'); })();
 </script>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
-<header class="kopf">
-  <div class="kopf-innen">
+<header class="kopfleiste">
+  <div class="leiste-innen">
     <a class="marke" href="#/" aria-label="Patent-Radar Bau und Dach, zur Übersicht">
-      <svg class="marke-zeichen" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 17 16 6l13 11" /><path d="M8 21h16M11 26h10" /></svg>
-      <span class="marke-text"><span class="marke-name">Patent-Radar</span><span class="marke-zusatz">Bau &amp; Dach</span></span>
+      <svg class="marke-icon" viewBox="0 0 32 32" aria-hidden="true"><circle class="mi-bg" cx="16" cy="16" r="15.5"/><circle class="mi-ring" cx="16" cy="16" r="11"/><g class="mi-sweep"><path d="M16 16V2.5A13.5 13.5 0 0 1 28 9.2z"/></g><path class="mi-dach" d="M8.5 18.6 16 12.2l7.5 6.4"/><path class="mi-dach" d="M11.2 22.4h9.6"/></svg>
+      <span class="marke-text">Patent-Radar<small>Bau &amp; Dach</small></span>
     </a>
-    <nav class="haupt-nav" aria-label="Hauptnavigation">
+    <nav class="hauptnav" aria-label="Bereiche">
       <a href="#/" data-route="uebersicht">Übersicht</a>
       <a href="#/schutzrechte" data-route="schutzrechte">Schutzrechte</a>
       <a href="#/bestand" data-route="bestand">Bestand</a>
-      <a href="#/fristen" data-route="fristen">Einspruchsfristen</a>
+      <a href="#/fristen" data-route="fristen" title="Einspruchsfristen">Fristen</a>
       <a href="#/anmelder" data-route="anmelder">Anmelder</a>
       <a href="#/news" data-route="news">News</a>
       <a href="#/berichte" data-route="berichte">Berichte</a>
-      <a href="#/hinweise" data-route="hinweise">Hinweise</a>
+      <span class="nav-zeiger" aria-hidden="true"></span>
     </nav>
-    <div class="kopf-werkzeuge">
-      <a class="werkzeug merk-link" href="#/merkliste" data-route="merkliste" aria-label="Merkliste">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg>
-        <span class="merk-zahl" aria-live="polite">0</span>
+    <div class="leiste-werkzeug">
+      <a class="lw-knopf merk-link" href="#/merkliste" data-route="merkliste" title="Merkliste" aria-label="Merkliste">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.2-6 4.2z"/></svg><span class="merk-zahl" aria-live="polite" hidden>0</span>
       </a>
-      <button class="werkzeug" type="button" id="thema-schalter" aria-label="Hell- oder Dunkelmodus umschalten">
-        <svg class="ic-sonne" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
-        <svg class="ic-mond" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      <button class="lw-knopf such-knopf" type="button" data-suche aria-label="Suchen (Strg und K)" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span class="such-text">Suchen</span><kbd class="such-kbd">Strg K</kbd>
+      </button>
+      <a class="lw-knopf hilfe-link" href="#/hinweise" data-route="hinweise" title="Hinweise: Quellen, Methode, Glossar" aria-label="Hinweise">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M9.6 9.5a2.5 2.5 0 1 1 3.4 2.3c-.7.3-1 .8-1 1.5v.6"/><circle class="fill" cx="12" cy="16.9" r="1"/></svg>
+      </a>
+      <button class="lw-knopf" type="button" id="thema-schalter" aria-label="Zwischen dunklem und hellem Farbschema wechseln" title="Farbschema">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path class="fill" d="M12 3.4a8.6 8.6 0 0 1 0 17.2z"/></svg>
       </button>
     </div>
   </div>
@@ -48,14 +54,39 @@
 <main id="inhalt" tabindex="-1">
   <div class="laden" role="status">Daten werden geladen …</div>
 </main>
+<nav class="unternav" aria-label="Bereiche (mobil)">
+  <a href="#/" data-route="uebersicht"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 12 17.5 6"/></svg>Übersicht</a>
+  <a href="#/schutzrechte" data-route="schutzrechte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7.5L19 8v12.5H7z"/><path d="M14.5 3.5V8H19M10 12.5h6M10 16h6"/></svg>Schutzrechte</a>
+  <a href="#/bestand" data-route="bestand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 5.5h15v4h-15zM5.5 9.5v10h13v-10"/><path d="M10 13.5h4"/></svg>Bestand</a>
+  <a href="#/fristen" data-route="fristen"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Fristen</a>
+  <button type="button" class="un-mehr" aria-expanded="false" aria-controls="un-menue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="fill" cx="6" cy="12" r="1.5"/><circle class="fill" cx="12" cy="12" r="1.5"/><circle class="fill" cx="18" cy="12" r="1.5"/></svg>Mehr</button>
+  <div class="un-menue" id="un-menue" hidden>
+    <a href="#/anmelder" data-route="anmelder">Anmelder</a>
+    <a href="#/news" data-route="news">News</a>
+    <a href="#/berichte" data-route="berichte">Berichte</a>
+    <a href="#/merkliste" data-route="merkliste">Merkliste</a>
+    <a href="#/hinweise" data-route="hinweise">Hinweise</a>
+  </div>
+</nav>
 <footer class="fuss">
   <div class="fuss-innen">
     <p>Automatisierte Übersicht öffentlicher Veröffentlichungen. Keine Rechtsberatung. Vor Entscheidungen bitte durch eine Patentanwältin oder einen Patentanwalt prüfen lassen.</p>
     <p class="fuss-links"><a href="#/hinweise">Quellen und Methode</a><a href="feed.xml">RSS-Feed</a><span id="fuss-stand"></span></p>
+    <p class="fuss-klein">Keine Cookies, kein Tracking, keine externen Schriften. Merkliste und Farbschema liegen nur in deinem Browser. Materialbilder und Zeichnungen sind Symbolbilder, keine Abbildungen aus den Schriften.</p>
   </div>
 </footer>
+<dialog id="suche" class="suche-dialog" aria-label="Suchen">
+  <div class="suche-kopf">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+    <input type="search" id="suche-feld" placeholder="Titel, Nummer, Anmelder, Patentklasse oder Seite" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="suche-treffer" aria-autocomplete="list">
+    <button type="button" class="esc-knopf" id="suche-zu">Esc</button>
+  </div>
+  <ul id="suche-treffer" class="suche-treffer" role="listbox" aria-label="Treffer"></ul>
+  <p class="suche-fuss"><span><kbd>↑</kbd><kbd>↓</kbd> auswählen</span><span><kbd>↵</kbd> öffnen</span><span><kbd>Esc</kbd> schließen</span><span class="sf-rechts"><kbd>Strg</kbd><kbd>K</kbd> oder <kbd>/</kbd> öffnet die Suche überall</span></p>
+</dialog>
 <div class="toast" role="status" aria-live="polite" hidden></div>
-<script src="assets/zeichnungen.js?v=5" defer></script>
-<script src="assets/app.js?v=5" defer></script>
+<script src="assets/zeichnungen.js?v=8" defer></script>
+<script src="assets/motive.js?v=8" defer></script>
+<script src="assets/app.js?v=8" defer></script>
 </body>
 </html>
