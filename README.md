@@ -8,6 +8,7 @@ Die Seite ist statisch: Die Daten liegen als JSON im Ordner `data/`, Suche und F
 
 - `index.html`, `assets/app.js`, `assets/app.css` – Oberfläche: Schiefer-Farbschema (dunkel, wahlweise hell), Kachel-Übersicht, klebende Filterleiste mit Themen, Karten mit Materialbild, Detailseiten mit Faktenkacheln und Schnellsuche (Strg K oder /) über Radar, Bestand, Anmelder und Seiten
 - `assets/fonts/` – Schrift Barlow und Barlow Condensed (SIL Open Font License, `OFL-Barlow.txt`), lokal eingebunden; keine externen Abrufe
+- `assets/bewegung.js`, `assets/bewegung.css` – Bewegung, gemeinsam mit dem Start-up-Radar: Fallblatt-Anzeigetafel auf der Übersicht, Karte wächst zur Detailseite (und zurück an dieselbe Stelle), Filtern mit Federn und rollender Trefferzahl, Gummiband in der Navigation mit Kamerafahrt im Seitenkopf, Merken mit Flug in die Merkliste, Neigen mit Lichtreflex, Zeitleiste füllt sich beim Scrollen; bei „Bewegung reduzieren“ ohne Animation
 - `assets/motive.js` – Materialbilder je Thema (Rohre, Riffelblech, Schnee auf Stehfalz, Solarmodule, Trapezblech, Gründach, Zinkblech, Dachziegel), im Browser als SVG erzeugt; Symbolbilder, keine Abbildungen aus den Schriften
 - `assets/zeichnungen.js` – eigene Strichzeichnungen im Stil von Patentfiguren (Fig. 1 auf der Übersicht, Fig. 2 bis 9 in den Kopfbändern der Unterseiten), erzeugt mit `tools/zeichnungen.py`
 - `data/eintraege.json` – gepflegte Einträge, `data/news.json` – Meldungen, `data/berichte.json` – Berichte, `data/meta.json` – Stand und Abdeckung

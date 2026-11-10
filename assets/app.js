@@ -225,18 +225,22 @@
     laden: function () { try { this.ids = JSON.parse(localStorage.getItem("pr-merkliste") || "[]") || []; } catch (e) { this.ids = []; } },
     speichern: function () { try { localStorage.setItem("pr-merkliste", JSON.stringify(this.ids)); } catch (e) {} },
     hat: function (id) { return this.ids.indexOf(id) >= 0; },
-    umschalten: function (id) {
+    umschalten: function (id, ohneZaehler) {
       var i = this.ids.indexOf(id);
       if (i >= 0) this.ids.splice(i, 1); else this.ids.push(id);
-      this.speichern(); this.zaehler(true);
+      this.speichern(); if (!ohneZaehler) this.zaehler(true);
       return i < 0;
     },
     zaehler: function (pop) {
       var z = document.querySelector(".merk-zahl"), l = document.querySelector(".merk-link");
       if (!z) return;
-      z.textContent = this.ids.length; z.hidden = !this.ids.length;
+      z.hidden = !this.ids.length;
+      if (window.Bewegung) window.Bewegung.zahl(z, this.ids.length, !pop); else z.textContent = this.ids.length;
       if (l) l.classList.toggle("hat", this.ids.length > 0);
-      if (pop && !reduziert) { z.classList.remove("pop"); void z.offsetWidth; z.classList.add("pop"); }
+      if (pop && !reduziert && this.ids.length) {
+        if (window.Bewegung) window.Bewegung.stoss(z);
+        else { z.classList.remove("pop"); void z.offsetWidth; z.classList.add("pop"); }
+      }
     }
   };
 
@@ -252,16 +256,24 @@
   });
 
   /* ---------- Gleitende Markierung in der Hauptnavigation ---------- */
-  function navZeiger() {
+  function navZeiger(sofort) {
     var z = document.querySelector(".nav-zeiger"), a = document.querySelector('.hauptnav a[aria-current="page"]');
     if (!z) return;
     if (!a || !a.offsetWidth) { z.style.opacity = "0"; return; }
-    z.style.width = (a.offsetWidth - 16) + "px";
-    z.style.transform = "translateX(" + (a.offsetLeft + 8) + "px)";
+    var nav = z.parentNode, l = a.offsetLeft + 8, r = nav.clientWidth - a.offsetLeft - a.offsetWidth + 8;
+    var still = sofort || !z.classList.contains("bereit") || z.style.opacity === "0";
+    if (window.Bewegung) {
+      /* Gummiband: die vordere Kante eilt voraus, die hintere zieht nach */
+      z.style.width = "auto"; z.style.transform = "none";
+      window.Bewegung.gleite(z, l, r, still);
+    } else {
+      z.style.width = (a.offsetWidth - 16) + "px";
+      z.style.transform = "translateX(" + l + "px)";
+    }
     z.style.opacity = "1";
     if (!z.classList.contains("bereit")) requestAnimationFrame(function () { z.classList.add("bereit"); });
   }
-  window.addEventListener("resize", function () { navZeiger(); });
+  window.addEventListener("resize", function () { navZeiger(true); });
 
   /* ---------- Mobile Leiste: „Mehr“ ---------- */
   (function () {
@@ -309,6 +321,7 @@
   });
   var letzteRoute = "", gezeichnet = {};
   function flipErfassen() {
+    if (window.Bewegung) return window.Bewegung.flipErfassen(main, "data-flip");
     var m = {};
     if (reduziert) return m;
     var vh = window.innerHeight;
@@ -319,6 +332,7 @@
     return m;
   }
   function flipAbspielen(alt) {
+    if (window.Bewegung) return window.Bewegung.flipAbspielen(main, "data-flip", alt);
     if (reduziert || !alt || !Element.prototype.animate) return;
     var vh = window.innerHeight, n = 0;
     main.querySelectorAll("[data-flip]").forEach(function (el) {
@@ -336,8 +350,19 @@
       }
     });
   }
+  var NAV_REIHE = ["uebersicht", "schutzrechte", "bestand", "fristen", "anmelder", "news", "berichte", "merkliste", "hinweise"];
+  function navIndex(name) { var n = name === "eintrag" || RUBRIK[name] ? "schutzrechte" : name; return NAV_REIHE.indexOf(n); }
+  var leit = null, letzterName = null;
+  /* Kacheln und die Top 5 neigen sich zum Mauszeiger, ein Lichtreflex wandert mit */
+  if (window.Bewegung) { window.Bewegung.neigen(".bento > .kachel"); window.Bewegung.neigen(".top5 .t5"); }
+  function zahlLesen(el) {
+    if (!el) return null;
+    var n = parseInt((el.querySelector(".bw-sr") || el).textContent.replace(/\D/g, ""), 10);
+    return isNaN(n) ? null : n;
+  }
   function zeichnen(fokus, flip) {
     var alt = flip ? flipErfassen() : null;
+    var altZahl = zahlLesen(main.querySelector(".ergebnis-zahl .ez-n"));
     var r = route();
     if (r.name === "schutzrechte" && RUBRIK_NACH_ART[r.params.get("art")]) {
       var ziel = RUBRIK_NACH_ART[r.params.get("art")].key;
@@ -362,6 +387,20 @@
     letzteRoute = schluessel;
     filterHoehe();
     if (alt) flipAbspielen(alt);
+    if (window.Bewegung) {
+      /* Trefferzahl rollt beim Filtern wie ein Zählwerk */
+      var zEl = main.querySelector(".ergebnis-zahl .ez-n");
+      if (zEl && flip && altZahl != null) window.Bewegung.rolle(zEl, altZahl, zahlLesen(zEl));
+      /* Kamerafahrt beim Bereichswechsel: Zeichnung fährt aus der Klickrichtung ins Bild, Titel steigt Buchstabe für Buchstabe auf */
+      if (fokus && letzterName && letzterName !== r.name && !zeichnen.ohneKamera) {
+        var dir = navIndex(r.name) >= navIndex(letzterName) ? 1 : -1;
+        window.Bewegung.kamera({ bild: main.querySelector(".kopfband .seitenfigur") || main.querySelector(".detail-band .db-bild"), titel: main.querySelector(".kopfband h1"), text: main.querySelector(".kopfband .kopfband-satz"), dir: dir });
+      }
+      /* Zeitleiste: Linie füllt sich beim Scrollen, die aktuelle Woche rastet ein */
+      if (!leit) leit = new window.Bewegung.Leitlinie({ gruppe: ".tag-gruppe", zahl: ".td-tag", kopf: .42 });
+      leit.neu(main.querySelector(".zeitleiste"));
+    }
+    letzterName = r.name;
   }
   /* Filterleiste: Höhe merken (für klebende Wochenmarken) und beim Runterscrollen ausweichen */
   function filterHoehe() {
@@ -378,7 +417,37 @@
     }
     letzteY = y;
   }, { passive: true });
-  window.addEventListener("hashchange", function () { zeichnen(true); });
+  /* Karte wächst zur Detailseite: Materialbild und Titel wandern mit; zurück geht es an dieselbe Stelle */
+  var morphQuelle = null, morphZurueck = null;
+  function morphTeile(k) {
+    return { "bw-bild": k && k.querySelector(".karte-bild, .t5-bild, .mini-bild"), "bw-titel": k && k.querySelector("h3 a, .t5-titel, .kl-name") };
+  }
+  function ohneKamera(fn) { return function () { zeichnen.ohneKamera = true; try { fn(); } finally { zeichnen.ohneKamera = false; } }; }
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href^="#/eintrag/"]');
+    if (!a || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+    var k = a.closest(".karte, .t5, .k-liste li");
+    morphQuelle = k ? { id: decodeURIComponent(a.getAttribute("href").slice(10)), teile: morphTeile(k), hash: location.hash || "#/", y: window.scrollY } : null;
+  }, true);
+  window.addEventListener("hashchange", function () {
+    var r = route(), q = morphQuelle, z = morphZurueck;
+    morphQuelle = null;
+    if (window.Bewegung && q && r.name === "eintrag" && r.arg === q.id) {
+      morphZurueck = { hash: q.hash, y: q.y, id: q.id };
+      window.Bewegung.morph(q.teile, ohneKamera(function () { zeichnen(true); }), function () {
+        return { "bw-bild": main.querySelector(".detail-band .db-bild"), "bw-titel": main.querySelector(".detail-band h1") };
+      });
+      return;
+    }
+    morphZurueck = null;
+    if (window.Bewegung && z && letzterName === "eintrag" && (location.hash || "#/") === z.hash) {
+      window.Bewegung.morph({ "bw-bild": main.querySelector(".detail-band .db-bild"), "bw-titel": main.querySelector(".detail-band h1") },
+        ohneKamera(function () { zeichnen(true); window.scrollTo(0, z.y); }),
+        function () { var a = main.querySelector('a[href="#/eintrag/' + encodeURIComponent(z.id) + '"]'); return morphTeile(a && a.closest(".karte, .t5, .k-liste li")); });
+      return;
+    }
+    zeichnen(true);
+  });
 
   /* ---------- Bausteine ---------- */
   function fristPille(e) {
@@ -448,7 +517,7 @@
     var erster = new Date(Date.UTC(j, m, 1)), versatz = (erster.getUTCDay() + 6) % 7, anzahl = new Date(Date.UTC(j, m + 1, 0)).getUTCDate();
     var h = heute(), html = '<div class="kal" data-monat="' + monat + '" data-feld="' + feld + '"><div class="kal-kopf"><button type="button" class="kal-pfeil" data-kal="-1" aria-label="Vormonat">' + SYM.links + "</button>" +
       "<strong>" + MONATE_LANG[m] + " " + j + '</strong><button type="button" class="kal-pfeil" data-kal="1" aria-label="Nächster Monat">' + SYM.rechts + "</button></div>" +
-      '<div class="kal-raster" role="grid"><span class="kal-wt">Mo</span><span class="kal-wt">Di</span><span class="kal-wt">Mi</span><span class="kal-wt">Do</span><span class="kal-wt">Fr</span><span class="kal-wt">Sa</span><span class="kal-wt">So</span>';
+      '<div class="kal-raster" role="group" aria-label="Tage im ' + MONATE_LANG[m] + '"><span class="kal-wt">Mo</span><span class="kal-wt">Di</span><span class="kal-wt">Mi</span><span class="kal-wt">Do</span><span class="kal-wt">Fr</span><span class="kal-wt">Sa</span><span class="kal-wt">So</span>';
     for (var i = 0; i < versatz; i++) html += "<span></span>";
     for (var dTag = 1; dTag <= anzahl; dTag++) {
       var iso = monat + "-" + String(dTag).padStart(2, "0"), n = tages(iso);
@@ -532,6 +601,12 @@
       '<p class="ausgabe-stand">Stand ' + datum(R.stand) + ", " + esc(alle.length + " Schutzrechte im Radar") +
       (abd.status === "eingeschraenkt" ? '<br><span class="abdeckung-hinweis">Eingeschränkte Abdeckung</span>' : "") + "</p></div>" +
       '<figure class="zeichenblatt">' + ((window.PRZ && window.PRZ.hero) || "") + "</figure></section>";
+    if (window.Bewegung) {
+      html += '<section class="pr-tafel bw-gehaeuse" aria-labelledby="pt-titel"><div class="pt-kopf"><h2 id="pt-titel"><span class="pt-led" aria-hidden="true"></span>Anzeigetafel</h2>' +
+        '<div class="pt-wahl" role="group" aria-label="Was die Tafel zeigt">' + TAFEL_ARTEN.map(function (t, i) {
+          return '<button type="button" data-tafel="' + t[0] + '" aria-pressed="' + (i === 0) + '" aria-label="' + esc(t[1]) + '"><span class="pt-lang">' + esc(t[1]) + '</span><span class="pt-kurz" aria-hidden="true">' + esc(t[2]) + "</span></button>";
+        }).join("") + '</div></div><div id="pr-tafel"></div></section>';
+    }
 
     html += '<section class="bezugszeichen" aria-labelledby="bz-titel"><h2 id="bz-titel">Bezugszeichenliste <span>Themen des Radars, ein Klick zeigt alle Einträge</span></h2><ul>' +
       THEMEN.map(function (t) {
@@ -545,8 +620,48 @@
     return html;
   }
   uebersicht.titel = function () { return "Übersicht"; };
+  /* Fallblatt-Anzeige: Schutzrechtsnummern laufen ein wie auf einer Abfahrtstafel */
+  var TAFEL_ARTEN = [["neu", "Neu diese Woche", "Neu"], ["erteilt", "Erteilungen", "Erteilungen"], ["fristen", "Einspruchsfristen", "Fristen"]];
+  function tafelZeilen(art) {
+    var alle = D.radar.eintraege, l;
+    if (art === "erteilt") l = alle.filter(function (e) { return e.art === "Erteilung"; }).sort(function (a, b) { return String(b.veroeffentlicht).localeCompare(a.veroeffentlicht); });
+    else if (art === "fristen") l = alle.filter(fristLaeuft).sort(function (a, b) { return a.einspruch_bis.localeCompare(b.einspruch_bis); });
+    else l = alle.filter(function (e) { return e.neu; }).sort(function (a, b) {
+      return relRang(a.relevanz) - relRang(b.relevanz) || (b.punkte || 0) - (a.punkte || 0) || String(b.veroeffentlicht).localeCompare(a.veroeffentlicht);
+    });
+    var zeilen = l.slice(0, 8).map(function (e) {
+      var d = String(art === "fristen" ? e.einspruch_bis : e.veroeffentlicht);
+      return { d: d.slice(8, 10) + "." + d.slice(5, 7), nr: e.nummer, t: e.titel, b: String(BEZUG[e.thema] || ""), thema: e.thema,
+        href: "#/eintrag/" + encodeURIComponent(e.id),
+        label: (art === "fristen" ? "Einspruch bis " : "") + datum(d) + ", " + e.nummer + ", " + e.titel + ", " + themaName(e.thema) };
+    });
+    if (!zeilen.length) zeilen = [{ d: "", nr: "", t: art === "fristen" ? "Keine laufenden Fristen" : "Diese Woche nichts Neues", b: "", label: art === "fristen" ? "Zurzeit laufen keine Einspruchsfristen" : "Diese Woche keine neuen Einträge" }];
+    return zeilen;
+  }
+  function tafelBauen() {
+    var ziel = main.querySelector("#pr-tafel");
+    if (!ziel || !window.Bewegung) return;
+    var tafel = new window.Bewegung.Tafel(ziel, {
+      zeilen: 8, element: "a",
+      spalten: [{ k: "d", n: 5 }, { k: "nr", n: 21, ab: 900 }, { k: "t", rest: true, min: 10 }, { k: "b", n: 2, farbe: function (d) { return d.thema ? "var(--t-" + d.thema + ")" : ""; } }],
+      titel: { d: "Datum", nr: "Nummer", t: "Titel", b: "Bez." }
+    });
+    tafel.zeige(tafelZeilen("neu"));
+    main.querySelectorAll("[data-tafel]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (b.getAttribute("aria-pressed") === "true") return;
+        main.querySelectorAll("[data-tafel]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        var art = b.getAttribute("data-tafel");
+        tafel.o.titel.d = art === "fristen" ? "Frist" : "Datum";
+        var kopf = ziel.querySelector(".bw-tafel-spalten span");
+        if (kopf) kopf.textContent = tafel.o.titel.d;
+        tafel.zeige(tafelZeilen(art));
+      });
+    });
+  }
   var schonGezeichnet = false;
   uebersicht.danach = function () {
+    tafelBauen();
     var svg = main.querySelector(".fig-zeichnung");
     if (!svg) return;
     var teile = svg.querySelectorAll(".teil");
@@ -699,7 +814,7 @@
     function x(d) { return L + (B - L - Rr) * ((d - start) / spanne); }
     var t30 = new Date(start); t30.setUTCDate(t30.getUTCDate() + 30);
     var t90 = new Date(start); t90.setUTCDate(t90.getUTCDate() + 90);
-    var s = '<svg viewBox="0 0 ' + B + " " + H + '" role="img" aria-label="Zeitleiste der laufenden Einspruchsfristen">';
+    var s = '<svg viewBox="0 0 ' + B + " " + H + '" role="group" aria-label="Zeitleiste der laufenden Einspruchsfristen">';
     s += '<rect class="zone-30" x="' + x(start) + '" y="22" width="' + (x(t30) - x(start)) + '" height="46" rx="4"/>';
     s += '<rect class="zone-90" x="' + x(t30) + '" y="22" width="' + (x(t90) - x(t30)) + '" height="46"/>';
     s += '<line class="achse" x1="' + L + '" x2="' + (B - Rr) + '" y1="68" y2="68"/>';
@@ -871,7 +986,7 @@
       mehrZahl: mehrZahl, chips: chipsAktiv, zuruecksetzen: "#/" + hier
     });
 
-    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl">' + liste.length.toLocaleString("de-DE") + " " + plural(liste.length, "Schutzrecht", "Schutzrechte") + "</h2>" +
+    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl"><span class="ez-n">' + liste.length.toLocaleString("de-DE") + "</span> " + plural(liste.length, "Schutzrecht", "Schutzrechte") + "</h2>" +
       '<div class="werkzeug-reihe"><div class="segment" role="group" aria-label="Ansicht">' +
       '<button type="button" data-ansicht="karten" aria-pressed="' + (ansicht === "karten") + '">' + SYM.karten + "Karten</button>" +
       '<button type="button" data-ansicht="tabelle" aria-pressed="' + (ansicht === "tabelle") + '">' + SYM.tabelle + "Tabelle</button></div>" +
@@ -1109,7 +1224,7 @@
       chips: chips, zuruecksetzen: "#/fristen"
     });
     html += '<section class="kachel k-leiste fristen-kachel" aria-labelledby="fl-titel">' + kKopf("fl-titel", "Die nächsten neun Monate", '<p class="k-text">Jeder Punkt ist eine Erteilung mit laufender Frist. Antippen öffnet den Eintrag.</p>') + fristenLeiste(laufend) + "</section>";
-    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl">' + laufend.length + " laufende " + plural(laufend.length, "Frist", "Fristen") + "</h2>" +
+    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl"><span class="ez-n">' + laufend.length + "</span> laufende " + plural(laufend.length, "Frist", "Fristen") + "</h2>" +
       '<div class="werkzeug-reihe">' + exportMenue(true) + "</div></div>";
     if (!laufend.length) html += leer(chips.length ? "Zu diesen Filtern laufen zurzeit keine Einspruchsfristen." : "Zurzeit keine laufenden Einspruchsfristen.", chips.length ? "Lockere die Filter oder setze sie zurück." : "");
     else {
@@ -1352,7 +1467,7 @@
     });
     html += ablaufDiagramm(bestandFiltern(alle, p, "ende"), p);
     if (!an) html += topAnmelder(bestandFiltern(alle, p, "anmelder"), p);
-    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl">' + liste.length.toLocaleString("de-DE") + " " + plural(liste.length, "Schutzrecht", "Schutzrechte") + "</h2>" +
+    html += '<div class="ergebnis-leiste"><h2 class="ergebnis-zahl"><span class="ez-n">' + liste.length.toLocaleString("de-DE") + "</span> " + plural(liste.length, "Schutzrecht", "Schutzrechte") + "</h2>" +
       '<div class="werkzeug-reihe"><label class="sortier"><span class="visuell-verborgen">Sortierung</span><select name="sort" form="filter" aria-label="Sortierung">' +
       Object.keys(BESTAND_SORT).map(function (k) { return '<option value="' + k + '"' + (k === sort ? " selected" : "") + ">" + BESTAND_SORT[k].name + "</option>"; }).join("") + "</select></label>" +
       exportMenue(false) + "</div></div>";
@@ -1851,7 +1966,14 @@
       b.addEventListener("click", function (ev) {
         ev.preventDefault(); ev.stopPropagation();
         var id = b.getAttribute("data-merken");
-        var jetzt = Merk.umschalten(id);
+        var jetzt = Merk.umschalten(id, true);
+        if (jetzt && window.Bewegung && !reduziert) {
+          window.Bewegung.funken(b);
+          var k = b.closest(".karte, .t5, li, .detail-seite") || main;
+          var quelle = k.querySelector(".karte-bild, .t5-bild, .mini-bild") || main.querySelector(".detail-band .db-bild") || b;
+          var ziele = Array.prototype.filter.call(document.querySelectorAll(".merk-link, .un-mehr"), function (x) { return x.offsetWidth > 0; });
+          window.Bewegung.flug(quelle, ziele[0], function () { Merk.zaehler(true); });
+        } else Merk.zaehler(jetzt);
         b.setAttribute("aria-pressed", jetzt);
         b.setAttribute("aria-label", jetzt ? "Von der Merkliste entfernen" : "Auf die Merkliste");
         var sp = b.querySelector("span"); if (sp) sp.textContent = jetzt ? "Gemerkt" : "Merken";

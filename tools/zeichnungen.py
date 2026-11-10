@@ -270,7 +270,8 @@ def farbe(var):
 
 
 def fig(nr, inhalt, label):
-    return (f'<svg class="fig-zeichnung fig-seite" viewBox="0 0 320 200" role="img" aria-label="{label}">' + inhalt +
+    rolle = "group" if "<a " in inhalt else "img"  # mit Links darin ist die Zeichnung eine Gruppe, kein reines Bild
+    return (f'<svg class="fig-zeichnung fig-seite" viewBox="0 0 320 200" role="{rolle}" aria-label="{label}">' + inhalt +
             f'<text class="fig-titel" x="300" y="194" text-anchor="end">Fig. {nr}</text></svg>')
 
 

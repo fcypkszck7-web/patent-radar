@@ -1,0 +1,112 @@
+/* Bewegung: Fallblatt-Tafel, Zählwerk, Funken, Flug, Lichtreflex, Übergänge.
+   Gemeinsam genutzt vom Start-up-Radar und vom Patent-Radar. */
+.bw-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Zählwerk: unsichtbarer Platzhalter gibt Breite und Grundlinie vor, darüber rollen die Ziffern */
+.bw-zahl { position: relative; display: inline-block; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bw-zahl-platz { visibility: hidden; }
+.bw-zw { position: absolute; top: 0; right: 0; bottom: 0; display: flex; overflow: hidden; }
+.bw-zw-s { position: relative; flex: none; width: 1ch; height: 100%; overflow: hidden; transition: width .35s cubic-bezier(.2, .7, .2, 1); }
+.bw-zw-s.trenn { width: .3em; }
+.bw-zw-s.leer { width: 0; }
+.bw-zw-band { display: block; height: 1300%; }
+.bw-zw-band > span { display: block; height: calc(100% / 13); text-align: center; }
+
+/* Fallblatt-Tafel: bewusst ein dunkles, mechanisches Objekt – in beiden Farbschemata */
+.bw-gehaeuse {
+  position: relative; padding: 16px 18px 20px; border-radius: 18px; color: #e8edf1;
+  background: linear-gradient(180deg, #131a22, #0e141a);
+  border: 1px solid rgba(255, 255, 255, .07);
+  box-shadow: 0 30px 70px -34px rgba(0, 0, 0, .85), inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+.bw-gehaeuse::before {
+  content: ""; position: absolute; inset: 8px; pointer-events: none;
+  background:
+    radial-gradient(circle, #3b444f 0 1.5px, #161c23 2px 2.8px, transparent 3.2px) 0 0 / 8px 8px no-repeat,
+    radial-gradient(circle, #3b444f 0 1.5px, #161c23 2px 2.8px, transparent 3.2px) 100% 0 / 8px 8px no-repeat,
+    radial-gradient(circle, #3b444f 0 1.5px, #161c23 2px 2.8px, transparent 3.2px) 0 100% / 8px 8px no-repeat,
+    radial-gradient(circle, #3b444f 0 1.5px, #161c23 2px 2.8px, transparent 3.2px) 100% 100% / 8px 8px no-repeat;
+}
+.bw-tafel { --bw-zw: 18px; --bw-zh: 28px; --bw-zf: 20px; --bw-zl: 2px; --bw-zg: 10px; position: relative; min-width: 0; }
+.bw-tafel-spalten { display: flex; gap: var(--bw-zg); margin: 0 0 6px; color: rgba(232, 237, 241, .55); font-size: 12.5px; line-height: 1.2; }
+.bw-tafel-spalten span { flex: none; overflow: hidden; white-space: nowrap; }
+.bw-tafel-spalten span:last-child { display: flex; justify-content: flex-end; overflow: visible; }
+.bw-tafel-zeilen { display: grid; gap: 5px; }
+.bw-tz {
+  display: flex; gap: var(--bw-zg); width: 100%; margin: 0; padding: 0; border: 0; border-radius: 4px; background: none;
+  color: inherit; font: inherit; text-align: left; text-decoration: none; cursor: pointer; transition: filter .2s;
+}
+.bw-tz.leer, .bw-tz:disabled { cursor: default; }
+.bw-tz:not(.leer):hover, .bw-tz.fokus { filter: brightness(1.25); }
+.bw-tz:focus-visible { outline: 2px solid #8fb0ff; outline-offset: 3px; }
+.bw-fg { display: flex; flex: none; gap: var(--bw-zl); }
+.bw-fz {
+  position: relative; flex: none; width: var(--bw-zw); height: var(--bw-zh); perspective: 260px; border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .55), 0 0 0 1px rgba(0, 0, 0, .35);
+}
+.bw-fz > span { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.bw-fz .o, .bw-fz .bo { top: 0; border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #373e47, #2c3239); }
+.bw-fz .u, .bw-fz .bu { bottom: 0; border-radius: 0 0 3px 3px; background: linear-gradient(180deg, #252a30, #1d2126); }
+.bw-fz b { position: absolute; left: 0; right: 0; display: block; height: var(--bw-zh); text-align: center; color: #f3f0e6;
+  font: 600 var(--bw-zf)/var(--bw-zh) "Barlow Condensed", "Arial Narrow", sans-serif; }
+.bw-fz .o b, .bw-fz .bo b { top: 0; }
+.bw-fz .u b, .bw-fz .bu b { bottom: 0; }
+.bw-fz .bo { z-index: 2; transform-origin: 50% 100%; }
+.bw-fz .bu { z-index: 2; transform-origin: 50% 0; transform: rotateX(90deg); }
+.bw-fz::after { content: ""; position: absolute; z-index: 3; left: 0; right: 0; top: 50%; height: 1px; margin-top: -.5px; background: rgba(0, 0, 0, .7); }
+.bw-fz::before { content: ""; position: absolute; z-index: 4; top: calc(50% - 2px); left: -1px; width: 2px; height: 4px; border-radius: 1px; background: #0a0e12; box-shadow: var(--bw-zw) 0 0 #0a0e12; }
+/* Prioritäten (Start-up-Radar) */
+.bw-fz .o.bw-p-A, .bw-fz .bo.bw-p-A { background: linear-gradient(180deg, #ffcd3a, #f5b800); }
+.bw-fz .u.bw-p-A, .bw-fz .bu.bw-p-A { background: linear-gradient(180deg, #e9ae00, #d9a300); }
+.bw-fz .bw-p-A b { color: #1d2935; }
+.bw-fz .o.bw-p-B, .bw-fz .bo.bw-p-B { background: linear-gradient(180deg, #4a6fbb, #3d61ab); }
+.bw-fz .u.bw-p-B, .bw-fz .bu.bw-p-B { background: linear-gradient(180deg, #34558f, #2e4c82); }
+.bw-fz .o.bw-p-C, .bw-fz .bo.bw-p-C { background: linear-gradient(180deg, #59656f, #4d5862); }
+.bw-fz .u.bw-p-C, .bw-fz .bu.bw-p-C { background: linear-gradient(180deg, #434d56, #3b444c); }
+/* Frei eingefärbte Spalte (Patent-Radar: Farbe des Themas) */
+.bw-fg-farbe .bw-fz .o, .bw-fg-farbe .bw-fz .bo { background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04)), var(--bw-blatt, #39424c); }
+.bw-fg-farbe .bw-fz .u, .bw-fg-farbe .bw-fz .bu { background: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .3)), var(--bw-blatt, #39424c); }
+.bw-fg-farbe .bw-fz b { text-shadow: 0 1px 1px rgba(0, 0, 0, .45); }
+@media (max-width: 600px) {
+  .bw-tafel { --bw-zw: 14px; --bw-zh: 23px; --bw-zf: 16px; --bw-zg: 7px; }
+  .bw-gehaeuse { padding: 14px 12px 16px; }
+}
+
+/* Merken: Funken und Flug */
+.bw-funken { position: fixed; z-index: 1000; width: 0; height: 0; pointer-events: none; }
+.bw-ring { position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--signal, #f5b800); opacity: 0; }
+.bw-funke { position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 50%; background: var(--signal, #f5b800); }
+.bw-geist {
+  position: fixed; z-index: 1000; margin: 0; pointer-events: none; overflow: hidden; border-radius: 12px;
+  background-color: #2b3d52; background-size: cover; background-position: center;
+  box-shadow: 0 16px 34px -10px rgba(0, 0, 0, .65), 0 0 0 1px rgba(255, 255, 255, .15);
+}
+
+/* Lichtreflex beim Neigen */
+.bw-glanz {
+  position: absolute; inset: 0; z-index: 4; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .35s;
+  background: radial-gradient(circle at var(--bw-gx, 50%) var(--bw-gy, 30%), var(--bw-glanz, rgba(255, 255, 255, .13)), rgba(255, 255, 255, .035) 28%, rgba(255, 255, 255, 0) 58%);
+}
+
+/* Beim Filtern Weggefallenes, verblassend an seinem alten Platz */
+.bw-weg { position: fixed !important; z-index: 5; display: block !important; margin: 0 !important; padding: 0 !important; list-style: none; pointer-events: none; box-sizing: border-box; }
+.bw-weg > * { width: 100%; height: 100%; }
+
+/* Überschrift Buchstabe für Buchstabe */
+.bw-w { display: inline-block; overflow: hidden; vertical-align: bottom; white-space: nowrap; padding: .14em .03em .16em 0; margin: -.14em -.03em -.16em 0; }
+.bw-b { display: inline-block; }
+
+/* Übergang Karte ↔ Detailansicht */
+html.bw-morph .leiste, html.bw-morph .kopfleiste { view-transition-name: none !important; }
+html.bw-morph::view-transition-old(root) { animation: bw-vt-aus .3s ease both; }
+html.bw-morph::view-transition-new(root) { animation: bw-vt-ein .3s ease both; }
+@keyframes bw-vt-aus { to { opacity: 0; } }
+@keyframes bw-vt-ein { from { opacity: 0; } }
+::view-transition-group(bw-bild), ::view-transition-group(bw-titel), ::view-transition-group(bw-logo) { animation-duration: var(--f-weich-d, 600ms); animation-timing-function: var(--f-weich, cubic-bezier(.2, .8, .2, 1)); z-index: 2; }
+::view-transition-old(bw-bild), ::view-transition-new(bw-bild) { height: 100%; object-fit: cover; }
+::view-transition-old(bw-titel), ::view-transition-new(bw-titel) { animation-duration: .3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bw-zw-s, .bw-zw-band, .bw-glanz { transition: none !important; }
+}
+@media print { .bw-funken, .bw-geist, .bw-weg, .bw-glanz { display: none !important; } }
