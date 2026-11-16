@@ -1,5 +1,40 @@
 [
  {
+  "id": "ep-4442922",
+  "titel": "Schneidschablone aus Karton für das untere Anschlussblech von Dachfenstern",
+  "titel_original": "SCHNEIDFÜHRUNG FÜR BODENANSCHLUSSELEMENT, KARTONVERPACKUNG UND VERFAHREN ZUM ABDECKEN EINES DACHELEMENTS",
+  "was_neu": "Eine flache Schablone aus Papiermaterial, bevorzugt Wellpappe, zeigt beim Eindecken eines Dachfensters auf Stehfalzdächern an, wo im unteren Anschlussblech die Aussparung für die Falzabdeckung geschnitten wird. Sie hat eine Grundfläche mit einer Führungsspur ab der Seitenkante und zwei abgewinkelte Teile, deren Öffnung etwas schmaler ist als die Spur. Geschützt sind außerdem eine passende Kartonverpackung und das Verfahren zum Eindecken; der Vorteil liegt in einem einfachen, günstigen Hilfsmittel direkt aus dem Verpackungsmaterial.",
+  "bezug": "Betrifft den Eindeckanschluss von Dachfenstern auf Stehfalzdächern.",
+  "amt": "EP",
+  "nummer": "EP 4442922 B1",
+  "familie": [],
+  "anmelder": [
+   "VKR Holding A/S"
+  ],
+  "anmelder_original": [
+   "VKR HOLDING AS"
+  ],
+  "anmelder_land": [
+   "DK"
+  ],
+  "veroeffentlicht": "2026-11-04",
+  "angemeldet": "2024-03-26",
+  "prioritaet": "2023-04-05",
+  "anmeldenummer": "24166262",
+  "thema": "zubehoer",
+  "relevanz": "mittel",
+  "punkte": 15,
+  "klassen": [
+   "E04D13/1475",
+   "E04D13/147",
+   "E04D15/00",
+   "B65D5/50"
+  ],
+  "aufgenommen": "2026-11-16",
+  "quelle": "DEPATISnet",
+  "neu_erteilt": true
+ },
+ {
   "id": "de-102025115246",
   "titel": "Textilaufbau für Dachbegrünung mit Befestigung von Solarmodulen",
   "titel_original": "Textil-Anordnung zur Dachbegrünung und Befestigung eines Objekts",

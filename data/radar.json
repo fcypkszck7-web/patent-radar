@@ -1,8 +1,8 @@
 {
- "stand": "2026-11-09",
- "heute": "2026-11-09",
+ "stand": "2026-11-16",
+ "heute": "2026-11-16",
  "lauf": {
-  "datum": "2026-11-09",
+  "datum": "2026-11-16",
   "art": "woche"
  },
  "daten_ab": "2026-01-29",
@@ -14,18 +14,18 @@
    {
     "name": "DEPATISnet (DPMA)",
     "umfang": "DE, EP, WO – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
-    "stand": "2026-11-09",
+    "stand": "2026-11-16",
     "status": "aktuell"
    },
    {
     "name": "Europäischer Publikationsserver (EPA)",
     "umfang": "Ergänzend: Zusammenfassungen und Ansprüche europäischer Dokumente",
-    "stand": "2026-11-09",
+    "stand": "2026-11-16",
     "status": "aktuell"
    }
   ],
   "hinweise_woche": [
-   "Zu sieben bereits erfassten europäischen Dokumenten liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+   "Zu sechs bereits erfassten europäischen Anmeldungen aus dem PCT-Weg liegt weiterhin keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
   ],
   "hinweise_monat": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
@@ -33,19 +33,19 @@
  },
  "weiterleitungen": [],
  "kennzahlen": {
-  "gesamt": 294,
-  "neu": 9,
-  "erteilungen": 124,
+  "gesamt": 295,
+  "neu": 1,
+  "erteilungen": 125,
   "gebrauchsmuster": 30,
-  "fristen_laufend": 120
+  "fristen_laufend": 119
  },
  "anmelder": [
   {
    "name": "VKR Holding A/S",
-   "anzahl": 21,
+   "anzahl": 22,
    "land": "DK",
    "themen": {
-    "zubehoer": 17,
+    "zubehoer": 18,
     "entwaesserung": 1,
     "sicherheit": 3
    },
@@ -2050,16 +2050,16 @@
   }
  ],
  "bestand": {
-  "stand": "2026-11-09",
+  "stand": "2026-11-16",
   "ab": "2006-01-01",
   "vollstaendig": true,
   "anmeldungen_jahre": 10,
-  "gesamt": 5682,
-  "patente": 3129,
-  "anmeldungen": 1907,
-  "gebrauchsmuster": 646,
-  "auslaufend_12m": 240,
-  "anmelder": 2952
+  "gesamt": 5683,
+  "patente": 3128,
+  "anmeldungen": 1908,
+  "gebrauchsmuster": 647,
+  "auslaufend_12m": 244,
+  "anmelder": 2953
  },
  "eintraege": [
   {
@@ -2114,7 +2114,7 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025116772A1"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "de-102025116902",
@@ -2166,6 +2166,58 @@
     {
      "label": "DEPATISnet (DPMA)",
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025116902A1"
+    }
+   ],
+   "neu": false
+  },
+  {
+   "id": "ep-4442922",
+   "titel": "Schneidschablone aus Karton für das untere Anschlussblech von Dachfenstern",
+   "titel_original": "SCHNEIDFÜHRUNG FÜR BODENANSCHLUSSELEMENT, KARTONVERPACKUNG UND VERFAHREN ZUM ABDECKEN EINES DACHELEMENTS",
+   "was_neu": "Eine flache Schablone aus Papiermaterial, bevorzugt Wellpappe, zeigt beim Eindecken eines Dachfensters auf Stehfalzdächern an, wo im unteren Anschlussblech die Aussparung für die Falzabdeckung geschnitten wird. Sie hat eine Grundfläche mit einer Führungsspur ab der Seitenkante und zwei abgewinkelte Teile, deren Öffnung etwas schmaler ist als die Spur. Geschützt sind außerdem eine passende Kartonverpackung und das Verfahren zum Eindecken; der Vorteil liegt in einem einfachen, günstigen Hilfsmittel direkt aus dem Verpackungsmaterial.",
+   "bezug": "Betrifft den Eindeckanschluss von Dachfenstern auf Stehfalzdächern.",
+   "amt": "EP",
+   "nummer": "EP 4442922 B1",
+   "familie": [],
+   "anmelder": [
+    "VKR Holding A/S"
+   ],
+   "anmelder_original": [
+    "VKR HOLDING AS"
+   ],
+   "anmelder_land": [
+    "DK"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2024-03-26",
+   "prioritaet": "2023-04-05",
+   "anmeldenummer": "24166262",
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 15,
+   "klassen": [
+    "E04D13/1475",
+    "E04D13/147",
+    "E04D15/00",
+    "B65D5/50"
+   ],
+   "aufgenommen": "2026-11-16",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": true,
+   "kind": "B1",
+   "nummer_kompakt": "EP4442922B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-11-04",
+   "einspruch_bis": "2027-08-04",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4442922B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP24166262&lng=de"
     }
    ],
    "neu": true
@@ -2225,7 +2277,7 @@
      "url": "https://register.epo.org/application?number=EP26174280&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4836291",
@@ -2271,7 +2323,7 @@
      "url": "https://register.epo.org/application?number=EP26175290&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4836289",
@@ -2317,7 +2369,7 @@
      "url": "https://register.epo.org/application?number=EP25174081&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4835219",
@@ -2368,7 +2420,7 @@
      "url": "https://register.epo.org/application?number=EP25196733&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4038325",
@@ -2431,7 +2483,7 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2021048310"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4442923",
@@ -2485,7 +2537,7 @@
      "url": "https://register.epo.org/application?number=EP24166292&lng=de"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "de-102017109317",
@@ -3036,7 +3088,7 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026105205U1"
     }
    ],
-   "neu": true
+   "neu": false
   },
   {
    "id": "ep-4826990",
@@ -17391,7 +17443,7 @@
    "art": "Erteilung",
    "erteilung_datum": "2026-02-12",
    "einspruch_bis": "2026-11-12",
-   "frist_status": "laufend",
+   "frist_status": "abgelaufen",
    "links": [
     {
      "label": "Espacenet",
@@ -17448,7 +17500,7 @@
    "art": "Erteilung",
    "erteilung_datum": "2026-02-11",
    "einspruch_bis": "2026-11-11",
-   "frist_status": "laufend",
+   "frist_status": "abgelaufen",
    "links": [
     {
      "label": "Espacenet",

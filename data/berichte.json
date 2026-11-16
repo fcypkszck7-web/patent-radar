@@ -1,5 +1,39 @@
 [
  {
+  "id": "woche-2026-47",
+  "art": "woche",
+  "titel": "Kalenderwoche 47/2026",
+  "zeitraum": {
+   "von": "2026-11-09",
+   "bis": "2026-11-16"
+  },
+  "erstellt": "2026-11-16",
+  "zusammenfassung": "In dieser Woche ist eine neue Erteilung hinzugekommen: eine Schneidschablone aus Karton für das untere Anschlussblech von Dachfenstern auf Stehfalzdächern. Mit ihr beginnt eine Einspruchsfrist bis Anfang August 2027. Sechs europäische Anmeldungen zu Solarbefestigung, Rinnenschutz und Dachbahnen warten weiterhin auf ihren Text und werden nachgetragen.",
+  "kurz": "1 neue Einträge",
+  "kennzahlen": {
+   "neu": 1,
+   "erteilungen": 1,
+   "gebrauchsmuster": 0,
+   "fristen_laufend": 119
+  },
+  "themen": {
+   "zubehoer": 1
+  },
+  "arten": {
+   "Erteilung": 1
+  },
+  "top": [
+   "ep-4442922"
+  ],
+  "fristen": [
+   "ep-4442922"
+  ],
+  "news": [],
+  "hinweise": [
+   "Zu sechs bereits erfassten europäischen Anmeldungen aus dem PCT-Weg liegt weiterhin keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+  ]
+ },
+ {
   "id": "woche-2026-46",
   "art": "woche",
   "titel": "Kalenderwoche 46/2026",
