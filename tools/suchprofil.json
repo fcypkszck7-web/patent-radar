@@ -28,6 +28,11 @@
   {"praefix": "H02S20/20", "thema": "solar", "nur_mit_stichwort": true},
   {"praefix": "F24S20/67", "thema": "solar"},
   {"praefix": "F24S20/69", "thema": "solar"},
+  {"praefix": "F24S25/1", "thema": "solar", "nur_mit_stichwort": true},
+  {"praefix": "F24S25/2", "thema": "solar", "nur_mit_stichwort": true},
+  {"praefix": "F24S25/3", "thema": "solar", "nur_mit_stichwort": true},
+  {"praefix": "F24S25/4", "thema": "solar", "nur_mit_stichwort": true},
+  {"praefix": "F24S25/5", "thema": "solar", "nur_mit_stichwort": true},
   {"praefix": "F24S25/613", "thema": "solar"},
   {"praefix": "F24S25/615", "thema": "solar"},
   {"praefix": "F24S25/617", "thema": null},
@@ -77,7 +82,7 @@
   "snow fence", "roof walkway", "roof hook", "roof drain", "scupper", "solar roof mount", "roof anchor", "roof safety", "roof penetration",
   "eaves", "rainwater", "green roof", "roof tile", "roofing"
  ],
- "bestand_titel_pflicht": ["B21D", "C22C38/", "C23C2/", "H02S20/20", "H02S20/22", "H02S20/26", "F24S25/6", "F24S25/70"],
+ "bestand_titel_pflicht": ["B21D", "C22C38/", "C23C2/", "H02S20/20", "H02S20/22", "H02S20/26", "F24S25/6", "F24S25/70", "F24S25/1", "F24S25/2", "F24S25/3", "F24S25/4", "F24S25/5"],
  "bestand_titel_stichwoerter": ["dach", "roof", "rinne", "gutter", "schnee", "snow", "ziegel", "sparren", "rafter", "traufe", "eaves", "attika", "stehfalz", "falzdach", "trapezblech", "bedachung", "toit", "tuile", "gouttière"],
  "bestand_ausschluss": ["fahrzeug", "vehicle", "automobil", "automotive", "karosserie", "car body", "schiebedach", "sunroof", "cabrio", "convertible", "wohnmobil", "caravan", "anhänger", "trailer", "zaun", "fence", "carport", "pergola", "terrasse", "gewächshaus", "greenhouse", "markise", "awning", "windturbine", "wind turbine", "panzerung", "véhicule", "kabelrinne", "kabelkanal"]
 }
