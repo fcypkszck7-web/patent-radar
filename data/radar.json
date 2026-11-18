@@ -50,7 +50,7 @@
     "sicherheit": 3
    },
    "firma": "VKR",
-   "bestand": 468
+   "bestand": 531
   },
   {
    "name": "SL Rack GmbH",
@@ -60,7 +60,7 @@
     "solar": 12
    },
    "firma": "SL Rack GmbH",
-   "bestand": 61
+   "bestand": 87
   },
   {
    "name": "RMH Tech LLC",
@@ -72,7 +72,7 @@
     "zubehoer": 2
    },
    "firma": "RMH Tech LLC",
-   "bestand": 13
+   "bestand": 27
   },
   {
    "name": "Roto Frank Dachsystem-Technologie GmbH",
@@ -82,7 +82,7 @@
     "zubehoer": 5
    },
    "firma": "Roto Frank",
-   "bestand": 103
+   "bestand": 105
   },
   {
    "name": "Sika Technology AG",
@@ -93,7 +93,7 @@
     "deckung": 3
    },
    "firma": "Sika Technology AG",
-   "bestand": 77
+   "bestand": 123
   },
   {
    "name": "ArcelorMittal",
@@ -103,7 +103,7 @@
     "deckung": 3
    },
    "firma": "ArcelorMittal",
-   "bestand": 21
+   "bestand": 42
   },
   {
    "name": "Carlisle Construction Materials LLC",
@@ -113,7 +113,7 @@
     "deckung": 3
    },
    "firma": "Carlisle Construction Materials",
-   "bestand": 9
+   "bestand": 40
   },
   {
    "name": "Contact Italia S.r.l.",
@@ -123,7 +123,7 @@
     "solar": 3
    },
    "firma": "Contact Italia S.r.l.",
-   "bestand": 5
+   "bestand": 9
   },
   {
    "name": "Enstall US Inc.",
@@ -133,7 +133,7 @@
     "solar": 3
    },
    "firma": "Enstall",
-   "bestand": 10
+   "bestand": 15
   },
   {
    "name": "Holcim Technology Ltd",
@@ -142,8 +142,8 @@
    "themen": {
     "deckung": 3
    },
-   "firma": "Holcim Technology Ltd",
-   "bestand": 19
+   "firma": "Holcim",
+   "bestand": 35
   },
   {
    "name": "Kingspan Holdings (IRL) Ltd.",
@@ -154,7 +154,7 @@
     "gruendach": 1
    },
    "firma": "Kingspan Holdings (IRL) Ltd.",
-   "bestand": 6
+   "bestand": 12
   },
   {
    "name": "Rockwool A/S",
@@ -164,7 +164,7 @@
     "gruendach": 3
    },
    "firma": "Rockwool",
-   "bestand": 44
+   "bestand": 77
   },
   {
    "name": "ABS Safety GmbH",
@@ -175,7 +175,7 @@
     "solar": 1
    },
    "firma": "ABS Safety GmbH",
-   "bestand": 9
+   "bestand": 11
   },
   {
    "name": "ACO Ahlmann SE & Co. KG",
@@ -185,7 +185,7 @@
     "entwaesserung": 2
    },
    "firma": "ACO",
-   "bestand": 25
+   "bestand": 44
   },
   {
    "name": "Aerocompact Group Holding GmbH",
@@ -195,7 +195,7 @@
     "solar": 2
    },
    "firma": "Aerocompact",
-   "bestand": 13
+   "bestand": 19
   },
   {
    "name": "Below0 GmbH",
@@ -217,7 +217,7 @@
     "solar": 1
    },
    "firma": "Blachotrapez",
-   "bestand": 3
+   "bestand": 5
   },
   {
    "name": "Detec System LLC",
@@ -257,7 +257,7 @@
     "deckung": 2
    },
    "firma": "Ewald Dörken AG",
-   "bestand": 45
+   "bestand": 76
   },
   {
    "name": "fischerwerke GmbH & Co. KG",
@@ -267,7 +267,7 @@
     "solar": 2
    },
    "firma": "fischerwerke GmbH & Co. KG",
-   "bestand": 10
+   "bestand": 13
   },
   {
    "name": "Flügel, Tatjana",
@@ -287,7 +287,7 @@
     "gruendach": 2
    },
    "firma": "Husqvarna AB",
-   "bestand": 18
+   "bestand": 27
   },
   {
    "name": "J. Pröpster GmbH",
@@ -297,7 +297,7 @@
     "zubehoer": 2
    },
    "firma": "J. Pröpster GmbH",
-   "bestand": 15
+   "bestand": 25
   },
   {
    "name": "Kampmeier Kunststoff GmbH",
@@ -317,7 +317,7 @@
     "sicherheit": 2
    },
    "firma": "MSA Europe GmbH",
-   "bestand": 8
+   "bestand": 21
   },
   {
    "name": "Optigrün international AG",
@@ -326,8 +326,8 @@
    "themen": {
     "gruendach": 2
    },
-   "firma": "Optigrün international AG",
-   "bestand": 14
+   "firma": "Optigrün",
+   "bestand": 16
   },
   {
    "name": "Rensburg, Markus",
@@ -337,7 +337,7 @@
     "solar": 2
    },
    "firma": "Rensburg, Markus",
-   "bestand": 7
+   "bestand": 8
   },
   {
    "name": "Renusol Europe GmbH",
@@ -346,8 +346,8 @@
    "themen": {
     "solar": 2
    },
-   "firma": "Renusol Europe GmbH",
-   "bestand": 14
+   "firma": "Renusol",
+   "bestand": 18
   },
   {
    "name": "SFS Group International AG",
@@ -368,7 +368,7 @@
     "gruendach": 1
    },
    "firma": "SOPREMA",
-   "bestand": 16
+   "bestand": 21
   },
   {
    "name": "Terreal",
@@ -378,7 +378,7 @@
     "deckung": 2
    },
    "firma": "Terreal",
-   "bestand": 8
+   "bestand": 10
   },
   {
    "name": "Tesla Inc.",
@@ -388,7 +388,7 @@
     "solar": 2
    },
    "firma": "Tesla Inc.",
-   "bestand": 20
+   "bestand": 33
   },
   {
    "name": "Tinteq Holding B.V.",
@@ -409,7 +409,7 @@
     "deckung": 1
    },
    "firma": "Ubbink B.V.",
-   "bestand": 6
+   "bestand": 8
   },
   {
    "name": "Unilin B.V.",
@@ -429,7 +429,7 @@
     "solar": 2
    },
    "firma": "Unirac Inc.",
-   "bestand": 4
+   "bestand": 25
   },
   {
    "name": "ZinCo GmbH",
@@ -439,7 +439,7 @@
     "gruendach": 2
    },
    "firma": "ZinCo",
-   "bestand": 8
+   "bestand": 12
   },
   {
    "name": "3M Innovative Properties Co.",
@@ -449,7 +449,7 @@
     "deckung": 1
    },
    "firma": "3M Innovative Properties",
-   "bestand": 32
+   "bestand": 64
   },
   {
    "name": "A Raymond et Cie",
@@ -459,7 +459,7 @@
     "solar": 1
    },
    "firma": "A Raymond et Cie",
-   "bestand": 3
+   "bestand": 8
   },
   {
    "name": "A&T Dakadvies B.V.",
@@ -469,7 +469,7 @@
     "solar": 1
    },
    "firma": "A&T Dakadvies B.V.",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Aanco UK Ltd",
@@ -499,7 +499,7 @@
     "solar": 1
    },
    "firma": "Aerocompact",
-   "bestand": 13
+   "bestand": 19
   },
   {
    "name": "Alto Roof Tech Ltd",
@@ -509,7 +509,7 @@
     "deckung": 1
    },
    "firma": "Alto Roof Tech Ltd",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Alwitra GmbH",
@@ -529,7 +529,7 @@
     "deckung": 1
    },
    "firma": "Amberger Kaolinwerke Eduard Kick GmbH & Co. KG",
-   "bestand": 3
+   "bestand": 6
   },
   {
    "name": "Amrize Tech Switzerland LLC",
@@ -578,7 +578,7 @@
     "solar": 1
    },
    "firma": "Autarq",
-   "bestand": 5
+   "bestand": 8
   },
   {
    "name": "Axt, Alexander",
@@ -608,7 +608,7 @@
     "deckung": 1
    },
    "firma": "Bambou",
-   "bestand": 1
+   "bestand": 3
   },
   {
    "name": "Benschop Victor Stefan",
@@ -658,7 +658,7 @@
     "gruendach": 1
    },
    "firma": "Blue Innovations B.V.",
-   "bestand": 2
+   "bestand": 4
   },
   {
    "name": "BMI Group Holdings UK Limited",
@@ -668,7 +668,7 @@
     "solar": 1
    },
    "firma": "BMI Group Holdings UK",
-   "bestand": 17
+   "bestand": 23
   },
   {
    "name": "BMI Italia S.r.l.",
@@ -697,7 +697,8 @@
    "themen": {
     "entwaesserung": 1
    },
-   "firma": "Bonerb Tim"
+   "firma": "Bonerb Tim",
+   "bestand": 1
   },
   {
    "name": "Bontje Samuel D",
@@ -706,7 +707,8 @@
    "themen": {
     "zubehoer": 1
    },
-   "firma": "Bontje Samuel D"
+   "firma": "Bontje Samuel D",
+   "bestand": 1
   },
   {
    "name": "Broatch Peter",
@@ -716,7 +718,7 @@
     "solar": 1
    },
    "firma": "Broatch Peter",
-   "bestand": 2
+   "bestand": 4
   },
   {
    "name": "Budmat Bogdan Wiecek",
@@ -746,7 +748,7 @@
     "solar": 1
    },
    "firma": "Caillau",
-   "bestand": 4
+   "bestand": 5
   },
   {
    "name": "Carlisle Intangible Co.",
@@ -756,7 +758,7 @@
     "deckung": 1
    },
    "firma": "Carlisle Intangible",
-   "bestand": 7
+   "bestand": 12
   },
   {
    "name": "Cirencester Ltd",
@@ -786,7 +788,7 @@
     "deckung": 1
    },
    "firma": "Continuus Mat Intellectual Property LLC",
-   "bestand": 4
+   "bestand": 5
   },
   {
    "name": "Crookston Charles Augustine",
@@ -806,7 +808,7 @@
     "deckung": 1
    },
    "firma": "DDP Specialty Electronic Materials US LLC",
-   "bestand": 3
+   "bestand": 6
   },
   {
    "name": "Dehn SE",
@@ -816,7 +818,7 @@
     "zubehoer": 1
    },
    "firma": "Dehn",
-   "bestand": 13
+   "bestand": 51
   },
   {
    "name": "DIETL plan & design GmbH",
@@ -854,7 +856,7 @@
     "deckung": 1
    },
    "firma": "Dumobil Construct NV",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Dupont China Res & Development and Management Co. Ltd",
@@ -864,7 +866,7 @@
     "deckung": 1
    },
    "firma": "Dupont China Res & Development and Management Co. Ltd",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "E.Z. Products LLC",
@@ -873,7 +875,8 @@
    "themen": {
     "entwaesserung": 1
    },
-   "firma": "E.Z. Products LLC"
+   "firma": "E.Z. Products LLC",
+   "bestand": 1
   },
   {
    "name": "Eco Invent AG",
@@ -883,7 +886,7 @@
     "solar": 1
    },
    "firma": "Eco Invent AG",
-   "bestand": 1
+   "bestand": 6
   },
   {
    "name": "EGA Solar System S.r.l.",
@@ -892,7 +895,8 @@
    "themen": {
     "solar": 1
    },
-   "firma": "EGA Solar System S.r.l."
+   "firma": "EGA Solar System S.r.l.",
+   "bestand": 1
   },
   {
    "name": "Eidca Speciality Products Company",
@@ -931,7 +935,7 @@
     "sicherheit": 1
    },
    "firma": "Enpal",
-   "bestand": 6
+   "bestand": 7
   },
   {
    "name": "Enstall Innovation B.V.",
@@ -941,7 +945,7 @@
     "solar": 1
    },
    "firma": "Enstall",
-   "bestand": 10
+   "bestand": 15
   },
   {
    "name": "EPC Solaire",
@@ -981,7 +985,7 @@
     "solar": 1
    },
    "firma": "Exa IP B.V.",
-   "bestand": 2
+   "bestand": 3
   },
   {
    "name": "FAKRO PP Sp. z o.o.",
@@ -1030,7 +1034,7 @@
     "entwaesserung": 1
    },
    "firma": "Foord Brian",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "FRANKEN SYSTEMS GmbH",
@@ -1040,7 +1044,7 @@
     "deckung": 1
    },
    "firma": "FRANKEN SYSTEMS GmbH",
-   "bestand": 8
+   "bestand": 10
   },
   {
    "name": "Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V.",
@@ -1050,7 +1054,7 @@
     "solar": 1
    },
    "firma": "Fraunhofer",
-   "bestand": 15
+   "bestand": 20
   },
   {
    "name": "Freudenberg Carl KG",
@@ -1060,7 +1064,7 @@
     "gruendach": 1
    },
    "firma": "Freudenberg Carl KG",
-   "bestand": 2
+   "bestand": 6
   },
   {
    "name": "Freudenberg Performance Mat B.V.",
@@ -1070,7 +1074,7 @@
     "deckung": 1
    },
    "firma": "Freudenberg Performance Mat",
-   "bestand": 2
+   "bestand": 3
   },
   {
    "name": "Gaddam Vamsi Krishna",
@@ -1080,7 +1084,7 @@
     "solar": 1
    },
    "firma": "Gaddam Vamsi Krishna",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Gandellini Beniamino S.r.l.",
@@ -1100,7 +1104,7 @@
     "sicherheit": 1
    },
    "firma": "George TFE SCP",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "GPM Sp. z o.o. Sp. k.",
@@ -1110,7 +1114,7 @@
     "entwaesserung": 1
    },
    "firma": "GPM Sp. z o.o. Sp. k.",
-   "bestand": 2
+   "bestand": 4
   },
   {
    "name": "Graboski Timothy Michael",
@@ -1120,7 +1124,7 @@
     "zubehoer": 1
    },
    "firma": "Graboski Timothy Michael",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Green Elevation ApS",
@@ -1140,7 +1144,7 @@
     "zubehoer": 1
    },
    "firma": "Grollegg Gerhard",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "GYS Holding",
@@ -1150,7 +1154,7 @@
     "solar": 1
    },
    "firma": "GYS Holding",
-   "bestand": 3
+   "bestand": 5
   },
   {
    "name": "Haddock Dustin M.M.",
@@ -1159,7 +1163,8 @@
    "themen": {
     "zubehoer": 1
    },
-   "firma": "Haddock Dustin M.M."
+   "firma": "Haddock Dustin M.M",
+   "bestand": 3
   },
   {
    "name": "Hallclip Ltd",
@@ -1169,7 +1174,7 @@
     "solar": 1
    },
    "firma": "Hallclip Ltd",
-   "bestand": 2
+   "bestand": 3
   },
   {
    "name": "Harald Zahn GmbH",
@@ -1179,7 +1184,7 @@
     "deckung": 1
    },
    "firma": "Harald Zahn GmbH",
-   "bestand": 22
+   "bestand": 23
   },
   {
    "name": "Henkel AG & Co. KGaA",
@@ -1189,7 +1194,7 @@
     "deckung": 1
    },
    "firma": "Henkel AG & Co. KGaA",
-   "bestand": 1
+   "bestand": 5
   },
   {
    "name": "Heuel GmbH Aluminiumgießerei",
@@ -1209,7 +1214,7 @@
     "solar": 1
    },
    "firma": "Iannuzzi Maurizio",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "INDU LIGHT Produktion & Vertrieb GmbH",
@@ -1229,7 +1234,7 @@
     "solar": 1
    },
    "firma": "IronRidge Inc.",
-   "bestand": 4
+   "bestand": 7
   },
   {
    "name": "Isopan S.p.A.",
@@ -1239,7 +1244,7 @@
     "deckung": 1
    },
    "firma": "Isopan S.p.A.",
-   "bestand": 7
+   "bestand": 8
   },
   {
    "name": "Jalet Jacky Denis",
@@ -1267,8 +1272,8 @@
    "themen": {
     "solar": 1
    },
-   "firma": "Jurchen Technology GmbH",
-   "bestand": 2
+   "firma": "Jurchen",
+   "bestand": 24
   },
   {
    "name": "K2 Systems GmbH",
@@ -1278,7 +1283,7 @@
     "solar": 1
    },
    "firma": "K2 Systems",
-   "bestand": 8
+   "bestand": 18
   },
   {
    "name": "Kieslich Dirk",
@@ -1288,7 +1293,7 @@
     "deckung": 1
    },
    "firma": "Kieslich Dirk",
-   "bestand": 11
+   "bestand": 12
   },
   {
    "name": "Kilago GmbH",
@@ -1308,7 +1313,7 @@
     "gruendach": 1
    },
    "firma": "Knauf Insulation",
-   "bestand": 12
+   "bestand": 21
   },
   {
    "name": "Kraftwerk Solutions GmbH",
@@ -1318,7 +1323,7 @@
     "gruendach": 1
    },
    "firma": "Kraftwerk",
-   "bestand": 4
+   "bestand": 6
   },
   {
    "name": "Lagan Building Solutions Ltd",
@@ -1338,7 +1343,7 @@
     "solar": 1
    },
    "firma": "Landatu Solar S.L.",
-   "bestand": 1
+   "bestand": 3
   },
   {
    "name": "Leister Tech AG",
@@ -1348,7 +1353,7 @@
     "deckung": 1
    },
    "firma": "Leister",
-   "bestand": 12
+   "bestand": 14
   },
   {
    "name": "Lemp GmbH & Co. KG",
@@ -1378,7 +1383,7 @@
     "zubehoer": 1
    },
    "firma": "Lonevag Beslagfabrikk",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "LORENZ-Montagesysteme GmbH",
@@ -1388,7 +1393,7 @@
     "solar": 1
    },
    "firma": "LORENZ-Montagesysteme GmbH",
-   "bestand": 5
+   "bestand": 9
   },
   {
    "name": "Luckow Hans Juergen",
@@ -1398,7 +1403,7 @@
     "deckung": 1
    },
    "firma": "Luckow Hans Juergen",
-   "bestand": 4
+   "bestand": 5
   },
   {
    "name": "Lukacs Mihaly Ferenc",
@@ -1428,7 +1433,7 @@
     "solar": 1
    },
    "firma": "Mafi",
-   "bestand": 1
+   "bestand": 5
   },
   {
    "name": "Maguire, Desmond Michael",
@@ -1438,7 +1443,7 @@
     "deckung": 1
    },
    "firma": "Maguire, Desmond Michael",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Manthorpe Building Products Ltd",
@@ -1497,7 +1502,7 @@
     "deckung": 1
    },
    "firma": "Millennium Slate LLC",
-   "bestand": 2
+   "bestand": 4
   },
   {
    "name": "Minimax Viking Patent Man GmbH",
@@ -1506,8 +1511,8 @@
    "themen": {
     "solar": 1
    },
-   "firma": "Minimax Viking Patent",
-   "bestand": 4
+   "firma": "Minimax Viking",
+   "bestand": 6
   },
   {
    "name": "Moss Jonathon",
@@ -1516,7 +1521,8 @@
    "themen": {
     "zubehoer": 1
    },
-   "firma": "Moss Jonathon"
+   "firma": "Moss Jonathon",
+   "bestand": 1
   },
   {
    "name": "MSA Technology LLC",
@@ -1526,7 +1532,7 @@
     "sicherheit": 1
    },
    "firma": "MSA Technology LLC",
-   "bestand": 5
+   "bestand": 57
   },
   {
    "name": "Noreiks Solutions in Sales GmbH",
@@ -1556,7 +1562,7 @@
     "solar": 1
    },
    "firma": "Novotegra GmbH",
-   "bestand": 1
+   "bestand": 4
   },
   {
    "name": "Nulok Global Pty Ltd",
@@ -1566,7 +1572,7 @@
     "solar": 1
    },
    "firma": "Nulok Global Pty Ltd",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Onduline SA",
@@ -1576,7 +1582,7 @@
     "solar": 1
    },
    "firma": "Onduline SA",
-   "bestand": 8
+   "bestand": 9
   },
   {
    "name": "Orbis Italia S.p.A.",
@@ -1596,7 +1602,7 @@
     "gruendach": 1
    },
    "firma": "Otto Graf G.m.b.H. Kunststofferzeugnisse",
-   "bestand": 4
+   "bestand": 13
   },
   {
    "name": "Owens Corning Intellectual Capital LLC",
@@ -1606,7 +1612,7 @@
     "gruendach": 1
    },
    "firma": "Owens Corning Intellectual Capital LLC",
-   "bestand": 2
+   "bestand": 13
   },
   {
    "name": "PanelClaw Inc.",
@@ -1615,8 +1621,8 @@
    "themen": {
     "solar": 1
    },
-   "firma": "PanelClaw Inc.",
-   "bestand": 3
+   "firma": "PanelClaw",
+   "bestand": 5
   },
   {
    "name": "Pegasus Solar Inc.",
@@ -1626,7 +1632,7 @@
     "solar": 1
    },
    "firma": "Pegasus Solar Inc.",
-   "bestand": 11
+   "bestand": 24
   },
   {
    "name": "Pegaz Blanc Eric",
@@ -1655,7 +1661,7 @@
     "gruendach": 1
    },
    "firma": "Plattner, Wolfgang",
-   "bestand": 4
+   "bestand": 11
   },
   {
    "name": "PPG Industries Ohio Inc.",
@@ -1665,7 +1671,7 @@
     "zubehoer": 1
    },
    "firma": "PPG Industries Ohio Inc.",
-   "bestand": 2
+   "bestand": 3
   },
   {
    "name": "PREFA Aluminiumprodukte GmbH",
@@ -1675,7 +1681,7 @@
     "solar": 1
    },
    "firma": "PREFA Aluminiumprodukte GmbH",
-   "bestand": 6
+   "bestand": 15
   },
   {
    "name": "Premium Mounting Technologies GmbH & Co. KG",
@@ -1685,7 +1691,7 @@
     "solar": 1
    },
    "firma": "Premium Mounting",
-   "bestand": 27
+   "bestand": 35
   },
   {
    "name": "Protan AS",
@@ -1695,7 +1701,7 @@
     "solar": 1
    },
    "firma": "Protan AS",
-   "bestand": 2
+   "bestand": 3
   },
   {
    "name": "Protect Proof Kunststoff Vertriebs GmbH",
@@ -1745,7 +1751,7 @@
     "gruendach": 1
    },
    "firma": "Rain Harvesting Pty Ltd",
-   "bestand": 1
+   "bestand": 8
   },
   {
    "name": "Rathscheck Schiefer und Dach-Systeme Zweigniederlassung der Wilh. Werhahn KG in Neuss",
@@ -1795,7 +1801,7 @@
     "zubehoer": 1
    },
    "firma": "Richard Brink GmbH & Co. KG",
-   "bestand": 8
+   "bestand": 26
   },
   {
    "name": "Roofeco Solar GmbH & Co. KG",
@@ -1824,7 +1830,8 @@
    "themen": {
     "sicherheit": 1
    },
-   "firma": "RTS Dachsicherheit GmbH"
+   "firma": "RTS Dachsicherheit GmbH",
+   "bestand": 1
   },
   {
    "name": "Ruiz Iglesias Migue Angel",
@@ -1853,8 +1860,8 @@
    "themen": {
     "deckung": 1
    },
-   "firma": "SAINT-GOBAIN",
-   "bestand": 41
+   "firma": "Saint-Gobain",
+   "bestand": 52
   },
   {
    "name": "Scheibe, Ulrich",
@@ -1914,7 +1921,7 @@
     "solar": 1
    },
    "firma": "Shenzhen Hello Tech Energy Co. Ltd",
-   "bestand": 6
+   "bestand": 29
   },
   {
    "name": "Sicurlive Group S.r.l.",
@@ -1933,8 +1940,8 @@
    "themen": {
     "deckung": 1
    },
-   "firma": "Silcart S.p.A.",
-   "bestand": 7
+   "firma": "Silcart",
+   "bestand": 8
   },
   {
    "name": "Sita Bauelemente",
@@ -1944,7 +1951,7 @@
     "entwaesserung": 1
    },
    "firma": "Sita Bauelemente",
-   "bestand": 10
+   "bestand": 12
   },
   {
    "name": "Skydome",
@@ -1964,7 +1971,7 @@
     "sicherheit": 1
    },
    "firma": "Skylotec GmbH",
-   "bestand": 14
+   "bestand": 72
   },
   {
    "name": "Sobik, Georg",
@@ -2003,7 +2010,7 @@
     "solar": 1
    },
    "firma": "Sonnen Stark GmbH",
-   "bestand": 3
+   "bestand": 5
   },
   {
    "name": "SOPREMA GmbH",
@@ -2013,7 +2020,7 @@
     "deckung": 1
    },
    "firma": "SOPREMA",
-   "bestand": 16
+   "bestand": 21
   },
   {
    "name": "SunRoof Allgäu GmbH",
@@ -2093,7 +2100,7 @@
     "zubehoer": 1
    },
    "firma": "Trautner Stefan",
-   "bestand": 1
+   "bestand": 2
   },
   {
    "name": "Traxler Manfred",
@@ -2103,7 +2110,7 @@
     "solar": 1
    },
    "firma": "Traxler Manfred",
-   "bestand": 2
+   "bestand": 6
   },
   {
    "name": "Tremco CPG Germany GmbH",
@@ -2113,7 +2120,7 @@
     "deckung": 1
    },
    "firma": "Tremco",
-   "bestand": 4
+   "bestand": 5
   },
   {
    "name": "Tuttosicurezza S.r.l.",
@@ -2133,7 +2140,7 @@
     "solar": 1
    },
    "firma": "Van der Valk Systemen B.V.",
-   "bestand": 3
+   "bestand": 6
   },
   {
    "name": "Van Eekeres Wilhelmus",
@@ -2183,7 +2190,7 @@
     "solar": 1
    },
    "firma": "voestalpine Metal Forming GmbH",
-   "bestand": 6
+   "bestand": 11
   },
   {
    "name": "Walther Bleuchamps, Jochen",
@@ -2202,8 +2209,8 @@
    "themen": {
     "solar": 1
    },
-   "firma": "Wencon Dev Inc.",
-   "bestand": 2
+   "firma": "Wencon Dev",
+   "bestand": 3
   },
   {
    "name": "Werova Kunststoffen B.V.",
@@ -2233,7 +2240,7 @@
     "sicherheit": 1
    },
    "firma": "Wilhelm Flender GmbH & Co. Kommanditgesellschaft",
-   "bestand": 11
+   "bestand": 12
   },
   {
    "name": "Wilhelm Ungeheuer Söhne GmbH",
@@ -2243,7 +2250,7 @@
     "entwaesserung": 1
    },
    "firma": "Wilhelm Ungeheuer Söhne GmbH",
-   "bestand": 3
+   "bestand": 6
   },
   {
    "name": "Xiamen HQ Mount Tech Co. Ltd",
@@ -2263,7 +2270,7 @@
     "zubehoer": 1
    },
    "firma": "Zinniatek Ltd",
-   "bestand": 10
+   "bestand": 13
   },
   {
    "name": "ZIWI Vertriebs GmbH",
@@ -2273,23 +2280,26 @@
     "zubehoer": 1
    },
    "firma": "ZIWI Vertriebs GmbH",
-   "bestand": 3
+   "bestand": 10
   }
  ],
  "bestand": {
-  "stand": "2026-11-16",
+  "stand": "2026-11-18",
   "ab": "2006-01-01",
   "vollstaendig": true,
   "anmeldungen_jahre": 10,
-  "gesamt": 5681,
-  "patente": 3127,
-  "anmeldungen": 1907,
-  "gebrauchsmuster": 647,
-  "auslaufend_12m": 243,
-  "anmelder": 2792,
+  "gesamt": 10159,
+  "patente": 4001,
+  "anmeldungen": 5328,
+  "gebrauchsmuster": 830,
+  "auslaufend_12m": 314,
+  "anmelder": 4299,
   "aemter": {
-   "DE": 1644,
-   "EP": 4037
+   "DE": 2146,
+   "EP": 4633,
+   "WO": 2960,
+   "AT": 265,
+   "CH": 155
   }
  },
  "eintraege": [

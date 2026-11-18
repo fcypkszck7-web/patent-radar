@@ -1426,7 +1426,7 @@
         var n = laender[k];
         return '<li><a href="' + mit("land", land === k ? "" : k) + '"' + (land === k ? ' aria-current="true"' : "") + '><span class="land-code">' + esc(k === "?" ? "–" : k) + '</span><span class="land-name">' + esc(landName(k === "?" ? "" : k)) + '</span><span class="land-zahl"><b>' + n.toLocaleString("de-DE") + "</b> " + plural(n, "Anmelder", "Anmelder") + '</span><span class="land-balken"><span style="width:' + Math.max(4, Math.round(100 * n / maxLand)) + '%"></span></span></a></li>';
       }).join("") + (rest.length ? '<li class="land-rest"><span class="land-code">+' + rest.length + '</span><span class="land-name">weitere Länder</span><span class="land-zahl">' +
-        rest.slice(0, 14).map(function (k) { return k === "?" ? esc("ohne Angabe") : '<a href="' + mit("land", k) + '" title="' + esc(landName(k)) + '">' + esc(k) + "</a>"; }).join(", ") + (rest.length > 14 ? " und " + (rest.length - 14) + " weitere" : "") + "</span></li>" : "") + "</ul></section>";
+        esc(rest.slice(0, 14).map(function (k) { return k === "?" ? "ohne Angabe" : k; }).join(", ")) + (rest.length > 14 ? " und " + (rest.length - 14) + " weitere" : "") + "</span></li>" : "") + "</ul></section>";
     html += '<section class="abschnitt" aria-labelledby="rang-titel"><div class="abschnitt-kopf"><h2 id="rang-titel">' + (land ? "Anmelder aus " + esc(landName(land)) : "Rangliste") + "</h2>" +
       '<div class="segment" role="group" aria-label="Sortierung"><a class="seg-link" href="' + mit("sort", "") + '"' + (!nachRadar ? ' aria-current="true"' : "") + ">Nach Bestand</a>" +
       '<a class="seg-link" href="' + mit("sort", "radar") + '"' + (nachRadar ? ' aria-current="true"' : "") + ">Nach Radar</a></div>" +
