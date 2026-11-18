@@ -2345,7 +2345,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025116772A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025116772.png",
+    "b": 255,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 116 772 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 116 772 A1"
+   }
   },
   {
    "id": "de-102025116902",
@@ -2399,7 +2411,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025116902A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025116902.png",
+    "b": 252,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 116 902 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 116 902 A1"
+   }
   },
   {
    "id": "ep-4442922",
@@ -2451,7 +2475,19 @@
      "url": "https://register.epo.org/application?number=EP24166262&lng=de"
     }
    ],
-   "neu": true
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4442922.png",
+    "b": 748,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4442922 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4442922 B1"
+   }
   },
   {
    "id": "ep-4835368",
@@ -2508,7 +2544,19 @@
      "url": "https://register.epo.org/application?number=EP26174280&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4835368.png",
+    "b": 760,
+    "h": 660,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4835368 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4835368 A1"
+   }
   },
   {
    "id": "ep-4836291",
@@ -2554,7 +2602,19 @@
      "url": "https://register.epo.org/application?number=EP26175290&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4836291.png",
+    "b": 760,
+    "h": 396,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4836291 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4836291 A1"
+   }
   },
   {
    "id": "ep-4836289",
@@ -2600,7 +2660,19 @@
      "url": "https://register.epo.org/application?number=EP25174081&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4836289.png",
+    "b": 760,
+    "h": 867,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4836289 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4836289 A1"
+   }
   },
   {
    "id": "ep-4835219",
@@ -2651,7 +2723,19 @@
      "url": "https://register.epo.org/application?number=EP25196733&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4835219.png",
+    "b": 760,
+    "h": 636,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4835219 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4835219 A1"
+   }
   },
   {
    "id": "ep-4038325",
@@ -2714,7 +2798,19 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2021048310"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4038325.png",
+    "b": 760,
+    "h": 843,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4038325 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4038325 B1"
+   }
   },
   {
    "id": "ep-4442923",
@@ -2768,7 +2864,19 @@
      "url": "https://register.epo.org/application?number=EP24166292&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4442923.png",
+    "b": 723,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4442923 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4442923 B1"
+   }
   },
   {
    "id": "de-102017109317",
@@ -2824,7 +2932,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102017109317B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102017109317.png",
+    "b": 215,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2017 109 317 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2017 109 317 B4"
+   }
   },
   {
    "id": "ep-4832341",
@@ -2875,7 +2995,19 @@
      "url": "https://register.epo.org/application?number=EP26165780&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4832341.png",
+    "b": 760,
+    "h": 857,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4832341 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4832341 A1"
+   }
   },
   {
    "id": "ep-4727008",
@@ -2931,7 +3063,19 @@
      "url": "https://register.epo.org/application?number=EP25207058&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4727008.png",
+    "b": 542,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4727008 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4727008 B1"
+   }
   },
   {
    "id": "ep-4609503",
@@ -2994,7 +3138,19 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2024089517"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4609503.png",
+    "b": 760,
+    "h": 860,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4609503 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4609503 B1"
+   }
   },
   {
    "id": "ep-3710647",
@@ -3057,7 +3213,19 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2019096779"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3710647.png",
+    "b": 550,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3710647 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3710647 B1"
+   }
   },
   {
    "id": "ep-4831232",
@@ -3106,7 +3274,19 @@
      "url": "https://register.epo.org/application?number=EP25172606&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4831232.png",
+    "b": 760,
+    "h": 373,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4831232 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4831232 A1"
+   }
   },
   {
    "id": "ep-4212684",
@@ -3158,7 +3338,19 @@
      "url": "https://register.epo.org/application?number=EP23160979&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4212684.png",
+    "b": 626,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4212684 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4212684 B1"
+   }
   },
   {
    "id": "de-102025115246",
@@ -3211,7 +3403,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025115246A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025115246.png",
+    "b": 282,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 115 246 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 115 246 A1"
+   }
   },
   {
    "id": "de-102019110588",
@@ -3265,7 +3469,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102019110588B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102019110588.png",
+    "b": 214,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2019 110 588 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2019 110 588 B4"
+   }
   },
   {
    "id": "de-202026105205",
@@ -3319,7 +3535,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026105205U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026105205.png",
+    "b": 246,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 105 205 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 105 205 U1"
+   }
   },
   {
    "id": "ep-4826990",
@@ -3369,7 +3597,19 @@
      "url": "https://register.epo.org/application?number=EP26172777&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4826990.png",
+    "b": 760,
+    "h": 785,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4826990 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4826990 A1"
+   }
   },
   {
    "id": "ep-4825160",
@@ -3425,7 +3665,19 @@
      "url": "https://register.epo.org/application?number=EP26169000&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4825160.png",
+    "b": 621,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4825160 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4825160 A1"
+   }
   },
   {
    "id": "ep-4824937",
@@ -3485,7 +3737,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025125860"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4824937.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4824937 A1"
+   }
   },
   {
    "id": "ep-4824936",
@@ -3544,7 +3804,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025125862"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4824936.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4824936 A1"
+   }
   },
   {
    "id": "ep-4824935",
@@ -3603,7 +3871,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025125861"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4824935.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4824935 A1"
+   }
   },
   {
    "id": "ep-4824934",
@@ -3662,7 +3938,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025201908"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4824934.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4824934 A1"
+   }
   },
   {
    "id": "ep-4824479",
@@ -3722,7 +4006,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025223901"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4824479.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4824479 A1"
+   }
   },
   {
    "id": "ep-4826187",
@@ -3772,7 +4064,19 @@
      "url": "https://register.epo.org/application?number=EP26202967&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4826187.png",
+    "b": 760,
+    "h": 510,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4826187 A2"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4826187 A2"
+   }
   },
   {
    "id": "ep-3921487",
@@ -3823,7 +4127,19 @@
      "url": "https://register.epo.org/application?number=EP20707509&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3921487.png",
+    "b": 760,
+    "h": 810,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3921487 B2"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3921487 B2"
+   }
   },
   {
    "id": "ep-3835508",
@@ -3876,7 +4192,19 @@
      "url": "https://register.epo.org/application?number=EP20210601&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3835508.png",
+    "b": 743,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3835508 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3835508 B1"
+   }
   },
   {
    "id": "de-202026002614",
@@ -3926,7 +4254,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026002614U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026002614.png",
+    "b": 220,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 002 614 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 002 614 U1"
+   }
   },
   {
    "id": "de-202026002613",
@@ -3979,7 +4319,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026002613U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026002613.png",
+    "b": 274,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 002 613 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 002 613 U1"
+   }
   },
   {
    "id": "de-202026104989",
@@ -4029,7 +4381,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026104989U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026104989.png",
+    "b": 221,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 104 989 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 104 989 U1"
+   }
   },
   {
    "id": "de-102024123778",
@@ -4085,7 +4449,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024123778B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024123778.png",
+    "b": 194,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 123 778 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 123 778 B4"
+   }
   },
   {
    "id": "ep-4822268",
@@ -4135,7 +4511,19 @@
      "url": "https://register.epo.org/application?number=EP23958184&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4822268.png",
+    "b": 760,
+    "h": 398,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4822268 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4822268 A1"
+   }
   },
   {
    "id": "ep-4822267",
@@ -4191,7 +4579,19 @@
      "url": "https://register.epo.org/application?number=EP26167289&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4822267.png",
+    "b": 760,
+    "h": 647,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4822267 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4822267 A1"
+   }
   },
   {
    "id": "ep-4822112",
@@ -4238,7 +4638,19 @@
      "url": "https://register.epo.org/application?number=EP26171730&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4822112.png",
+    "b": 760,
+    "h": 616,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4822112 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4822112 A1"
+   }
   },
   {
    "id": "ep-4492677",
@@ -4287,7 +4699,19 @@
      "url": "https://register.epo.org/application?number=EP24185864&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4492677.png",
+    "b": 734,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4492677 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4492677 B1"
+   }
   },
   {
    "id": "ep-4423349",
@@ -4338,7 +4762,19 @@
      "url": "https://register.epo.org/application?number=EP22772976&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4423349.png",
+    "b": 760,
+    "h": 783,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4423349 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4423349 B1"
+   }
   },
   {
    "id": "ep-3969821",
@@ -4391,7 +4827,19 @@
      "url": "https://register.epo.org/application?number=EP20727211&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3969821.png",
+    "b": 579,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3969821 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3969821 B1"
+   }
   },
   {
    "id": "de-202026104708",
@@ -4444,7 +4892,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026104708U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026104708.png",
+    "b": 112,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 104 708 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 104 708 U1"
+   }
   },
   {
    "id": "de-102023122587",
@@ -4500,7 +4960,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102023122587B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102023122587.png",
+    "b": 195,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2023 122 587 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2023 122 587 B4"
+   }
   },
   {
    "id": "ep-4818594",
@@ -4550,7 +5022,19 @@
      "url": "https://register.epo.org/application?number=EP26162855&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4818594.png",
+    "b": 627,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4818594 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4818594 A1"
+   }
   },
   {
    "id": "ep-4816070",
@@ -4610,7 +5094,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025114383"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4816070.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4816070 A1"
+   }
   },
   {
    "id": "ep-3601699",
@@ -4663,7 +5155,19 @@
      "url": "https://register.epo.org/application?number=EP17902782&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3601699.png",
+    "b": 578,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3601699 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3601699 B1"
+   }
   },
   {
    "id": "ep-4817869",
@@ -4719,7 +5223,19 @@
      "url": "https://register.epo.org/application?number=EP25167547&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4817869.png",
+    "b": 760,
+    "h": 212,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4817869 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4817869 A1"
+   }
   },
   {
    "id": "ep-4818431",
@@ -4768,7 +5284,19 @@
      "url": "https://register.epo.org/application?number=EP26162759&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4818431.png",
+    "b": 760,
+    "h": 226,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4818431 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4818431 A1"
+   }
   },
   {
    "id": "ep-4817417",
@@ -4820,7 +5348,19 @@
      "url": "https://register.epo.org/application?number=EP26167965&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4817417.png",
+    "b": 655,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4817417 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4817417 A1"
+   }
   },
   {
    "id": "ep-4818439",
@@ -4876,7 +5416,19 @@
      "url": "https://register.epo.org/application?number=EP26169156&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4818439.png",
+    "b": 760,
+    "h": 677,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4818439 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4818439 A1"
+   }
   },
   {
    "id": "wo-2026207013",
@@ -4930,7 +5482,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026207013A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026207013.png",
+    "b": 248,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/207013 A1"
+   }
   },
   {
    "id": "de-202026104887",
@@ -4980,7 +5540,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026104887U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026104887.png",
+    "b": 252,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 104 887 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 104 887 U1"
+   }
   },
   {
    "id": "de-102025111750",
@@ -5030,7 +5602,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025111750A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025111750.png",
+    "b": 295,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 111 750 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 111 750 A1"
+   }
   },
   {
    "id": "de-102023000784",
@@ -5087,7 +5671,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102023000784B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102023000784.png",
+    "b": 243,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2023 000 784 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2023 000 784 B4"
+   }
   },
   {
    "id": "ep-4343074",
@@ -5140,7 +5736,19 @@
      "url": "https://register.epo.org/application?number=EP24156053&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4343074.png",
+    "b": 592,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4343074 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4343074 B1"
+   }
   },
   {
    "id": "ep-4814226",
@@ -5190,7 +5798,19 @@
      "url": "https://register.epo.org/application?number=EP26173506&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4814226.png",
+    "b": 760,
+    "h": 854,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4814226 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4814226 A1"
+   }
   },
   {
    "id": "ep-4033174",
@@ -5242,7 +5862,19 @@
      "url": "https://register.epo.org/application?number=EP21153530&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4033174.png",
+    "b": 634,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4033174 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4033174 B1"
+   }
   },
   {
    "id": "ep-4810873",
@@ -5288,7 +5920,19 @@
      "url": "https://register.epo.org/application?number=EP26162550&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4810873.png",
+    "b": 760,
+    "h": 489,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4810873 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4810873 A1"
+   }
   },
   {
    "id": "ep-4810739",
@@ -5336,7 +5980,19 @@
      "url": "https://register.epo.org/application?number=EP25165390&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4810739.png",
+    "b": 760,
+    "h": 525,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4810739 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4810739 A1"
+   }
   },
   {
    "id": "ep-4252347",
@@ -5389,7 +6045,19 @@
      "url": "https://register.epo.org/application?number=EP21895932&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4252347.png",
+    "b": 526,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4252347 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4252347 B1"
+   }
   },
   {
    "id": "ep-4810740",
@@ -5439,7 +6107,19 @@
      "url": "https://register.epo.org/application?number=EP26165711&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4810740.png",
+    "b": 537,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4810740 A1"
+   },
+   "anspruch_1": {
+    "sprache": "fr",
+    "dokument": "EP 4810740 A1"
+   }
   },
   {
    "id": "ep-4602304",
@@ -5490,7 +6170,19 @@
      "url": "https://register.epo.org/application?number=EP23790423&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4602304.png",
+    "b": 574,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4602304 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4602304 B1"
+   }
   },
   {
    "id": "ep-3707212",
@@ -5543,7 +6235,19 @@
      "url": "https://register.epo.org/application?number=EP18801052&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3707212.png",
+    "b": 760,
+    "h": 553,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3707212 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3707212 B1"
+   }
   },
   {
    "id": "wo-2026189742",
@@ -5597,7 +6301,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026189742A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026189742.png",
+    "b": 264,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/189742 A1"
+   }
   },
   {
    "id": "de-102025109524",
@@ -5650,7 +6362,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025109524A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025109524.png",
+    "b": 95,
+    "h": 398,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 109 524 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 109 524 A1"
+   }
   },
   {
    "id": "de-202026103995",
@@ -5700,7 +6424,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026103995U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026103995.png",
+    "b": 319,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 103 995 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 103 995 U1"
+   }
   },
   {
    "id": "de-102025109681",
@@ -5752,7 +6488,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025109681A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025109681.png",
+    "b": 288,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 109 681 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 109 681 A1"
+   }
   },
   {
    "id": "ep-4807985",
@@ -5800,7 +6548,19 @@
      "url": "https://register.epo.org/application?number=EP25163606&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4807985.png",
+    "b": 760,
+    "h": 379,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4807985 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4807985 A1"
+   }
   },
   {
    "id": "ep-4807104",
@@ -5846,7 +6606,19 @@
      "url": "https://register.epo.org/application?number=EP25162479&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4807104.png",
+    "b": 760,
+    "h": 777,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4807104 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4807104 A1"
+   }
   },
   {
    "id": "ep-3693432",
@@ -5899,7 +6671,19 @@
      "url": "https://register.epo.org/application?number=EP20154701&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3693432.png",
+    "b": 690,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3693432 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3693432 B1"
+   }
   },
   {
    "id": "ep-3650610",
@@ -5952,7 +6736,19 @@
      "url": "https://register.epo.org/application?number=EP20150535&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3650610.png",
+    "b": 414,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3650610 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3650610 B1"
+   }
   },
   {
    "id": "wo-2026185715",
@@ -6006,7 +6802,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026185715A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026185715.png",
+    "b": 466,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/185715 A1"
+   }
   },
   {
    "id": "de-102025108948",
@@ -6059,7 +6863,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025108948A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025108948.png",
+    "b": 263,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 108 948 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 108 948 A1"
+   }
   },
   {
    "id": "de-102025108623",
@@ -6110,7 +6926,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025108623A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025108623.png",
+    "b": 281,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 108 623 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 108 623 A1"
+   }
   },
   {
    "id": "ep-4802226",
@@ -6170,7 +6998,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025097037"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4802226.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4802226 A1"
+   }
   },
   {
    "id": "ep-4803717",
@@ -6215,7 +7051,19 @@
      "url": "https://register.epo.org/application?number=EP25161888&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4803717.png",
+    "b": 259,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4803717 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4803717 A1"
+   }
   },
   {
    "id": "ep-4578636",
@@ -6268,7 +7116,19 @@
      "url": "https://register.epo.org/application?number=EP24223249&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4578636.png",
+    "b": 629,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4578636 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4578636 B1"
+   }
   },
   {
    "id": "wo-2026183021",
@@ -6319,7 +7179,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026183021A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026183021.png",
+    "b": 363,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/183021 A1"
+   }
   },
   {
    "id": "wo-2026182624",
@@ -6373,7 +7241,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026182624A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026182624.png",
+    "b": 230,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/182624 A1"
+   }
   },
   {
    "id": "wo-2026180492",
@@ -6426,7 +7302,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026180492A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026180492.png",
+    "b": 268,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/180492 A1"
+   }
   },
   {
    "id": "de-202026102771",
@@ -6485,7 +7369,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026102771U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026102771.png",
+    "b": 318,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 102 771 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 102 771 U1"
+   }
   },
   {
    "id": "de-202026103249",
@@ -6538,7 +7434,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026103249U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026103249.png",
+    "b": 537,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 103 249 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 103 249 U1"
+   }
   },
   {
    "id": "de-202026102794",
@@ -6589,7 +7497,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026102794U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026102794.png",
+    "b": 191,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 102 794 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 102 794 U1"
+   }
   },
   {
    "id": "de-202026002582",
@@ -6641,7 +7561,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026002582U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026002582.png",
+    "b": 257,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 002 582 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 002 582 U1"
+   }
   },
   {
    "id": "de-102025107740",
@@ -6694,7 +7626,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025107740A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025107740.png",
+    "b": 277,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 107 740 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 107 740 A1"
+   }
   },
   {
    "id": "ep-4800919",
@@ -6739,7 +7683,19 @@
      "url": "https://register.epo.org/application?number=EP26151439&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4800919.png",
+    "b": 501,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4800919 A2"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4800919 A2"
+   }
   },
   {
    "id": "ep-4338958",
@@ -6792,7 +7748,19 @@
      "url": "https://register.epo.org/application?number=EP23190704&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4338958.png",
+    "b": 581,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4338958 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4338958 B1"
+   }
   },
   {
    "id": "ep-4800198",
@@ -6838,7 +7806,19 @@
      "url": "https://register.epo.org/application?number=EP25160964&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4800198.png",
+    "b": 585,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4800198 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4800198 A1"
+   }
   },
   {
    "id": "wo-2026178284",
@@ -6892,7 +7872,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026178284A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026178284.png",
+    "b": 434,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/178284 A1"
+   }
   },
   {
    "id": "wo-2026176035",
@@ -6945,7 +7933,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026176035A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026176035.png",
+    "b": 264,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/176035 A1"
+   }
   },
   {
    "id": "de-202026103483",
@@ -6993,7 +7989,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026103483U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026103483.png",
+    "b": 289,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 103 483 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 103 483 U1"
+   }
   },
   {
    "id": "de-202025102060",
@@ -7046,7 +8054,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202025102060U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202025102060.png",
+    "b": 427,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2025 102 060 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2025 102 060 U1"
+   }
   },
   {
    "id": "de-102025108949",
@@ -7102,7 +8122,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025108949B3"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025108949.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 108 949 B3"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 108 949 B3"
+   }
   },
   {
    "id": "ep-4797530",
@@ -7152,7 +8184,19 @@
      "url": "https://register.epo.org/application?number=EP26159328&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4797530.png",
+    "b": 760,
+    "h": 510,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4797530 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4797530 A1"
+   }
   },
   {
    "id": "ep-4796867",
@@ -7202,7 +8246,19 @@
      "url": "https://register.epo.org/application?number=EP26158495&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4796867.png",
+    "b": 716,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4796867 A2"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4796867 A2"
+   }
   },
   {
    "id": "ep-4795242",
@@ -7262,7 +8318,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025084932"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4795242.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4795242 A1"
+   }
   },
   {
    "id": "ep-4375587",
@@ -7315,7 +8379,19 @@
      "url": "https://register.epo.org/application?number=EP23210027&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4375587.png",
+    "b": 608,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4375587 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4375587 B1"
+   }
   },
   {
    "id": "ep-4121610",
@@ -7375,7 +8451,19 @@
      "url": "https://register.epo.org/application?number=EP21771677&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4121610.png",
+    "b": 589,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4121610 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4121610 B1"
+   }
   },
   {
    "id": "ep-3655597",
@@ -7428,7 +8516,19 @@
      "url": "https://register.epo.org/application?number=EP18835126&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3655597.png",
+    "b": 540,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3655597 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3655597 B1"
+   }
   },
   {
    "id": "wo-2026173846",
@@ -7480,7 +8580,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026173846A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026173846.png",
+    "b": 175,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/173846 A1"
+   }
   },
   {
    "id": "de-202026103726",
@@ -7533,7 +8641,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026103726U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026103726.png",
+    "b": 281,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 103 726 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 103 726 U1"
+   }
   },
   {
    "id": "de-202026103594",
@@ -7586,7 +8706,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026103594U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026103594.png",
+    "b": 237,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 103 594 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 103 594 U1"
+   }
   },
   {
    "id": "de-202026001299",
@@ -7635,7 +8767,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026001299U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026001299.png",
+    "b": 357,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 001 299 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 001 299 U1"
+   }
   },
   {
    "id": "ep-4794191",
@@ -7680,7 +8824,19 @@
      "url": "https://register.epo.org/application?number=EP25158257&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4794191.png",
+    "b": 760,
+    "h": 540,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4794191 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4794191 A1"
+   }
   },
   {
    "id": "ep-4366157",
@@ -7733,7 +8889,19 @@
      "url": "https://register.epo.org/application?number=EP23207818&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4366157.png",
+    "b": 567,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4366157 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4366157 B1"
+   }
   },
   {
    "id": "ep-2767652",
@@ -7786,7 +8954,19 @@
      "url": "https://register.epo.org/application?number=EP13184886&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-2767652.png",
+    "b": 582,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 2767652 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 2767652 B1"
+   }
   },
   {
    "id": "ep-4791964",
@@ -7846,7 +9026,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025077987"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4791964.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4791964 A1"
+   }
   },
   {
    "id": "ep-4791963",
@@ -7902,7 +9090,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025077986"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4791963.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4791963 A2"
+   }
   },
   {
    "id": "de-202025101695",
@@ -7955,7 +9151,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202025101695U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202025101695.png",
+    "b": 311,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2025 101 695 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2025 101 695 U1"
+   }
   },
   {
    "id": "de-202026000719",
@@ -8008,7 +9216,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026000719U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026000719.png",
+    "b": 258,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 000 719 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 000 719 U1"
+   }
   },
   {
    "id": "ep-4400669",
@@ -8061,7 +9281,19 @@
      "url": "https://register.epo.org/application?number=EP23216238&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4400669.png",
+    "b": 636,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4400669 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4400669 B1"
+   }
   },
   {
    "id": "ep-4789533",
@@ -8117,7 +9349,19 @@
      "url": "https://register.epo.org/application?number=EP25156546&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4789533.png",
+    "b": 760,
+    "h": 315,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4789533 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4789533 A1"
+   }
   },
   {
    "id": "ep-3964664",
@@ -8169,7 +9413,19 @@
      "url": "https://register.epo.org/application?number=EP21194495&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3964664.png",
+    "b": 616,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3964664 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3964664 B1"
+   }
   },
   {
    "id": "ep-4789790",
@@ -8215,7 +9471,19 @@
      "url": "https://register.epo.org/application?number=EP25156018&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4789790.png",
+    "b": 760,
+    "h": 632,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4789790 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4789790 A1"
+   }
   },
   {
    "id": "de-202026103534",
@@ -8263,7 +9531,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026103534U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026103534.png",
+    "b": 446,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 103 534 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 103 534 U1"
+   }
   },
   {
    "id": "ep-4786877",
@@ -8313,7 +9593,19 @@
      "url": "https://register.epo.org/application?number=EP25223011&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4786877.png",
+    "b": 760,
+    "h": 474,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4786877 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4786877 A1"
+   }
   },
   {
    "id": "ep-3983591",
@@ -8366,7 +9658,19 @@
      "url": "https://register.epo.org/application?number=EP20734821&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3983591.png",
+    "b": 760,
+    "h": 429,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3983591 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3983591 B1"
+   }
   },
   {
    "id": "ep-3683375",
@@ -8423,7 +9727,19 @@
      "url": "https://register.epo.org/application?number=EP20151205&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3683375.png",
+    "b": 760,
+    "h": 822,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3683375 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3683375 B1"
+   }
   },
   {
    "id": "ep-4786703",
@@ -8469,7 +9785,19 @@
      "url": "https://register.epo.org/application?number=EP26155044&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4786703.png",
+    "b": 760,
+    "h": 681,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4786703 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4786703 A1"
+   }
   },
   {
    "id": "ep-4784850",
@@ -8529,7 +9857,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025068243"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4784850.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4784850 A1"
+   }
   },
   {
    "id": "de-202026102703",
@@ -8582,7 +9918,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026102703U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026102703.png",
+    "b": 304,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 102 703 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 102 703 U1"
+   }
   },
   {
    "id": "de-202026102436",
@@ -8636,7 +9984,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026102436U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026102436.png",
+    "b": 243,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 102 436 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 102 436 U1"
+   }
   },
   {
    "id": "de-102006022980",
@@ -8690,7 +10050,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102006022980B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102006022980.png",
+    "b": 284,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2006 022 980 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2006 022 980 B4"
+   }
   },
   {
    "id": "ep-4783455",
@@ -8740,7 +10112,19 @@
      "url": "https://register.epo.org/application?number=EP26153527&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4783455.png",
+    "b": 760,
+    "h": 567,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4783455 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4783455 A1"
+   }
   },
   {
    "id": "ep-4780214",
@@ -8805,7 +10189,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025061891"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4780214.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4780214 A1"
+   }
   },
   {
    "id": "ep-4467892",
@@ -8858,7 +10250,19 @@
      "url": "https://register.epo.org/application?number=EP24168039&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4467892.png",
+    "b": 579,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4467892 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4467892 B1"
+   }
   },
   {
    "id": "ep-3769017",
@@ -8911,7 +10315,19 @@
      "url": "https://register.epo.org/application?number=EP19771033&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3769017.png",
+    "b": 760,
+    "h": 670,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3769017 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3769017 B1"
+   }
   },
   {
    "id": "ep-4782621",
@@ -8966,7 +10382,19 @@
      "url": "https://register.epo.org/application?number=EP26154321&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4782621.png",
+    "b": 579,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4782621 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4782621 A1"
+   }
   },
   {
    "id": "ep-4320319",
@@ -9019,7 +10447,19 @@
      "url": "https://register.epo.org/application?number=EP22728315&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4320319.png",
+    "b": 760,
+    "h": 659,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4320319 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4320319 B1"
+   }
   },
   {
    "id": "wo-2026156292",
@@ -9081,7 +10521,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026156292A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026156292.png",
+    "b": 252,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/156292 A1"
+   }
   },
   {
    "id": "wo-2026153999",
@@ -9132,7 +10580,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026153999A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026153999.png",
+    "b": 490,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/153999 A1"
+   }
   },
   {
    "id": "ep-4777768",
@@ -9190,7 +10646,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025059003"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4777768.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4777768 A1"
+   }
   },
   {
    "id": "ep-4777686",
@@ -9250,7 +10714,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025058525"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4777686.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4777686 A1"
+   }
   },
   {
    "id": "ep-4779098",
@@ -9300,7 +10772,19 @@
      "url": "https://register.epo.org/application?number=EP26151124&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4779098.png",
+    "b": 760,
+    "h": 625,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4779098 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4779098 A1"
+   }
   },
   {
    "id": "ep-4777685",
@@ -9358,7 +10842,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025056285"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4777685.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4777685 A1"
+   }
   },
   {
    "id": "ep-3663478",
@@ -9411,7 +10903,19 @@
      "url": "https://register.epo.org/application?number=EP19208827&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3663478.png",
+    "b": 760,
+    "h": 834,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3663478 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3663478 B1"
+   }
   },
   {
    "id": "de-202026102894",
@@ -9463,7 +10967,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026102894U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026102894.png",
+    "b": 400,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 102 894 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 102 894 U1"
+   }
   },
   {
    "id": "de-102026100851",
@@ -9520,7 +11036,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102026100851A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102026100851.png",
+    "b": 464,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2026 100 851 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2026 100 851 A1"
+   }
   },
   {
    "id": "de-102025001546",
@@ -9576,7 +11104,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025001546B3"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025001546.png",
+    "b": 122,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 001 546 B3"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 001 546 B3"
+   }
   },
   {
    "id": "de-102025100745",
@@ -9636,7 +11176,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025100745A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025100745.png",
+    "b": 271,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 100 745 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 100 745 A1"
+   }
   },
   {
    "id": "ep-4393057",
@@ -9696,7 +11248,19 @@
      "url": "https://register.epo.org/application?number=EP22862013&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4393057.png",
+    "b": 542,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4393057 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4393057 B1"
+   }
   },
   {
    "id": "ep-4776508",
@@ -9746,7 +11310,19 @@
      "url": "https://register.epo.org/application?number=EP26150738&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4776508.png",
+    "b": 760,
+    "h": 590,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4776508 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4776508 A1"
+   }
   },
   {
    "id": "ep-4505083",
@@ -9799,7 +11375,19 @@
      "url": "https://register.epo.org/application?number=EP23704360&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4505083.png",
+    "b": 560,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4505083 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4505083 B1"
+   }
   },
   {
    "id": "ep-4272309",
@@ -9852,7 +11440,19 @@
      "url": "https://register.epo.org/application?number=EP22772235&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4272309.png",
+    "b": 760,
+    "h": 866,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4272309 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4272309 B1"
+   }
   },
   {
    "id": "ep-3656053",
@@ -9905,7 +11505,19 @@
      "url": "https://register.epo.org/application?number=EP18749978&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3656053.png",
+    "b": 534,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3656053 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3656053 B1"
+   }
   },
   {
    "id": "ep-3575656",
@@ -9958,7 +11570,19 @@
      "url": "https://register.epo.org/application?number=EP19177249&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3575656.png",
+    "b": 567,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3575656 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3575656 B1"
+   }
   },
   {
    "id": "ep-4775756",
@@ -10014,7 +11638,19 @@
      "url": "https://register.epo.org/application?number=EP26150513&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4775756.png",
+    "b": 760,
+    "h": 550,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4775756 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4775756 A1"
+   }
   },
   {
    "id": "ep-4571007",
@@ -10064,7 +11700,19 @@
      "url": "https://register.epo.org/application?number=EP24000142&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4571007.png",
+    "b": 690,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4571007 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4571007 B1"
+   }
   },
   {
    "id": "ep-3717235",
@@ -10117,7 +11765,19 @@
      "url": "https://register.epo.org/application?number=EP18807389&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3717235.png",
+    "b": 760,
+    "h": 824,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3717235 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3717235 B1"
+   }
   },
   {
    "id": "ep-3405339",
@@ -10170,7 +11830,19 @@
      "url": "https://register.epo.org/application?number=EP16754036&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3405339.png",
+    "b": 590,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3405339 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3405339 B1"
+   }
   },
   {
    "id": "de-102025100475",
@@ -10221,7 +11893,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025100475A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025100475.png",
+    "b": 262,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 100 475 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 100 475 A1"
+   }
   },
   {
    "id": "ep-4177413",
@@ -10280,7 +11964,19 @@
      "url": "https://register.epo.org/application?number=EP22204329&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4177413.png",
+    "b": 567,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4177413 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4177413 B1"
+   }
   },
   {
    "id": "ep-4771289",
@@ -10340,7 +12036,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025049970"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4771289.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4771289 A2"
+   }
   },
   {
    "id": "de-202026000819",
@@ -10392,7 +12096,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026000819U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026000819.png",
+    "b": 760,
+    "h": 323,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 000 819 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 000 819 U1"
+   }
   },
   {
    "id": "de-102023200592",
@@ -10448,7 +12164,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102023200592B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102023200592.png",
+    "b": 322,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2023 200 592 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2023 200 592 B4"
+   }
   },
   {
    "id": "ep-4770343",
@@ -10504,7 +12232,19 @@
      "url": "https://register.epo.org/application?number=EP25770639&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4770343.png",
+    "b": 760,
+    "h": 291,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4770343 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4770343 A1"
+   }
   },
   {
    "id": "ep-3947846",
@@ -10564,7 +12304,19 @@
      "url": "https://register.epo.org/application?number=EP20715879&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3947846.png",
+    "b": 527,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3947846 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3947846 B1"
+   }
   },
   {
    "id": "ep-4766993",
@@ -10623,7 +12375,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025149362"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4766993.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4766993 A1"
+   }
   },
   {
    "id": "ep-4502311",
@@ -10680,7 +12440,19 @@
      "url": "https://register.epo.org/application?number=EP24189932&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4502311.png",
+    "b": 590,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4502311 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4502311 B1"
+   }
   },
   {
    "id": "ep-4490366",
@@ -10733,7 +12505,19 @@
      "url": "https://register.epo.org/application?number=EP23714166&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4490366.png",
+    "b": 484,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4490366 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4490366 B1"
+   }
   },
   {
    "id": "ep-4086404",
@@ -10782,7 +12566,19 @@
      "url": "https://register.epo.org/application?number=EP22171588&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4086404.png",
+    "b": 721,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4086404 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4086404 B1"
+   }
   },
   {
    "id": "de-202025004195",
@@ -10836,7 +12632,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202025004195U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202025004195.png",
+    "b": 258,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2025 004 195 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2025 004 195 U1"
+   }
   },
   {
    "id": "ep-4764354",
@@ -10886,7 +12694,19 @@
      "url": "https://register.epo.org/application?number=EP25223896&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4764354.png",
+    "b": 760,
+    "h": 768,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4764354 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4764354 A1"
+   }
   },
   {
    "id": "ep-4764113",
@@ -10936,7 +12756,19 @@
      "url": "https://register.epo.org/application?number=EP26162256&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4764113.png",
+    "b": 520,
+    "h": 732,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4764113 A2"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4764113 A2"
+   }
   },
   {
    "id": "ep-4764112",
@@ -10981,7 +12813,19 @@
      "url": "https://register.epo.org/application?number=EP24222270&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4764112.png",
+    "b": 578,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4764112 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4764112 A1"
+   }
   },
   {
    "id": "ep-4763786",
@@ -11029,7 +12873,19 @@
      "url": "https://register.epo.org/application?number=EP25224260&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4763786.png",
+    "b": 752,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4763786 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4763786 A1"
+   }
   },
   {
    "id": "ep-4763289",
@@ -11082,7 +12938,19 @@
      "url": "https://register.epo.org/application?number=EP24222861&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4763289.png",
+    "b": 284,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4763289 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4763289 A1"
+   }
   },
   {
    "id": "ep-4762657",
@@ -11139,7 +13007,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025036556"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4762657.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4762657 A1"
+   }
   },
   {
    "id": "ep-4762656",
@@ -11199,7 +13075,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2026020173"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4762656.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4762656 A1"
+   }
   },
   {
    "id": "ep-4667677",
@@ -11250,7 +13134,19 @@
      "url": "https://register.epo.org/application?number=EP25168032&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4667677.png",
+    "b": 529,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4667677 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4667677 B1"
+   }
   },
   {
    "id": "ep-4239261",
@@ -11303,7 +13199,19 @@
      "url": "https://register.epo.org/application?number=EP23186534&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4239261.png",
+    "b": 727,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4239261 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4239261 B1"
+   }
   },
   {
    "id": "ep-4046271",
@@ -11356,7 +13264,19 @@
      "url": "https://register.epo.org/application?number=EP20789187&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4046271.png",
+    "b": 692,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4046271 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4046271 B1"
+   }
   },
   {
    "id": "ep-4764110",
@@ -11412,7 +13332,19 @@
      "url": "https://register.epo.org/application?number=EP25223612&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4764110.png",
+    "b": 760,
+    "h": 556,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4764110 A2"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4764110 A2"
+   }
   },
   {
    "id": "ep-4762234",
@@ -11472,7 +13404,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025036902"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4762234.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4762234 A1"
+   }
   },
   {
    "id": "ep-4640966",
@@ -11526,7 +13466,19 @@
      "url": "https://register.epo.org/application?number=EP25169540&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4640966.png",
+    "b": 760,
+    "h": 742,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4640966 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4640966 B1"
+   }
   },
   {
    "id": "de-102024138562",
@@ -11579,7 +13531,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024138562A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024138562.png",
+    "b": 333,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 138 562 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 138 562 A1"
+   }
   },
   {
    "id": "de-102024137406",
@@ -11632,7 +13596,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024137406A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024137406.png",
+    "b": 277,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 137 406 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 137 406 A1"
+   }
   },
   {
    "id": "de-102016111484",
@@ -11686,7 +13662,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102016111484B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102016111484.png",
+    "b": 324,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2016 111 484 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2016 111 484 B4"
+   }
   },
   {
    "id": "ep-4761102",
@@ -11735,7 +13723,19 @@
      "url": "https://register.epo.org/application?number=EP25221213&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4761102.png",
+    "b": 760,
+    "h": 634,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4761102 A1"
+   },
+   "anspruch_1": {
+    "sprache": "fr",
+    "dokument": "EP 4761102 A1"
+   }
   },
   {
    "id": "ep-4760027",
@@ -11785,7 +13785,19 @@
      "url": "https://register.epo.org/application?number=EP25220043&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4760027.png",
+    "b": 760,
+    "h": 409,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4760027 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4760027 A1"
+   }
   },
   {
    "id": "ep-4758712",
@@ -11845,7 +13857,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025034979"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4758712.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4758712 A1"
+   }
   },
   {
    "id": "ep-4587659",
@@ -11898,7 +13918,19 @@
      "url": "https://register.epo.org/application?number=EP23767895&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4587659.png",
+    "b": 760,
+    "h": 483,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4587659 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4587659 B1"
+   }
   },
   {
    "id": "ep-4760020",
@@ -11948,7 +13980,19 @@
      "url": "https://register.epo.org/application?number=EP25223037&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4760020.png",
+    "b": 478,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4760020 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4760020 A1"
+   }
   },
   {
    "id": "ep-4758307",
@@ -12008,7 +14052,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025032306"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4758307.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4758307 A1"
+   }
   },
   {
    "id": "ep-4758306",
@@ -12066,7 +14118,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025032208"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4758306.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4758306 A1"
+   }
   },
   {
    "id": "ep-3877579",
@@ -12119,7 +14179,19 @@
      "url": "https://register.epo.org/application?number=EP19783315&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3877579.png",
+    "b": 589,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3877579 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3877579 B1"
+   }
   },
   {
    "id": "wo-2026122602",
@@ -12173,7 +14245,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026122602A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026122602.png",
+    "b": 209,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/122602 A1"
+   }
   },
   {
    "id": "de-202026000744",
@@ -12226,7 +14306,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026000744U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026000744.png",
+    "b": 300,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 000 744 U1"
+   }
   },
   {
    "id": "de-102025117267",
@@ -12282,7 +14370,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025117267B3"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025117267.png",
+    "b": 570,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 117 267 B3"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 117 267 B3"
+   }
   },
   {
    "id": "ep-4756312",
@@ -12331,7 +14431,19 @@
      "url": "https://register.epo.org/application?number=EP24217538&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4756312.png",
+    "b": 666,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4756312 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4756312 A1"
+   }
   },
   {
    "id": "ep-4756311",
@@ -12380,7 +14492,19 @@
      "url": "https://register.epo.org/application?number=EP24217568&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4756311.png",
+    "b": 423,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4756311 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4756311 A1"
+   }
   },
   {
    "id": "ep-4756147",
@@ -12436,7 +14560,19 @@
      "url": "https://register.epo.org/application?number=EP25219560&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4756147.png",
+    "b": 760,
+    "h": 532,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4756147 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4756147 A1"
+   }
   },
   {
    "id": "ep-4756146",
@@ -12492,7 +14628,19 @@
      "url": "https://register.epo.org/application?number=EP25219554&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4756146.png",
+    "b": 760,
+    "h": 482,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4756146 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4756146 A1"
+   }
   },
   {
    "id": "ep-4755467",
@@ -12541,7 +14689,19 @@
      "url": "https://register.epo.org/application?number=EP24217010&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4755467.png",
+    "b": 315,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4755467 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4755467 A1"
+   }
   },
   {
    "id": "ep-3832234",
@@ -12594,7 +14754,19 @@
      "url": "https://register.epo.org/application?number=EP20211489&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3832234.png",
+    "b": 760,
+    "h": 572,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3832234 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3832234 B1"
+   }
   },
   {
    "id": "ep-4753143",
@@ -12646,7 +14818,19 @@
      "url": "https://register.epo.org/application?number=EP25208732&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4753143.png",
+    "b": 760,
+    "h": 581,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4753143 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4753143 A1"
+   }
   },
   {
    "id": "ep-4752454",
@@ -12696,7 +14880,19 @@
      "url": "https://register.epo.org/application?number=EP25218700&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4752454.png",
+    "b": 760,
+    "h": 342,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4752454 A1"
+   },
+   "anspruch_1": {
+    "sprache": "fr",
+    "dokument": "EP 4752454 A1"
+   }
   },
   {
    "id": "ep-4752298",
@@ -12746,7 +14942,19 @@
      "url": "https://register.epo.org/application?number=EP25219040&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4752298.png",
+    "b": 592,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4752298 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4752298 A1"
+   }
   },
   {
    "id": "ep-4751373",
@@ -12805,7 +15013,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025022195"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4751373.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4751373 A1"
+   }
   },
   {
    "id": "de-202026100910",
@@ -12854,7 +15070,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026100910U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026100910.png",
+    "b": 296,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 100 910 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 100 910 U1"
+   }
   },
   {
    "id": "ep-4127350",
@@ -12914,7 +15142,19 @@
      "url": "https://register.epo.org/application?number=EP20719355&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4127350.png",
+    "b": 505,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4127350 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4127350 B1"
+   }
   },
   {
    "id": "ep-4750957",
@@ -12974,7 +15214,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025021958"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4750957.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4750957 A1"
+   }
   },
   {
    "id": "ep-4584450",
@@ -13027,7 +15275,19 @@
      "url": "https://register.epo.org/application?number=EP23782652&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4584450.png",
+    "b": 760,
+    "h": 792,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4584450 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4584450 B1"
+   }
   },
   {
    "id": "ep-4571009",
@@ -13080,7 +15340,19 @@
      "url": "https://register.epo.org/application?number=EP24218319&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4571009.png",
+    "b": 657,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4571009 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4571009 B1"
+   }
   },
   {
    "id": "de-102024135916",
@@ -13129,7 +15401,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024135916A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024135916.png",
+    "b": 300,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 135 916 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 135 916 A1"
+   }
   },
   {
    "id": "ep-4753142",
@@ -13181,7 +15465,19 @@
      "url": "https://register.epo.org/application?number=EP25219186&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4753142.png",
+    "b": 562,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4753142 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4753142 A1"
+   }
   },
   {
    "id": "wo-2026107532",
@@ -13235,7 +15531,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026107532A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026107532.png",
+    "b": 214,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/107532 A1"
+   }
   },
   {
    "id": "de-102025149662",
@@ -13289,7 +15593,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025149662A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025149662.png",
+    "b": 687,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 149 662 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 149 662 A1"
+   }
   },
   {
    "id": "de-102024003859",
@@ -13341,7 +15657,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024003859A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024003859.png",
+    "b": 438,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 003 859 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 003 859 A1"
+   }
   },
   {
    "id": "de-202026000626",
@@ -13392,7 +15720,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026000626U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026000626.png",
+    "b": 257,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 000 626 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 000 626 U1"
+   }
   },
   {
    "id": "de-102023205121",
@@ -13448,7 +15788,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102023205121B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102023205121.png",
+    "b": 281,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2023 205 121 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2023 205 121 B4"
+   }
   },
   {
    "id": "ep-4749205",
@@ -13497,7 +15849,19 @@
      "url": "https://register.epo.org/application?number=EP24214868&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4749205.png",
+    "b": 760,
+    "h": 599,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4749205 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4749205 A1"
+   }
   },
   {
    "id": "ep-4749050",
@@ -13545,7 +15909,19 @@
      "url": "https://register.epo.org/application?number=EP25217120&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4749050.png",
+    "b": 593,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4749050 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4749050 A1"
+   }
   },
   {
    "id": "ep-4547916",
@@ -13598,7 +15974,19 @@
      "url": "https://register.epo.org/application?number=EP23733400&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4547916.png",
+    "b": 635,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4547916 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4547916 B1"
+   }
   },
   {
    "id": "ep-4624693",
@@ -13650,7 +16038,19 @@
      "url": "https://register.epo.org/application?number=EP25166878&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4624693.png",
+    "b": 612,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4624693 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4624693 B1"
+   }
   },
   {
    "id": "ep-4253684",
@@ -13700,7 +16100,19 @@
      "url": "https://register.epo.org/application?number=EP23166217&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4253684.png",
+    "b": 566,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4253684 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4253684 B1"
+   }
   },
   {
    "id": "ep-3921150",
@@ -13753,7 +16165,19 @@
      "url": "https://register.epo.org/application?number=EP20753242&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3921150.png",
+    "b": 760,
+    "h": 826,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3921150 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3921150 B1"
+   }
   },
   {
    "id": "ep-3690347",
@@ -13805,7 +16229,19 @@
      "url": "https://register.epo.org/application?number=EP19154638&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3690347.png",
+    "b": 555,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3690347 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3690347 B1"
+   }
   },
   {
    "id": "wo-2026107327",
@@ -13856,7 +16292,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026107327A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026107327.png",
+    "b": 313,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/107327 A1"
+   }
   },
   {
    "id": "de-202026100742",
@@ -13909,7 +16353,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026100742U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026100742.png",
+    "b": 296,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 100 742 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 100 742 U1"
+   }
   },
   {
    "id": "de-102024134226",
@@ -13961,7 +16417,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024134226A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024134226.png",
+    "b": 272,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 134 226 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 134 226 A1"
+   }
   },
   {
    "id": "ep-4746286",
@@ -14008,7 +16476,19 @@
      "url": "https://register.epo.org/application?number=EP24383247&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4746286.png",
+    "b": 760,
+    "h": 689,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4746286 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4746286 A1"
+   }
   },
   {
    "id": "ep-4745334",
@@ -14060,7 +16540,19 @@
      "url": "https://register.epo.org/application?number=EP25216638&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4745334.png",
+    "b": 760,
+    "h": 598,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4745334 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4745334 A1"
+   }
   },
   {
    "id": "ep-4745333",
@@ -14107,7 +16599,19 @@
      "url": "https://register.epo.org/application?number=EP24213655&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4745333.png",
+    "b": 748,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4745333 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4745333 A1"
+   }
   },
   {
    "id": "ep-4743727",
@@ -14167,7 +16671,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025052141"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4743727.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4743727 A1"
+   }
   },
   {
    "id": "ep-4743677",
@@ -14226,7 +16738,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025064969"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4743677.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4743677 A1"
+   }
   },
   {
    "id": "ep-4211379",
@@ -14279,7 +16799,19 @@
      "url": "https://register.epo.org/application?number=EP21772662&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4211379.png",
+    "b": 528,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4211379 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4211379 B1"
+   }
   },
   {
    "id": "ep-4745335",
@@ -14327,7 +16859,19 @@
      "url": "https://register.epo.org/application?number=EP25216195&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4745335.png",
+    "b": 760,
+    "h": 560,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4745335 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4745335 A1"
+   }
   },
   {
    "id": "ep-4745331",
@@ -14375,7 +16919,19 @@
      "url": "https://register.epo.org/application?number=EP24213641&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4745331.png",
+    "b": 681,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4745331 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4745331 A1"
+   }
   },
   {
    "id": "ep-4745330",
@@ -14422,7 +16978,19 @@
      "url": "https://register.epo.org/application?number=EP24213628&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4745330.png",
+    "b": 659,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4745330 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4745330 A1"
+   }
   },
   {
    "id": "ep-4745329",
@@ -14469,7 +17037,19 @@
      "url": "https://register.epo.org/application?number=EP24213618&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4745329.png",
+    "b": 678,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4745329 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4745329 A1"
+   }
   },
   {
    "id": "ep-4571008",
@@ -14521,7 +17101,19 @@
      "url": "https://register.epo.org/application?number=EP24204762&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4571008.png",
+    "b": 520,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4571008 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4571008 B1"
+   }
   },
   {
    "id": "ep-3829864",
@@ -14574,7 +17166,19 @@
      "url": "https://register.epo.org/application?number=EP19711916&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3829864.png",
+    "b": 587,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3829864 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3829864 B1"
+   }
   },
   {
    "id": "ep-4741599",
@@ -14624,7 +17228,19 @@
      "url": "https://register.epo.org/application?number=EP25210654&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4741599.png",
+    "b": 760,
+    "h": 402,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4741599 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4741599 A1"
+   }
   },
   {
    "id": "ep-4739863",
@@ -14684,7 +17300,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025008359"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4739863.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4739863 A1"
+   }
   },
   {
    "id": "ep-4661285",
@@ -14734,7 +17358,19 @@
      "url": "https://register.epo.org/application?number=EP25170858&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4661285.png",
+    "b": 437,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4661285 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4661285 B1"
+   }
   },
   {
    "id": "ep-4352318",
@@ -14786,7 +17422,19 @@
      "url": "https://register.epo.org/application?number=EP22811715&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4352318.png",
+    "b": 645,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4352318 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4352318 B1"
+   }
   },
   {
    "id": "de-202026000532",
@@ -14836,7 +17484,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026000532U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026000532.png",
+    "b": 185,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 000 532 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 000 532 U1"
+   }
   },
   {
    "id": "de-102024116949",
@@ -14891,7 +17551,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024116949B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024116949.png",
+    "b": 249,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 116 949 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 116 949 B4"
+   }
   },
   {
    "id": "de-102024003663",
@@ -14943,7 +17615,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024003663A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024003663.png",
+    "b": 297,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 003 663 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 003 663 A1"
+   }
   },
   {
    "id": "de-102022129609",
@@ -14997,7 +17681,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102022129609B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102022129609.png",
+    "b": 272,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2022 129 609 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2022 129 609 B4"
+   }
   },
   {
    "id": "wo-2026095857",
@@ -15051,7 +17747,15 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026095857A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026095857.png",
+    "b": 470,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/095857 A1"
+   }
   },
   {
    "id": "de-202024002713",
@@ -15104,7 +17808,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202024002713U1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202024002713.png",
+    "b": 447,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2024 002 713 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2024 002 713 U1"
+   }
   },
   {
    "id": "ep-4737664",
@@ -15153,7 +17869,19 @@
      "url": "https://register.epo.org/application?number=EP24210150&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4737664.png",
+    "b": 760,
+    "h": 560,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4737664 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4737664 A1"
+   }
   },
   {
    "id": "ep-4735708",
@@ -15213,7 +17941,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025003377"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4735708.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4735708 A1"
+   }
   },
   {
    "id": "ep-4431837",
@@ -15265,7 +18001,19 @@
      "url": "https://register.epo.org/application?number=EP23161928&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4431837.png",
+    "b": 537,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4431837 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4431837 B1"
+   }
   },
   {
    "id": "ep-4737117",
@@ -15315,7 +18063,19 @@
      "url": "https://register.epo.org/application?number=EP25211808&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4737117.png",
+    "b": 660,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4737117 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4737117 A1"
+   }
   },
   {
    "id": "ep-4499939",
@@ -15368,7 +18128,19 @@
      "url": "https://register.epo.org/application?number=EP23718877&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4499939.png",
+    "b": 684,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4499939 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4499939 B1"
+   }
   },
   {
    "id": "ep-4279683",
@@ -15423,7 +18195,19 @@
      "url": "https://register.epo.org/application?number=EP22174629&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4279683.png",
+    "b": 586,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4279683 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4279683 B1"
+   }
   },
   {
    "id": "de-102025111504",
@@ -15474,7 +18258,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025111504A1"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025111504.png",
+    "b": 428,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 111 504 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 111 504 A1"
+   }
   },
   {
    "id": "ep-4733687",
@@ -15524,7 +18320,19 @@
      "url": "https://register.epo.org/application?number=EP24842484&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4733687.png",
+    "b": 622,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4733687 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4733687 A1"
+   }
   },
   {
    "id": "ep-4732423",
@@ -15584,7 +18392,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2024261602"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4732423.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4732423 A1"
+   }
   },
   {
    "id": "ep-4397820",
@@ -15635,7 +18451,19 @@
      "url": "https://register.epo.org/application?number=EP23220326&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4397820.png",
+    "b": 620,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4397820 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4397820 B1"
+   }
   },
   {
    "id": "ep-4275274",
@@ -15686,7 +18514,19 @@
      "url": "https://register.epo.org/application?number=EP22703102&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4275274.png",
+    "b": 242,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4275274 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4275274 B1"
+   }
   },
   {
    "id": "ep-4733507",
@@ -15739,7 +18579,19 @@
      "url": "https://register.epo.org/application?number=EP25211323&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4733507.png",
+    "b": 552,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4733507 A1"
+   },
+   "anspruch_1": {
+    "sprache": "fr",
+    "dokument": "EP 4733507 A1"
+   }
   },
   {
    "id": "ep-4733506",
@@ -15790,7 +18642,19 @@
      "url": "https://register.epo.org/application?number=EP25211322&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4733506.png",
+    "b": 760,
+    "h": 497,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4733506 A1"
+   },
+   "anspruch_1": {
+    "sprache": "fr",
+    "dokument": "EP 4733506 A1"
+   }
   },
   {
    "id": "ep-4733505",
@@ -15840,7 +18704,19 @@
      "url": "https://register.epo.org/application?number=EP25193248&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4733505.png",
+    "b": 760,
+    "h": 802,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4733505 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4733505 A1"
+   }
   },
   {
    "id": "ep-4731845",
@@ -15896,7 +18772,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025006463"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4731845.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4731845 A1"
+   }
   },
   {
    "id": "ep-4172222",
@@ -15949,7 +18833,19 @@
      "url": "https://register.epo.org/application?number=EP21831641&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4172222.png",
+    "b": 259,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4172222 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4172222 B1"
+   }
   },
   {
    "id": "ep-3310717",
@@ -16002,7 +18898,19 @@
      "url": "https://register.epo.org/application?number=EP16810605&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3310717.png",
+    "b": 586,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3310717 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3310717 B1"
+   }
   },
   {
    "id": "ep-4731848",
@@ -16062,7 +18970,15 @@
      "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025003878"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4731848.png",
+    "b": 278,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "EP 4731848 A1"
+   }
   },
   {
    "id": "de-102024139459",
@@ -16116,7 +19032,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024139459B3"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024139459.png",
+    "b": 394,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 139 459 B3"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 139 459 B3"
+   }
   },
   {
    "id": "ep-4431838",
@@ -16169,7 +19097,19 @@
      "url": "https://register.epo.org/application?number=EP23178344&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4431838.png",
+    "b": 755,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4431838 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4431838 B1"
+   }
   },
   {
    "id": "ep-4413659",
@@ -16218,7 +19158,19 @@
      "url": "https://register.epo.org/application?number=EP22786844&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4413659.png",
+    "b": 725,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4413659 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4413659 B1"
+   }
   },
   {
    "id": "ep-4089024",
@@ -16271,7 +19223,19 @@
      "url": "https://register.epo.org/application?number=EP22172984&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4089024.png",
+    "b": 615,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4089024 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4089024 B1"
+   }
   },
   {
    "id": "ep-4499942",
@@ -16323,7 +19287,19 @@
      "url": "https://register.epo.org/application?number=EP23719634&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4499942.png",
+    "b": 596,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4499942 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4499942 B1"
+   }
   },
   {
    "id": "ep-3933138",
@@ -16372,7 +19348,19 @@
      "url": "https://register.epo.org/application?number=EP21183761&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3933138.png",
+    "b": 580,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3933138 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3933138 B1"
+   }
   },
   {
    "id": "ep-4103289",
@@ -16425,7 +19413,19 @@
      "url": "https://register.epo.org/application?number=EP21706224&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4103289.png",
+    "b": 612,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4103289 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4103289 B1"
+   }
   },
   {
    "id": "ep-4519059",
@@ -16484,7 +19484,19 @@
      "url": "https://register.epo.org/application?number=EP23732233&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4519059.png",
+    "b": 760,
+    "h": 749,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4519059 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4519059 B1"
+   }
   },
   {
    "id": "ep-4417759",
@@ -16537,7 +19549,19 @@
      "url": "https://register.epo.org/application?number=EP24157670&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4417759.png",
+    "b": 601,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4417759 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4417759 B1"
+   }
   },
   {
    "id": "ep-3911517",
@@ -16590,7 +19614,19 @@
      "url": "https://register.epo.org/application?number=EP20741508&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3911517.png",
+    "b": 706,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3911517 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3911517 B1"
+   }
   },
   {
    "id": "de-102024112829",
@@ -16644,7 +19680,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024112829B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024112829.png",
+    "b": 347,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 112 829 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 112 829 B4"
+   }
   },
   {
    "id": "ep-4411086",
@@ -16695,7 +19743,19 @@
      "url": "https://register.epo.org/application?number=EP24155242&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4411086.png",
+    "b": 604,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4411086 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4411086 B1"
+   }
   },
   {
    "id": "ep-4575120",
@@ -16748,7 +19808,19 @@
      "url": "https://register.epo.org/application?number=EP24216523&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4575120.png",
+    "b": 657,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4575120 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4575120 B1"
+   }
   },
   {
    "id": "ep-3902958",
@@ -16812,7 +19884,19 @@
      "url": "https://register.epo.org/application?number=EP20755309&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3902958.png",
+    "b": 604,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3902958 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3902958 B1"
+   }
   },
   {
    "id": "ep-4523325",
@@ -16865,7 +19949,19 @@
      "url": "https://register.epo.org/application?number=EP22735899&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4523325.png",
+    "b": 612,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4523325 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4523325 B1"
+   }
   },
   {
    "id": "ep-4470370",
@@ -16918,7 +20014,19 @@
      "url": "https://register.epo.org/application?number=EP24170602&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4470370.png",
+    "b": 760,
+    "h": 628,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4470370 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4470370 B1"
+   }
   },
   {
    "id": "ep-4448891",
@@ -16967,7 +20075,19 @@
      "url": "https://register.epo.org/application?number=EP22839729&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4448891.png",
+    "b": 703,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4448891 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4448891 B1"
+   }
   },
   {
    "id": "ep-4383559",
@@ -17019,7 +20139,19 @@
      "url": "https://register.epo.org/application?number=EP23215377&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4383559.png",
+    "b": 604,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4383559 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4383559 B1"
+   }
   },
   {
    "id": "ep-4603651",
@@ -17069,7 +20201,19 @@
      "url": "https://register.epo.org/application?number=EP25155548&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4603651.png",
+    "b": 660,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4603651 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4603651 B1"
+   }
   },
   {
    "id": "ep-4499932",
@@ -17122,7 +20266,19 @@
      "url": "https://register.epo.org/application?number=EP23712923&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4499932.png",
+    "b": 514,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4499932 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4499932 B1"
+   }
   },
   {
    "id": "ep-4545725",
@@ -17175,7 +20331,19 @@
      "url": "https://register.epo.org/application?number=EP25163619&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4545725.png",
+    "b": 499,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4545725 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4545725 B1"
+   }
   },
   {
    "id": "ep-4541981",
@@ -17228,7 +20396,19 @@
      "url": "https://register.epo.org/application?number=EP24206981&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4541981.png",
+    "b": 606,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4541981 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4541981 B1"
+   }
   },
   {
    "id": "ep-4511409",
@@ -17281,7 +20461,19 @@
      "url": "https://register.epo.org/application?number=EP23720849&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4511409.png",
+    "b": 760,
+    "h": 710,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4511409 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4511409 B1"
+   }
   },
   {
    "id": "ep-4575131",
@@ -17330,7 +20522,19 @@
      "url": "https://register.epo.org/application?number=EP24220739&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4575131.png",
+    "b": 675,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4575131 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4575131 B1"
+   }
   },
   {
    "id": "ep-4299851",
@@ -17385,7 +20589,19 @@
      "url": "https://register.epo.org/application?number=EP22182500&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4299851.png",
+    "b": 625,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4299851 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4299851 B1"
+   }
   },
   {
    "id": "ep-4141185",
@@ -17438,7 +20654,19 @@
      "url": "https://register.epo.org/application?number=EP22189778&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4141185.png",
+    "b": 653,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4141185 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4141185 B1"
+   }
   },
   {
    "id": "ep-4058155",
@@ -17488,7 +20716,19 @@
      "url": "https://register.epo.org/application?number=EP20804663&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4058155.png",
+    "b": 619,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4058155 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4058155 B1"
+   }
   },
   {
    "id": "ep-4483020",
@@ -17539,7 +20779,19 @@
      "url": "https://register.epo.org/application?number=EP23719283&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4483020.png",
+    "b": 566,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4483020 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4483020 B1"
+   }
   },
   {
    "id": "ep-4471224",
@@ -17590,7 +20842,19 @@
      "url": "https://register.epo.org/application?number=EP24177519&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4471224.png",
+    "b": 657,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4471224 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4471224 B1"
+   }
   },
   {
    "id": "ep-4141186",
@@ -17643,7 +20907,19 @@
      "url": "https://register.epo.org/application?number=EP22190061&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4141186.png",
+    "b": 662,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4141186 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4141186 B1"
+   }
   },
   {
    "id": "ep-4119198",
@@ -17695,7 +20971,19 @@
      "url": "https://register.epo.org/application?number=EP22184260&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4119198.png",
+    "b": 522,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 4119198 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4119198 B1"
+   }
   },
   {
    "id": "de-102012013032",
@@ -17749,7 +21037,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102012013032B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102012013032.png",
+    "b": 280,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2012 013 032 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2012 013 032 B4"
+   }
   },
   {
    "id": "ep-3894760",
@@ -17802,7 +21102,19 @@
      "url": "https://register.epo.org/application?number=EP19894564&lng=de"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-3894760.png",
+    "b": 558,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "erste Zeichnung",
+    "dokument": "EP 3894760 B1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 3894760 B1"
+   }
   },
   {
    "id": "de-102024102480",
@@ -17858,7 +21170,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102024102480B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102024102480.png",
+    "b": 183,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2024 102 480 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2024 102 480 B4"
+   }
   },
   {
    "id": "de-102010005577",
@@ -17911,7 +21235,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102010005577B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102010005577.png",
+    "b": 345,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2010 005 577 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2010 005 577 B4"
+   }
   },
   {
    "id": "de-102007026732",
@@ -17964,7 +21300,19 @@
      "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102007026732B4"
     }
    ],
-   "neu": false
+   "neu": false,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102007026732.png",
+    "b": 254,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2007 026 732 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2007 026 732 B4"
+   }
   }
  ]
 }

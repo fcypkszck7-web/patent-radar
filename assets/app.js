@@ -1190,6 +1190,8 @@
       ziel.innerHTML = anspruchHtml(a, z.dokument, (D.byId[r.arg] || {}).links);
     }).catch(function () { ziel.innerHTML = '<p class="hinweis-text">Anspruch 1 konnte nicht geladen werden.</p>'; });
   };
+  /* Beim Drucken den ganzen Anspruch zeigen */
+  window.addEventListener("beforeprint", function () { main.querySelectorAll("details.at-mehr").forEach(function (d) { d.open = true; }); });
   var anspruchIndex = null;
   function ladeAnsprueche() {
     if (!anspruchIndex) anspruchIndex = json("data/zeichnungen/index.json", D.radar.stand).catch(function (e) { anspruchIndex = null; throw e; });

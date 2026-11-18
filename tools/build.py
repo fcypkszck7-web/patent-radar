@@ -442,7 +442,8 @@ def zeichnungen_planen(quelle, gueltig, sperrwoerter):
         datei = os.path.join(quelle, x.get("datei") or "-")
         if x.get("datei") and os.path.exists(datei):
             z.update({"datei": f"data/zeichnungen/{e['id']}.png", "b": x.get("b"), "h": x.get("h"),
-                      "quelle": x.get("quelle"), "figur": x.get("figur")})
+                      "quelle": x.get("quelle"), "figur": x.get("figur"),
+                      "bild_dokument": dokument_anzeige(x.get("dokument_bild") or x.get("dokument"))})
             kopien.append((datei, os.path.join(ZEICHNUNGEN, f"{e['id']}.png")))
         a = x.get("anspruch_1") or {}
         if a.get("text") and not any(w in a["text"].lower() for w in woerter):
@@ -893,7 +894,8 @@ def main():
     for e in gueltig:
         z = zindex.get(e["id"])
         if z and z.get("datei"):
-            e["zeichnung"] = {k: z[k] for k in ("datei", "b", "h", "quelle", "figur", "dokument") if z.get(k)}
+            e["zeichnung"] = {k: z[k] for k in ("datei", "b", "h", "quelle", "figur") if z.get(k)}
+            e["zeichnung"]["dokument"] = z.get("bild_dokument") or z.get("dokument")
         if z and z.get("anspruch_1"):
             e["anspruch_1"] = {"sprache": z["anspruch_1"].get("sprache"), "dokument": z.get("dokument")}
 

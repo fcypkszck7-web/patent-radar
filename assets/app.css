@@ -1567,4 +1567,6 @@ a.db-pille:hover { color: #fff; background: color-mix(in srgb, var(--signal) 45%
   .nur-schmal { display: none !important; }
   .nur-breit { display: block !important; break-inside: avoid; }
   .zk-bild { border: 1px solid #999; }
+  .at-mehr summary { display: none; }
+  .anspruch-text { break-inside: avoid; }
 }
