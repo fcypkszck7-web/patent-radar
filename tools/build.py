@@ -17,12 +17,16 @@ import datetime as dt
 import json
 import os
 import re
+import shutil
 import sys
 from email.utils import format_datetime
 from xml.sax.saxutils import escape
 
 WURZEL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATEN = os.path.join(WURZEL, "data")
+ZEICHNUNGEN = os.path.join(DATEN, "zeichnungen")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import firmen  # noqa: E402
 
 THEMEN = {
     "entwaesserung": "Dachentwässerung",
@@ -34,10 +38,14 @@ THEMEN = {
     "gruendach": "Gründach, Regenwasser und Dämmung",
     "werkstoffe": "Werkstoffe und Fertigung",
 }
+# Im Bestand zusätzlich: übrige Schutzrechte von Fachanmeldern außerhalb der Profilklassen
+BESTAND_THEMEN = dict(THEMEN, weitere="Weitere Technik")
 ARTEN = {
     "DE": {"A1": "Offenlegung", "B3": "Erteilung", "B4": "Erteilung", "U1": "Gebrauchsmuster"},
     "EP": {"A1": "Offenlegung", "A2": "Offenlegung", "B1": "Erteilung", "B2": "Erteilung"},
     "WO": {"A1": "Internationale Anmeldung", "A2": "Internationale Anmeldung", "A3": "Internationale Anmeldung"},
+    "AT": {"A1": "Offenlegung", "A2": "Offenlegung", "B1": "Erteilung", "U1": "Gebrauchsmuster", "U2": "Gebrauchsmuster", "U3": "Gebrauchsmuster"},
+    "CH": {"A1": "Offenlegung", "A2": "Offenlegung", "B1": "Erteilung"},
 }
 # Einspruch nur gegen die erste Veröffentlichung der Erteilung (EP B2 = Fassung nach Einspruch).
 MIT_EINSPRUCH = {("DE", "B3"), ("DE", "B4"), ("EP", "B1")}
@@ -45,6 +53,8 @@ MUSTER = {
     "DE": re.compile(r"^DE(\d{12}|\d{7,8})(A1|B3|B4|U1)$"),
     "EP": re.compile(r"^EP(\d{7})(A1|A2|B1|B2)$"),
     "WO": re.compile(r"^WO(\d{10})(A1|A2|A3)$"),
+    "AT": re.compile(r"^AT(\d{1,7})(A1|A2|B1|U1|U2|U3)$"),
+    "CH": re.compile(r"^CH(\d{6,7})(A1|A2|B1)$"),
 }
 PFLICHT = ["id", "titel", "titel_original", "was_neu", "bezug", "amt", "nummer", "anmelder",
            "veroeffentlicht", "thema", "relevanz", "klassen", "aufgenommen", "quelle"]
@@ -124,10 +134,23 @@ def links(e):
             l.append({"label": "Europäisches Patentregister", "url": f"https://register.epo.org/smartSearch?searchMode=smart&query={k[:-2]}&lng=de"})
     elif e["amt"] == "WO":
         l.append({"label": "PATENTSCOPE", "url": f"https://patentscope.wipo.int/search/de/detail.jsf?docId={k[:-2]}"})
+    if e["amt"] in ("WO", "AT", "CH"):
+        l.append({"label": "DEPATISnet (DPMA)", "url": f"https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid={depatis_id(k)}"})
     for extra in e.get("links_extra", []) or []:
         if isinstance(extra, dict) and extra.get("url", "").startswith("https://"):
             l.append({"label": extra.get("label", "Weitere Quelle"), "url": extra["url"]})
     return l
+
+
+def depatis_id(k):
+    """'WO2026215527A1' -> 'WO002026215527A1'; 'AT16532U1' -> 'AT000000016532U1' (DEPATISnet-Dokumentnummer)"""
+    m = re.match(r"^([A-Z]{2})(\d+)([A-Z]\d?)$", k)
+    if not m:
+        return k
+    cc, z, kind = m.groups()
+    if cc == "DE" and len(z) == 12:
+        return k
+    return f"{cc}{z.zfill(12)}{kind}"
 
 
 BESTAND_ART = {"patent", "anmeldung", "gm"}
@@ -170,8 +193,11 @@ def ohne_ort(name):
 
 
 def anzeige_nummer(amt, nr, kind):
-    """DE102015104643 + B4 -> 'DE 10 2015 104 643 B4'; EP1845319 + B1 -> 'EP 1845319 B1'"""
+    """DE102015104643 + B4 -> 'DE 10 2015 104 643 B4'; EP1845319 + B1 -> 'EP 1845319 B1';
+    WO2026215527 + A1 -> 'WO 2026/215527 A1'"""
     z = nr[2:]
+    if amt == "WO" and len(z) == 10:
+        return f"WO {z[:4]}/{z[4:]} {kind}"
     if amt == "DE" and z.startswith("0000"):
         z = str(int(z))
     if amt == "DE" and len(z) == 12:
@@ -197,8 +223,9 @@ def baue_bestand(quelle, heute, radar_eintraege):
     varianten, laender, haeufig = {}, {}, {}
     for r in rechte:
         r["anmelder"] = [[ohne_ort(n), l] for n, l in r.get("anmelder") or []]
+        r["inhaber"] = [[ohne_ort(n), l] for n, l in r.get("inhaber") or []]
     for r in rechte:
-        for name, land in r.get("anmelder") or []:
+        for name, land in (r.get("anmelder") or []) + (r.get("inhaber") or []):
             k = namenschluessel(name)
             if not k:
                 continue
@@ -243,8 +270,17 @@ def baue_bestand(quelle, heute, radar_eintraege):
     namen = sorted(nach_name, key=lambda n: (-sum(haeufig[k] for k in nach_name[n]), n.lower()))
     index = {k: i for i, n in enumerate(namen) for k in nach_name[n]}
     eintraege, zaehl = [], {"patent": 0, "anmeldung": 0, "gm": 0}
+    def indizes(liste):
+        erg, gesehen = [], set()
+        for name, _ in liste or []:
+            k = ziel(namenschluessel(name))
+            if k in index and index[k] not in gesehen:
+                erg.append(index[k])
+                gesehen.add(index[k])
+        return erg
+
     for r in rechte:
-        if r.get("art") not in BESTAND_ART or r.get("thema") not in THEMEN:
+        if r.get("art") not in BESTAND_ART or r.get("thema") not in BESTAND_THEMEN:
             warnungen.append(f"Bestand {r.get('id')}: Art oder Thema unbekannt, ausgelassen")
             continue
         doks = r.get("dokumente") or []
@@ -252,28 +288,29 @@ def baue_bestand(quelle, heute, radar_eintraege):
             continue
         letzt = doks[-1]
         nr = re.sub(r"[A-Z]\d?$", "", letzt["nummer"])
-        if r["amt"] == "EP" or nr[2:].startswith("0000"):
+        if r["amt"] == "WO":
+            nr = "WO" + nr[-10:]
+        elif r["amt"] != "DE" or nr[2:].startswith("0000"):
             nr = nr[:2] + str(int(nr[2:]))
         t = r.get("titel") or {}
         titel = t.get("de") or t.get("en") or t.get("fr") or next(iter(t.values()), "")
-        anm, gesehen = [], set()
-        for name, _ in r.get("anmelder") or []:
-            k = ziel(namenschluessel(name))
-            if k in index and index[k] not in gesehen:
-                anm.append(index[k])
-                gesehen.add(index[k])
+        anm = indizes(r.get("anmelder"))
+        inh = indizes(r.get("inhaber"))
+        z = re.search(r"([A-Z]\d?)$", r.get("zeichnung") or "")
         zaehl[r["art"]] += 1
         eintraege.append([
             f"{r['amt'].lower()}-{nr[2:]}", r["amt"], r["art"], anzeige_nummer(r["amt"], nr, letzt["kind"]),
             [[d["kind"], d.get("pub")] for d in doks], r["angemeldet"], r.get("veroeffentlicht"), r.get("erteilt"),
             r["ende_laengstens"], r["thema"], titel, anm, r.get("klassen") or [], 1 if r.get("geaendert") else 0,
+            inh if inh and inh != anm else None, z.group(1) if z else None,
         ])
     eintraege.sort(key=lambda z: (z[5], z[0]), reverse=True)
     bestand = {
         "stand": roh.get("stand"), "quelle": roh.get("quelle", "DEPATISnet (DPMA)"), "ab": roh.get("ab"),
         "vollstaendig": bool(roh.get("vollstaendig")), "heute": heute, "anmeldungen_jahre": ANMELDUNG_JAHRE,
         "felder": ["id", "amt", "art", "nummer", "dokumente", "angemeldet", "veroeffentlicht", "erteilt", "ende",
-                   "thema", "titel", "anmelder", "klassen", "geaendert"],
+                   "thema", "titel", "anmelder", "klassen", "geaendert", "inhaber", "zeichnung"],
+        "aemter": roh.get("aemter") or ["DE", "EP"],
         "anmelder": namen,
         "anmelder_land": [land_von([laender.get(k, {}) for k in nach_name[n]]) for n in namen],
         "eintraege": eintraege,
@@ -312,8 +349,119 @@ def bestand_kurz(bestand, heute):
         "anmeldungen": sum(1 for z in laufend if z[f["art"]] == "anmeldung"),
         "gebrauchsmuster": sum(1 for z in laufend if z[f["art"]] == "gm"),
         "auslaufend_12m": sum(1 for z in laufend if z[f["ende"]] < in12 and z[f["art"]] != "anmeldung"),
-        "anmelder": len(bestand.get("anmelder") or []),
+        "anmelder": len(bestand.get("firmen") or bestand.get("anmelder") or []),
+        "aemter": {a: sum(1 for z in laufend if z[f["amt"]] == a) for a in (bestand.get("aemter") or ["DE", "EP"])},
     }
+
+
+def firmen_bilden(bestand, radar_eintraege):
+    """Schreibweisen eines Anmelders zu Firmen bündeln (Bestand und Radar gemeinsam).
+    Ergebnis: {Anmeldername: Firmenname}. Der Firmenname ist der gemeinsame Teil der amtlichen
+    Schreibweisen (bei nur einer Schreibweise der Name selbst)."""
+    namen, zahl = [], {}
+
+    def dazu(n, c=1):
+        if not n:
+            return
+        if n not in zahl:
+            namen.append(n)
+            zahl[n] = 0
+        zahl[n] += c
+    if bestand and bestand.get("eintraege"):
+        f = {n: i for i, n in enumerate(bestand["felder"])}
+        z_b = {}
+        for z in bestand["eintraege"]:
+            for i in set(z[f["anmelder"]] + ((z[f["inhaber"]] or []) if "inhaber" in f else [])):
+                z_b[i] = z_b.get(i, 0) + 1
+        for i, n in enumerate(bestand.get("anmelder") or []):
+            dazu(n, z_b.get(i, 0))
+    for e in radar_eintraege:
+        for n in e.get("anmelder") or []:
+            dazu(n)
+    gruppen, kerne = firmen.gruppieren(namen)
+    gewicht = {i: zahl[namen[i]] for i in range(len(namen))}
+    firma_von = {}
+    for mitglieder in gruppen.values():
+        name = firmen.anzeige(mitglieder, namen, kerne, gewicht)
+        for i in mitglieder:
+            firma_von[namen[i]] = name
+    return firma_von
+
+
+def firmen_eintragen(bestand, firma_von):
+    """bestand['firmen'] (nach Zahl der Schutzrechte) und bestand['anmelder_firma'] je Anmeldername."""
+    f = {n: i for i, n in enumerate(bestand["felder"])}
+    zaehl = {}
+    for z in bestand["eintraege"]:
+        fs = {firma_von.get(bestand["anmelder"][i], bestand["anmelder"][i])
+              for i in z[f["anmelder"]] + ((z[f["inhaber"]] or []) if "inhaber" in f else [])}
+        for x in fs:
+            zaehl[x] = zaehl.get(x, 0) + 1
+    liste = sorted({firma_von.get(n, n) for n in bestand["anmelder"]}, key=lambda x: (-zaehl.get(x, 0), x.lower()))
+    pos = {x: i for i, x in enumerate(liste)}
+    bestand["firmen"] = liste
+    bestand["anmelder_firma"] = [pos[firma_von.get(n, n)] for n in bestand["anmelder"]]
+    return zaehl
+
+
+def dokument_anzeige(d):
+    """'EP000004442922B1' -> 'EP 4442922 B1'; 'DE102024115233A1' -> 'DE 10 2024 115 233 A1'"""
+    m = re.match(r"^([A-Z]{2})(\d+)([A-Z]\d?)$", d or "")
+    if not m:
+        return d
+    cc, z, kind = m.groups()
+    if cc == "WO":
+        z = z[-10:]
+        return f"WO {z[:4]}/{z[4:]} {kind}"
+    if cc == "DE" and len(z) == 12 and not z.startswith("0000"):
+        return anzeige_nummer("DE", "DE" + z, kind)
+    return f"{cc} {int(z)} {kind}"
+
+
+def zeichnungen_planen(quelle, gueltig, sperrwoerter):
+    """Bilder und Anspruch 1 aus dem Datenabruf (rohdaten/zeichnungen) für die gültigen Einträge.
+    Ergebnis: (neuer Index, Kopien [(von, nach)]). Ohne Quelle bleibt der bisherige Index."""
+    alt = lade(os.path.join("zeichnungen", "index.json"), {})
+    if not quelle:
+        return {k: v for k, v in alt.items() if any(e["id"] == k for e in gueltig)}, []
+    pfad = os.path.join(quelle, "index.json")
+    if not os.path.exists(pfad):
+        warnungen.append(f"--zeichnungen: {pfad} fehlt, bisherige Zeichnungen bleiben")
+        return alt, []
+    with open(pfad, encoding="utf-8") as f:
+        roh = json.load(f)
+    woerter = [w.lower() for w in sperrwoerter if w.strip()]
+    index, kopien = {}, []
+    for e in gueltig:
+        x = roh.get(e["id"])
+        if not x:
+            if e["id"] in alt:
+                index[e["id"]] = alt[e["id"]]
+            continue
+        z = {"dokument": dokument_anzeige(x.get("dokument")), "abgerufen": x.get("abgerufen")}
+        datei = os.path.join(quelle, x.get("datei") or "-")
+        if x.get("datei") and os.path.exists(datei):
+            z.update({"datei": f"data/zeichnungen/{e['id']}.png", "b": x.get("b"), "h": x.get("h"),
+                      "quelle": x.get("quelle"), "figur": x.get("figur")})
+            kopien.append((datei, os.path.join(ZEICHNUNGEN, f"{e['id']}.png")))
+        a = x.get("anspruch_1") or {}
+        if a.get("text") and not any(w in a["text"].lower() for w in woerter):
+            z["anspruch_1"] = {"text": a["text"], "sprache": a.get("sprache") or "de",
+                               "quelle": "EPA, Europäischer Publikationsserver" if (x.get("dokument") or "").startswith("EP") else "DPMA, DEPATISnet"}
+        index[e["id"]] = z
+    return index, kopien
+
+
+def zeichnungen_schreiben(index, kopien):
+    os.makedirs(ZEICHNUNGEN, exist_ok=True)
+    for von, nach in kopien:
+        if not os.path.exists(nach) or open(von, "rb").read() != open(nach, "rb").read():
+            shutil.copyfile(von, nach)
+    behalten = {os.path.basename(z["datei"]) for z in index.values() if z.get("datei")}
+    for name in os.listdir(ZEICHNUNGEN):
+        if name.endswith(".png") and name not in behalten:
+            os.remove(os.path.join(ZEICHNUNGEN, name))
+    schreibe(os.path.join(ZEICHNUNGEN, "index.json"), dict(sorted(index.items())))
 
 
 def pruefe_eintrag(e, heute):
@@ -408,7 +556,7 @@ def pruefe_woerter(sperrwoerter, anmelder_namen):
     def json_laufen(obj, ort, pfad=""):
         if isinstance(obj, dict):
             for k, v in obj.items():
-                if k in ("anmelder", "anmelder_original") and (isinstance(v, list) or isinstance(v, str)):
+                if k in ("anmelder", "anmelder_original", "firmen", "firma") and (isinstance(v, list) or isinstance(v, str)):
                     werte = v if isinstance(v, list) else [v]
                     for x in werte:
                         if isinstance(x, str):
@@ -527,6 +675,7 @@ def main():
     ap.add_argument("--trends", default="")
     ap.add_argument("--heute")
     ap.add_argument("--bestand", help="rohdaten/bestand.json aus dem Daten-Repository; erzeugt data/bestand.json neu")
+    ap.add_argument("--zeichnungen", help="rohdaten/zeichnungen aus dem Daten-Repository; übernimmt Zeichnungen und Anspruch 1")
     args = ap.parse_args()
 
     heute = args.heute or dt.date.today().isoformat()
@@ -722,17 +871,31 @@ def main():
     if fehler:
         return abbruch()
 
+    # Schreibweisen zu Firmen bündeln (Bestand und Radar gemeinsam)
+    firma_von = firmen_bilden(alt_bestand, gueltig)
+    if bestand is not None:
+        firmen_eintragen(bestand, firma_von)
+    zaehl_f = {}
     if alt_bestand and alt_bestand.get("eintraege"):
         fb = {n: i for i, n in enumerate(alt_bestand["felder"])}
-        zaehl_b = {}
         for z in alt_bestand["eintraege"]:
             if z[fb["ende"]] >= heute:
-                for i in z[fb["anmelder"]]:
-                    zaehl_b[i] = zaehl_b.get(i, 0) + 1
-        namen_b = {alt_bestand["anmelder"][i]: n for i, n in zaehl_b.items()}
-        for a in anmelder:
-            if namen_b.get(a["name"]):
-                a["bestand"] = namen_b[a["name"]]
+                idx = z[fb["anmelder"]] + ((z[fb["inhaber"]] or []) if "inhaber" in fb else [])
+                for x in {firma_von.get(alt_bestand["anmelder"][i], alt_bestand["anmelder"][i]) for i in idx}:
+                    zaehl_f[x] = zaehl_f.get(x, 0) + 1
+    for a in anmelder:
+        a["firma"] = firma_von.get(a["name"], a["name"])
+        if zaehl_f.get(a["firma"]):
+            a["bestand"] = zaehl_f[a["firma"]]
+
+    # Zeichnung und Anspruch 1 (Text nur im Index, wird auf der Detailseite nachgeladen)
+    zindex, zkopien = zeichnungen_planen(args.zeichnungen, gueltig, args.sperrwort)
+    for e in gueltig:
+        z = zindex.get(e["id"])
+        if z and z.get("datei"):
+            e["zeichnung"] = {k: z[k] for k in ("datei", "b", "h", "quelle", "figur", "dokument") if z.get(k)}
+        if z and z.get("anspruch_1"):
+            e["anspruch_1"] = {"sprache": z["anspruch_1"].get("sprache"), "dokument": z.get("dokument")}
 
     alle_lauf = laufende()
     radar = {
@@ -757,7 +920,7 @@ def main():
         return abbruch()
 
     alte = {}
-    for name in ("radar.json", "berichte.json", "meta.json", "bestand.json"):
+    for name in ("radar.json", "berichte.json", "meta.json", "bestand.json", os.path.join("zeichnungen", "index.json")):
         p = os.path.join(DATEN, name)
         alte[name] = open(p, encoding="utf-8").read() if os.path.exists(p) else None
     alt_feed = open(os.path.join(WURZEL, "feed.xml"), encoding="utf-8").read() if os.path.exists(os.path.join(WURZEL, "feed.xml")) else None
@@ -767,6 +930,7 @@ def main():
     schreibe("meta.json", meta)
     if bestand is not None:
         schreibe_bestand(bestand)
+    zeichnungen_schreiben(zindex, zkopien)
     with open(os.path.join(WURZEL, "feed.xml"), "w", encoding="utf-8") as f:
         f.write(feed(radar, berichte, basis))
 
