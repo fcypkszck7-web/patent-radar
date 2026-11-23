@@ -1,5 +1,51 @@
 [
  {
+  "id": "woche-2026-48",
+  "art": "woche",
+  "titel": "Kalenderwoche 48/2026",
+  "zeitraum": {
+   "von": "2026-11-16",
+   "bis": "2026-11-23"
+  },
+  "erstellt": "2026-11-23",
+  "zusammenfassung": "20 neue Einträge, Schwerpunkt Solarbefestigung und Dachsicherheit: erteilt wurde eine abgedichtete Dachkonsole mit Gewindemuffe und Butyl-Pad, neu sind unter anderem ein Anschlagpunkt auf Solar-Montageschienen, eine Ersatzplatte mit Dichtkappe für Schieferdächer, ein zweiteiliger Dachhaken und ein werkzeugloses Dachgeländer. Dazu kommen eine Durchführung für Elektroleitungen durch das Dach sowie Erdungs- und Blitzschutzklemmen. Neue Einspruchsfristen laufen für zwei deutsche und eine europäische Erteilung.",
+  "kurz": "20 neue Einträge",
+  "kennzahlen": {
+   "neu": 20,
+   "erteilungen": 3,
+   "gebrauchsmuster": 4,
+   "fristen_laufend": 118
+  },
+  "themen": {
+   "solar": 7,
+   "sicherheit": 3,
+   "zubehoer": 5,
+   "werkstoffe": 2,
+   "entwaesserung": 2,
+   "gruendach": 1
+  },
+  "arten": {
+   "Erteilung": 3,
+   "Offenlegung": 12,
+   "Gebrauchsmuster": 4,
+   "Internationale Anmeldung": 1
+  },
+  "top": [
+   "de-102021100385",
+   "de-102025116576",
+   "de-202026105923"
+  ],
+  "fristen": [
+   "ep-4321543",
+   "de-102021100385",
+   "de-102019220617"
+  ],
+  "news": [],
+  "hinweise": [
+   "Zu zehn bereits erfassten europäischen Dokumenten liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+  ]
+ },
+ {
   "id": "woche-2026-47",
   "art": "woche",
   "titel": "Kalenderwoche 47/2026",

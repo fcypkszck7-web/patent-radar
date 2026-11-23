@@ -1,8 +1,8 @@
 {
- "stand": "2026-11-16",
- "heute": "2026-11-18",
+ "stand": "2026-11-23",
+ "heute": "2026-11-23",
  "lauf": {
-  "datum": "2026-11-16",
+  "datum": "2026-11-23",
   "art": "woche"
  },
  "daten_ab": "2026-01-29",
@@ -13,19 +13,19 @@
   "quellen": [
    {
     "name": "DEPATISnet (DPMA)",
-    "umfang": "DE, EP, WO – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
-    "stand": "2026-11-16",
+    "umfang": "DE, EP, WO, AT, CH – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
+    "stand": "2026-11-23",
     "status": "aktuell"
    },
    {
     "name": "Europäischer Publikationsserver (EPA)",
     "umfang": "Ergänzend: Zusammenfassungen und Ansprüche europäischer Dokumente",
-    "stand": "2026-11-16",
+    "stand": "2026-11-23",
     "status": "aktuell"
    }
   ],
   "hinweise_woche": [
-   "Zu sechs bereits erfassten europäischen Anmeldungen aus dem PCT-Weg liegt weiterhin keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+   "Zu zehn bereits erfassten europäischen Dokumenten liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
   ],
   "hinweise_monat": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
@@ -33,31 +33,31 @@
  },
  "weiterleitungen": [],
  "kennzahlen": {
-  "gesamt": 295,
-  "neu": 1,
-  "erteilungen": 125,
-  "gebrauchsmuster": 30,
-  "fristen_laufend": 119
+  "gesamt": 315,
+  "neu": 20,
+  "erteilungen": 128,
+  "gebrauchsmuster": 34,
+  "fristen_laufend": 118
  },
  "anmelder": [
   {
    "name": "VKR Holding A/S",
-   "anzahl": 22,
+   "anzahl": 23,
    "land": "DK",
    "themen": {
-    "zubehoer": 18,
+    "zubehoer": 19,
     "entwaesserung": 1,
     "sicherheit": 3
    },
    "firma": "VKR",
-   "bestand": 531
+   "bestand": 530
   },
   {
    "name": "SL Rack GmbH",
-   "anzahl": 12,
+   "anzahl": 15,
    "land": "DE",
    "themen": {
-    "solar": 12
+    "solar": 15
    },
    "firma": "SL Rack GmbH",
    "bestand": 87
@@ -94,6 +94,16 @@
    },
    "firma": "Sika Technology AG",
    "bestand": 123
+  },
+  {
+   "name": "ACO Ahlmann SE & Co. KG",
+   "anzahl": 3,
+   "land": "DE",
+   "themen": {
+    "entwaesserung": 3
+   },
+   "firma": "ACO",
+   "bestand": 44
   },
   {
    "name": "ArcelorMittal",
@@ -133,7 +143,7 @@
     "solar": 3
    },
    "firma": "Enstall",
-   "bestand": 15
+   "bestand": 16
   },
   {
    "name": "Holcim Technology Ltd",
@@ -144,6 +154,16 @@
    },
    "firma": "Holcim",
    "bestand": 35
+  },
+  {
+   "name": "J. Pröpster GmbH",
+   "anzahl": 3,
+   "land": "DE",
+   "themen": {
+    "zubehoer": 3
+   },
+   "firma": "J. Pröpster GmbH",
+   "bestand": 25
   },
   {
    "name": "Kingspan Holdings (IRL) Ltd.",
@@ -178,16 +198,6 @@
    "bestand": 11
   },
   {
-   "name": "ACO Ahlmann SE & Co. KG",
-   "anzahl": 2,
-   "land": "DE",
-   "themen": {
-    "entwaesserung": 2
-   },
-   "firma": "ACO",
-   "bestand": 44
-  },
-  {
    "name": "Aerocompact Group Holding GmbH",
    "anzahl": 2,
    "land": "AT",
@@ -218,6 +228,27 @@
    },
    "firma": "Blachotrapez",
    "bestand": 5
+  },
+  {
+   "name": "BMI Group Holdings UK Limited",
+   "anzahl": 2,
+   "land": "GB",
+   "themen": {
+    "werkstoffe": 1,
+    "solar": 1
+   },
+   "firma": "BMI Group Holdings UK Limited",
+   "bestand": 23
+  },
+  {
+   "name": "Dehn SE",
+   "anzahl": 2,
+   "land": "DE",
+   "themen": {
+    "zubehoer": 2
+   },
+   "firma": "Dehn",
+   "bestand": 51
   },
   {
    "name": "Detec System LLC",
@@ -288,16 +319,6 @@
    },
    "firma": "Husqvarna AB",
    "bestand": 27
-  },
-  {
-   "name": "J. Pröpster GmbH",
-   "anzahl": 2,
-   "land": "DE",
-   "themen": {
-    "zubehoer": 2
-   },
-   "firma": "J. Pröpster GmbH",
-   "bestand": 25
   },
   {
    "name": "Kampmeier Kunststoff GmbH",
@@ -601,6 +622,15 @@
    "bestand": 1
   },
   {
+   "name": "Bajgar, Armin",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "gruendach": 1
+   },
+   "firma": "Bajgar, Armin"
+  },
+  {
    "name": "Bambou",
    "anzahl": 1,
    "land": "FR",
@@ -609,6 +639,16 @@
    },
    "firma": "Bambou",
    "bestand": 3
+  },
+  {
+   "name": "BayWa AG",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "zubehoer": 1
+   },
+   "firma": "BayWa AG",
+   "bestand": 1
   },
   {
    "name": "Benschop Victor Stefan",
@@ -659,16 +699,6 @@
    },
    "firma": "Blue Innovations B.V.",
    "bestand": 4
-  },
-  {
-   "name": "BMI Group Holdings UK Limited",
-   "anzahl": 1,
-   "land": "GB",
-   "themen": {
-    "solar": 1
-   },
-   "firma": "BMI Group Holdings UK",
-   "bestand": 23
   },
   {
    "name": "BMI Italia S.r.l.",
@@ -781,6 +811,26 @@
    "bestand": 1
   },
   {
+   "name": "Consorcio Comex, S.A. de C.V.",
+   "anzahl": 1,
+   "land": "MX",
+   "themen": {
+    "werkstoffe": 1
+   },
+   "firma": "Consorcio Comex, S.A. de C.V.",
+   "bestand": 3
+  },
+  {
+   "name": "CONTECTA GmbH",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "solar": 1
+   },
+   "firma": "CONTECTA GmbH",
+   "bestand": 2
+  },
+  {
    "name": "Continuus Mat Intellectual Property LLC",
    "anzahl": 1,
    "land": "US",
@@ -811,16 +861,6 @@
    "bestand": 6
   },
   {
-   "name": "Dehn SE",
-   "anzahl": 1,
-   "land": "DE",
-   "themen": {
-    "zubehoer": 1
-   },
-   "firma": "Dehn",
-   "bestand": 51
-  },
-  {
    "name": "DIETL plan & design GmbH",
    "anzahl": 1,
    "land": "DE",
@@ -847,6 +887,15 @@
     "solar": 1
    },
    "firma": "Dinçer, Muhsin"
+  },
+  {
+   "name": "DS2.0 LLC",
+   "anzahl": 1,
+   "land": "US",
+   "themen": {
+    "solar": 1
+   },
+   "firma": "DS2.0 LLC"
   },
   {
    "name": "Dumobil Construct NV",
@@ -945,7 +994,7 @@
     "solar": 1
    },
    "firma": "Enstall",
-   "bestand": 15
+   "bestand": 16
   },
   {
    "name": "EPC Solaire",
@@ -1097,6 +1146,26 @@
    "bestand": 3
   },
   {
+   "name": "Gembala, David",
+   "anzahl": 1,
+   "land": "US",
+   "themen": {
+    "zubehoer": 1
+   },
+   "firma": "Gembala, David",
+   "bestand": 1
+  },
+  {
+   "name": "Gembala, Henry",
+   "anzahl": 1,
+   "land": "US",
+   "themen": {
+    "zubehoer": 1
+   },
+   "firma": "Gembala, Henry",
+   "bestand": 1
+  },
+  {
    "name": "George TFE SCP",
    "anzahl": 1,
    "land": "MC",
@@ -1145,6 +1214,16 @@
    },
    "firma": "Grollegg Gerhard",
    "bestand": 2
+  },
+  {
+   "name": "Gruner, Benjamin",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "sicherheit": 1
+   },
+   "firma": "Gruner, Benjamin",
+   "bestand": 1
   },
   {
    "name": "GYS Holding",
@@ -1204,6 +1283,16 @@
     "schneeschutz": 1
    },
    "firma": "Heuel GmbH Aluminiumgießerei",
+   "bestand": 1
+  },
+  {
+   "name": "HYMER-Leichtmetallbau GmbH & Co. KG",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "sicherheit": 1
+   },
+   "firma": "HYMER-Leichtmetallbau GmbH & Co. KG",
    "bestand": 1
   },
   {
@@ -1324,6 +1413,16 @@
    },
    "firma": "Kraftwerk",
    "bestand": 6
+  },
+  {
+   "name": "KWEnergy GmbH",
+   "anzahl": 1,
+   "land": "CH",
+   "themen": {
+    "solar": 1
+   },
+   "firma": "KWEnergy GmbH",
+   "bestand": 4
   },
   {
    "name": "Lagan Building Solutions Ltd",
@@ -1486,6 +1585,16 @@
    "bestand": 1
   },
   {
+   "name": "Meißner Sicherheitstechnik GmbH",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "sicherheit": 1
+   },
+   "firma": "Meißner Sicherheitstechnik GmbH",
+   "bestand": 7
+  },
+  {
    "name": "MHN Montage Handwerk Nalbach S.à r.l.",
    "anzahl": 1,
    "land": "LU",
@@ -1532,7 +1641,7 @@
     "sicherheit": 1
    },
    "firma": "MSA Technology LLC",
-   "bestand": 57
+   "bestand": 58
   },
   {
    "name": "Noreiks Solutions in Sales GmbH",
@@ -1814,6 +1923,26 @@
    "bestand": 1
   },
   {
+   "name": "Rostock, Felix",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "solar": 1
+   },
+   "firma": "Rostock, Felix",
+   "bestand": 2
+  },
+  {
+   "name": "Rostock, Friedrich",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "solar": 1
+   },
+   "firma": "Rostock, Friedrich",
+   "bestand": 2
+  },
+  {
    "name": "RSS GmbH",
    "anzahl": 1,
    "land": "DE",
@@ -1921,7 +2050,7 @@
     "solar": 1
    },
    "firma": "Shenzhen Hello Tech Energy Co. Ltd",
-   "bestand": 29
+   "bestand": 30
   },
   {
    "name": "Sicurlive Group S.r.l.",
@@ -2040,6 +2169,16 @@
     "solar": 1
    },
    "firma": "Swift Solar Inc.",
+   "bestand": 1
+  },
+  {
+   "name": "Söldner, Karl-Heinz",
+   "anzahl": 1,
+   "land": "DE",
+   "themen": {
+    "entwaesserung": 1
+   },
+   "firma": "Söldner, Karl-Heinz",
    "bestand": 1
   },
   {
@@ -2284,25 +2423,1048 @@
   }
  ],
  "bestand": {
-  "stand": "2026-11-18",
+  "stand": "2026-11-23",
   "ab": "2006-01-01",
   "vollstaendig": true,
   "anmeldungen_jahre": 10,
-  "gesamt": 10159,
-  "patente": 4001,
-  "anmeldungen": 5328,
-  "gebrauchsmuster": 830,
-  "auslaufend_12m": 314,
-  "anmelder": 4299,
+  "gesamt": 10180,
+  "patente": 4026,
+  "anmeldungen": 5322,
+  "gebrauchsmuster": 832,
+  "auslaufend_12m": 316,
+  "anmelder": 4311,
   "aemter": {
-   "DE": 2146,
-   "EP": 4633,
-   "WO": 2960,
-   "AT": 265,
+   "DE": 2155,
+   "EP": 4646,
+   "WO": 2958,
+   "AT": 266,
    "CH": 155
   }
  },
  "eintraege": [
+  {
+   "id": "de-202026105565",
+   "titel": "Fahrbarer Dacharbeitsbock mit einzeln verstellbaren Rollenarmen",
+   "titel_original": "Dacharbeitsbock",
+   "was_neu": "Der Arbeitsbock trägt ein begehbares Belagelement und rollt auf vier Dachauflagerollen. Jeder der vier Rollenarme sitzt an einem Querträger und lässt sich über ein eigenes Gelenk unabhängig von den anderen in mehreren Stellungen arretieren, sodass sich der Bock an Dachneigung und Untergrund anpassen lässt.",
+   "bezug": "Betrifft Arbeits- und Standflächen für Arbeiten auf Steildächern.",
+   "amt": "DE",
+   "nummer": "DE 20 2026 105 565 U1",
+   "familie": [],
+   "anmelder": [
+    "Gruner, Benjamin"
+   ],
+   "anmelder_original": [
+    "Gruner, Benjamin, 08115, Lichtentanne"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-19",
+   "angemeldet": "2026-09-09",
+   "anmeldenummer": "202026105565",
+   "thema": "sicherheit",
+   "relevanz": "mittel",
+   "punkte": 30,
+   "klassen": [
+    "E04D15/00",
+    "E04G21/32",
+    "E04G3/26",
+    "E04G3/28"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "U1",
+   "nummer_kompakt": "DE202026105565U1",
+   "art": "Gebrauchsmuster",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE202026105565U1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=2020261055654"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026105565U1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026105565.png",
+    "b": 361,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 105 565 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 105 565 U1"
+   }
+  },
+  {
+   "id": "de-102025119129",
+   "titel": "Entwässerungsleitung mit Feuchtesensor für waagerechte Bauteile",
+   "titel_original": "Vorrichtung zur Erkennung und Ausleitung von Feuchtigkeit aus einem waagrechten Gebäudeteil und Gebäudeabschnitt umfassend eine Vorrichtung zur Erkennung und Ausleitung von Feuchtigkeit aus einem waagrechten Gebäudeteil",
+   "was_neu": "In einem waagerechten Gebäudeteil wird eine Entwässerungsleitung verlegt, die eingedrungene Feuchtigkeit in ein Sensorgehäuse leitet. Ein Feuchtigkeitssensor zwischen Ein- und Auslass erkennt das Wasser, das anschließend abgeleitet wird; so werden Undichtigkeiten früh bemerkt.",
+   "bezug": "Betrifft Leckerkennung und Entwässerung flacher Bauteile wie Flachdächer.",
+   "amt": "DE",
+   "nummer": "DE 10 2025 119 129 A1",
+   "familie": [],
+   "anmelder": [
+    "Söldner, Karl-Heinz"
+   ],
+   "anmelder_original": [
+    "Söldner, Karl-Heinz, 94104, Witzmannsberg"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-19",
+   "angemeldet": "2025-05-16",
+   "anmeldenummer": "102025119129",
+   "thema": "entwaesserung",
+   "relevanz": "mittel",
+   "punkte": 28,
+   "klassen": [
+    "E04D13/00",
+    "E04B1/70",
+    "G01N27/00",
+    "G08B21/20"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "DE102025119129A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102025119129A1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020251191298"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025119129A1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025119129.png",
+    "b": 238,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 119 129 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 119 129 A1"
+   }
+  },
+  {
+   "id": "de-202026003428",
+   "titel": "Modulare Regenwasserzisterne am Fallrohr",
+   "titel_original": "Modulare Fallrohrzisterne für das Sammeln von Regenwasser",
+   "was_neu": "Die Zisterne wird am Fallrohr angeschlossen und besteht aus Behältermodulen, die beliebig oft senkrecht übereinander eingebaut werden können. So lässt sich das Speichervolumen an die örtlichen Gegebenheiten anpassen.",
+   "bezug": "Betrifft Regenwassernutzung an Fallrohren.",
+   "amt": "DE",
+   "nummer": "DE 20 2026 003 428 U1",
+   "familie": [],
+   "anmelder": [
+    "Bajgar, Armin"
+   ],
+   "anmelder_original": [
+    "Bajgar, Armin, 68623, Lampertheim"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-19",
+   "angemeldet": "2026-08-05",
+   "anmeldenummer": "202026003428",
+   "thema": "gruendach",
+   "relevanz": "mittel",
+   "punkte": 24,
+   "klassen": [
+    "E03B3/03"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "U1",
+   "nummer_kompakt": "DE202026003428U1",
+   "art": "Gebrauchsmuster",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE202026003428U1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=2020260034289"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026003428U1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026003428.png",
+    "b": 341,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 003 428 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 003 428 U1"
+   }
+  },
+  {
+   "id": "de-102021100385",
+   "titel": "Dachkonsole mit Gewindemuffe, Dichtmanschette und Butyl-Pad",
+   "titel_original": "Montagevorrichtung als Dachkonsole",
+   "was_neu": "Die Montagevorrichtung schafft auf dem Dach einen dichten Befestigungspunkt für Aufbauten wie Solargestelle: Eine Gewindemuffe ragt aus einer Dichtmanschette, die auf einer Grundscheibe liegt. Zwischen Scheibe und Manschette sitzt ein beidseitig klebendes Butyl-Pad, das zusätzlich an der Gewindemuffe hochgezogen ist und sie teilweise umschließt; so wird die Durchdringung zuverlässig abgedichtet.",
+   "bezug": "Betrifft abgedichtete Befestigungspunkte für Solar- und andere Dachaufbauten.",
+   "amt": "DE",
+   "nummer": "DE 10 2021 100 385 B4",
+   "familie": [],
+   "anmelder": [
+    "Rostock, Felix",
+    "Rostock, Friedrich"
+   ],
+   "anmelder_original": [
+    "Rostock, Felix, 74906, Bad Rappenau",
+    "Rostock, Friedrich, 74906, Bad Rappenau"
+   ],
+   "anmelder_land": [
+    "DE",
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-12",
+   "angemeldet": "2021-01-12",
+   "anmeldenummer": "102021100385",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 82,
+   "klassen": [
+    "E04D13/14",
+    "E04D13/18",
+    "E04D5/00",
+    "F24S20/67",
+    "H02S20/24"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "B4",
+   "nummer_kompakt": "DE102021100385B4",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-11-12",
+   "einspruch_bis": "2027-08-12",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102021100385B4"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020211003857"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102021100385B4"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102021100385.png",
+    "b": 260,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2021 100 385 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2021 100 385 B4"
+   }
+  },
+  {
+   "id": "de-102025117224",
+   "titel": "Dachgeländer mit werkzeuglos klemmenden Rohraufnahmen",
+   "titel_original": "Dachgeländer",
+   "was_neu": "Das Geländer zur Absturzsicherung besteht aus Pfosten mit einem Ausleger zur Dachfläche hin; Handlauf und Knieleiste werden in Rohraufnahmen am Pfosten gelegt. Ein Haltebügel an jeder Aufnahme spannt das Rohr ohne Werkzeug form- und kraftschlüssig ein, was die Montage auf dem Dach beschleunigen soll.",
+   "bezug": "Betrifft Geländer als Absturzsicherung auf Dächern.",
+   "amt": "DE",
+   "nummer": "DE 10 2025 117 224 A1",
+   "familie": [],
+   "anmelder": [
+    "HYMER-Leichtmetallbau GmbH & Co. KG"
+   ],
+   "anmelder_original": [
+    "HYMER-LEICHTMETALLBAU GMBH & CO. KG., 88239, Wangen"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-12",
+   "angemeldet": "2025-05-06",
+   "anmeldenummer": "102025117224",
+   "thema": "sicherheit",
+   "relevanz": "hoch",
+   "punkte": 70,
+   "klassen": [
+    "E04G21/32"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "DE102025117224A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102025117224A1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020251172242"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025117224A1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025117224.png",
+    "b": 250,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 117 224 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 117 224 A1"
+   }
+  },
+  {
+   "id": "de-102019220617",
+   "titel": "Vormontierte Einbaueinheit für Fenster mit Verschattung",
+   "titel_original": "Montageeinheit",
+   "was_neu": "Die Montageeinheit aus drei Rahmenelementen bildet zusammen mit Deck-, Rück-, Vorder- und Seitenplatten ein Gehäuse für die Verschattung, etwa einen Rollladen. Am dritten Rahmenelement sitzt ein Auflageelement für Fensterbrett und Fenster; das Fenster ist bereits vormontiert, sodass die Einheit als Ganzes in die Gebäudehülle eingesetzt wird.",
+   "bezug": "Betrifft den Einbau von Fenstern und Verschattung in die Gebäudehülle.",
+   "amt": "DE",
+   "nummer": "DE 10 2019 220 617 B4",
+   "familie": [],
+   "anmelder": [
+    "BayWa AG"
+   ],
+   "anmelder_original": [
+    "BayWa Aktiengesellschaft, 81925, München"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-12",
+   "angemeldet": "2019-12-30",
+   "anmeldenummer": "102019220617",
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 26,
+   "klassen": [
+    "E06B1/02",
+    "E06B1/04",
+    "E06B9/17",
+    "E06B9/24"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "B4",
+   "nummer_kompakt": "DE102019220617B4",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-11-12",
+   "einspruch_bis": "2027-08-12",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102019220617B4"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020192206174"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102019220617B4"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102019220617.png",
+    "b": 161,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2019 220 617 B4"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2019 220 617 B4"
+   }
+  },
+  {
+   "id": "de-102025117471",
+   "titel": "Kabelrinnenklemme mit Halter für Blitzschutzdraht",
+   "titel_original": "Kabelrinnenklemme",
+   "was_neu": "Die Klemme wird mit einem Klemmsteg und einer Klemmschraube an der Kabelrinne befestigt. Ein seitlich abstehender Haltesteg trägt zusätzlich einen Halter für den Blitzschutzdraht, sodass Kabelrinne und Blitzschutzleitung mit einem Bauteil verbunden werden.",
+   "bezug": "Betrifft Blitzschutz an Kabeltrassen, etwa auf Dächern.",
+   "amt": "DE",
+   "nummer": "DE 10 2025 117 471 A1",
+   "familie": [],
+   "anmelder": [
+    "J. Pröpster GmbH"
+   ],
+   "anmelder_original": [
+    "J. Pröpster GmbH, 92318, Neumarkt"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-12",
+   "angemeldet": "2025-05-07",
+   "anmeldenummer": "102025117471",
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 22,
+   "klassen": [
+    "H02G13/00",
+    "F16B2/02",
+    "H01R4/30",
+    "H01R4/66"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "DE102025117471A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102025117471A1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020251174717"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025117471A1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025117471.png",
+    "b": 339,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 117 471 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 117 471 A1"
+   }
+  },
+  {
+   "id": "ep-4838780",
+   "titel": "Solar-Nachführung mit Bogensegment und Zahnradantrieb",
+   "titel_original": "NACHFÜHRVORRICHTUNG",
+   "was_neu": "Ein zwischen Pfosten drehbar gelagertes Zentralrohr trägt die Module und ist fest mit einem Bogensegment verbunden, das seitliche Aussparungen hat. Ein Zahnradgetriebe greift mit seinen Zähnen in diese Aussparungen und dreht so das Rohr, um die Module der Sonne nachzuführen.",
+   "bezug": "Betrifft Unterkonstruktionen und Nachführsysteme für Solaranlagen.",
+   "amt": "EP",
+   "nummer": "EP 4838780 A1",
+   "familie": [
+    {
+     "nummer": "DE 10 2025 117 356 A1",
+     "art": "Offenlegung",
+     "datum": "2026-11-12"
+    }
+   ],
+   "anmelder": [
+    "SL Rack GmbH"
+   ],
+   "anmelder_original": [
+    "SL RACK GMBH"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-11",
+   "angemeldet": "2026-03-30",
+   "prioritaet": "2025-05-06",
+   "anmeldenummer": "26169211",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 38,
+   "klassen": [
+    "F24S25/12",
+    "F24S25/70",
+    "F24S30/425",
+    "F24S30/452",
+    "H02S20/32"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4838780A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4838780A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP26169211&lng=de"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4838780.png",
+    "b": 760,
+    "h": 666,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4838780 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4838780 A1"
+   }
+  },
+  {
+   "id": "ep-4837267",
+   "titel": "Rinnenabdeckung mit eingesetzter Funkeinheit",
+   "titel_original": "ABDECKUNG UND VERFAHREN ZUR KOMMUNIKATION",
+   "was_neu": "In eine Öffnung der Abdeckung einer Entwässerungseinrichtung wird eine Funkeinheit mit Antennengehäuse eingesetzt. Die Antennen sind so ausgelegt, dass ihre Grundfrequenz um 0,3 bis 30 Prozent über der Resonanzfrequenz liegt, die sich im eingebauten Zustand ergibt; so soll die Verstimmung durch die Abdeckung ausgeglichen werden.",
+   "bezug": "Betrifft Abdeckungen und Sensorik für Entwässerungsrinnen.",
+   "amt": "EP",
+   "nummer": "EP 4837267 A1",
+   "familie": [],
+   "anmelder": [
+    "ACO Ahlmann SE & Co. KG"
+   ],
+   "anmelder_original": [
+    "ACO AHLMANN SE & CO KG"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-11",
+   "angemeldet": "2024-12-19",
+   "prioritaet": "2024-01-05",
+   "anmeldenummer": "24833688",
+   "thema": "entwaesserung",
+   "relevanz": "hoch",
+   "punkte": 36,
+   "klassen": [
+    "H01Q1/04",
+    "H01Q1/2233",
+    "H01Q1/40"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "links_extra": [
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025146368"
+    }
+   ],
+   "kind": "A1",
+   "nummer_kompakt": "EP4837267A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4837267A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP24833688&lng=de"
+    },
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2025146368"
+    }
+   ],
+   "neu": true
+  },
+  {
+   "id": "ep-4838779",
+   "titel": "Solarmodule auf Membrandächern mit Lichtlenkung auf die Modulrückseite",
+   "titel_original": "VERFAHREN ZUR MONTAGE VON MODULEN AUF EINEM DACH",
+   "was_neu": "Auf Dächern, etwa von Leichtbauhallen mit Membrandach, werden die Module mit Abstand zueinander montiert. Platzhalter zwischen den Modulen halten den Zwischenraum frei, und Umlenkmittel leiten das dort einfallende Tageslicht auf die Rückseiten der benachbarten Module, um deren Ertrag zu erhöhen.",
+   "bezug": "Betrifft die Montage von Solarmodulen auf Dächern.",
+   "amt": "EP",
+   "nummer": "EP 4838779 A1",
+   "familie": [],
+   "anmelder": [
+    "KWEnergy GmbH"
+   ],
+   "anmelder_original": [
+    "KWENERGY GMBH"
+   ],
+   "anmelder_land": [
+    "CH"
+   ],
+   "veroeffentlicht": "2026-11-11",
+   "angemeldet": "2025-05-05",
+   "anmeldenummer": "25174320",
+   "thema": "solar",
+   "relevanz": "mittel",
+   "punkte": 40,
+   "klassen": [
+    "F24S20/67",
+    "F24S20/25",
+    "H02S20/23",
+    "H02S20/24",
+    "H02S40/22"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4838779A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4838779A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP25174320&lng=de"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4838779.png",
+    "b": 714,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4838779 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4838779 A1"
+   }
+  },
+  {
+   "id": "ep-4838041",
+   "titel": "Dachfensterflügel mit Profilelementen und verbessertem Wetterschutz",
+   "titel_original": "DACHFENSTER MIT EINEM FLÜGEL MIT PROFILELEMENTEN UND VERBESSERTEN WITTERUNGSSCHUTZEIGENSCHAFTEN",
+   "was_neu": "Die Flügelholme des Dachfensters bestehen aus Profilelementen; das untere Profil hat einen Kopfteil auf der Innenseite der Scheibe sowie anschließende innere und äußere Abschnitte, die den Witterungsschutz verbessern sollen. Optional trägt der untere Flügelholm eine Trittkonsole als Schutzeinrichtung.",
+   "bezug": "Betrifft Dachfenster im Steildach.",
+   "amt": "EP",
+   "nummer": "EP 4838041 A2",
+   "familie": [],
+   "anmelder": [
+    "VKR Holding A/S"
+   ],
+   "anmelder_original": [
+    "VKR HOLDING AS"
+   ],
+   "anmelder_land": [
+    "DK"
+   ],
+   "veroeffentlicht": "2026-11-11",
+   "angemeldet": "2025-07-11",
+   "prioritaet": "2024-07-16",
+   "anmeldenummer": "26207092",
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 22,
+   "klassen": [
+    "E04D13/031",
+    "E04D13/0354",
+    "E06B3/301",
+    "E06B3/96"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A2",
+   "nummer_kompakt": "EP4838041A2",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4838041A2"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP26207092&lng=de"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4838041.png",
+    "b": 760,
+    "h": 841,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4838041 A2"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4838041 A2"
+   }
+  },
+  {
+   "id": "ep-4838781",
+   "titel": "Modulrahmen ohne Bohrungen mit angeformter Montagelasche",
+   "titel_original": "LOCHFREIER PLATTENRAHMEN",
+   "was_neu": "Der Rahmen für Solarmodule bildet mit einer senkrechten Außenwand und drei Vorsprüngen einen Schlitz zur Aufnahme des Moduls. Der untere Vorsprung ist zu einer Montagelasche verlängert, über die der Rahmen ohne Bohrungen am Gestell befestigt und das Modul zugleich versteift wird.",
+   "bezug": "Betrifft Modulrahmen und deren Befestigung an Unterkonstruktionen.",
+   "amt": "EP",
+   "nummer": "EP 4838781 A1",
+   "familie": [],
+   "anmelder": [
+    "DS2.0 LLC"
+   ],
+   "anmelder_original": [
+    "DS2 0 LLC"
+   ],
+   "anmelder_land": [
+    "US"
+   ],
+   "veroeffentlicht": "2026-11-11",
+   "angemeldet": "2026-05-06",
+   "prioritaet": "2025-05-08",
+   "anmeldenummer": "26176869",
+   "thema": "solar",
+   "relevanz": "mittel",
+   "punkte": 20,
+   "klassen": [
+    "F24S25/12",
+    "F24S25/20",
+    "F24S25/65",
+    "H02S30/10"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4838781A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4838781A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP26176869&lng=de"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4838781.png",
+    "b": 760,
+    "h": 387,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4838781 A1"
+   },
+   "anspruch_1": {
+    "sprache": "en",
+    "dokument": "EP 4838781 A1"
+   }
+  },
+  {
+   "id": "ep-4321543",
+   "titel": "Elastomere Latexbeschichtung mit Haftvermittler für Dächer",
+   "titel_original": "ELASTOMERE LATEXE UND DIESE ENTHALTENDE BESCHICHTUNGSZUSAMMENSETZUNGEN",
+   "was_neu": "Geschützt ist ein wasserbasierter elastomerer Latex aus einem Copolymer, das Monomere mit sehr niedriger und mit hoher Glasübergangstemperatur, ein N-Methylol-Monomer und ein Alkoxysilan als Haftvermittler verbindet. Daraus werden Beschichtungen hergestellt, wie sie etwa als flüssige Dachbeschichtung eingesetzt werden.",
+   "bezug": "Betrifft Beschichtungen für Dachflächen.",
+   "amt": "EP",
+   "nummer": "EP 4321543 B1",
+   "familie": [],
+   "anmelder": [
+    "Consorcio Comex, S.A. de C.V."
+   ],
+   "anmelder_original": [
+    "CONSORCIO COMEX S A DE C V"
+   ],
+   "anmelder_land": [
+    "MX"
+   ],
+   "veroeffentlicht": "2026-11-11",
+   "angemeldet": "2018-04-20",
+   "prioritaet": "2017-04-21",
+   "anmeldenummer": "23211206",
+   "thema": "werkstoffe",
+   "relevanz": "mittel",
+   "punkte": 18,
+   "klassen": [
+    "E04D7/00",
+    "C09D125/14",
+    "C08F220/18",
+    "C08F230/085"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "links_extra": [
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2018193409"
+    }
+   ],
+   "kind": "B1",
+   "nummer_kompakt": "EP4321543B1",
+   "art": "Erteilung",
+   "erteilung_datum": "2026-11-11",
+   "einspruch_bis": "2027-08-11",
+   "frist_status": "laufend",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4321543B1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP23211206&lng=de"
+    },
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2018193409"
+    }
+   ],
+   "neu": true,
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4321543 B1"
+   }
+  },
+  {
+   "id": "de-202026105923",
+   "titel": "Ersatzplatte mit Abdeckkappe für Solarbefestigungen auf Schieferdächern",
+   "titel_original": "Abdeckvorrichtung",
+   "was_neu": "Eine plattenförmige Ersatzplatte ersetzt im Befestigungsbereich die Deckung, etwa auf einem Schieferdach, und hat eine Öffnung mit erhöhtem Rand, durch die die Konsole für das Solargestell geführt wird. Auf den Rand wird eine Abdeckkappe mit elastischer Dichtmanschette gesetzt, die die Konsole umschließt und den Durchgang abdichtet.",
+   "bezug": "Betrifft Ersatzplatten und Durchführungen für Solarbefestigungen im Steildach.",
+   "amt": "DE",
+   "nummer": "DE 20 2026 105 923 U1",
+   "familie": [],
+   "anmelder": [
+    "SL Rack GmbH"
+   ],
+   "anmelder_original": [
+    "SL Rack GmbH, 83527, Haag"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-05",
+   "angemeldet": "2026-09-18",
+   "anmeldenummer": "202026105923",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 76,
+   "klassen": [
+    "E04D1/12",
+    "E04D13/147",
+    "E04D13/18",
+    "F24S25/61",
+    "F24S25/613",
+    "H02S20/23"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "U1",
+   "nummer_kompakt": "DE202026105923U1",
+   "art": "Gebrauchsmuster",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE202026105923U1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=2020261059234"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026105923U1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026105923.png",
+    "b": 330,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 105 923 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 105 923 U1"
+   }
+  },
+  {
+   "id": "de-102026110894",
+   "titel": "Zweiteiliger Dachhaken mit Basiselement und Zwischenstück",
+   "titel_original": "Dachhakensystem",
+   "was_neu": "Das Dachhakensystem trennt die Befestigung am Dach von der Halterung: Ein Basiselement wird am Dachaufbau befestigt, der eigentliche Dachhaken wird über ein Zwischenelement daran angebracht. Damit lassen sich Haken und Unterteil getrennt montieren und kombinieren.",
+   "bezug": "Betrifft Dachhaken für Solarmodule und andere Dachaufbauten.",
+   "amt": "DE",
+   "nummer": "DE 10 2026 110 894 A1",
+   "familie": [],
+   "anmelder": [
+    "CONTECTA GmbH"
+   ],
+   "anmelder_original": [
+    "CONTECTA GmbH, 55481, Kirchberg"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-05",
+   "angemeldet": "2026-03-17",
+   "prioritaet": "2025-04-30",
+   "anmeldenummer": "102026110894",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 72,
+   "klassen": [
+    "E04D13/18",
+    "F24S25/613",
+    "H02S20/23"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "DE102026110894A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102026110894A1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020261108946"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102026110894A1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102026110894.png",
+    "b": 310,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2026 110 894 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2026 110 894 A1"
+   }
+  },
+  {
+   "id": "de-202026105209",
+   "titel": "Haltefuß für das Schienenende von Solar-Montageschienen",
+   "titel_original": "Haltevorrichtung",
+   "was_neu": "Die Haltevorrichtung klemmt mit einem Haltefuß das Endstück einer Montageschiene für Solarmodule fest. Über eine eigene Befestigungsvorrichtung wird sie an einer Rahmenbefestigung angeschlossen, sodass das Schienenende sicher mit dem tragenden Rahmen verbunden ist.",
+   "bezug": "Betrifft Montageschienen und Schienenverbinder für Solaranlagen.",
+   "amt": "DE",
+   "nummer": "DE 20 2026 105 209 U1",
+   "familie": [],
+   "anmelder": [
+    "SL Rack GmbH"
+   ],
+   "anmelder_original": [
+    "SL Rack GmbH, 83527, Haag"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-11-05",
+   "angemeldet": "2026-08-26",
+   "anmeldenummer": "202026105209",
+   "thema": "solar",
+   "relevanz": "hoch",
+   "punkte": 64,
+   "klassen": [
+    "F24S25/61",
+    "F24S25/613",
+    "F24S25/632",
+    "F24S25/636",
+    "F24S25/65",
+    "H02S20/23"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "U1",
+   "nummer_kompakt": "DE202026105209U1",
+   "art": "Gebrauchsmuster",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE202026105209U1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=2020261052094"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE202026105209U1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-202026105209.png",
+    "b": 318,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 20 2026 105 209 U1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 20 2026 105 209 U1"
+   }
+  },
   {
    "id": "de-102025116772",
    "titel": "Halteschuh mit einrastendem Rahmenfuß für Solarmodule auf Flachdächern",
@@ -2436,6 +3598,66 @@
    }
   },
   {
+   "id": "ep-4834556",
+   "titel": "Formenträger mit offenporiger Metallform für Dachziegelpressen",
+   "titel_original": "FORMENTRÄGER FÜR DACHZIEGELPRESSE, MIT EINER WASSERDURCHLÄSSIGEN FORM AUS METALL, UND VERFAHREN ZUM PRESSEN EINES DACHZIEGELS",
+   "was_neu": "Beim Pressen von Tondachziegeln wird das austretende Wasser durch die Form selbst abgesaugt: Die Form besteht zumindest bereichsweise aus offenporigem, flüssigkeitsdurchlässigem Metall. Die Porosität ist so gewählt, dass bei den üblichen Pressdrücken eine definierte Menge Flüssigkeit von der Formoberfläche zur Rückseite abgeleitet wird.",
+   "bezug": "Betrifft die Herstellung von Tondachziegeln.",
+   "amt": "EP",
+   "nummer": "EP 4834556 A1",
+   "familie": [],
+   "anmelder": [
+    "BMI Group Holdings UK Limited"
+   ],
+   "anmelder_original": [
+    "BMI GROUP HOLDINGS UK LTD"
+   ],
+   "anmelder_land": [
+    "GB"
+   ],
+   "veroeffentlicht": "2026-11-04",
+   "angemeldet": "2025-04-29",
+   "anmeldenummer": "25173175",
+   "thema": "werkstoffe",
+   "relevanz": "hoch",
+   "punkte": 42,
+   "klassen": [
+    "B28B13/065",
+    "B28B3/021",
+    "B28B7/366",
+    "B28B7/46"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4834556A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4834556A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP25173175&lng=de"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4834556.png",
+    "b": 760,
+    "h": 838,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4834556 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4834556 A1"
+   }
+  },
+  {
    "id": "ep-4442922",
    "titel": "Schneidschablone aus Karton für das untere Anschlussblech von Dachfenstern",
    "titel_original": "SCHNEIDFÜHRUNG FÜR BODENANSCHLUSSELEMENT, KARTONVERPACKUNG UND VERFAHREN ZUM ABDECKEN EINES DACHELEMENTS",
@@ -2485,7 +3707,7 @@
      "url": "https://register.epo.org/application?number=EP24166262&lng=de"
     }
    ],
-   "neu": true,
+   "neu": false,
    "zeichnung": {
     "datei": "data/zeichnungen/ep-4442922.png",
     "b": 748,
@@ -2889,6 +4111,141 @@
    }
   },
   {
+   "id": "de-102025116576",
+   "titel": "Anschlagpunkt auf der Montageschiene einer Solaranlage",
+   "titel_original": "Anschlagvorrichtung",
+   "was_neu": "Der Anschlagpfosten für die Absturzsicherung wird nicht in die Dachkonstruktion, sondern über Montageverbinder in den offenen Querschnitt einer vorhandenen Aluminium-Profilschiene eingesetzt, wie sie etwa Solaranlagen tragen. Der Pfosten verformt sich im Sturzfall und nimmt so einen Teil der Energie auf; die Restkraft wird flächig in die Schiene eingeleitet.",
+   "bezug": "Betrifft Anschlageinrichtungen zur Absturzsicherung auf Dächern mit Montageschienen.",
+   "amt": "DE",
+   "nummer": "DE 10 2025 116 576 A1",
+   "familie": [],
+   "anmelder": [
+    "Meißner Sicherheitstechnik GmbH"
+   ],
+   "anmelder_original": [
+    "Meißner Sicherheitstechnik GmbH, 89079, Ulm"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-10-29",
+   "angemeldet": "2025-04-29",
+   "anmeldenummer": "102025116576",
+   "thema": "sicherheit",
+   "relevanz": "hoch",
+   "punkte": 78,
+   "klassen": [
+    "E04G21/32"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "DE102025116576A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DDE102025116576A1"
+    },
+    {
+     "label": "DPMAregister",
+     "url": "https://register.dpma.de/DPMAregister/pat/register?AKZ=1020251165769"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=DE102025116576A1"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/de-102025116576.png",
+    "b": 205,
+    "h": 399,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "DE 10 2025 116 576 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "DE 10 2025 116 576 A1"
+   }
+  },
+  {
+   "id": "wo-2026226890",
+   "titel": "Abgedichtete Durchführung für Elektroleitungen durch das Dach",
+   "titel_original": "ELECTRICAL CONDUIT SUPPORT FOR ROOF DECKS",
+   "was_neu": "Ein starres Rohr wird durch die Dachschalung geführt und von einer Rohrmanschette umschlossen, deren Grundplatte auf die Schalung geschraubt wird. Abdeckbleche und Dichtstoff dichten den Durchgang ab; das Elektro-Leerrohr läuft vom Gebäudeinneren durch das Rohr und tritt oben aus einer abgedichteten Kappe in einstellbarer Höhe aus.",
+   "bezug": "Betrifft Leitungsdurchführungen durch die Dachfläche, etwa für Solaranlagen.",
+   "amt": "WO",
+   "nummer": "WO 2026/226890 A1",
+   "familie": [],
+   "anmelder": [
+    "Gembala, David",
+    "Gembala, Henry"
+   ],
+   "anmelder_original": [
+    "GEMBALA DAVID",
+    "GEMBALA HENRY"
+   ],
+   "anmelder_land": [
+    "US",
+    "US"
+   ],
+   "veroeffentlicht": "2026-10-29",
+   "angemeldet": "2026-04-24",
+   "prioritaet": "2025-04-25",
+   "anmeldenummer": "2026025063",
+   "thema": "zubehoer",
+   "relevanz": "hoch",
+   "punkte": 48,
+   "klassen": [
+    "E04D13/14",
+    "E04D1/36",
+    "F16L5/00",
+    "H02G3/34"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "links_extra": [
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2026226890"
+    }
+   ],
+   "kind": "A1",
+   "nummer_kompakt": "WO2026226890A1",
+   "art": "Internationale Anmeldung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DWO2026226890A1"
+    },
+    {
+     "label": "PATENTSCOPE",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2026226890"
+    },
+    {
+     "label": "DEPATISnet (DPMA)",
+     "url": "https://depatisnet.dpma.de/DepatisNet/depatisnet?action=bibdat&docid=WO002026226890A1"
+    },
+    {
+     "label": "PATENTSCOPE (internationale Anmeldung)",
+     "url": "https://patentscope.wipo.int/search/de/detail.jsf?docId=WO2026226890"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/wo-2026226890.png",
+    "b": 242,
+    "h": 400,
+    "quelle": "DPMA, DEPATISnet",
+    "figur": "erste Zeichnung (Vorschaubild)",
+    "dokument": "WO 2026/226890 A1"
+   }
+  },
+  {
    "id": "de-102017109317",
    "titel": "Durchsturzsicherung aus Gittermatten für Lichtbänder",
    "titel_original": "Durchsturzsicherung für eine Lichtbandzarge sowie Verfahren zur Herstellung einer Durchsturzsicherung",
@@ -2954,6 +4311,66 @@
    "anspruch_1": {
     "sprache": "de",
     "dokument": "DE 10 2017 109 317 B4"
+   }
+  },
+  {
+   "id": "ep-4831418",
+   "titel": "Erdungsklemme für Falzdächer mit verschiebbarer Halteplatte",
+   "titel_original": "KLEMMVORRICHTUNG ZUM ANORDNEN WENIGSTENS EINER ERDUNGSLEITUNG AN EINEM EINEN FALZ AUFWEISENDEN DACHBLECH UND VERFAHREN ZUM ANORDNEN WENIGSTENS EINER ERDUNGSLEITUNG",
+   "was_neu": "Eine Klemmplatte übergreift den Falz eines Metalldachs und wird dort verklemmt; darauf sitzt über eine Kontaktplatte mit Langloch die Halteplatte für den Erdungsleiter. Halte- und Klemmplatte sind über eine Spannschraube verbunden und lassen sich in Längsrichtung verschieben, sodass die Leitung passend ausgerichtet werden kann.",
+   "bezug": "Betrifft Blitzschutz und Erdung auf Stehfalz- und Falzdächern.",
+   "amt": "EP",
+   "nummer": "EP 4831418 A1",
+   "familie": [],
+   "anmelder": [
+    "Dehn SE"
+   ],
+   "anmelder_original": [
+    "DEHN SE"
+   ],
+   "anmelder_land": [
+    "DE"
+   ],
+   "veroeffentlicht": "2026-10-28",
+   "angemeldet": "2026-02-09",
+   "prioritaet": "2025-04-25",
+   "anmeldenummer": "26401000",
+   "thema": "zubehoer",
+   "relevanz": "mittel",
+   "punkte": 34,
+   "klassen": [
+    "E04D15/04",
+    "H01R4/42",
+    "H01R4/646"
+   ],
+   "aufgenommen": "2026-11-23",
+   "quelle": "DEPATISnet",
+   "neu_erteilt": false,
+   "kind": "A1",
+   "nummer_kompakt": "EP4831418A1",
+   "art": "Offenlegung",
+   "links": [
+    {
+     "label": "Espacenet",
+     "url": "https://worldwide.espacenet.com/patent/search?q=pn%3DEP4831418A1"
+    },
+    {
+     "label": "Europäisches Patentregister",
+     "url": "https://register.epo.org/application?number=EP26401000&lng=de"
+    }
+   ],
+   "neu": true,
+   "zeichnung": {
+    "datei": "data/zeichnungen/ep-4831418.png",
+    "b": 580,
+    "h": 900,
+    "quelle": "EPA, Europäischer Publikationsserver",
+    "figur": "Abbildung der Zusammenfassung",
+    "dokument": "EP 4831418 A1"
+   },
+   "anspruch_1": {
+    "sprache": "de",
+    "dokument": "EP 4831418 A1"
    }
   },
   {
@@ -3267,7 +4684,13 @@
     "C09J7/35",
     "C08L95/00"
    ],
-   "familie": [],
+   "familie": [
+    {
+     "nummer": "WO 2026/224282 A1",
+     "art": "Internationale Anmeldung",
+     "datum": "2026-10-29"
+    }
+   ],
    "aufgenommen": "2026-11-02",
    "quelle": "DEPATISnet",
    "neu_erteilt": false,
@@ -11069,7 +12492,18 @@
    ],
    "aufgenommen": "2026-10-30",
    "quelle": "DEPATISnet",
-   "familie": [],
+   "familie": [
+    {
+     "nummer": "EP 4838149 A1",
+     "art": "Offenlegung",
+     "datum": "2026-11-11"
+    },
+    {
+     "nummer": "DE 10 2025 005 214 A1",
+     "art": "Offenlegung",
+     "datum": "2026-11-12"
+    }
+   ],
    "kind": "B3",
    "nummer_kompakt": "DE102025001546B3",
    "art": "Erteilung",
@@ -20730,7 +22164,7 @@
    "art": "Erteilung",
    "erteilung_datum": "2026-02-18",
    "einspruch_bis": "2026-11-18",
-   "frist_status": "laufend",
+   "frist_status": "abgelaufen",
    "links": [
     {
      "label": "Espacenet",
@@ -20793,7 +22227,7 @@
    "art": "Erteilung",
    "erteilung_datum": "2026-02-18",
    "einspruch_bis": "2026-11-18",
-   "frist_status": "laufend",
+   "frist_status": "abgelaufen",
    "links": [
     {
      "label": "Espacenet",
@@ -20858,7 +22292,7 @@
    "art": "Erteilung",
    "erteilung_datum": "2026-02-18",
    "einspruch_bis": "2026-11-18",
-   "frist_status": "laufend",
+   "frist_status": "abgelaufen",
    "links": [
     {
      "label": "Espacenet",
@@ -20922,7 +22356,7 @@
    "art": "Erteilung",
    "erteilung_datum": "2026-02-18",
    "einspruch_bis": "2026-11-18",
-   "frist_status": "laufend",
+   "frist_status": "abgelaufen",
    "links": [
     {
      "label": "Espacenet",

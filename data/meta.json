@@ -8,19 +8,19 @@
   "quellen": [
    {
     "name": "DEPATISnet (DPMA)",
-    "umfang": "DE, EP, WO – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
-    "stand": "2026-11-16",
+    "umfang": "DE, EP, WO, AT, CH – Offenlegungen und Gebrauchsmuster ab 29.04.2026, Erteilungen ab 29.01.2026",
+    "stand": "2026-11-23",
     "status": "aktuell"
    },
    {
     "name": "Europäischer Publikationsserver (EPA)",
     "umfang": "Ergänzend: Zusammenfassungen und Ansprüche europäischer Dokumente",
-    "stand": "2026-11-16",
+    "stand": "2026-11-23",
     "status": "aktuell"
    }
   ],
   "hinweise_woche": [
-   "Zu sechs bereits erfassten europäischen Anmeldungen aus dem PCT-Weg liegt weiterhin keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
+   "Zu zehn bereits erfassten europäischen Dokumenten liegt noch keine Zusammenfassung vor; sie werden aufgenommen, sobald der Text verfügbar ist."
   ],
   "hinweise_monat": [
    "Der Oktober-Bericht umfasst die Erstbefüllung und damit auch ältere Veröffentlichungen aus dem Erfassungszeitraum."
@@ -28,8 +28,8 @@
  },
  "weiterleitungen": [],
  "lauf": {
-  "datum": "2026-11-16",
+  "datum": "2026-11-23",
   "art": "woche"
  },
- "stand": "2026-11-16"
+ "stand": "2026-11-23"
 }
